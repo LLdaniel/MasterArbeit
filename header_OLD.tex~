@@ -1,0 +1,48 @@
+\documentclass[pdftex, a4paper, parskip=full*, open=any, BCOR=10mm, fontsize=12pt, DIV=12, headsepline, footsepline=true, footinclude=false, draft=false, captions=nooneline]{scrbook}  %pdftex,
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{babelbib}
+\usepackage{verbatim}
+\usepackage{lscape}
+\usepackage{textcomp}    %fuer aufrechte mu
+\usepackage[ngerman]{babel}
+\usepackage{caption}%Ist Voraussetzung für das Subcaption package, welches die subfigures erlaubt
+\usepackage{subcaption}%Für Einbindung von Bildern als Untergraphiken subfig(ure) sind veraltet!
+%\usepackage[numbers]{natbib}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{ziffer}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+%\usepackage{bibgerm}
+%Aus dem Praktikum...
+\usepackage{ae}                %macht schöneres ß
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} %macht die Bildbeschriftungen richtig
+\usepackage{epsfig}%Zur Einbindung von .eps: eps-->pdf
+\usepackage{rotating}%für Querformat einer Tabelle 
+\renewcommand{\figurename}{Abb.}
+\setlength\parindent{1em}%Rückt am Absatzbeginn ein
+%......ENDE
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}%Symbole für Fußnoten und keine default arabics
+\makeatletter%Clear counter nach jedem Kapitel für die Fußnoten
+\@addtoreset{footnote}{section}% ""
+\makeatother% ""
+\addtokomafont{caption}{\small}
+\setkomafont{captionlabel}{\bfseries \sffamily}
+%\bibliographystyle{gerplain} %Ist jetzt im Hauptdokument verbaut-->s. \bibliography{}
+
+
+
+\hyphenation{
+  Aus-gangs-sig-nal Be-trach-tet er-folg-reich Über-gangs-strah-lungs-de-tek-tor
+}
+
+% Keine "Schusterjungen"
+	\clubpenalty = 9999
+% Keine "Hurenkinder"
+	\widowpenalty = 9999 \displaywidowpenalty = 9999

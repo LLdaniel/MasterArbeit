@@ -1,0 +1,137 @@
+\input{header.tex}
+\begin{document}
+\input{titlepage.tex}
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{XyZ}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htbp]
+		\centering
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
+		\hline
+		\hline
+		\rule[-6pt]{0pt}{21pt} \textbf{sample}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$}}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} \multirow{2}{*}{selection}  & reconstruction & truth & reconstruction & truth  
+		\\ 
+		\rule[-7pt]{0pt}{23pt}  & event yield & event yield & event yield & event yield 
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets   & $66878$ & $252200$ & $73$ & $200$
+		\\
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets $+1\,\tau$  & $188$ & $5923$ & $2.5$ & $28$
+		\\
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets $+2\,\tau$ & $0.7$ & $49$ & $0.2$ & $8.2$ 
+		\\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[Event yield for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Event yield for different selections with tau leptons for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample. The luminosity account for $36.1\,\text{fb}^{-1}$.}
+		\label{ttHttbarEvent}
+	\end{table}
+%
+\begin{table}[htbp]
+		\centering
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccc}
+		\hline
+		\hline
+		\rule[-6pt]{0pt}{21pt} \textbf{sample}  & \textbf{t$\bar{\textbf{t}}$} & \textbf{t$\bar{\textbf{t}}$H}
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} selection  & efficiency $\frac{\epsilon}{\%}$ & efficiency $\frac{\epsilon}{\%}$ 
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets & $26.52$ & $36.72$ 
+		\\
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets $+1\,\tau$  & $3.18$ & $8.83$ 
+		\\
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets $+2\,\tau$  & $1.41$ & $2.13$ 
+		\\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[Efficiencies for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Efficiencies for different selections with tau leptons for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\label{ttHttbarEff}
+	\end{table}
+%
+%
+%
+%
+\begin{table}[htbp]
+		\centering
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccccc}
+		\hline
+		\hline
+		\rule[-6pt]{0pt}{21pt} \textbf{sample} & & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$}}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} \multirow{2}{*}{selection} & reference & reconstruction & truth & reconstruction & truth  
+		\\ 
+		\rule[-7pt]{0pt}{23pt} & selection & ratio $\frac{r}{\%}$ & ratio $\frac{r}{\%}$ & ratio $\frac{r}{\%}$ & ratio $\frac{r}{\%}$ 
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets $+1\,\tau$ & $\geq 2\,$b-jets & $0.28$ & $2.35$ & $3.43$ & $14.26$
+		\\
+		\rule[-6pt]{0pt}{21pt} $\geq 2\,$b-jets $+2\,\tau$ & $\geq 2\,$b-jets & $0.0011$ & $0.020$ & $0.24$ & $4.11$ 
+		\\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[Ratios for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Ratios for different selections with tau leptons for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\label{ttHttbarRatio}
+	\end{table}
+	
+
+	
+	
+	\begin{table}[htbp]
+		\centering
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
+		\hline
+		\hline
+		\rule[-6pt]{0pt}{21pt} \textbf{sample}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$}}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} \multirow{2}{*}{selection}  & numerator      & denominator & numerator      & denominator
+		\\ 
+		\rule[-7pt]{0pt}{23pt}                             & event yield    & event yield & event yield    & event yield 
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} truth matching for tau      & $63$            & $13723$      & $5590$        & $21610$
+		\\
+		\rule[-6pt]{0pt}{21pt} efficiency                  & \multicolumn{2}{c}{$0.46\%$}    & \multicolumn{2}{c}{$25.9\%$}
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} tau from H$^0$, W$^{\pm}$, Z$^0$& $0$        & $0$         & $4859$          & $11988$
+		\\
+		\rule[-6pt]{0pt}{21pt} efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$40.5\%$}
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} tau from B-mesons           & $63$            & $13722$      & $20$            & $7416$ 
+		\\
+		\rule[-6pt]{0pt}{21pt} efficiency                  & \multicolumn{2}{c}{$0.46\%$}   & \multicolumn{2}{c}{$0.27\%$}
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} tau within a jet            & $8440$         & $3776952$      & $18511$         & $20327225$ 
+		\\
+		\rule[-6pt]{0pt}{21pt} efficiency                  & \multicolumn{2}{c}{$0.22\%$}   & \multicolumn{2}{c}{$0.091\%$}
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} tau within a b-jet          & $6098$        & $2658379$      & $2317$         & $1208924$ 
+		\\
+		\rule[-6pt]{0pt}{21pt} efficiency                  & \multicolumn{2}{c}{$0.23\%$}   & \multicolumn{2}{c}{$0.19\%$}
+		\\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[Event yield for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Event yield for different selections with tau leptons for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample. The luminosity account for $36.1\,\text{fb}^{-1}$.}
+		\label{ttHttbarEventTruthMatching}
+	\end{table}
+	%
+		%Literaturverzeichnis--------------------------------------------------------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{Literatur}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}%fügt das Literaturverzeichnis zum Inhaltsverzeichnis
+	
+\end{document}

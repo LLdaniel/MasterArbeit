@@ -1,0 +1,30 @@
+\begin{titlepage}
+\vspace*{-7\baselineskip} 
+	\enlargethispage{100mm}
+		\begin{center}
+		\LARGE{\textbf{Master Thesis}\\}
+		\vspace{6mm}	
+		\huge{\textbf{insert title here blablabl lalbal, normally it is a very long title which needs a new line as well}\\}
+		\vspace{6mm}
+		\Large{Daniel Adlkofer\\}
+		\vspace{6mm}
+        \includegraphics[width=0.55\textwidth]{figures/neuSIEGEL.eps} \\
+		\vspace{6mm}
+		Supervisor \\
+		\Large{Prof. Dr. Raimund Ströhmer\\}
+               	\vspace{6mm}
+                Advisor \\
+    \Large{Dr. Mahsana Haleem\\}
+               	\vspace{6mm}
+
+		\vspace{4mm}
+		November 2018\\
+		  \noindent\hrulefill\\
+		\vspace{4mm}
+ 		Physikalisches Institut\\
+ 		Lehrstuhl für Physik und ihre Didaktik\\
+	    Julius-Maximilians-Universität Würzburg
+	\end{center}
+\end{titlepage}
+
+\cleardoubleoddemptypage
