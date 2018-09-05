@@ -1,6 +1,6 @@
 %%      --- TO DO --- 
 %%    vllt die Chapter geschichten auch mit einem Strichelement wie im Titel?
-%%
+%%    Umbennenung des LHC Kapitels in Accelerator complex o.Ä.
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
@@ -184,20 +184,48 @@ $\SI{2}{\electronvolt\per\meter}$
 		\caption[]{}
 		\label{LQEventTruthMatching}
 	\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}
+%einen gescheiten Einleitungsgedanken überlegen! Ja nicht Higgs... :see_no_evil:
+%Yukawa Kopplung vielleicht? --> ich bin mir nicht mehr sicher, aber vielleicht habe ich da einen Artikel gelesen (News CERN oder so) wo es um die noch bessere Messung der Yukawa Kopplung ging...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental setup for the search of scalar leptoquarks}\label{experiment}
+For the search of scalar leptoquarks the ATLAS detector at the Large Hadron Collider is used as experimental setup which will be described within this chapter. In section \ref{LHC} the general setting of the proton-proton collider located at the CERN research center is the subject of interest. The particle detection of the resulting collision events will take place in the ATLAS detector with its different specialized components (section \ref{ATLAS}). Section \ref{LQpp} addresses the leptoquark pair production in proton-proton collisions.  
+\section{The Large Hadron Collider}\label{LHC}
+The research center CERN (Conseil Européen pour la Recherche Nucléaire) was founded in $1945$ near Geneva to become a major European joint venture on elementary particle physics. In the mean time $22$ member states are participating in that large-scale project with the ambition to probe the essential constitutes of nature and the fundamental forces acting between them. \cite{CERNabout}\par
+%Der Part war oben mal mit drin, aber wenn er besser ausformuliert ist, dann sollte das schon mit in den Hauptteil gehören. Sonst wird der Einleitungssatz ja auch zu lange
+
+In the huge acceleration complex protons reach nearly the velocity of light and will be brought to collision at defined locations. Particle detectors then register signatures of the collsion events and the analysis of new created particles gives insight to the nature of elementary particle physics.
+
+%Hauptaugenmerk auf LHC
+%AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel
 \section{The ATLAS detector at the LHC}\label{ATLAS}
-[20],[21],[22] in Bachelorarbeit
 %Aufbau Idee: auch so ein Walktrough durch die einzelnen Komponenten wie bei der Bachelorarbeit
-%Beschleunigungskette-->einzelne Komponenten + Trigger
+%Beschleunigungskette-->einzelne Komponenten + Trigger(ref auf Datenauswertung, Software part im Text dann)
 %wahrscheinlich insgesamt genauer und etwas ausführlicher, da ein Schwerpunkt auf ein Detektorsystem keinen Sinn macht (schaue auch taus, jets, leptonen an...
 %Motivation erher sogar von der Seite, wieso so gebaut, wie er ist --> Teilchen detektieren (Verweis auf SM Kaptiel)-> Schichtaufbau-> etc...
-%AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Leptoquark pair production in proton-proton collisions}\label{LQpp}
+
+%                   Gliederungsideen
+%Experiment-Part: LHC, ATLAS, LQpairprod @pp collisions
 %
+%Software-Part: Datenprozessierung, MC Simulation
+%
+%Theorie-Part: Standardmodell, beyond SM?(eigentlich klein hakten und eher versteckt von hinten rum in Theorie LQ einführen...), Theorie LQ(begründung, was es erkärt, so bisschen die beyond SM Schiene), 
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\listoffigures
+\addcontentsline{toc}{chapter}{List of figures}%fügt das Bildverzeichnis zum Inhaltsverzeichnis
+\listoftables
+\addcontentsline{toc}{chapter}{List of tables}%fügt das Tabellenverzeichnis zum Inhaltsverzeichnis
 %Literaturverzeichnis--------------------------------------------------------------------------------------------------
 \bibliographystyle{unsrt}
 \bibliography{Literatur}
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}%fügt das Literaturverzeichnis zum Inhaltsverzeichnis
+\addcontentsline{toc}{chapter}{Bibliography}%fügt das Literaturverzeichnis zum Inhaltsverzeichnis
 	
 \end{document}
