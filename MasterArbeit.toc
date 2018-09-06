@@ -1,6 +1,0 @@
-\select@language {english}
-\select@language {english}
-\contentsline {chapter}{\numberline {1}XyZ}{4}{chapter.1}
-\contentsline {chapter}{\numberline {2}Experimental setup for the search of scalar leptoquarks}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}The ATLAS detector at the LHC}{7}{section.2.1}
-\contentsline {chapter}{Literaturverzeichnis}{8}{chapter*.7}
