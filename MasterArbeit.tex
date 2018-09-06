@@ -1,5 +1,5 @@
 %%      --- TO DO --- 
-%%    vllt die Chapter geschichten auch mit einem Strichelement wie im Titel?
+%%    Abstand des Chapters zu stark... --> ist aber kein Chapter design problem sondern randproblem allgemein
 %%    Umbennenung des LHC Kapitels in Accelerator complex o.Ä.
 \input{header.tex}
 \begin{document}
@@ -190,15 +190,26 @@ $\SI{2}{\electronvolt\per\meter}$
 %Yukawa Kopplung vielleicht? --> ich bin mir nicht mehr sicher, aber vielleicht habe ich da einen Artikel gelesen (News CERN oder so) wo es um die noch bessere Messung der Yukawa Kopplung ging...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental setup for the search of scalar leptoquarks}\label{experiment}
-For the search of scalar leptoquarks the ATLAS detector at the Large Hadron Collider is used as experimental setup which will be described within this chapter. In section \ref{LHC} the general setting of the proton-proton collider located at the CERN research center is the subject of interest. The particle detection of the resulting collision events will take place in the ATLAS detector with its different specialized components (section \ref{ATLAS}). Section \ref{LQpp} addresses the leptoquark pair production in proton-proton collisions.  
+For the search of scalar leptoquarks the ATLAS detector at the Large Hadron Collider (LHC) is used as experimental setup which will be described within this chapter. In section \ref{LHC} the general setting of the proton-proton collider located at the CERN research center is the subject of interest. The particle detection of the resulting collision events will take place in the ATLAS detector with its different specialized components (section \ref{ATLAS}). Section \ref{LQpp} addresses the leptoquark pair production in proton-proton collisions.  
 \section{The Large Hadron Collider}\label{LHC}
-The research center CERN (Conseil Européen pour la Recherche Nucléaire) was founded in $1945$ near Geneva to become a major European joint venture on elementary particle physics. In the mean time $22$ member states are participating in that large-scale project with the ambition to probe the essential constitutes of nature and the fundamental forces acting between them. \cite{CERNabout}\par
-%Der Part war oben mal mit drin, aber wenn er besser ausformuliert ist, dann sollte das schon mit in den Hauptteil gehören. Sonst wird der Einleitungssatz ja auch zu lange
-
-In the huge acceleration complex protons reach nearly the velocity of light and will be brought to collision at defined locations. Particle detectors then register signatures of the collsion events and the analysis of new created particles gives insight to the nature of elementary particle physics.
-
-%Hauptaugenmerk auf LHC
-%AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel
+The research center CERN (Conseil Européen pour la Recherche Nucléaire) was founded in $1954$ near Geneva to become a major European joint venture on elementary particle physics. In the mean time $22$ member states are participating in that large-scale project with the ambition to probe the essential constitutes of nature and the fundamental forces acting between them. \cite{CERNabout}\par
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  \includegraphics[width=0.7\linewidth]{figures/CERNKomplex.jpg} 
+   \caption[Schematic of the CERN accelerator complex.]{Schematic of the CERN accelerator complex with its different stages and few experiments like ATLAS located at a crossing point for protons. \cite{CERNKomplex}}
+  \label{complex}                                     
+ \end{center}
+\end{figure}
+%
+In the huge accelerator complex protons reach through different stages energies of $\SI{6.5}{\tera\electronvolt}$ and will be brought to collisions at defined buch crossing sites in time intervals of ??ns. Particle detectors then register signatures of the resulting collsion events and the analysis of new created particles gives insight to the nature of elementary particle physics.\newline 
+Figure \ref{complex} shows the different acceleration stages. Starting from the injection protons will gain as much energy as $\SI{50}{\mega\electronvolt}$ in the linear accelerator LINAC2 and will be further transferred to the Proton Synchrotron Booster ($\SI{1.4}{\giga\electronvolt}$), the Proton Synchrotron ($\SI{25}{\giga\electronvolt}$), the Super Proton Synchrotron ($\SI{450}{\giga\electronvolt}$) and finally to the LHC ring with its $\SI{26.7}{\kilo\meter}$ circumference. \cite{CERNabout}\newline
+The LHC is designed as two-ring proton-proton collider. Conditions for a stable proton beam are diversely including high vacua of $\SI{E-10}{\milli\bar}$ to $\SI{E-11}{\milli\bar}$ and temperatures of $\SI{1.9}{\kelvin}$ for the superconducting NbTi-magnets of the accelerator. \cite{LHCJINST}   
+%hier dann weiter ins Detail wie LHC JINST #######################
+%Die Idee ist eigentlich eine genauere Beschreibung der Komponenten, allerdings ist JINST schon wieder so tief... So überblicksmäßiger wäre viel bessser, bei dem man noch im Blick behalten kann, um was es eigentlich geht...
+lorem ipsum...\par
+Different more experiments like ALICE\cite{ALICE}, LHCb\cite{LHCb} are located at CERN due to the variety of research questions. But the subject of interest in this work lies in the high luminosity experiment ATLAS specialized for proton-proton collisions like its counterpart CMS\cite{CMS}. 
+%AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel https://arxiv.org/pdf/1705.08830.pdf
 \section{The ATLAS detector at the LHC}\label{ATLAS}
 %Aufbau Idee: auch so ein Walktrough durch die einzelnen Komponenten wie bei der Bachelorarbeit
 %Beschleunigungskette-->einzelne Komponenten + Trigger(ref auf Datenauswertung, Software part im Text dann)
@@ -210,7 +221,7 @@ In the huge acceleration complex protons reach nearly the velocity of light and 
 %                   Gliederungsideen
 %Experiment-Part: LHC, ATLAS, LQpairprod @pp collisions
 %
-%Software-Part: Datenprozessierung, MC Simulation
+%Software-Part: Datenprozessierung, MC Simulation, b-tagging, anti kT(jet reconstruction), tau reconstruction, e+µ detektion?
 %
 %Theorie-Part: Standardmodell, beyond SM?(eigentlich klein hakten und eher versteckt von hinten rum in Theorie LQ einführen...), Theorie LQ(begründung, was es erkärt, so bisschen die beyond SM Schiene), 
 %

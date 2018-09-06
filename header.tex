@@ -14,6 +14,13 @@
 \usepackage[english]{babel}
 \usepackage{caption}%Ist Voraussetzung für das Subcaption package, welches die subfigures erlaubt
 \usepackage{subcaption}%Für Einbindung von Bildern als Untergraphiken subfig(ure) sind veraltet!
+\renewcommand*{\chapterformat}{%Chapter Design
+  \enskip\mbox{\scalebox{2}{\thechapter\autodot}}}
+\renewcommand\chapterlinesformat[3]{%
+  \parbox[b]{\textwidth}{\textcolor{royalazure}{\hrulefill#2}}\par%
+  #3\par\bigskip%
+  \textcolor{royalazure}{\hrule}}
+\RedeclareSectionCommand[afterskip=1.5\baselineskip]{chapter}
 %\usepackage[numbers]{natbib}
 \usepackage{hyperref}
 \usepackage{url}
