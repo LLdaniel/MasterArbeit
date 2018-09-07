@@ -45,7 +45,9 @@
 \setkomafont{captionlabel}{\bfseries \sffamily}
 %\bibliographystyle{gerplain} %Ist jetzt im Hauptdokument verbaut-->s. \bibliography{}
 \definecolor{royalazure}{rgb}{0.0, 0.22, 0.66}
-
+\renewcommand*\chapterheadstartvskip{\vspace*{-\topskip}}%Seitenrandanfang einstellen
+\renewcommand*\chapterheadendvskip{%Seitenrandende einstellen
+  \vspace*{1\baselineskip plus .1\baselineskip minus .167\baselineskip}}
 
 \hyphenation{
   %Aus-gangs-sig-nal Be-trach-tet er-folg-reich Über-gangs-strah-lungs-de-tek-tor
