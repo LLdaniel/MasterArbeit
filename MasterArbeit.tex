@@ -1,6 +1,5 @@
 %%      --- TO DO --- 
 %%    Abstand des Chapters zu stark... --> ist aber kein Chapter design problem sondern randproblem allgemein
-%%    Umbennenung des LHC Kapitels in Accelerator complex o.Ä.
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
@@ -191,7 +190,8 @@ $\SI{2}{\electronvolt\per\meter}$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental setup for the search of scalar leptoquarks}\label{experiment}
 For the search of scalar leptoquarks the ATLAS detector at the Large Hadron Collider (LHC) is used as experimental setup which will be described within this chapter. In section \ref{LHC} the general setting of the proton-proton collider located at the CERN research center is the subject of interest. The particle detection of the resulting collision events will take place in the ATLAS detector with its different specialized components (section \ref{ATLAS}). Section \ref{LQpp} addresses the leptoquark pair production in proton-proton collisions.  
-\section{The Large Hadron Collider}\label{LHC}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Large Hadron Collider accelerator complex}\label{LHC}
 The research center CERN (Conseil Européen pour la Recherche Nucléaire) was founded in $1954$ near Geneva, Switzerland to become a major European joint venture on elementary particle physics. In the mean time $22$ member states are participating in that large-scale project with the ambition to probe the essential constitutes of nature and the fundamental forces acting between them. \cite{CERNabout}\par
 %
 \begin{figure}[htbp]                                 
@@ -209,10 +209,32 @@ The LHC is designed as two-ring proton-proton collider. Conditions for a stable 
 %Die Idee ist eigentlich eine genauere Beschreibung der Komponenten, allerdings ist JINST schon wieder so tief... So überblicksmäßiger wäre viel bessser, bei dem man noch im Blick behalten kann, um was es eigentlich geht...
 \par
 Different more experiments like ALICE\cite{ALICE}, LHCb\cite{LHCb} are located at CERN due to the variety of research questions. But the subject of interest in this work lies in the high luminosity experiment ATLAS specialized for proton-proton collisions like its counterpart CMS\cite{CMS}. 
-%AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel https://arxiv.org/pdf/1705.08830.pdf ################
+%AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel https://arxiv.org/pdf/1705.08830.pdf, https://cds.cern.ch/record/1711887/files/ATL-COM-UPGRADE-2014-014.pdf ################
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The ATLAS detector at the LHC}\label{ATLAS}
-%Aufbau Idee: auch so ein Walktrough durch die einzelnen Komponenten wie bei der Bachelorarbeit
+One of the general purpose detector for proton-proton collisions is the ATLAS detector. This $\SI{25}{\meter}$ tall detector is located at one interaction point of the LHC where bunches, consisting of approximately $\SI{E11}{}$ protons, collide at a rate of $\SI{40}{\mega\hertz}$ \cite{ATLASJINST}. The number of particles encountered per time is given by \cite{Perkins}
+\begin{align}
+                        \dot{N}=\mathcal{L}\sigma
+\end{align}
+with the cross section $\sigma$ for the present event and the instant luminosity $\mathcal{L}$. Given a measure for the number of collisions per unit time the instant luminosity can be introduced and is often used as key parameter in collider physics \cite{LHCJINST}.
+\begin{align}
+                        \mathcal{L}=
+\label{Lumi}
+\end{align}
+The design luminosity for ATLAS was exceeded with $\mathcal{L}=\SI{2.05E34}{\per\square\centi\meter\per\second}$ for $2.05$ times on the $2^{\text{nd}}$ of November 2017 emphasizing the great success over the years \cite{designLumiExceeded}.\par 
+%Erklärung für Lumi auch aus Perkins? ##########
+The basic structure is shown in figure \ref{ATLASDetector} with its different sub-detector systems together with convention for the used coordinate system.  
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  %\includegraphics[width=0.55\linewidth]{figures/CERNKomplex.jpg} 
+   \caption[Structure of the ATLAS detector at the LHC]{The layered structure of the ATLAS detector at the LHC and the used coordinate system. \cite{ATLASJINST}}
+  \label{ATLASDetector}                                     
+ \end{center}
+\end{figure}
+%
+%Koordinatensystem
+%Aufbau Idee: auch so ein Walkthrough durch die einzelnen Komponenten wie bei der Bachelorarbeit
 %Beschleunigungskette-->einzelne Komponenten + Trigger(ref auf Datenauswertung, Software part im Text dann)
 %wahrscheinlich insgesamt genauer und etwas ausführlicher, da ein Schwerpunkt auf ein Detektorsystem keinen Sinn macht (schaue auch taus, jets, leptonen an...
 %Motivation erher sogar von der Seite, wieso so gebaut, wie er ist --> Teilchen detektieren (Verweis auf SM Kaptiel)-> Schichtaufbau-> etc...
