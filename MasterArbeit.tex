@@ -1,7 +1,8 @@
 %%      --- TO DO --- 
 %%    Abstand des Chapters zu stark... --> ist aber kein Chapter design problem sondern randproblem des kompletten .tex
 %%    Koordinatensystem noch in ATLAS reinzeichnen... und als zweite Graphik einfügen
-%%    Die Frage ist, ob das jetzt noch eine Idee ist, den Detektoraufbau von der systematischen Teilchenbestimmungs-Seite aufzuziehen, quasi so, wie man es in der Masterclass lernt, mit einzelnen Spuren unterscheiden usw... --> siehe hierfür das Skript zusammenfassung ATLAS sowie https://cds.cern.ch/record/1096081/export/hx?ln=en und https://cds.cern.ch/record/1096081, oder ob das nicht dann doch zu viel wird.
+%%    Die Frage ist, ob das jetzt noch eine Idee ist, den Detektoraufbau von der systematischen Teilchenbestimmungs-Seite aufzuziehen, quasi so, wie man es in der Masterclass lernt, mit einzelnen Spuren unterscheiden usw... --> siehe hierfür das Skript zusammenfassung ATLAS sowie https://cds.cern.ch/record/1096081/export/hx?ln=en und https://cds.cern.ch/record/1096081, oder ob das nicht dann doch zu viel wird
+%
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
@@ -202,7 +203,7 @@ The research center CERN (Conseil Européen pour la Recherche Nucléaire) was fo
 \begin{figure}[htbp]                                 
  \begin{center}                                       
   \includegraphics[width=0.55\linewidth]{figures/CERNKomplex.jpg} 
-   \caption[Schematic of the CERN accelerator complex.]{Schematic of the CERN accelerator complex with its different stages and few experiments like ATLAS located at a crossing point for protons. \cite{CERNKomplex}}
+   \caption[Schematic of the CERN accelerator complex.]{Schematic of the CERN accelerator complex with its different stages and few experiments like ATLAS located at one crossing point for protons. \cite{CERNKomplex}}
   \label{complex}                                     
  \end{center}
 \end{figure}
@@ -230,14 +231,22 @@ Where $N_b$ is the number of particles per bunch, $n_b$ the number of bunches pe
 %Erklärung für Lumi auch aus Perkins? ##########
 The aspiration to be sensitive to the great variety of particles governed by the fundamental forces (see chapter \ref{SM}) influenced the detector design accordingly. The layered structure reflects the fact that
 %Motivation eher sogar von der Seite, wieso so gebaut, wie er ist --> Teilchen detektieren (Verweis auf SM Kaptiel)-> Schichtaufbau-> etc... #######
-The basic structure of ATLAS is shown in figure \ref{ATLASDetector} with its different sub-detector systems together with the convention for the used coordinate system.  %Koordinatensystem
+The basic structure of ATLAS is shown in figure \ref{ATLASandCoordinate} with its different sub-detector systems together with the convention for the used coordinate system.  %Koordinatensystem
 %
-\begin{figure}[htbp]                                 
- \begin{center}                                       
-  \includegraphics[width=0.8\linewidth]{figures/ATLASDesign.png} 
-   \caption[Structure of the ATLAS detector and the used coordinate system.]{The layered structure of the ATLAS detector at the LHC and the used cylindric coordinate system. \cite{ATLASJINST}}%Koordinatensystem muss auch R und besser auch eta beinhalten
-  \label{ATLASDetector}                                     
- \end{center}
+\begin{figure}
+ \centering
+  \begin{subfigure}[c]{0.7\textwidth}
+   \includegraphics[width=\textwidth]{figures/ATLASDesign.png}
+    \subcaption[The structure of the ATLAS detecor and its sub-systems.]{The layered structure of the ATLAS Detector at the LHC with its sub-systems Inner Detektor, Calorimeter, magnets and Muon Spectrometer \cite{ATLASJINST}.}
+   \label{ATLASDesign}
+  \end{subfigure}
+  \begin{subfigure}[c]{0.7\textwidth}
+   \includegraphics[width=1\textwidth]{figures/ATLASDesignCoordinate.png}
+   \subcaption[Definition of the global ATLAS coordinate system.]{The global ATLAS coordinate system formulated in cylindric coordinates with the $z$-axis parallel to the beam line and the transverse plane defined through azimuthal angle $\phi$ and pseudorapidity $\eta$. Based on \cite{ATLASJINST}.}
+   \label{Coordinate}
+  \end{subfigure}
+ \caption[Structure of the ATLAS detector and the used coordinate system.]{Structure of the ATLAS detector and the used coordinate system.}
+ \label{ATLASandCoordinate}
 \end{figure}
 %
 The nominal interaction point acts as origin of the coordinate system where the $z$-axis follows the beam line. Perpendicular to the $z$ axis lies the transverse $x$-$y$-plane usually described through the azimuthal angle $\phi$. The positive $x$-axis points towards the center of the LHC. The cylindric symmetry of the detector suggests a cylindric coordinate system with the angle $\theta$ starting from the beamline. \cite{ATLASJINST} Since the polar angle is not a Lorentz invariant quantity it is useful to describe the position in terms of rapidity \cite{LHCJINST} $w=\frac12\ln{\frac{E+p_zc}{E-p_zc}}$ in that highly relativistic regime. In the limit of large momenta i.e. $|\mathbf{p}|c\approx E$ the rapidity coincides with the pseudorapidity formulated as \cite{ChinaPseudorapidityBook}
