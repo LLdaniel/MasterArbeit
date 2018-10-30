@@ -38,7 +38,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{XyZ}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-{\ATLAS} ATLAS
 \begin{table}[htbp]
 		\centering
 		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
@@ -220,6 +219,8 @@
 %Yukawa Kopplung vielleicht? --> ich bin mir nicht mehr sicher, aber vielleicht habe ich da einen Artikel gelesen (News CERN oder so) wo es um die noch bessere Messung der Yukawa Kopplung ging...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Theoretical background for the search of scalar leptoquarks}\label{theory}
+%Vorgeplänkel fehlt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Standard Model of particle physics}\label{SM}
 A remarkable achievement for understanding nature is the Standard Model of particle physics, embracing physics at the most fundamental level. This quantum field theory, incorporating conceptual frameworks like special relativity and quantum mechanics, describes the constituents of matter and the laws governing their interactions. \cite{Mann} Despite its success of being the best theory so far capable of explaining the observed results within its domain in agreement with empirical data, it seems not to be the complete story. There are still many puzzles left which are not described by the Standard Model. That circumstance keeps physicists well motivated to gain further progress and to push the frontiers of our understanding. \cite{Nair}\par
 %Physics <-> Symmetries Gruppentheorie und Noether Theorem
@@ -228,6 +229,11 @@ A remarkable achievement for understanding nature is the Standard Model of parti
 %von folgender Seite betrachten: SM vom Standpunkt der Symmetrien und Gruppentheorie einführen und von der Seite aufziehen.
 %Die Frage ist, ob der Lagrangian vorkommen soll
 % außerdem: CPT als Beispiel erwähnen, wenn schon Symmetrien --> gut erklärt auch in Martin und Shaw Buch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Beyond the scope of The Standard Model}\label{beyondSM}
+%GUT und B anomalies explanation within LQ models
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Leptoquark Models}\label{LQmodels}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental setup for the search of scalar leptoquarks}\label{experiment}
 For the search of scalar leptoquarks the {\ATLAS} detector at the Large Hadron Collider ({\LHC}) is used as experimental setup, which will be described within this chapter. The general setting of the proton-proton collider located at the {\CERN} research center is the topic of section \ref{LHC}. The particle detection of the resulting collision events will take place in the {\ATLAS} detector with its different specialized components (section \ref{ATLAS}). Section \ref{LQpp} addresses the leptoquark pair production in proton-proton collisions.  
@@ -252,7 +258,7 @@ The {\LHC} is designed as two-ring proton-proton collider. Conditions for a stab
 Different experiments like \ALICE\cite{ALICE}, {{\LHC}}b\cite{LHCb} are located at the {\LHC} due to the variety of research questions. But the subject of interest in this work lies in the high luminosity experiment {\ATLAS}, which is specialized for proton-proton collisions like its counterpart \CMS\cite{CMS}. Main tasks of {\ATLAS} are more precise measurements of the SM (see chapter \ref{SM}), better understanding Quantum Chromo Dynamics (QCD) and search for supersymmetric models and new physics among others. With the {\LHC} production of $10^9$ inelastic events per second up to $23$ simultaneously events at dominating high QCD cross sections reqiure a powerful detector that is capable of recognizing the characteristic signatures. These circumstances make up the demands for {\ATLAS}, including fast electronic elements, high detector granularity, handling high particles fluxes and reducing overlapping events at a large acceptance and coverage region. \cite{ATLASJINST}       
 %AußerdeM: Hinweis auf high Lumi LHC als Art mini-Ausblick in diesem Kapitel https://arxiv.org/pdf/1705.08830.pdf, https://cds.cern.ch/record/1711887/files/ATL-COM-UPGRADE-2014-014.pdf ################
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The {\ATLAS} detector at the {\LHC}}\label{ATLAS}
+\section{The ATLAS detector at the LHC}\label{ATLAS}
 One of the general purpose detector for proton-proton collisions is the {\ATLAS} detector. This $\SI{25}{\meter}$ tall detector is located at one interaction point of the {\LHC} where bunches, consisting of approximately $\SI{E11}{}$ protons, collide at a rate of $\SI{40}{\mega\hertz}$ \cite{ATLASJINST}. The number of particles encountered per time is given by \cite{Perkins}
 \begin{align}
                         \dot{N}=\mathcal{L}\sigma
@@ -299,6 +305,8 @@ The \textbf{muon system} is suited in the outer layer of {\ATLAS} and provides a
 Due to technology and resource limitations the data recording rate has to be reduced from $\SI{40}{\mega\hertz}$ to $\SI{200}{\hertz}$. This poses high demands on an efficient \textbf{trigger system} which is organised in three levels. Level $1$ uses only a subset of the total detector information making basic decisions to flag so called regions of interest, i.e. coordinate regions. Searches include patterns for high transverse momenta of muon tracks, electrons and photons as well as jets or large missing energy balances. The output rate after this first selection accounts for $\SI{75}{\kilo\hertz}$. The high level trigger $2$ and $3$ are responsible for selecting the level $1$ triggerd regions at full granularity and precision. The level $3$ event filter is the final stage and achieves data reduction down to the final data-taking rate of $\SI{200}{\hertz}$, writing events of the size of approximately $\SI{1.3}{\mega\byte}$ to the disks. The event filter`s selection criteria are implemented using offline analysis procedures. \cite{ATLASJINST}%efficient triggering with sufficient background rejection ##############
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Leptoquark pair production in proton-proton collisions}\label{LQpp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Turning detector signatures into physical objects}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{b-tagging at ALTAS}\label{btagging}
 The third generation quarks, i.e. top (t) and bottom (b), play a crucial role in the Standard Model and its various extension possibilities like the Leptoquark Model due to their large masses \cite{Hansson}. Therefore, it is essential to identify hadrons containing b quarks and seperating them from light-flavour quarks at hadron collider detectors like {\ATLAS}. This task is commonly reffered as b-tagging and can be seen as a classification problem with the goal to assign right jet flavours. To that end the particle tracks in the Inner Detector and the jet reconstruction of clusters in the electromagnetic and hadronic calorimeter are discriminating objects. \cite{Paganini}\par
@@ -316,6 +324,18 @@ The long lifetime of B hadrons in the order of $\SI{1.6}{\pico\second}$ allow th
 %allgemeines Kapitel hierzu: https://arxiv.org/abs/1709.01290, https://arxiv.org/abs/1111.4190 und https://arxiv.org/abs/0809.4896
 % dann ganz kurzer Ausblick auf https://arxiv.org/abs/1711.08811 (sind alle noch nicht in der bib)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Data analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Current status in the search for skalar leptoquarks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Starting point and research question for the analysis}
+\section{Used data and Monte Carlo samples}
+%MC16a campaign and full data 2017
+\section{Physical object selection}
+\section{Event selection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Results}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \listoffigures
 \addcontentsline{toc}{chapter}{List of figures}%fügt das Bildverzeichnis zum Inhaltsverzeichnis
 \listoftables
@@ -326,7 +346,7 @@ The long lifetime of B hadrons in the order of $\SI{1.6}{\pico\second}$ allow th
  %\begin{itemize}
 % \item Professor Thomas Trefzger für die sehr freundliche Aufnahme an den Lehrstuhl Physik und ihre Didaktik
 % \item Professor Raimund Ströhmer für die konstruktiven Anregungen und hilfreichen Diskussionen, welche die Arbeit sehr vorangebracht haben 
-%  \item Dr. Mahsana Haleem für die Betreuung meiner Bachelor Arbeit, für die geduldigen Erklärungen zu jeder Zeit und die lehrreichen Diskussionen zum Thema meiner Arbeit und darüber hinaus
+%  \item Dr. Mahsana Haleem für die Betreuung meiner Master Arbeit, für die geduldigen Erklärungen zu jeder Zeit und die lehrreichen Diskussionen zum Thema meiner Arbeit und darüber hinaus
 %  \item Verena Herget für die Einarbeitung in die Datenanalyse, für tausend Antworten zu Fragen aller Art, ob phyiskalischer, programmiertechnischer oder alltäglicher Natur, für bereitwilliges und kompetentes Erklären sogar per Fernanalyse, für das Korrekturlesen der Arbeit, für die äußerst nette Atmosphäre im Büro zu jeder Zeit und den Aktionen freizeittechnischer Natur. Ohne Dich wäre ich niemals soweit gekommen. Danke! 
 %  \item Deb Sankar Bhattacharya
 %  \item Thorben Swirski für das Korrekturlesen der Arbeit, fröhliches debuggen, viele Anregungen nebenbei und für ausführliche, fachliche Erläuterungen
