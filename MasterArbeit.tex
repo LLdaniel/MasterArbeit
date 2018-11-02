@@ -17,8 +17,8 @@
 %-----------------------------------------------------------------------------------------------
 % Seitenübersicht aus der Bachelor Arbeit                       vs                      Master Arbeit                                   Diff
 % Einleitung              1.25                                                          
-% Grundlagen              0.25 Vorgeplänkel
-% Standardmodell          3
+% Grundlagen              0.25 Vorgeplänkel                                             0.25                                            0
+% Standardmodell          3                                                             
 % mögliche Erweiterungen  2.5
 % LQ                      2
 % Experimentelle ...      0.25 Vorgeplänkel                                             0.25                                            0
@@ -219,16 +219,97 @@
 %Yukawa Kopplung vielleicht? --> ich bin mir nicht mehr sicher, aber vielleicht habe ich da einen Artikel gelesen (News CERN oder so) wo es um die noch bessere Messung der Yukawa Kopplung ging...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Theoretical background for the search of scalar leptoquarks}\label{theory}
-%Vorgeplänkel fehlt
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This chapter describes the basic theoretical knowledge for the search of scalar Leptoquarks including the successful Standard Model of elementary particle physics evolved from the symbiosis of experimental achievments and theoretical milestones. Besides its success some issues still remain and could be a hint to physics beyond the Standard Model, giving space to introduce the Leptoquark Model as one possible extension. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Standard Model of particle physics}\label{SM}
 A remarkable achievement for understanding nature is the Standard Model of particle physics, embracing physics at the most fundamental level. This quantum field theory, incorporating conceptual frameworks like special relativity and quantum mechanics, describes the constituents of matter and the laws governing their interactions. \cite{Mann} Despite its success of being the best theory so far capable of explaining the observed results within its domain in agreement with empirical data, it seems not to be the complete story. There are still many puzzles left which are not described by the Standard Model. That circumstance keeps physicists well motivated to gain further progress and to push the frontiers of our understanding. \cite{Nair}\par
-%Physics <-> Symmetries Gruppentheorie und Noether Theorem
+One of the most important conceptions in physics is that of symmetries, because they are deeply connected with conservation of laws following Noether`s Theorem. Physical properties can appear in form of a invariant under symmetry transformation, leaving that property unchanged, or as covariant, changing their property induced by the symmetry transformation. %Continuous symmetries yield additive laws whereas discrete symmetries result in multiplicative laws.
+Foundational symmetries of particle include space translation symmetry and hence the conservation of momentum, rotational invariance and hence conservation of momentum as well as time translation invariance leading to energy conservation. The proper mathematical description for fundamental symmetries involves group theory. In case of particle physics almost all groups are Lie groups $\mathcal{G}$, that is a set of objects $\{g_i\}$, which can be combined with a binary operation and has four basic properties: closure, identity, inverse element and associativity. For Lie groups additionally the group elements are continuous and differentiable function of some finite set of parameter $\theta_{a}$:
+\begin{align}
+                g=g(\theta_1, \ldots, \theta_N)=\exp\left[i\theta_a\mathbf{T}^a\right]=\exp\left[i\vec{\theta}\vec{\mathbf{T}}\right]\qquad \text{with}\quad a=1,\ldots,N
+\end{align}
+Here $\mathbf{T}^a$ are the generators of the group from which all elements of the group can be created. The irreducible representatives of a group can be written as complex matrices\footnote{Irreducible means, that not all representing matrices of the group can be decomposed into block-diagonal form simultaneously \cite{Mann}.}, acting on the wavefunction of the particles and on charges as well as on space-time coordinates. \cite{Mann}\par
+Matter and its interactions can be described by two basic types of particles and the fundamental forces, i.e. the electromagnetic force, the weak and the strong force and gravity. Fermionic particles, following Fermi-Dirac statistics, build up matter, whereas bosons, following Bose-Einstein statistics, are acting as mediators of the fundamental forces. \cite{Cottingham}\cite{Griffiths}\newline
+The fermions can be further categorized into $6$ leptons $l$ characterized through lepton quantum number $L_l$ and $6$ quarks $q$ characterized through baryon quantum number $B$ together with their anti-particles ($\bar{l}$ respectively $\bar{q}$). The only difference between particle and anti-particle is contrary electrical charge and contrary lepton respectively baryon number. Leptons occur in three generations with different flavour -- electron (e), muon ($\mu$) and tauon $\tau$ -- and can carry electrical charge $Q=\pm e$ in units of the elementary charge or electrical neutral neutrinos $\nu_l$. \cite{Griffiths}\newline
+Table \ref{SMtable} shows the leptons with selected properties like mass. Various neutrino oscillation experiments confirm, that neutrinos have non-zero masses, although the Standard Model does not predict neutrino masses \cite{Kajita}\cite{McDonald}. The flavor states $\nu_\alpha$ with $\alpha=e,\mu,\tau$ are quantum entangled with the mass states $\nu_i$ where $i=1,2,3$ described by an unitary matrix $U_{\alpha i}$ \cite{mixing}. Because of the absence of the right chirality spinor components, the mass term $\bar{\Psi}_L\Psi_R+\bar{\Psi}_R\Psi_L$ cannot be formed in case of neutrinos. One possible solution is to introduce very massive\footnote{So massive, that it is beyond todays oberservable mass limit \cite{Nair}.} right-chiral neutrinos, giving them the differnt masses with a Majorana mass term. This corresponds to the prediction of the seesaw meachnism. \cite{Nair}   
+\begin{table}[htbp]
+		\centering
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccccc}
+		\hline
+		\hline
+		\rule[-6pt]{0pt}{21pt}\textbf{leptons}  & & & &
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} $l$ & $L_l$ & $B$ & $Q/e$ & $m$/$\frac{\SI{}{\giga\electronvolt}}{\SI{}{\text{\ensuremath{c}\squared}}}$ & Spin $S_z/\hbar$
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} e$^-$ & \(L_e=1\) & $0$ & $-1$ & $0.511$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt}$\nu_e$&  \(L_e=1\)	& $0$ & $0$ & $<2\cdot10^{-6}$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} $\mu^-$ & \(L_{\mu}=1\) & $0$ & $-1$ & $106$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt}$\nu_{\mu}$ &  \(L_{\mu}=1\)	& $0$ & $0$ & $<2\cdot10^{-6}$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} $\tau^-$ & \(L_{\tau}=1\) & $0$ & $-1$ & $1.78\cdot10^3$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt}$\nu_{\tau}$&  \(L_{\tau}=1\)	& $0$ & $0$ & $<2\cdot10^{-6}$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt}  & & & &
+		\\
+		\rule[-6pt]{0pt}{21pt}\textbf{quarks}  & & & &
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} $q$ & \(L_l\) & $B$ & $Q/e$ & $m$/$\frac{\SI{}{\giga\electronvolt}}{\SI{}{\text{\ensuremath{c}\squared}}}$ & Spin $S_z/\hbar$
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} u (up) &  $0$	& $\frac{1}{3}$ & $\frac{2}{3}$ & $2.2$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} d (down) &  $0$	& $\frac{1}{3}$ & $-\frac{1}{3}$ & $4.7$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} c (charm) &  $0$	& $\frac{1}{3}$ & $\frac{2}{3}$ & $1.3\cdot10^3$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} s (strange) &  $0$	& $\frac{1}{3}$ & $-\frac{1}{3}$ & $95$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} t (top) &  $0$	& $\frac{1}{3}$ & $\frac{2}{3}$ & $17\cdot10^{4}$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt} b (bottom) &  $0$	& $\frac{1}{3}$ & $-\frac{1}{3}$ & $4.2\cdot10^{3}$ & $\frac{1}{2}$
+		\\
+		\rule[-6pt]{0pt}{21pt}  & & & &
+		\\
+		\rule[-6pt]{0pt}{21pt} \textbf{gauge bosons} & & & &
+		\\
+		\hline
+		\rule[-7pt]{0pt}{23pt} Eichboson & \(L_l\) & $B$ & $Q/e$ & $m$/$\frac{\SI{}{\giga\electronvolt}}{\SI{}{\text{\ensuremath{c}\squared}}}$ & Spin $S_z/\hbar$
+		\\
+		\hline
+		\rule[-6pt]{0pt}{21pt} $\gamma$ &  $0$	& $0$ & $0$ & $0$ & $1$
+		\\
+		\rule[-6pt]{0pt}{21pt} Z$^0$ &  $0$	& $0$ & $0$ & $91.2$ & $1$
+		\\
+		\rule[-6pt]{0pt}{21pt} W$^-$ &  $0$	& $0$ & $-1$ & $80.4$ & $1$
+		\\
+		\rule[-6pt]{0pt}{21pt} W$^+$ &  $0$	& $0$ & $+1$ & $80.4$ & $1$
+		\\
+		\rule[-6pt]{0pt}{21pt} g &  $0$	& $0$ & $0$ & $0$ & $2$
+		\\
+		\rule[-6pt]{0pt}{21pt} H$^0$ &  $0$	& $0$ & $0$ & $125$ & $0$
+		\\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[Overview of elementary particles with some selected properties.]{Overview of leptons $l$, quarks $q$ and gauge bosons as mediators of the forces with some selected properties and quantum numbers like electrical charge $Q$, mass $m$, lepton number $L_l$ and baryon number $B$. \cite{Nair}\cite{PhysRevD}. Anti-particles are not shown due to the only difference in electrical charge and lepton/baryon number.}
+		\label{SMtable}
+	\end{table}
+%quarks (baryon -->hadron<->mesons      
+%Bosons + kurzer gedanke zu graviton: On elementary particle scales gravity is insignificant compared to all other forces. \cite{Cottingham} außerdem: hypothetisch, falls es eine QFT in verbindung mit ART gäbe
+%
 %NAir und Mann gefallen mir sehr gut 
 %Gedanken zum SM:
-%von folgender Seite betrachten: SM vom Standpunkt der Symmetrien und Gruppentheorie einführen und von der Seite aufziehen.
+%strong (n und p of same duplet) and weak isospin (chirality)
 %Die Frage ist, ob der Lagrangian vorkommen soll
 % außerdem: CPT als Beispiel erwähnen, wenn schon Symmetrien --> gut erklärt auch in Martin und Shaw Buch
+%bei den neutrinos muss vorher noch rechts und linkshändig erklärt werden, und mass term genauer zu higgs bezogen werden, dass es in diesem fall nicht  funktioniert
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Beyond the scope of The Standard Model}\label{beyondSM}
 %GUT und B anomalies explanation within LQ models
@@ -344,7 +425,7 @@ The long lifetime of B hadrons in the order of $\SI{1.6}{\pico\second}$ allow th
 %\chapter*{Acknowledgement}
 %An dieser Stelle möchte ich meinen herzlichen Dank an die Personen aussprechen, die für das Gelingen dieser Arbeit unentbehrlich waren:
  %\begin{itemize}
-% \item Professor Thomas Trefzger für die sehr freundliche Aufnahme an den Lehrstuhl Physik und ihre Didaktik
+% \item Professor Thomas Trefzger für die sehr freundliche Aufnahme an den Lehrstuhl Physik und ihre Didaktik + NTW
 % \item Professor Raimund Ströhmer für die konstruktiven Anregungen und hilfreichen Diskussionen, welche die Arbeit sehr vorangebracht haben 
 %  \item Dr. Mahsana Haleem für die Betreuung meiner Master Arbeit, für die geduldigen Erklärungen zu jeder Zeit und die lehrreichen Diskussionen zum Thema meiner Arbeit und darüber hinaus
 %  \item Verena Herget für die Einarbeitung in die Datenanalyse, für tausend Antworten zu Fragen aller Art, ob phyiskalischer, programmiertechnischer oder alltäglicher Natur, für bereitwilliges und kompetentes Erklären sogar per Fernanalyse, für das Korrekturlesen der Arbeit, für die äußerst nette Atmosphäre im Büro zu jeder Zeit und den Aktionen freizeittechnischer Natur. Ohne Dich wäre ich niemals soweit gekommen. Danke! 
