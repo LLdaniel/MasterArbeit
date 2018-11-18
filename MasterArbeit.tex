@@ -1,6 +1,8 @@
 %%      --- TO DO --- 
 %%    Die Frage ist, ob das jetzt noch eine Idee ist, den Detektoraufbau von der systematischen Teilchenbestimmungs-Seite aufzuziehen, quasi so, wie man es in der Masterclass lernt, mit einzelnen Spuren unterscheiden usw... --> siehe hierfür das Skript zusammenfassung ATLAS sowie https://cds.cern.ch/record/1096081/export/hx?ln=en und https://cds.cern.ch/record/1096081, oder ob das nicht dann doch zu viel wird
 %
+%FCNC im LQ Kaptiel braucht sehr wahrscheinlich eine Erklärung!!
+%
 %%    Danksagung --> noch überlegen, ob die nicht vielleicht doch auf Deutsch sein soll..., aber Deb, Mahsana usw lesen das lieber auf Englisch, ein misch masch kommt aber auch komisch -->eher doch englisch
 %-----------------------------------------------------------------------------------------------
 %                   Gliederungsideen
@@ -369,19 +371,55 @@ Different shortcomings of the Standardmodel open up chances to extend the the cu
 %
 %
 \subsection{Leptoquarks and grand unified theories}
-The first {\GUT} was proposed by Georgi and Glashow \cite{GeorgiGlashow}. They ruled out that the group $SU(5)$ incorporates all the fermions into one multiplet following the same universal coupling. This enables the possibility to transforms leptons and quarks into each other with leptoquarks as mediators. \cite{Perkins} Altought the Georgi-Glashow model had a great impact, this model is ruled out. It predicts a lifetime of the proton of $10^{30}y$, but the current experimental lower limit is      
-%SU(5) Georgi Glashow --> ruled out ->lifetime p
-%SO(10) und E_6 noch, muss ja auch nicht so lang werden
+The first {\GUT} was proposed by Georgi and Glashow \cite{GeorgiGlashow}. They ruled out that the group $SU(5)$ incorporates all the fermions into one multiplet following the same universal coupling. This enables the possibility to transforms leptons and quarks into each other with leptoquarks as mediators. \cite{Perkins} Altought the Georgi-Glashow model had a great impact, this model is ruled out. It predicts a lifetime of the proton of $10^{30}\,\text{y}$, but the current experimental lower limit is $10^{33}\,\text{y}$. \cite{Griffiths}\par%vllt noch einen Feynmangraph zum Proton Zerfall S. 408, Griffiths
+Another unifying group would be $SO(10)$, which is broken to $SO(10)\rightarrow SU(4)_c\times SU(2)_L\times SU(2)_R$, where the leptons are treated as a forth color. \cite{PatiSalamExplanation} This model is the Pati-Salam {\GUT} model \cite{PatiSalam}. Here also the right-handed leptons are included, acting different than their left-chiral counterpart as it is expected for solutions of the neutrino masses for example. \cite{PatiSalamExplanation}\par
+Other symmetry groups like $E_6$, inspired by superstring models, are also canditates for a {\GUT} theory. \cite{E6} $E_6$ has a rank of $6$ and is member of the exceptional Lie groups. Furthermore it can be seen as the natural extension of $SU(5)$ and $SU(10)$ and includes a greater set of particles, interpreting them as dark matter candidates. \cite{E6explanation}
 %
 %
 \subsection{Effective Leptoquark models}
+%12 new mediators X (charge +-4/3, 3 colors = 6) und Y (charge +-1/3, 3 colors = 6) they couple to anti quarks and leptons (anti d liegt  im selben multiplet wie e-) griffiths
+%X(Q,I3,Y)=(4/3,1/2,5/3), >(Q,I3,Y)=(1/3,-1/2,5/3) Nagashima
+%gauge bosons both with su3 and su2 quantum numbers. these are associated with generators E_ar^+ a =1,2,3 r=4,5- These will be indicated as (X_mu)^alpha and (Y_mu)^alpha associated with r = 4,5 respectively. They occupy the positions indicated by alpha and r. the gauge bosons associated with E_alphar^- are the adjoined of the above and will be indicated as (X_mu)_alpha and (Y_mu)_alpha or equivalently as (Xbar_mu)^alpha and (Ybar_mu)^alpha. the gauge bosons X und Y are triplets under su3 and doublets under su2 and have hypercharge xxx and xxx (wie bei griffiths) vergados
+%The known fermions split into three generations each containing 15 states. for example the first generation comprises u and d each in three colors and helicity states, the e- in two helicity states and the nu_e with one helicity state. by convention su5 multiplets are written down as LH states and  RH states are replaced by LH antiparticles (since CP symmetry e-_Land e+_L are equivalent, the RH states of course appear in seperate multiplets) Perkins
+The introduction of the effective leptoquark models closely follows \cite{Kuze}.\newline
+Leptoquarks are color-triplet scalar $(S)$ or vector $(V)$ bosons having baryon and lepton numbers and carry fractional electrical charge. \cite{Kuze} A general formulation of an effective Lagrangian for leptoquark interaction with the SM fermions was proposed by Buchm\"{u}ller, R\"{u}ckl and Wyler \cite{BRW}. It assumes that LQs
+\begin{itemize}
+\item[(i)] have renormalizable interactions.
+\item[(ii)] have interactions invariant under the SM gauge symmetries $SU(3)_c\times SU(2)_L\times U(1)_Y$.
+\item[(iii)] couple only to the SM fermions, gauge bosons and the Higgs boson.
+\item[(iv)] are required to conserve the lepton number $L$ and the baryon number $B$ seperately. They carry the fermion number
+\begin{align}
+                        F=3B+L
+\label{fermionnumber}
+\end{align}
+of $|F|=0$ or $|F|=2$.
+\item[(v)] each LQ couples to only a single quark-lepton generation, i.e. three LQ families.
+\item[(vi)] has pure chiral couplings to the SM fermions.
+\end{itemize}
+Condition (iv) makes sure that the proton instability is avoided. Condition (v) only allows inter-generational interactions and large tree-level flavor changing neutral currents and flavor universalites. Condition (vi) supresses contributions to chirally meson decays like $\pi\rightarrow e\nu$. The LQ model, fulfilling (i)-(vi), is the so called minimal-Buchm\"{u}ller-R\"{u}ckl-Wyler effective model (mBRW) with coupling constant $\lambda$.\newline
+Fourteen different leptoquark types are known and are listed in table \ref{LQstable}. 
+%experimental (masses erklärung? versteht man das? ah, phd lmu gibt aufschluss) + table of lq von kuze br ratio etc
+\par
+%generic da wird auf hewett verwiese
+%dann noch überblick, was jetzt sonst in den anderen papern stünde, das das auf alle Fälle abgeklärt ist
+%hier auch dann generic models erwähnen S8 SUSYandLQ, dann ist der Anschluss auf der SUSY Seite besser: LQ->models->constraints->exp Suche aber freier->generic models->LQ like SUSY decays
+%generic -> (v) ist dann halt nicht so streng, bei der generischen Suche
+%die relevanten websites sind:
+%https://edoc.ub.uni-muenchen.de/9100/1/Krobath_Gernot.pdf
+%https://arxiv.org/pdf/hep-ph/9709356.pdf
+%https://arxiv.org/pdf/hep-ex/0211048.pdf
+%https://ac.els-cdn.com/037026938790637X/1-s2.0-037026938790637X-main.pdf?_tid=7fd73e94-a159-4098-a0c1-5df2ae6f102b&acdnat=1542542854_1685c5ae7ed0ff0824a75e01ecf264ea
+%https://journals.aps.org/prd/pdf/10.1103/PhysRevD.8.1240
+%https://journals.aps.org/prd/pdf/10.1103/PhysRevD.37.3165
+%
 %
 %
 \subsection{Leptoquark-like couplings in supersymmetry}
-%%S8 von SSUSYandLQ hat jetzt auch noch generic beschreibung drin, das ist super! Kommt aber eher von dem Standpunkt LQ->models->constraints->exp Suche aber freier->generic models->LQ like SUSY decays
+An additional generic picture can result from the view point of supersymmetry. In $R$-parity violating {\SUSY} models squarks can produce leptoquark-like signature, because of decay modes involving Yukawa coupling. The left-chiral $\tilde{u}_L$\footnote{Usually the supersymmetric partner particles are denoted with a tilde $\left(\widetilde{\quad}\right)$.} squark couples to a $e^++d$ pair similar a leptoquark $\tilde{S}_{1/2,L}$ with electrical charge of $Q=|\frac23|e$ would do. Analogous the $\tilde{d}_R$ squark couples to a $e^-+u$ pair or $\nu_e+d$ pair and mimics a $S_0$ leptoquark of charge $Q=|\frac13|e$. From an experimental view point, the oberservation of such decay is not only restricted to LQ models, but also has implications for the coupling constant of a possible {\SUSY} models. \cite{SUSYandLQ}     
+%
 %
 \subsection{Leptoquark pair production in proton-proton collisions}\label{LQpp}
-%GUT und B anomalies explanation within LQ models --> mal darüber nachdenken, ob man nicht die Kapitelstrukur ändert, ähnlich wie es in der Dr Arbeit LMU ist... das wäre zusammenhängender
+% mal darüber nachdenken, ob man nicht die Kapitelstrukur ändert, ähnlich wie es in der Dr Arbeit LMU ist... das wäre zusammenhängender
 %https://cds.cern.ch/record/2308307/files/SUgS-18-001-pas.pdf guter Ausgangspunkt auch für LQ Literatur Suche
 %https://edoc.ub.uni-muenchen.de/9100/1/Krobath_Gernot.pdf
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
