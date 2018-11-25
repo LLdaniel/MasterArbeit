@@ -5,6 +5,10 @@
 %
 %ob wohl das physical objects Kapitel gekürzt werden sollte... Etwas kondensierter vielleicht und mehr mit eigenen worten, was so das grundprinzip ist
 %
+%Verena Masterarbeit: wo ist das MC zeug her??
+%%
+%QCD und QED sollte vielleicht mal im SM erwähnt werden
+%
 % im pp LQpair prod chapter: den channel nochmal genauer spezifizieren und zur LQ tabelle bezug nehmen, vielleicht kann man auch noch ein bisschen mehr dazu sagen+generic? + final state results in jets/bjets plus tau ->verweis auf Physical objects chapter
 %
 %%    Danksagung --> noch überlegen, ob die nicht vielleicht doch auf Deutsch sein soll..., aber Deb, Mahsana usw lesen das lieber auf Englisch, ein misch masch kommt aber auch komisch -->eher doch englisch
@@ -466,20 +470,77 @@ An additional generic picture can result from the view point of supersymmetry. I
 \subsection{Leptoquark pair production in proton-proton collisions}\label{LQpp}
 For the search of leptoquarks, the mBRW model (see chapter \ref{effmodels}) is taken as basis.\newline 
 At proton-proton colliders, like the {\LHC}, the leptoquarks can be be produced in pairs by gluon-fusion and smaller contributions of quark-fusion. These main processes are shown in Feynman graphs in figure \ref{LQpairs}. The upper row describes the gluon initated production and the lower one the quark initiated production. The last Feynman graph (lower right) is proportional to the square of the coupling constant ($\lambda^2$) \cite{hunter}\cite{Hewett}. Cross section calculations for such processes and further details can be found for example in reference \cite{Kramer}.  
-%
-\begin{figure}[htbp]                                 
- \begin{center}                                       
-  \includegraphics[width=\linewidth]{figures/pairproduction.pdf} 
-   \caption[Feynman graphs of leptoquark pair production processes at proton-proton colliders like the {\LHC}.]{Feynman graphs of leptoquark pair production processes dominated by gluon-fusion (upper row) and smaller contributions by quark-fusion (lower row) at proton-proton colliders like the {\LHC}. \cite{hunter}}
-  \label{LQpairs}                                     
- \end{center}
+\begin{figure}[h]
+\centering
+\subfloat[Subfigure 1 list of figures text][Subfigure 1 caption]{
+\includegraphics[width=0.4\textwidth]{figure1.jpg}
+\label{fig:subfig1}}
+\qquad
+\subfloat[Subfigure 2 list of figures text][Subfigure 2 caption]{
+\includegraphics[width=0.4\textwidth]{figure2.jpg}
+\label{fig:subfig2}}
+\subfloat[Subfigure 3 list of figures text][Subfigure 3 caption]{
+\includegraphics[width=0.4\textwidth]{figure3.jpg}
+\label{fig:subfig3}}
+\qquad
+\subfloat[Subfigure 4 list of figures text][Subfigure 4 caption]{
+\includegraphics[width=0.4\textwidth]{figure4.jpg}
+\label{fig:subfig4}}
+\caption{This is a figure containing several subfigures.}
+\label{fig:globfig}
 \end{figure}
 %
+\begin{figure}
+  \centering
+                \begin{minipage}[t]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{figures/gfa.pdf}
+                %\subcaption[]{}
+                %\label{}
+                \end{minipage}
+                %
+                \begin{minipage}[t]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{figures/gfb.pdf}
+                %\subcaption[]{}
+                %\label{}
+                \end{minipage}
+                %
+                \begin{minipage}[t]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{figures/gfc.pdf}
+                %\subcaption[]{}
+                %\label{}
+                \end{minipage}
+                %
+                \begin{minipage}[t]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{figures/gfd.pdf}
+                %\subcaption[]{}
+                %\label{}
+                \end{minipage}
+                %
+                \begin{minipage}[t]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{figures/qfe.pdf}
+                %\subcaption[]{}
+                %\label{}
+                \end{minipage}
+                %
+                \begin{minipage}[t]{0.4\textwidth}
+                \includegraphics[width=1\textwidth]{figures/qff.pdf}
+                %\subcaption[]{}
+                %\label{}
+                \end{minipage}
+%
+\caption[Feynman graphs of leptoquark pair production processes at proton-proton colliders like the {\LHC}.]{Feynman graphs of leptoquark pair production processes dominated by gluon-fusion (upper row) and smaller contributions by quark-fusion (lower row) at proton-proton colliders like the {\LHC}. \cite{hunter}}
+\label{LQpairs}
+\end{figure}
+%
+
+
+
+
 The detectable final states, in this case with the {\ATLAS} detector, are governed by the Yukawa coupling $\lambda_{lq}$ of the leptoquark directly on the quark $q$ and lepton $l$ (see figure \ref{YukawaLQ}). The model is defined by two parameters derived from $\lambda_{lq}$: The branching ratio $\beta$ and a coupling constant $\lambda$ are connected to the Yukawa coupling constant like $\lambda_{lq}=\sqrt{\beta}\lambda$ for a charged lepton and like $\lambda_{lq}=\sqrt{1-\beta}\lambda$ for neutrinos. \cite{LQATLAS}\par
 %
 \begin{figure}[htbp]                                 
  \begin{center}                                       
-  \includegraphics[width=0.444444\linewidth]{figures/yukawa.pdf} 
+  \includegraphics[width=0.4\linewidth]{figures/yukawa.pdf} 
    \caption[Feynman graphs of a leptoquark decay gouverned by Yukawa coupling.]{Feynman graphs of a leptoquark decay into a lepton $l$ and a quark $q$ gouverned by Yukawa coupling $\lambda_{lq}=\sqrt{\beta}\lambda$. \cite{LQATLAS}}
   \label{YukawaLQ}                                     
  \end{center}
@@ -617,7 +678,13 @@ To ensure that electrons will be not misinterpreted as 1-prong tau decays an add
 %
 %
 \section{Monte Carlo simulations}
-%auch mal in Hinblick auf MC prüfen...: https://cds.cern.ch/record/2157687/files/ATLAS-CONF-2016-024.pdf
+Final states of high energy particle collision experiments, like the {\LHC}, is an extremely challenging endeavor. Typically hundreds of particles of different species are involved and their energy and momentum spectra a widely distributed over differnt orders of magnitudes. Understanding these complex processes are crucial to make physical predictions and search for new physics. Therefore Monte Carlo simulations (MC) are one important cornerstone to handle these scenarios. \cite{bigMC}\par
+The MC chain for the {\ATLAS} detector has three main steps. This includes the generation of MC events with event generators, the simulation of the detector and the propagation of the particles with the associated interactions and the digitization of energy deposited in the detector's sensitive areas. The last step involves the simulation of the resulting signals in the readout system for comparison with real data. The detailed implemented simulation of the detector additionally considers realistic detector conditions and misalignments as well as the detector response to be as realistic as possible. This fact enhances the digital copy to furthermore test the effectiveness of proposed search strategies for specific signatures. \cite{ATLASSim}
+
+
+%-->relevant matrix element are to labourious to compute beyond the first few orders of perturbation theory even there are non-perturbative problems in quantum chromodynamics (confinement) -->using mc techniques bigMC to overcome or circumvent these problems
+
+%achieve reliable pysical results the sim has to be corrected to data to reproduce data ePerf
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Data analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
