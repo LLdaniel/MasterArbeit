@@ -83,14 +83,17 @@ author = {CERN}
   url={http://stacks.iop.org/1748-0221/3/i=08/a=S08003},
   year={2008},
 }
-@article{newATLASJINST,
-      author         = "Aad, Georges and others",
-      title          = "{Technical Design Report for the Phase-I Upgrade of the
-                        ATLAS TDAQ System}",
-      collaboration  = "ATLAS",
-      year           = "2013",
-      reportNumber   = "CERN-LHCC-2013-018, ATLAS-TDR-023",
-      SLACcitation   = "%%CITATION = CERN-LHCC-2013-018;%%"
+@techreport{newATLASJINST,
+      author        = "Aad, Georges and others",
+      title         = "{Technical Design Report for the Phase-I Upgrade of the
+                       ATLAS TDAQ System}",
+      collaboration = "ATLAS Collaboration",
+      number        = "CERN-LHCC-2013-018. ATLAS-TDR-023",
+      month         = "Sep",
+      year          = "2013",
+      reportNumber  = "CERN-LHCC-2013-018",
+      url           = "https://cds.cern.ch/record/1602235",
+      note          = "Final version presented to December 2013 LHCC.",
 }
 %Insertable B-Layer
 @article{IBL,
@@ -207,6 +210,15 @@ eprint = {\url{https://www.worldscientific.com/doi/pdf/10.1142/1128}}
 	PUBLISHER = {Wiley},
 	ADDRESS = {New York},
 }
+@BOOK{Peskin,
+	AUTHOR = {Peskin, Michael E. AND Schroeder, Daniel V.},
+	YEAR = {1995},
+	TITLE = {An Introduction to Quantum Field Theory - },
+	EDITION = {},
+	ISBN = {978-0-201-50397-5},
+	PUBLISHER = {Addison-Wesley Publishing Company},
+	ADDRESS = {Reading},
+}
 %Kajita und Mc Donald paper --> neutrino oscillations
 @article{Kajita,
   title = {Evidence for Oscillation of Atmospheric Neutrinos},
@@ -272,7 +284,10 @@ month = {09},
 pages = {},
 title = {Measurement of the $\eta$ c (1S) production cross-section via the decay $\eta$ c to proton-antiproton final state}
 }
-%beyond SM - quantum gravity
+%---------------------------
+% beyond SM
+%---------------------------
+%quantum gravity
 @BOOK{quantumgravity,
 	AUTHOR = {Kiefer, Claus},
 	YEAR = {2007},
@@ -282,7 +297,7 @@ title = {Measurement of the $\eta$ c (1S) production cross-section via the decay
 	PUBLISHER = {OUP Oxford},
 	ADDRESS = {New York, London},
 }
-%beyond SM - hierarchy problem
+%hierarchy problem
 @article{hierarchy,
       author         = "Fowlie, Andrew and Balazs, Csaba and White, Graham and
                         Marzola, Luca and Raidal, Martti",
@@ -392,9 +407,9 @@ title = {Measurement of the $\eta$ c (1S) production cross-section via the decay
       SLACcitation   = "%%CITATION = HEP-TH/9805067;%%"
 }
 
-%
+%------------------------------------------------
 % LQ
-%========================================
+%------------------------------------------------
 %SU(5) Georgi Glashow GUT model - the first of all 
 @article{GeorgiGlashow,
   title = {Unity of All Elementary-Particle Forces},
@@ -480,7 +495,7 @@ author = "JoAnne L. Hewett and Thomas G. Rizzo",
       SLACcitation   = "%%CITATION = ARXIV:1706.05033;%%"
 }
 % pair production of scalar leptoquarks to NLO Parton Shower accuracy
-@article{Mandal:2015lca,
+@article{currentStatus:shower,
       author         = "Mandal, Tanumoy and Mitra, Subhadip and Seth, Satyajit",
       title          = "{Pair Production of Scalar Leptoquarks at the LHC to NLO
                         Parton Shower Accuracy}",
@@ -497,7 +512,7 @@ author = "JoAnne L. Hewett and Thomas G. Rizzo",
       SLACcitation   = "%%CITATION = ARXIV:1506.07369;%%"
 }
 %13TeV paper leptoquarks third generation ABER: CMS
-@article{Sirunyan:2018nkj,
+@article{currentStatus:13TeVCMS,
       author         = "Sirunyan, Albert M and others",
       title          = "{Search for third-generation scalar leptoquarks decaying
                         to a top quark and a $\tau$ lepton at $\sqrt{s}=$ 13 TeV}",
@@ -511,7 +526,7 @@ author = "JoAnne L. Hewett and Thomas G. Rizzo",
       SLACcitation   = "%%CITATION = ARXIV:1803.02864;%%"
 } 
 % third generation LQ ATLAS 7TeV
-@article{ATLAS:2013oea,
+@article{currentStatus7TeVATLAS,
       author         = "Aad, Georges and others",
       title          = "{Search for third generation scalar leptoquarks in pp
                         collisions at $\sqrt{s}$ = 7 TeV with the ATLAS detector}",
@@ -528,7 +543,7 @@ author = "JoAnne L. Hewett and Thomas G. Rizzo",
       SLACcitation   = "%%CITATION = ARXIV:1303.0526;%%"
 }
 %ATLAS + CMS LQ like signatures
-@article{ROMEO2016638,
+@article{currentStatus:CMSuATLAS,
 title = "Search for leptoquark-like signatures with the ATLAS and CMS detectors",
 journal = "Nuclear and Particle Physics Proceedings",
 volume = "273-275",
@@ -703,9 +718,9 @@ abstract = "The case is made for light spinless leptoquarks of the Goldstone bos
 % more on that:
 % ATLAS discussions sessions on various LQ models: https://indico.cern.ch/event/672990/
 % select "Leptoquarks" https://twiki.cern.ch/twiki/bin/view/AtlasPublic/ExoticsPublicResult
-
+%------------------------------------
 %reconstruction perfomance chapter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+%-----------------------------------
 @techreport{ePerformance,
       title         = "{Electron efficiency measurements with the ATLAS detector
                        using the 2015 LHC proton-proton collision data}",
@@ -812,18 +827,6 @@ url="https://doi.org/10.1140/epjc/s10052-017-5031-2"
       reportNumber   = "CERN-PH-EP-2015-304",
       SLACcitation   = "%%CITATION = ARXIV:1603.02934;%%"
 }
-@techreport{ATL-PHYS-PUB-2015-045,
-      title         = "{Reconstruction, Energy Calibration, and Identification of
-                       Hadronically Decaying Tau Leptons in the ATLAS Experiment
-                       for Run-2 of the LHC}",
-      institution   = "CERN",
-      address       = "Geneva",
-      number        = "ATL-PHYS-PUB-2015-045",
-      month         = "Nov",
-      year          = "2015",
-      reportNumber  = "ATL-PHYS-PUB-2015-045",
-      url           = "https://cds.cern.ch/record/2064383",
-}
 @techreport{tauPerformance,
       title         = "{Reconstruction, Energy Calibration, and Identification of
                        Hadronically Decaying Tau Leptons in the ATLAS Experiment
@@ -920,7 +923,7 @@ keywords = "High energy physics, Nuclear physics, Radiation, Simulation, Computi
 	ADDRESS = {New York},
 }
 % tau reconstruction/production
-% ===============================================
+% 
 % tau production with ATLAS http://etheses.bham.ac.uk/1746/2/Collins_11_PhD.pdf  --> Dr Arbeit
 %request for MC from Mahsana
 % https://indico.cern.ch/event/718232/contributions/2980693/attachments/1639448/2617178/tttautau.pdf
@@ -1007,22 +1010,9 @@ keywords = "High energy physics, Nuclear physics, Radiation, Simulation, Computi
       reportNumber   = "CERN-PH-EP-2014-227",
       SLACcitation   = "%%CITATION = ARXIV:1412.7086;%%"
 }
-%additional:
-@techreport{ATL-PHYS-PUB-2015-045,
-      title         = "{Reconstruction, Energy Calibration, and Identification of
-                       Hadronically Decaying Tau Leptons in the ATLAS Experiment
-                       for Run-2 of the LHC}",
-      institution   = "CERN",
-      address       = "Geneva",
-      number        = "ATL-PHYS-PUB-2015-045",
-      month         = "Nov",
-      year          = "2015",
-      reportNumber  = "ATL-PHYS-PUB-2015-045",
-      url           = "https://cds.cern.ch/record/2064383",
-}
-%=====================================================
+%------------------------------------------
 % b-tagging 
-%
+%--------------------------------------------
 %b tagging at ATLAS and CMS
 @inproceedings{Luca,
       author         = "Scodellaro, Luca",
@@ -1108,41 +1098,14 @@ keywords = "High energy physics, Nuclear physics, Radiation, Simulation, Computi
       url           = "https://cds.cern.ch/record/2160731",
 }
 %%Bachelorarbeits- part
-%%
-%%
-%%
-%%
-%%
-%%
-%%
-%%
-%%%
-%%
-%%
-%%
-%%
-%%
-%%
-%%%%
-%%
-%%
-%%
-%%
-%%
-%%
-%%%
-%%
-%%
-%%%%
-%%
-%%%
-%%
-%%
-%%
-%%
-%%
-%%
-%%%
+%%X
+%% X
+%%  X
+%%   X
+%%    X
+%%     X
+%%      X
+%%       X 
 %%
 %%
 %%
@@ -1152,50 +1115,37 @@ keywords = "High energy physics, Nuclear physics, Radiation, Simulation, Computi
 %%
 %%
 %%
-%% ========================================================================================================================
+%%
+%%
+%%
+%%
+%%
+%%
+%%
+%%                          X
+%%                            X
+%%
+%%                               X
+%%
+%%
+%%
+%%
+%%
+%%
+%%
+%%
+%%
+%%                                             X 
+%%                                                  X    X 
+%%                                                                                         XXXXXXXXXXXXXXXXXXXXXXXXXXX
+%%
+%%
+%%
+%%
+%
 %=============================================
-%BACHELORARBEIT LITERATURVERZEICHNIS
+%BACHELORARBEIT LITERATURVERZEICHNIS - ausgewählte Einträge
 %=============================================
-%--------
-%allgemeiner: Datenanalyse von Sätzen mit Myonen
-%---------
-%Muon reconstruction performance 13TeV
-@article{MuPerNeu,
-      author         = "Aad, Georges and others",
-      title          = "{Muon reconstruction performance of the ATLAS detector in
-                        proton–proton collision data at $\sqrt{s}$ =13 TeV}",
-      collaboration  = "ATLAS",
-      journal        = "Eur. Phys. J.",
-      volume         = "C76",
-      year           = "2016",
-      number         = "5",
-      pages          = "292",
-      doi            = "10.1140/epjc/s10052-016-4120-y",
-      eprint         = "1603.05598",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      reportNumber   = "CERN-EP-2016-033",
-      SLACcitation   = "%%CITATION = ARXIV:1603.05598;%%"
-}
-%7/8TeV Daten, Muon reconstruction, verweis vom LQATLAS paper von Giovanni--langjährige Grundlage!
-@article{MuPerAlt,
-      author         = "Aad, Georges and others",
-      title          = "{Measurement of the muon reconstruction performance of
-                        the ATLAS detector using 2011 and 2012 LHC proton-proton
-                        collision data}",
-      collaboration  = "ATLAS",
-      journal        = "Eur. Phys. J.",
-      volume         = "C74",
-      year           = "2014",
-      number         = "11",
-      pages          = "3130",
-      doi            = "10.1140/epjc/s10052-014-3130-x",
-      eprint         = "1407.3935",
-      archivePrefix  = "arXiv",
-      primaryClass   = "hep-ex",
-      reportNumber   = "CERN-PH-EP-2014-151",
-      SLACcitation   = "%%CITATION = ARXIV:1407.3935;%%"
-}
 %Expected performance: Eta phi map, die anzeigt, wie viele Kammern getroffen werden
 @article{KammernCount,
       author         = "Aad, G. and others",
@@ -1217,28 +1167,6 @@ keywords = "High energy physics, Nuclear physics, Radiation, Simulation, Computi
        publisher = {Julius-Maximilians-Universit{\"a}t W{\"u}rzburg},
             year = {2014}
 }
-%das MS Bild kommt aus diesem Paper
-@inproceedings{MyonSpectrometer,
-      author         = "Diehl, E.",
-      title          = "{Calibration and Performance of the ATLAS Muon
-                        Spectrometer}",
-      booktitle      = "{Particles and fields. Proceedings, Meeting of the
-                        Division of the American Physical Society, DPF 2011,
-                        Providence, USA, August 9-13, 2011}",
-      collaboration  = "ATLAS",
-      url            = "https://inspirehep.net/record/930228/files/arXiv:1109.6933.pdf",
-      year           = "2011",
-      eprint         = "1109.6933",
-      archivePrefix  = "arXiv",
-      primaryClass   = "physics.ins-det",
-      reportNumber   = "ATL-COM-MUON-2011-019",
-      SLACcitation   = "%%CITATION = ARXIV:1109.6933;%%"
-}
-%-------
-%LQ
-%-------
-%LQ Paper ATLAS von Giovanni bekommen
-
 %---------
 %Detektortechnik
 %-------------
@@ -1252,62 +1180,9 @@ keywords = "High energy physics, Nuclear physics, Radiation, Simulation, Computi
 	PUBLISHER = {Springer Science & Business Media},
 	ADDRESS = {Berlin Heidelberg},
 }
-%THE LHC MACHINE
-@article{LHC,
-  author={Lyndon Evans and Philip Bryant},
-  title={LHC Machine},
-  journal={Journal of Instrumentation},
-  volume={3},
-  number={08},
-  pages={S08001},
-  url={http://stacks.iop.org/1748-0221/3/i=08/a=S08001},
-  year={2008},
-  abstract={The Large Hadron Collider (LHC) at CERN near Geneva is the world's newest and most powerful tool for Particle Physics research. It is designed to collide proton beams with a centre-of-mass energy of 14 TeV and an unprecedented luminosity of cm$^{-2}$s$^{-1}$. It can also collide heavy (Pb) ions with an energy of 2.8 TeV per nucleon and a peak luminosity of 10 27 cm$^{-2}$s$^{-1}$. In this paper, the machine design is described.}
-}
-%Technical design report ATLAS Muonspectrometer
-@article{MS,
-      title          = "{ATLAS muon spectrometer: Technical design report}",
-      collaboration  = "ATLAS",
-      year           = "1997",
-      reportNumber   = "CERN-LHCC-97-22, ATLAS-TDR-10",
-      SLACcitation   = "%%CITATION = CERN-LHCC-97-22;%%"
-}
-%Technical design report ATLAS 
-%CSC, so wie man es erwartet: Mal nachsehen auch wegen typischen Eta; Phi Plots...
-@article{ATLAS,
-      author         = "Aad, G. and others",
-      title          = "{The ATLAS Experiment at the CERN Large Hadron Collider}",
-      collaboration  = "ATLAS",
-      journal        = "JINST",
-      volume         = "3",
-      year           = "2008",
-      pages          = "S08003",
-      doi            = "10.1088/1748-0221/3/08/S08003",
-      url            = "{http://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08003/pdf;jsessionid=26565AAFAAAB1530BDB2D897A9562007.c4.iopscience.cld.iop.org}",
-      SLACcitation   = "%%CITATION = JINST,3,S08003;%%"
-}
 %----------
 %Allgemein: SM, Hochenergiephysik, l und q, Quantenfeldtheorie...
 %----------
-%Allgemeiner Quarks und Leptonen
-@book{Halzen,
-author={Halzen, FMartin, Alan D},
-title={Quarks and leptons},
-place={New York},
-publisher={Wiley},
-year={1984}
-}
-%Einführung in Quantenfeld Theorie
-@BOOK{Peskin,
-	AUTHOR = {Peskin, Michael E. AND Schroeder, Daniel V.},
-	YEAR = {1995},
-	TITLE = {An Introduction to Quantum Field Theory - },
-	EDITION = {},
-	ISBN = {978-0-201-50397-5},
-	PUBLISHER = {Addison-Wesley Publishing Company},
-	ADDRESS = {Reading},
-}
-
 %Higgs Massenmessung Paper combined ATLAS und CMS
 @article{HiggsMasse,
   title = {Combined Measurement of the Higgs Boson Mass in $pp$ Collisions at $\sqrt{s}=7$ and 8 TeV with the ATLAS and CMS Experiments},
@@ -1462,19 +1337,4 @@ doi = {10.1002/ciuz.201000514},
 pages = {190--197},
 keywords = {Kunststoffe, Duroplaste, Phenolharze, Bakelit, Schellack},
 year = {2010},
-}
-%=================================
-%Eigentlich aus der Vorlesung Detektoren für Teilchenstrahlung
-%=================================
-%Physics at TeV sale: Theorie- und Experimentteil
-
-%ziemlich alt eigentlich (wahrscheinlich nicht so hilfreich)
-@BOOK{Kleinknecht,
-	AUTHOR = {Kleinknecht, Konrad},
-	YEAR = {1987},
-	TITLE = {Detektoren f\"{u}r Teilchestrahlung - },
-	EDITION = {2.Aufl. 1987},
-	ISBN = {978-3-519-13058-1},
-	PUBLISHER = {Vieweg+Teubner Verlag},
-	ADDRESS = {Wiesbaden},
 }
