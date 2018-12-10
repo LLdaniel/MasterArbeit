@@ -384,7 +384,7 @@ Different shortcomings of the Standardmodel open up chances to extend the curren
 %
 %
 \subsection{Leptoquarks and grand unified theories}\label{GUTandLQ}
-The first {\GUT} model was proposed by Georgi and Glashow in 1974 \cite{GeorgiGlashow}. They proposed that the group $SU(5)$ incorporates all the fermions into one multiplet following the same universal coupling. This enables the possibility to transform leptons and quarks into each other with leptoquarks as mediators. Various global symmetries can embed the SM symmetries, but $SU(5)$ is the simplest one. \cite{Perkins} Altough the Georgi-Glashow model had a great impact, this model has been ruled out. It predicts a lifetime of the proton of $10^{30}\,\text{years}$, but the current experimental lower limit is $10^{33}\,\text{years}$. \cite{Griffiths}\par%vllt noch einen Feynmangraph zum Proton Zerfall S. 408, Griffiths, experimental data proton lifetime https://arxiv.org/pdf/hep-ex/0502026.pdf
+The first {\GUT} model was proposed by Georgi and Glashow in 1974 \cite{GeorgiGlashow}. They proposed that the group $SU(5)$ incorporates all the fermions into one multiplet following the same universal coupling. This enables the possibility to transform leptons and quarks into each other with leptoquarks as mediators. Various global symmetries can embed the SM symmetries, but $SU(5)$ is the simplest one. \cite{Perkins} Altough the Georgi-Glashow model had a great impact, this model has been ruled out \cite{GeorgiGlashowruledout}. It predicts a lifetime of the proton of $10^{30}\,\text{years}$, but the current experimental lower limit is $10^{33}\,\text{years}$\footnote{This value is vaild for the decay mode $p\rightarrow e^+K^0$. The predictions of the proton lifetime for other dominant decay modes -- relevant in {\GUT} models -- are higher and can be found in reference \cite{protonlifetime}.} \cite{Griffiths}\cite{protonlifetime}.\par%vllt noch einen Feynmangraph zum Proton Zerfall S. 408, Griffiths
 Another unifying group would be $SO(10)$, which is broken to $SO(10)\rightarrow SU(4)_c\times SU(2)_L\times SU(2)_R$, where the leptons are treated as a forth color. \cite{PatiSalamExplanation} This model is knwon as Pati-Salam {\GUT} model \cite{PatiSalam}. Here also the right-handed leptons are included, acting differently than their left-chiral counterparts as it is expected for solutions of the neutrino masses for example. \cite{PatiSalamExplanation}\par
 Other symmetry groups like $E_6$, inspired by superstring models, are also candidates for a {\GUT} theory. \cite{E6} $E_6$ has a rank of $6$ and is a member of the exceptional Lie groups. Furthermore it can be seen as the natural extension of $SU(5)$ and $SU(10)$ and naturally includes a greater set of particles. These additional particles can be, for instance, interpreted as dark matter candidates. \cite{E6explanation}
 %
@@ -509,12 +509,12 @@ At proton-proton colliders, like the {\LHC}, leptoquarks can be be produced in p
 %
 %
 %
-The detectable final states are governed by the Yukawa coupling $\lambda_{lq}$ of the leptoquark directly to the quark $q$ and lepton $l$ (see figure \ref{YukawaLQ}). The model is defined by two parameters derived from $\lambda_{lq}$: The branching ratio $\beta$ and the coupling constant $\lambda$. They are connected to the Yukawa coupling constant by $\lambda_{lq}=\sqrt{\beta}\lambda$ for a charged lepton and by $\lambda_{lq}=\sqrt{1-\beta}\lambda$ for neutrinos. \cite{LQATLAS}\par
+The detectable final states are governed by the Yukawa coupling $\lambda_{lq}$ of the leptoquark directly to the quark $q$ and lepton $l$ (see figure \ref{YukawaLQ}). The model is defined by two parameters derived from $\lambda_{lq}$: The branching ratio $\beta$ and the coupling constant $\lambda$. They are connected to the Yukawa coupling constant by $\lambda_{lq}=\sqrt{\beta}\lambda$ for a charged lepton and by $\lambda_{lq}=\sqrt{1-\beta}\lambda$ for neutrinos. \cite{currentStatus:13TeVATLAS}\par
 %
 \begin{figure}[htbp]                                 
  \begin{center}                                       
   \includegraphics[width=0.4\linewidth]{figures/yukawa.pdf} 
-   \caption[Feynman graph of a leptoquark decay governed by Yukawa coupling.]{Feynman graphs of a leptoquark decay into a lepton $l$ and a quark $q$ gouverned by Yukawa coupling $\lambda_{lq}=\sqrt{\beta}\lambda$. \cite{LQATLAS}}
+   \caption[Feynman graph of a leptoquark decay governed by Yukawa coupling.]{Feynman graphs of a leptoquark decay into a lepton $l$ and a quark $q$ gouverned by Yukawa coupling $\lambda_{lq}=\sqrt{\beta}\lambda$. \cite{currentStatus:13TeVATLAS}}
   \label{YukawaLQ}                                     
  \end{center}
 \end{figure}
@@ -526,17 +526,35 @@ The focus of this thesis lies on the search of pair produced scalar leptoquarks 
 % eigentlich war geplant, dass die folgenden zwei Kapitel zu Kapitel data anaalysis gehören, allerdings findet Mahsana, dass das jetzt gleich kommen sollte
 %
 %
-\section{Current status in the search for scalar leptoquarks}
-
-%In der Literatur die ganzen LQ pair production paper mal noch durchforsten, die sind da eher so für diese Kapitel passend ausgelegt...
-%wichtig, eigene Arbeit herausstellen, was ist mein Beitrag, nicht dass das wischi waschi wird
-%tau als wichtiges fragezeichen? --> Wie ist das so mit SF usw, für t gibts das, deshalb auch die frage nach der fake rate: was kann alles so ein tau faken.
-%mit dem semileptonic oder gleich dem dil wird gearbeitet, weil es ein reinerer zustand ist, als jetzt alles komplett hadronic
-%Mahsana: I think the focus of your thesis should not in highlighting scalar vs the vector LQ.  In any case, you are not presenting the full search strategy.  Your work involved mostly in the understanding of the tau reconstruction efficiencies, and the fake rate etc....
-
-%You should highlight, the search for LQ--> top+tau is complex because of multiple objects in the final state from the decays of the heaviest quark and the heaviest lepton. Zerfallskanäle
+\subsection{Current status in the search for scalar leptoquarks}\label{currentStatus}
+%Literatur dazu: current:<> in der .bib
+Leptoquarks are a promising research field for physics beyond the SM. Various efforts are made with today's particle accelerators to search for LQ-like signatures. The following summarizes briefly the current status for the search of scalar leptoquarks at the {\LHC}.\par
+LQ considered by the minimal-Buchm\"{u}ller-R\"{u}ckl-Wyler model (cf. section \ref{effmodels}) can result in various final states, which can be potentially detected by the {\ATLAS} or {\CMS} detector.\newline
+Simulated signal events of pair-produced LQs decaying to $LQ+LQ\rightarrow e^+q+e^-\bar{q}$, $LQ+LQ\rightarrow \mu^+q+\mu^-\bar{q}$, $LQ+LQ\rightarrow t\nu_\tau+q+\bar{t}\bar{\nu}_\tau$ and $LQ+LQ\rightarrow b\nu_\tau+q+\bar{b}\bar{\nu}_\tau$ were compared with $\sqrt{s}=\SI{8}{\tera\electronvolt}$ data samples of the {\ATLAS} detector at an integrated luminosity of $\SI{20.3}{\per\femto\barn}$ for first and second generation LQs ($e^+qe^-\bar{q}$ and $\mu^+q\mu^-\bar{q}$ channel). The integrated luminosity for the search of third generation LQs ($t\nu_\tau\bar{t}\bar{\nu}_\tau$ and $b\nu_\tau\bar{b}\bar{\nu}_\tau$) is $\SI{20.1}{\per\femto\barn}$. \cite{currentStatus:8TeVATLAS} For a branching ratio of the LQs of $\beta=1.0$ exclusion limits have been found for the first and second generation LQs. The exclusion limit for first generation LQ masses are $m_{LQ1}<\SI{1050}{\giga\electronvolt}$ and for second generation LQ masses are $m_{LQ2}<\SI{1000}{\giga\electronvolt}$ at a confidence limit (CL) of $\SI{95}{\percent}$. For third generation the mass exclusion limit at CL $\SI{95}{\percent}$ is $m_{LQ3}<\SI{625}{\giga\electronvolt}$ based on the $b\nu_\tau\bar{b}\bar{\nu}_\tau$ decay mode and $\SI{210}{\giga\electronvolt}<m_{LQ3}<\SI{640}{\giga\electronvolt}$ based on the $t\nu_\tau\bar{t}\bar{\nu}_\tau$ decay mode. \cite{currentStatus:8TeVATLAS}\par
+A more recent study of the {\ATLAS} collaboration at $\sqrt{s}=\SI{13}{\tera\electronvolt}$ was published in reference \cite{currentStatus:13TeVATLAS} for first and second generation leptoquarks. The observerd exclusion limits for the LQ mass at $\SI{95}{\percent}$ CL are $\SI{1100}{\giga\electronvolt}$ and $\SI{1050}{\giga\electronvolt}$ assuming a branching ratio of $\beta=1.0$. The study has increased sensitivity for the leptoquarks and agrees with the former study \cite{currentStatus:8TeVATLAS}. At least, the exclusion limits are extended \cite{currentStatus:13TeVATLAS} compared to the previous study.\par
+The {\CMS} collaboration published a study for the search of third generation scalar leptoquarks decaying to a top quark and $\tau$-lepton at a center of mass energy of $\SI{13}{\tera\electronvolt}$.
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  \includegraphics[width=0.6\linewidth]{figures/exclusionLQ.pdf} 
+   \caption[Upper limits of the product of the cross section and $\beta^2$ depending on the leptoquark mass for the $t\tau^-\bar{t}\tau^+$ channel.]{Upper limits at CL $\SI{95}{\percent}$ of the product of the cross section and $\beta^2$ depending on the leptoquark mass for the $t\tau^-\bar{t}\tau^+$ channel (third generation) at $\sqrt{s}=\SI{13}{\tera\electronvolt}$ \cite{currentStatus:13TeVATLAS}.}
+  \label{exclusionLQ}                                     
+ \end{center}
+\end{figure}
+%
+The corresponding integrated luminosity is $\SI{35.9}{\per\femto\barn}$. The results agree with the standard model expectation and no evidence for LQ pair production was found. The study excludes LQ with masses below $\SI{900}{\giga\electronvolt}$ at a branching fraction of $\beta=1.0$ and at a CL of $\SI{95}{\percent}$. Figure \ref{exclusionLQ} shows upper limits at CL $\SI{95}{\percent}$ of the product of the cross section and $\beta^2$ depending on the leptoquark mass for the $t\tau^-\bar{t}\tau^+$ channel. These results are the most stringent limits to date for the production of third generation LQs decaying to top quark and $\tau$-lepton. \cite{currentStatus:13TeVCMS}\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Starting point and research question for the analysis}
+\subsection{Starting point and research question for the analysis}
+%wichtig, eigene Arbeit herausstellen, was ist mein Beitrag, nicht dass das wischi waschi wird
+This work has to be seen in the general research context briefly described in section \ref{currentStatus} and makes a contribution to the search of pair-produced scalar LQs of type $S_{0,L}$ and $S_{1,L}$ (cf. table \ref{LQstable}) decaying to $LQ+LQ\rightarrow t\tau^{-}+\bar{t}\tau^{+}$ at the {\ATLAS} experiment. This involves in particluar $\tau$ reconstruction efficiencies and background studies for the search of LQ-signal signatures based on MC samples. The simulations are compared with data from the data taking periods $2015$, $2016$, $2017$ and partly $2018$ adding up to an integrated luminosity of $\SI{128.34}{\per\femto\barn}$.\par   
+The search for third generation LQ decaying to top quarks and $\tau$-leptons is complex because of the multiple objects resulting from the final states of the heaviest quark and heaviest lepton. 
+%Zerfallskanäle top tau ...-> aus dem wird ja aufs LQ rückgeschlossen, Verweis auf nächstes chapter https://www-d0.fnal.gov/Run2Physics/top/top_public_web_pages/top_feynman_diagrams.html ttbar tabelle
+%als logische Folge zunächst kennenlernen und besser abschäzten:
+%mit dem semileptonic oder gleich dem dil wird gearbeitet, weil es ein reinerer zustand ist, als jetzt alles komplett hadronic
+%tau als wichtiges fragezeichen? --> Wie ist das so mit SF usw, für t gibts das, deshalb auch die frage nach der fake rate: was kann alles so ein tau faken. In any case, you are not presenting the full search strategy.  Your work involved mostly in the understanding of the tau reconstruction efficiencies, and the fake rate etc....
+
+%higher lumi
+%bezug zu cms <-> counterpart
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental setup for the search for scalar leptoquarks}\label{experiment}
 For the search for scalar leptoquarks the {\ATLAS} detector at the Large Hadron Collider ({\LHC}) is used as experimental setup, which will be described within this chapter. The general setting of the proton-proton collider located at the {\CERN} research center is the topic of section \ref{LHC}. The particle detection of the resulting collision events, taking place in the {\ATLAS} detector with its different specialized components (section \ref{ATLAS}). Section \ref{LQpp} addresses the possible leptoquark pair production in proton-proton collisions.  
