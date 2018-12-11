@@ -545,11 +545,71 @@ The {\CMS} collaboration published a study for the search of third generation sc
 The corresponding integrated luminosity is $\SI{35.9}{\per\femto\barn}$. The results agree with the standard model expectation and no evidence for LQ pair production was found. The study excludes LQ with masses below $\SI{900}{\giga\electronvolt}$ at a branching fraction of $\beta=1.0$ and at a CL of $\SI{95}{\percent}$. Figure \ref{exclusionLQ} shows upper limits at CL $\SI{95}{\percent}$ of the product of the cross section and $\beta^2$ depending on the leptoquark mass for the $t\tau^-\bar{t}\tau^+$ channel. These results are the most stringent limits to date for the production of third generation LQs decaying to top quark and $\tau$-lepton. \cite{currentStatus:13TeVCMS}\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Starting point and research question for the analysis}
-%wichtig, eigene Arbeit herausstellen, was ist mein Beitrag, nicht dass das wischi waschi wird
 This work has to be seen in the general research context briefly described in section \ref{currentStatus} and makes a contribution to the search of pair-produced scalar LQs of type $S_{0,L}$ and $S_{1,L}$ (cf. table \ref{LQstable}) decaying to $LQ+LQ\rightarrow t\tau^{-}+\bar{t}\tau^{+}$ at the {\ATLAS} experiment. This involves in particluar $\tau$ reconstruction efficiencies and background studies for the search of LQ-signal signatures based on MC samples. The simulations are compared with data from the data taking periods $2015$, $2016$, $2017$ and partly $2018$ adding up to an integrated luminosity of $\SI{128.34}{\per\femto\barn}$.\par   
 The search for third generation LQ decaying to top quarks and $\tau$-leptons is complex because of the multiple objects resulting from the final states of the heaviest quark and heaviest lepton. 
 %Zerfallskanäle top tau ...-> aus dem wird ja aufs LQ rückgeschlossen, Verweis auf nächstes chapter https://www-d0.fnal.gov/Run2Physics/top/top_public_web_pages/top_feynman_diagrams.html ttbar tabelle
-\newline
+%
+\begin{figure}
+ \centering
+  \begin{subfigure}[t]{0.45\textwidth}
+   \includegraphics[width=\textwidth]{figures/t_leptonic.pdf}
+    \subcaption[Leptonic top decay.]{Leptonic single-top decay. Black depicts the top decay, whereas blue depicts the anti-top decay. Leptons of different flavors are depicted as $l$ with the corresponding neutrino flavor $\nu_l$.}
+   \label{topleptonic}
+  \end{subfigure}
+  \quad
+  \begin{subfigure}[t]{0.45\textwidth}
+   \includegraphics[width=1\textwidth]{figures/t_hadronic.pdf}
+   \subcaption[Hadronic top decay.]{Hadronic single-top decay. Black depicts the top decay, whereas blue depicts the anti-top decay.}
+   \label{tophadronic}
+  \end{subfigure}
+ \caption[Leptonic and hadronic top decay.]{Leptonic (a) and hadronic (b) single-top decay.}
+ \label{topdecay}
+\end{figure}
+%
+The top quark decays weakly into $t\rightarrow Wq$ with $q=b,s,d$. The main decay mode involves the bottom quark. The subsequent decay of the weak gauge boson $W$ is either hadronically ($\SI[separate-uncertainty = true]{66.5\pm 1.4}{\percent}$) or leptonically ($\SI[separate-uncertainty = true]{34\pm1.0}{\percent}$) \cite{PhysRevD}. This is shown in figure \ref{topdecay}, where the black diagram paths is for the top decay and the blue diagram path for the anti-top decay. Leptons of different flavors are depicted as $l$ with their corresponding neutrinos $\nu_l$. This means that top-pairs can produce full-leptonic decays following both the feynman diagram of figure \ref{topleptonic}, full-hadronic decays following both the feynman diagram of figure \ref{tophadronic} and semi-leptonic decays, where one top decays leptonically and one hadronically. The overall percentage of the final state of evolving from top pair is shown in figure \ref{topcake}.\newline
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  \includegraphics[width=0.6\linewidth]{figures/top_pair_branching_frac.eps} 
+   \caption[Branching fractions of top-pairs.]{Branching fractions of top-pairs decaying full-hadronically (`alljets'), full-leptonically (`dileptons') and semi-leptonically (`lepton+jets') \cite{D0}. }
+  \label{topcake}                                     
+ \end{center}
+\end{figure}
+%
+Tau leptons have various decay modes, which can be categorized with the number of charged particles involved in the decay. Main decay modes for taus include one charged particle (`1-prong') and three charged particles (`3-prong') in the decay. They are shown in table \ref{taudecays} for $\tau^-$. Here $h^{\pm}$ are charged pions $\pi^\pm$ and Kaons $K^\pm$, `neutrals' are photons $\gamma$ or neutral pions $\pi^0$. The decay modes of the $\tau^+$ involve the same products, but with opposite charges.\par        
+\par
+\begin{table}[htbp]
+		\centering
+                \renewcommand{\arraystretch}{1.2}       
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}clc}
+		\hline
+		\hline
+		&\textbf{mode}&  \textbf{fraction }$\Gamma_i/\Gamma$
+		\\
+		\hline
+                \multicolumn{3}{c}{\textbf{1-prong decay}}
+                \\
+                $\Gamma_1$       & particle$^-\geq$ 0 neutrals $\geq 0K_L^0\nu_\tau$ & $\SI[separate-uncertainty=true]{84.58\pm0.06}{\percent}$
+                \\
+                $\Gamma_2$       & $\qquad \mu^-\bar{\nu}_\mu\nu_\tau$               & $\SI[separate-uncertainty=true]{17.39\pm0.04}{\percent}$
+                \\
+                $\Gamma_3$       & $\qquad e^-\bar{\nu}_e\nu_\tau$                   & $\SI[separate-uncertainty=true]{17.82\pm0.04}{\percent}$
+                \\
+                $\Gamma_4$       & $\qquad e^-\bar{\nu}_e\nu_\tau$                   & $\SI[separate-uncertainty=true]{17.82\pm0.04}{\percent}$
+                \\
+                \hline
+                \multicolumn{3}{c}{\textbf{3-prong decay}}
+                \\
+                $\Gamma_4$       & $\qquad e^-\bar{\nu}_e\nu_\tau$                   & $\SI[separate-uncertainty=true]{17.82\pm0.04}{\percent}$
+                \\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[]{}
+\label{taudecays}
+%\renewcommand{\arraystretch}{1}
+\end{table}
+%
 Signal and background studies with various objects in the final state depend crucially on the purity of the signatures left in the detector and how they are traced back to the potential LQ. Electrons and muons provide a good chance for reliable reconstruction (see chapter \ref{detectorsignatures}). Therefore the dilepton and semileptonic decay modes of the top quark-pair are good candidates to study the signal and background contributions for the search of LQ. They provide, additionally to the hadronic $\tau$ final states, two leptons from the top-pair decay or one lepton and one jet respectively. In the face of high contributions from underlying QCD events, resulting in jet objects, dilepton and semileptonic modes are easier to reconstruct compared to the full hadronic decays with jets only in the final state. This provides the starting point for studying the hadronic $\tau$ reconstruction efficiencies and the influence of fake rates on the $t\tau^{-}+\bar{t}\tau^{+}$ channel. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental setup for the search for scalar leptoquarks}\label{experiment}
