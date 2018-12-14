@@ -793,8 +793,21 @@ Muons have to meet the medium quality requirement and have a transverse momentum
 \subsubsection*{Taus}
 Taus selected for this analysis have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$ and must lie in the pseudorapidity range of $|\eta|<2.5$. Additional to that the taus have to decay hadronically. Following their basic reconstruction procedure, taus have to met the conditions of the loose working point. To avoid misinterpretations of electrons as taus, the corresponding working point is set to loose.
 \subsubsection*{Jets}
+Jets are reconstructed with the anti-$k_T$ algorithm and have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$. 
 \subsubsection*{b-jets}
+For the b-jet selection the b-tagger MV2c10 is used with a working point of $\SI{77}{\percent}$ b-tagging efficiency.
+%overlap removal? --> default between <e,mu>, <e,jet>, <mu,jet>
 \section{Event selection}\label{eventselection}
+The signal and background studies for the $t\tau^{-}+\bar{t}\tau^{+}$ channel involves the event selection shown in figure \ref{selection}.\newline
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  \includegraphics[width=0.45\linewidth]{figures/selection.pdf} 
+   \caption[Overview of the event selection.]{Overview of the event selection involved for the signal and background studies $t\tau^{-}+\bar{t}\tau^{+}$ channel. This selection is valid for the reconstruction level.}
+  \label{selection}                                    
+ \end{center}
+\end{figure}
+%
 % Da könnte man vielleicht neben der bloßen Beschreibung eigentlich auch eine selbstgezeichnete Graphik einbinden a la powerpoint presentation, dann hat man noch ein anschauliches Bildchen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results}
