@@ -1,14 +1,11 @@
 %      --- TO DO --- 
-%%    Die Frage ist, ob das jetzt noch eine Idee ist, den Detektoraufbau von der systematischen Teilchenbestimmungs-Seite aufzuziehen, quasi so, wie man es in der Masterclass lernt, mit einzelnen Spuren unterscheiden usw... --> siehe hierfür das Skript zusammenfassung ATLAS skript wie https://cds.cern.ch/record/1096081/export/hx?ln=en und https://cds.cern.ch/record/1096081, oder ob das nicht dann doch zu viel wird
-%
 %FCNC im LQ Kaptiel braucht sehr wahrscheinlich eine Erklärung!! + schwacher isospin
-%
-%ob wohl das physical objects Kapitel gekürzt werden sollte... Etwas kondensierter vielleicht und mehr mit eigenen worten, was so das grundprinzip ist
 %
 %%
 %QCD und QED sollte vielleicht mal im SM erwähnt werden
 %
-% im pp LQpair prod chapter: den channel nochmal genauer spezifizieren und zur LQ tabelle bezug nehmen, vielleicht kann man auch noch ein bisschen mehr dazu sagen+generic? + final state results in jets/bjets plus tau ->verweis auf Physical objects chapter
+% overlap removal bei phys obj sel
+%%
 %
 %%    Danksagung --> noch überlegen, ob die nicht vielleicht doch auf Deutsch sein soll..., aber Deb, Mahsana usw lesen das lieber auf Englisch, ein misch masch kommt aber auch komisch -->eher doch englisch
 %-----------------------------------------------------------------------------------------------
@@ -22,6 +19,8 @@
 %Ausgangspunkt, Forschungsfrage...
 %
 %Quasi eine Story erzählen: SM sehr erfolgreiche Theorie (->Theorie), aber auch nicht die ganze Geschichte (->beyond), das könnte LQ lösen (->LQ) dafür braucht man aber ein Nachweisgerät (->ATLAS, LHC...) und dass man an die Physik rankommt, braucht man Auswertung (->Datenprocessierung und btagging usw), was ist  der aktuelle Stand in der Vorschung, worauf wird sich hier in der Arbeit konzentriert (->ttbar tautau)
+%
+%dilepton, semileptonic, nonallhad in samples nochmal überprüfen, ob das jetzt so stimmt...
 %
 %-----------------------------------------------------------------------------------------------
 % Seitenübersicht aus der Bachelor Arbeit                       vs                      Master Arbeit                                   Diff
@@ -780,8 +779,8 @@ The MC samples and data samples, which are taken into account, are listed in det
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Athena is the {\ATLAS} software framework for event generation, simulation, reconstruction and derivation production (cf. also section \ref{MCsim}) \cite{Athena}. The management and build of the software packages rely on CMake. At the end of the software chain analyses use the AthAnalysisBase, which is organized in different anlysis sub-groups like the top-quark group. Their standard package for physical object reconstruction is AnalysisTop, which also includes the data analysis tool {\ROOT}.\par
 For this work a package based on AnalysisTop of release 21.2.56 (build on November 29, 2018) was used.\newline
-The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to deacy either full leptonically in the dilepton LQ sample or semi-leptonically in the nonallhad LQ sample (cf. section \ref{startingpoint}). The parton shower and fragmentation as well as the underlying event was generated with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} parameters at next-to-leading (NLO) in matrix calculation. \newline         
-The other categories includes main background contributions of SM processes. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allows the $t\bar{t}$ pair to decay either full leptonically or semi-leptonically. Showering, fragmentation and underlying event is simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and is responsible for the highest parton radiation beyond Born level \cite{hdamp}.\newline
+The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to deacy either fully leptonically or semi-leptonically in the nonallhad LQ sample (cf. section \ref{startingpoint}). The parton shower and fragmentation as well as the underlying event was generated with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} parameters at next-to-leading (NLO) in matrix calculation. \newline         
+The other categories includes main background contributions of SM processes. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allows the $t\bar{t}$ pair to decay fully leptonically. Showering, fragmentation and underlying event is simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and is responsible for the highest parton radiation beyond the Born level \cite{hdamp}.\newline
 %
 \begin{table}[htbp]
 		\centering
@@ -792,7 +791,7 @@ The other categories includes main background contributions of SM processes. Tha
 		\textbf{data-taking year}&  \textbf{integrated luminosity}
 		\\
 		\hline
-                $2018$ (partly)       & $\SI{59.94}{\per\femto\barn}$
+                $2018$                & $\SI{59.94}{\per\femto\barn}$
                 \\
                 $2017$                & $\SI{44.31}{\per\femto\barn}$
                 \\
@@ -801,19 +800,19 @@ The other categories includes main background contributions of SM processes. Tha
                 $2015$                & $\SI{3.22}{\per\femto\barn}$
                 \\
                 \hline
-                \textbf{total}        & $\SI{128.34}{\per\femto\barn}$
+                \textbf{total}        & $\SI{140.45}{\per\femto\barn}$
                 \\
 		\hline
 		\hline
 		\end{tabular*}
-		\caption[Integrated luminosity for the data-taking periods 2015-2018.]{Integrated luminosity for the data-taking periods 2015, 2016, 2017 and partly 2018.}
+		\caption[Integrated luminosity for the data-taking periods 2015-2018.]{Integrated luminosity for the data-taking periods 2015, 2016, 2017 and 2018.}
 \label{datalumi}
 \renewcommand{\arraystretch}{1}
 \end{table}
 %
 The $t\bar{t}H$ samples (dilepton and semi-leptonic) are generated with {\POWHEG}. Like for the $t\bar{t}$ samples, the event generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14 was used to simulate the showering, fragmentation and underlying event. The mass of the Higgs boson is set to $\SI{125}{\giga\electronvolt}$ and the resummation parameter was set to $\SI{325.5}{\giga\electronvolt}$. \newline
 For all samples the {\EvtGen} (v1.6.0) \cite{EvtGen} program was used for the decay of the bottom and charm hardons produced by the top-quark decay.\newline
-To compare the MC prediction data of the data-taking periods 2015, 2016, 2017 and partly 2018 was used. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{128.34}{\per\femto\barn}$ used in the analysis.
+To compare the MC prediction data of the data-taking periods 2015, 2016, 2017 and 2018 was used. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{140.45}{\per\femto\barn}$ used in the analysis.
 \section{Physical object selection}\label{physObj}
 The physical object selection for electrons, muons, hadronic taus, jets and b-jets in the analysis is described in this chapter. For the basic reconstruction of physical objects see chapter \ref{detectorsignatures}.
 \subsubsection*{Electrons}
