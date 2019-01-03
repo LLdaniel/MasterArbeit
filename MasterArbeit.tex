@@ -898,9 +898,55 @@ The event yield table \ref{eventYieldTable} includes all the main background con
 The additional selection of at least either one or two tau leptons impose an additional reduction of the event yield for both b-jet selections. The difference between the simulations is that selecting $1\,\tau$ additionally results in a strong reduction of the events without any tau lepton selection down to $\SI{0.5\pm 0.75}{\percent}$ in case of the $t\bar{t}$ sample, whereas the amount in case of the $t\bar{t}H$ sample is reduced to $\SI{5.4\pm 2.0}{\percent}$. The expectation is that the events surviving the tau selection contributed from the top pairs are mainly due to faked taus. No real $\tau$ lepton is expected here. In contrast, some real $\tau$ contributions from the Higgs sample are expected from the possible decay $H^0\rightarrow \tau^-\tau^+$. This is because the Higgs coupling strength is proportional to the mass and therefore the heaviest lepton (cf. table \ref{SMtable}) is a direct decay product of the Higgs boson. The reduction of the event yield for both signal samples, when at least one tau is selected, is only down to $\SI{45.9\pm 5.5}{\percent}$ (mass point \SI{500}{\giga\electronvolt}) and $\SI{45.3\pm 4.9}{\percent}$ (mass point \SI{1}{\tera\electronvolt}). A more detailed efficiency study is presented in section \ref{signalANDbgEff}.     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Signal and background efficiencies}\label{signalANDbgEff}
-\subsection{Background produced fake fake rates}
+Main background contributions are processes from Higgs and top-quark pairs, which contaminate the potential LQ signal. A sub-selection of the event selection (cf. \ref{eventselection}) allows for a more detailed picture of the final states' origin in the $t\tau^{-}+\bar{t}\tau^{+}$ channel for signal and background samples. The MC samples include the so called `truth' information that is the information of the generated particles and the subsequent decay without the digitization and reconstruction step of their signatures in the detector. Taking into account this capability of the MC simulations (cf. \ref{MCsim}) a comparison between the fully reconstructed events and the mere information of the simulated particles is possible. Thus reconstruction efficiencies are the adequate description for that comparison and give insight to the signal and background composition. The efficiency study for signal and background samples are done in two sections \ref{bgeff} and \ref{signaleff} separately. 
+\subsection{Background produced fake rates}\label{bgeff}
+%ttbar teil
+Dominant background processes, contaminating the potential LQ signal, originate from QCD events producing top-quark pairs and from Higgs decay modes, involving top-quarks and tau leptons.\newline
+The differential cross section for top-quark pair generation is \SI{829\pm189}{\pico\barn} \cite{ttbarpairproduction} including the statistical and the systematic uncertainty as well as the uncertainty from the luminosity measurement. Due to the nature of a proton-proton collider mainly gluon fusion ($\SI{90}{\percent}$ \cite{PhysRevD}) is responsible for the top-quark pair production at the {\LHC}. Also quark fusion can lead to $t\bar{t}$ states. The corresponding Feynman diagrams involved in the pair production are shown in figure \ref{ttbarproduction}. Because of its high production cross section and the lack of naturally existing taus the $t\bar{t}$ sample is the ideal candidate to study light jets and b-jets that fake as a hadronic tau.  
+%
+\begin{figure}
+ \centering
+  \begin{subfigure}[t]{0.4\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbara.pdf}
+    \subcaption[Quark fusion process generating a top-quark pair in the s-channel.]{Quark fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
+   %\label{ATLASDesign}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+   \includegraphics[width=1\textwidth]{figures/ttbarb.pdf}
+   \subcaption[Gluon fusion process generating a top-quark pair in the t-channel.]{Gluon fusion process generating a top-quark pair in the t-channel \cite{Feynmanttbar}.}
+   %\label{btageff}
+  \end{subfigure}
+ \begin{subfigure}[t]{0.4\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbarc.pdf}
+    \subcaption[Gluon fusion process generating a top-quark pair in the u-channel.]{Gluon fusion process generating a top-quark pair in the u-channel \cite{Feynmanttbar}.}
+   %\label{ATLASDesign}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.4\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbard.pdf}
+    \subcaption[Gluon fusion process generating a top-quark pair in the s-channel.]{Gluon fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
+   %\label{ATLASDesign}
+  \end{subfigure}
+ \caption[Feynman diagrams showing the dominant top-pair production at the {\LHC}.]{Feynman diagrams showing the dominant top-pair production at the {\LHC} including quark fusion (a) and gluon fusion (b)-(d) \cite{Feynmanttbar}.}
+ \label{ttbarproduction}
+\end{figure}
+%
+%dann noch H teil.
+The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} \right)\,\text{pb}$ \cite{HiggsCrossSection}. The dominant Higgs production mechanisms of leading order at hadron colliders are gluon fusion, vector boson fusion, Higgs-strahlung or the associated production with a pair of top (bottom) quarks \cite{PhysRevD}. The relevant background SM process for the search of LQs is the associated Higgs production with a top pair, which can mimic the $t\tau^{-}+\bar{t}\tau^{+}$ state. The corresponding Feynman diagram for $t\bar{t}H$ production is depicted in figure \ref{ttHproduction}. The used $t\bar{t}H$ sample (cf. section \ref{MCsamples}) acts as an inclusive sample, which allows all possible Higgs decays. The Higgs coupling strength is proportional to the particle's mass and therefore the direct decay of the Higgs boson into a tau-pair is possible, as it involves the heaviest lepton(cf. \ref{SMtable}). Together with the decay $H\rightarrow b\bar{b}$ the mode $H\rightarrow \tau^-\tau^+$ is the dominant process below the threshold of $\SI{160.8}{\giga\electronvolt}$ and $\SI{182.4}{\giga\electronvolt}$ that is the on-shell $\text{H}^0\rightarrow\text{W}^-\text{W}^+$ and $\text{H}^0\rightarrow\text{Z}^0\text{Z}^0$ production \cite{PhysRevD}. On-shell means that both vector bosons are produced with their likeliest mass rather than producing a virtual vector boson. From the point of view of the Higgs boson's coupling to large masses in principle $H\rightarrowt\bar{t}$ is also a decay mode. But the di-top mass exceeds the Higgs mass by a factor of roughly three times, which supresses that decay due to the fact that the top-pair can exist only virtually.    
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  \includegraphics[width=0.3\linewidth]{figures/ttHproduction.pdf} 
+   \caption[Higgs production associated with a top-quark pair.]{Feynman diagram in leading order for the top-quark pair associated Higgs production \cite{PhysRevD}.}
+  \label{ttHproduction}                                    
+ \end{center}
+\end{figure}
+%
+The above mentioned aspects make the $t\bar{t}H$ sample a good candidate to study faked taus from jets with the additional condition that also real taus are naturally present compared to the top-pair production. Furthermore efficiencies for different tau selections can be studied as well in this events as they occur as signal signatures. Findings in the background processes then can be compared to the LQ signal samples (see section \ref{signaleff}). \newline
+Together these to background samples cover most of the contamination of the $t\tau^{-}+\bar{t}\tau^{+}$ for the LQ search.\par
+%Truth match
+The sub-selections for the efficiency study are as follows: The event selection (cf. section \ref{eventselection}) with two b-jets is applied additionally to the object selection (cf. section \ref{physObj}), in the following named as basic selection. Applying the common definition of efficiency, which compares the number of events passing a special selection compared to the total event number, different efficiency selections are created. They are summarized in table \ref{ttbarttHEffTable}. The error $\sigma_\epsilon$ is derived from the binomial uncertainty in efficiency $\epsilon$ following the definition $\sigma_\epsilon=\frac{\sqrt{n\epsilon\left(1-\epsilon\right)}}{n}$. The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fullfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ in case of the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ for the Higgs background events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. This fact reflects that no taus are expected in the former sample and some tau leptons are expected from direct Higgs boson decays. As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate. 
 %	
-	\begin{sidewaystable}[htbp]
+\begin{sidewaystable}[htbp]
 		\centering
                 \footnotesize
                 \renewcommand{\arraystretch}{1.2}
@@ -953,24 +999,24 @@ The additional selection of at least either one or two tau leptons impose an add
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.635\pm 0.061}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.514\pm 0.077}{\percent}$}
 		\\
 		\hline
-		tau faking as jet            & $8232$         & $4728730$      & $21925$         & $2178770$ 
+		jet faking as tau            & $8232$         & $4728730$      & $21925$         & $2178770$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.1741\pm 0.0019}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.0063\pm 0.0068}{\percent}$}
 		\\
 		\hline
-		tau faking as b-jet          & $5361$        & $3317260$      & $1993$         & $1332650$ 
+		b-jet faking as tau          & $5361$        & $3317260$      & $1993$         & $1332650$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.1616\pm 0.0022}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.1496\pm 0.0033}{\percent}$}
 		\\
 		\hline
-                tau faking as electron          & $17$        & $1639390$      & $17$         & $488234$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{0.00104\pm 0.00025}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.00348\pm 0.00084}{\percent}$}
-		\\
-		\hline
-                tau faking not as b-jet          & $2871$        & $1411470$      & $19932$         & $846121$ 
+                not b-jet faking as tau          & $2871$        & $1411470$      & $19932$         & $846121$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.2034\pm 0.0038}{\percent}$}   & \multicolumn{2}{c}{$\SI{2.356\pm 0.016}{\percent}$}
+		\\
+                \hline
+                electron faking as tau          & $17$        & $1639390$      & $17$         & $488234$ 
+		\\
+		efficiency                  & \multicolumn{2}{c}{$\SI{0.00104\pm 0.00025}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.00348\pm 0.00084}{\percent}$}
 		\\
 		\hline
 		\hline
@@ -980,7 +1026,105 @@ The additional selection of at least either one or two tau leptons impose an add
                 \renewcommand{\arraystretch}{1}
                 \end{sidewaystable}
 %
-\subsection{Signal efficiency}
+%from B mesons
+The dependency of the tau reconstruction efficiency are shown in figure \ref{DividedTau:bg}. The difficulty of the real tau reconstruction with transverse momenta smaller than $\sim\SI{100}{\giga\electronvolt}$ can be seen in the ratio plot of the Higgs sample with its low efficiency in that $p_{T,\text{vis}}^{\tau,\text{truth}}$ range (fig. \ref{DividedTau:bg:ttH}). Further investigating the matched truth tau`s origin shows that they originate from heavy B mesons (tau from B-mesons in \ref{ttbarttHEffTable}). This is denoted by the efficiency defined by the number of hadronic taus in the basic selection matched to a truth particle and originating from B-mesons over the total number of taus in the basic selection originating from B-mesons. Background contributions from Higgs events only originate only in rare cases from B-mesons with a efficiency of $\SI{0.514\pm 0.077}{\percent}$.\par       
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.9\textwidth}
+                \qquad\qquad
+                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
+                \subcaption{Hadronic tau reconstruction efficiency of $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events.}
+                \label{DividedTau:bg:ttbar}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
+                \subcaption{Hadronic tau reconstruction efficiency of $\SI{29.39\pm 0.26}{\percent}$ for the Higgs events.}
+                \label{DividedTau:bg:ttH}
+                \end{subfigure}
+   %             
+%
+\caption[Hadronic tau reconstruction efficiency for the background events.]{Hadronic tau reconstruction efficiency for the background events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
+\label{DividedTau:bg}
+\end{figure}
+%
+%Tau fake rates
+Tau fake rates are estimated by the same efficiency definition as described above, were the matching is accomplished by a geometric matching between the reconstructed tau and the truth jet within a cone of $\Delta R<0.01$. For the fake rate estimation four different selections are available, estimating the taus faked by jets in general, by b-jets, by light-jets excluding b-jets and electrons. The fake rate for jets that is the number of jets passing the basic selection and matched with a tau-jet over the number of jets satisfying the basic selection is $\SI{0.1741\pm 0.0019}{\percent}$ and $\SI{1.0063\pm 0.0068}{\percent}$ for the top-pair related background and the Higgs related background respectively. The efficiency depending on the transverse momentum of the truth jet is shown as ratio plot in figure \ref{Divided_Jet:bg}.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.9\textwidth}
+                \qquad\qquad
+                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_Jet.pdf}
+                \subcaption{Estimation of a jet faking a tau lepton of $\SI{0.1741\pm 0.0019}{\percent}$ for the top-quark pair events.}
+                \label{DividedJet:bg:ttbar}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_Jet.pdf}
+                \subcaption{Estimation of a jet faking a tau lepton of $\SI{1.0063\pm 0.0068}{\percent}$ for the Higgs events.}
+                \label{DividedJet:bg:ttH}
+                \end{subfigure}
+   %             
+\caption[Estimation of a jet faking a tau lepton for the background events.]{Estimation of a jet faking a tau lepton for the background events. The efficiency is defined as number of jets passing the basic selection and is matched to a tau-jet over the number of truth jets passing the basic selection.}
+\label{DividedJet:bg}
+\end{figure}
+%
+%Jet
+The qualitative trend is for both the same showing a peak fake rate at $p_{T,\text{jet}}^{\text{truth}}$ of $\SI{50}{\giga\electronvolt}$. Before the efficiency goes down there exist a plateau in the range of the truth jet transverse momentum between $\SI{100}{\giga\electronvolt}$ and $\SI{200}{\giga\electronvolt}$. The main difference is that the fake rate for the $t\bar{t}H$ sample is greater than that of the $t\bar{t}$ sample. Differences in the production processes of jets can be responsible for that behaviour, because jets in the top-pair simulation are mostly induced by gluons (cf. fig. \ref{ttbarproduction}) while jets in the Higgs simulation are mostly induced by associated quark generation including the special case of top quarks (cf. fig. \ref{ttHproduction}).\newline
+%b-jet
+The fake rate for b-jets is defined in the same way as for jets above with the difference of selecting only jets of b-flavor. The efficiency values of the two background samples are not in agreement within the uncertainties, altough they are in the same range of $\SI{0.1616\pm 0.0022}{\percent}$ and $\SI{0.1496\pm 0.0033}{\percent}$ corresponding to $t\bar{t}$ and $t\bar{t}H$. The efficiency depending on the truth transverse momentum of the b-jet is shown in figure \ref{DividedBjet:bg}.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.9\textwidth}
+                \qquad\qquad
+                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_Bjet.pdf}
+                \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.2034\pm 0.0038}{\percent}$ for the top-quark pair events.}
+                \label{DividedBjet:bg:ttbar}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_Bjet.pdf}
+                \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.1496\pm 0.0033}{\percent}$ for the Higgs events.}
+                \label{DividedBjet:bg:ttH}
+                \end{subfigure}
+   %             
+\caption[Estimation of a b-jet faking a tau lepton for the background events.]{Estimation of a b-jet faking a tau lepton for the background events. The efficiency is defined as number of b-jets passing the basic selection and is matched to a tau-jet over the number of truth b-jets passing the basic selection.}
+\label{DividedBjet:bg}
+\end{figure}
+%
+Comparing the large difference between both samples for jet fakes with the small difference of b-jet fakes shows the dominance of b-jets in the top-quark pair related events, whereas the Higgs related events are more dominated by light jets. This can be seen in the efficiency sub-selection of taking only light jets into account and excluding the b-jets explicitly. This is done in figure \ref{Divided_NoBjet:bg}, which shows the constant high efficiency for the Higgs related background in the range up to $\SI{120}{\giga\electronvolt}$ for the truth b-jets' transverse momentum (see fig. \ref{Divided_NoBjet:bg:ttH}). Sources of b-jets are the subsequent decay of top-quark pairs mainly in b-quarks or in case of Higgs related background from direct Higgs decays into $b\bar{b}$. %to do: b kommen halt mal schnell von ttbar zerfall, aber woher kommen b bei H? gibt es ja keine wirkliche Quelle, oder? hab ich oben ja schon gesagt, dass tt nicht so vorkommt, jetzt ist nur die frage, eigentlich hat ja auch H->bb einen anteil... aber ist wohl nicht so groß im vergleich zu den haufen ttbars in ttbar sample?
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.9\textwidth}
+                \qquad\qquad
+                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_NoBjet.pdf}
+                \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{0.1616\pm 0.0022}{\percent}$ for the top-quark pair events.}
+                \label{DividedNoBjet:bg:ttbar}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.5\textwidth}
+                \centering
+                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_NoBjet.pdf}
+                \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{2.356\pm 0.016}{\percent}$ for the Higgs events.}
+                \label{DividedNoBjet:bg:ttH}
+                \end{subfigure}
+   %             
+\caption[Estimation of a light-jet faking a tau lepton for the background events.]{Estimation of a light-jet (excluding b-jets) faking a tau lepton for the background events. The efficiency is defined as number of jets explicitly not including the b-flavor, passing the basic selection and is matched to a tau-jet over the number of jets without truth b-jets passing the basic selection.}
+\label{DividedNoBjet:bg}
+\end{figure}
+%
+%e fake
+The fake tau contributions from electrons is very tiny in this efficiency consideration. The fake rate estimation is done by taking the number of electrons in the basic selection and additionally match the electron with a tau lepton within a cone of $\Delta R<0.15$ over the number of truth electrons in the basic selection. For the top-pair related events the fake rate is $\SI{0.00104\pm 0.00025}{\percent}$ and for the Higgs related events $\SI{0.00348\pm 0.00084}{\percent}$. One reason for such a low rate lies in the standard procedure of tau reconstruction described in section \ref{taus}, where most of the electrons are already vetoed. Therefore the electron fake rate can be neglected in this context.
+%prompt und H für Higgs Betrachtung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Signal efficiency}\label{signaleff}
 %	
 	\begin{sidewaystable}[htbp]
 		\centering
@@ -1035,24 +1179,24 @@ The additional selection of at least either one or two tau leptons impose an add
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.91\pm 0.90}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.93\pm 0.93}{\percent}$}
 		\\
 		\hline
-		tau faking as jet            & $3452$         & $43922$      & $3728$         & $53495$ 
+		jet faking as tau            & $3452$         & $43922$      & $3728$         & $53495$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{7.86\pm 0.13}{\percent}$}   & \multicolumn{2}{c}{$\SI{6.97\pm 0.11}{\percent}$}
 		\\
 		\hline
-		tau faking as b-jet          & $38$        & $1613$      & $33$         & $1842$ 
+		b-jet faking as tau          & $38$        & $1613$      & $33$         & $1842$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{2.36\pm 0.38}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.79\pm 0.31}{\percent}$}
 		\\
 		\hline
-                tau faking as electron          & $2$        & $7871$      & $5$         & $8906$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{0.025\pm 0.018}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.056\pm 0.025}{\percent}$}
-		\\
-		\hline
-                tau faking not as b-jet          & $3414$        & $27788$      & $3695$         & $35075$ 
+                not b-jet faking as tau          & $3414$        & $27788$      & $3695$         & $35075$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{12.29\pm 0.20}{\percent}$}   & \multicolumn{2}{c}{$\SI{10.53\pm 0.16}{\percent}$}
+		\\
+                \hline
+                electron faking as tau          & $2$        & $7871$      & $5$         & $8906$ 
+		\\
+		efficiency                  & \multicolumn{2}{c}{$\SI{0.025\pm 0.018}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.056\pm 0.025}{\percent}$}
 		\\
 		\hline
 		\hline
