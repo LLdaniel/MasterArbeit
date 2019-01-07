@@ -20,7 +20,7 @@
 %
 %Quasi eine Story erzählen: SM sehr erfolgreiche Theorie (->Theorie), aber auch nicht die ganze Geschichte (->beyond), das könnte LQ lösen (->LQ) dafür braucht man aber ein Nachweisgerät (->ATLAS, LHC...) und dass man an die Physik rankommt, braucht man Auswertung (->Datenprocessierung und btagging usw), was ist  der aktuelle Stand in der Vorschung, worauf wird sich hier in der Arbeit konzentriert (->ttbar tautau)
 %
-%dilepton, semileptonic, nonallhad in samples nochmal überprüfen, ob das jetzt so stimmt...      1
+%dilepton, semileptonic, nonallhad in samples nochmal überprüfen, ob das jetzt so stimmt...      
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
@@ -894,11 +894,12 @@ The event yield table \ref{eventYieldTable} includes all the main background con
 \renewcommand{\arraystretch}{1}
 \end{sidewaystable}
 %
-The additional selection of at least either one or two tau leptons impose an additional reduction of the event yield for both b-jet selections. The difference between the simulations is that selecting $1\,\tau$ additionally results in a strong reduction of the events without any tau lepton selection down to $\SI{0.5\pm 0.75}{\percent}$ in case of the $t\bar{t}$ sample, whereas the amount in case of the $t\bar{t}H$ sample is reduced to $\SI{5.4\pm 2.0}{\percent}$. The expectation is that the events surviving the tau selection contributed from the top pairs are mainly due to faked taus. No real $\tau$ lepton is expected here. In contrast, some real $\tau$ contributions from the Higgs sample are expected from the possible decay $H^0\rightarrow \tau^-\tau^+$. This is because the Higgs coupling strength is proportional to the mass and therefore the heaviest lepton (cf. table \ref{SMtable}) is a direct decay product of the Higgs boson. The reduction of the event yield for both signal samples, when at least one tau is selected, is only down to $\SI{45.9\pm 5.5}{\percent}$ (mass point \SI{500}{\giga\electronvolt}) and $\SI{45.3\pm 4.9}{\percent}$ (mass point \SI{1}{\tera\electronvolt}). A more detailed efficiency study is presented in section \ref{signalANDbgEff}.     
+The additional selection of at least either one or two tau leptons impose an additional reduction of the event yield for both b-jet selections. The difference between the simulations is that selecting $1\,\tau$ additionally results in a strong reduction of the events without any tau lepton selection down to $\SI{0.5\pm 0.75}{\percent}$ in case of the $t\bar{t}$ sample, whereas the amount in case of the $t\bar{t}H$ sample is reduced to $\SI{5.4\pm 2.0}{\percent}$. The expectation is that the events surviving the tau selection contributed from the top pairs are mainly due to faked taus. No real $\tau$ lepton is expected here. In contrast, some real $\tau$ contributions from the Higgs sample are expected from the possible decay $H^0\rightarrow \tau^-\tau^+$. This is because the Higgs coupling strength is proportional to the mass and therefore the heaviest lepton (cf. table \ref{SMtable}) is a direct decay product of the Higgs boson. The reduction of the event yield for both signal samples, when at least one tau is selected, is only down to $\SI{45.9\pm 5.5}{\percent}$ (mass point \SI{500}{\giga\electronvolt}) and $\SI{45.3\pm 4.9}{\percent}$ (mass point $\SI{1}{\tera\electronvolt}$). A more detailed efficiency study is presented in section \ref{signalANDbgEff}.     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Signal and background efficiencies}\label{signalANDbgEff}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Main background contributions are processes from Higgs and top-quark pairs, which contaminate the potential LQ signal. A sub-selection of the event selection (cf. \ref{eventselection}) allows for a more detailed picture of the final states' origin in the $t\tau^{-}+\bar{t}\tau^{+}$ channel for signal and background samples. The MC samples include the so called `truth' information that is the information of the generated particles and the subsequent decay without the digitization and reconstruction step of their signatures in the detector. Taking into account this capability of the MC simulations (cf. \ref{MCsim}) a comparison between the fully reconstructed events and the mere information of the simulated particles is possible. Thus reconstruction efficiencies are the adequate description for that comparison and give insight to the signal and background composition. The efficiency study for signal and background samples are done in two sections \ref{bgeff} and \ref{signaleff} separately. 
-\subsection{Background produced fake rates}\label{bgeff}
+\subsection{Background produced efficiencies and fake rates}\label{bgeff}
 %ttbar teil
 Dominant background processes, contaminating the potential LQ signal, originate from QCD events producing top-quark pairs and from Higgs decay modes, involving top-quarks and tau leptons.\newline
 The differential cross section for top-quark pair generation is \SI{829\pm189}{\pico\barn} \cite{ttbarpairproduction} including the statistical and the systematic uncertainty as well as the uncertainty from the luminosity measurement. Due to the nature of a proton-proton collider mainly gluon fusion ($\SI{90}{\percent}$ \cite{PhysRevD}) is responsible for the top-quark pair production at the {\LHC}. Also quark fusion can lead to $t\bar{t}$ states. The corresponding Feynman diagrams involved in the pair production are shown in figure \ref{ttbarproduction}. Because of its high production cross section and the lack of naturally existing taus the $t\bar{t}$ sample is the ideal candidate to study light jets and b-jets that fake as a hadronic tau.  
@@ -906,22 +907,22 @@ The differential cross section for top-quark pair generation is \SI{829\pm189}{\
 \begin{figure}
  \centering
   \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbara.pdf}
+   \includegraphics[width=0.95\textwidth]{figures/ttbara.pdf}
     \subcaption[Quark fusion process generating a top-quark pair in the s-channel.]{Quark fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
    %\label{ATLASDesign}
   \end{subfigure}
   \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=1\textwidth]{figures/ttbarb.pdf}
+   \includegraphics[width=0.95\textwidth]{figures/ttbarb.pdf}
    \subcaption[Gluon fusion process generating a top-quark pair in the t-channel.]{Gluon fusion process generating a top-quark pair in the t-channel \cite{Feynmanttbar}.}
    %\label{btageff}
   \end{subfigure}
  \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbarc.pdf}
+   \includegraphics[width=0.95\textwidth]{figures/ttbarc.pdf}
     \subcaption[Gluon fusion process generating a top-quark pair in the u-channel.]{Gluon fusion process generating a top-quark pair in the u-channel \cite{Feynmanttbar}.}
    %\label{ATLASDesign}
   \end{subfigure}
   \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbard.pdf}
+   \includegraphics[width=0.95\textwidth]{figures/ttbard.pdf}
     \subcaption[Gluon fusion process generating a top-quark pair in the s-channel.]{Gluon fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
    %\label{ATLASDesign}
   \end{subfigure}
@@ -930,7 +931,7 @@ The differential cross section for top-quark pair generation is \SI{829\pm189}{\
 \end{figure}
 %
 %dann noch H teil.
-The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} \right)\,\text{pb}$ \cite{HiggsCrossSection}. The dominant Higgs production mechanisms of leading order at hadron colliders are gluon fusion, vector boson fusion, Higgs-strahlung or the associated production with a pair of top (bottom) quarks \cite{PhysRevD}. The relevant background SM process for the search of LQs is the associated Higgs production with a top pair, which can mimic the $t\tau^{-}+\bar{t}\tau^{+}$ state. The corresponding Feynman diagram for $t\bar{t}H$ production is depicted in figure \ref{ttHproduction}. The used $t\bar{t}H$ sample (cf. section \ref{MCsamples}) acts as an inclusive sample, which allows all possible Higgs decays. The Higgs coupling strength is proportional to the particle's mass and therefore the direct decay of the Higgs boson into a tau-pair is possible, as it involves the heaviest lepton(cf. \ref{SMtable}). Together with the decay $H\rightarrow b\bar{b}$ the mode $H\rightarrow \tau^-\tau^+$ is the dominant process below the threshold of $\SI{160.8}{\giga\electronvolt}$ and $\SI{182.4}{\giga\electronvolt}$ that is the on-shell $\text{H}^0\rightarrow\text{W}^-\text{W}^+$ and $\text{H}^0\rightarrow\text{Z}^0\text{Z}^0$ production \cite{PhysRevD}. On-shell means that both vector bosons are produced with their likeliest mass rather than producing a virtual vector boson. From the point of view of the Higgs boson's coupling to large masses in principle $H\rightarrow t\bar{t}$ is also a decay mode. But the di-top mass exceeds the Higgs mass by a factor of roughly three times, which supresses that decay due to the fact that the top-pair can exist only virtually.    
+The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} \right)\,\text{pb}$ \cite{HiggsCrossSection}. The dominant Higgs production mechanisms of leading order at hadron colliders are gluon fusion, vector boson fusion, Higgs-strahlung or the associated production with a pair of top (bottom) quarks \cite{PhysRevD}. The relevant background SM process for the search of LQs is the associated Higgs production with a top pair, which can mimic the $t\tau^{-}+\bar{t}\tau^{+}$ state. The corresponding Feynman diagram for $t\bar{t}H$ production is depicted in figure \ref{ttHproduction}. The used $t\bar{t}H$ sample (cf. section \ref{MCsamples}) acts as an inclusive sample, which allows all possible Higgs decays. The Higgs coupling strength is proportional to the particle's mass and therefore the direct decay of the Higgs boson into a tau-pair is possible, as it involves the heaviest lepton (cf. \ref{SMtable}). Together with the decay $H\rightarrow b\bar{b}$ the mode $H\rightarrow \tau^-\tau^+$ is the dominant process below the threshold of $\SI{160.8}{\giga\electronvolt}$ and $\SI{182.4}{\giga\electronvolt}$ that is the on-shell $\text{H}^0\rightarrow\text{W}^-\text{W}^+$ and $\text{H}^0\rightarrow\text{Z}^0\text{Z}^0$ production \cite{PhysRevD}. On-shell means that both vector bosons are produced with their likeliest mass rather than producing a virtual vector boson. From the point of view of the Higgs boson's coupling to large masses in principle $H\rightarrow t\bar{t}$ is also a decay mode. But the di-top mass exceeds the Higgs mass by a factor of roughly three times, which supresses that decay due to the fact that the top-pair can exist only virtually.    
 %
 \begin{figure}[htbp]                                 
  \begin{center}                                       
@@ -943,7 +944,12 @@ The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} 
 The above mentioned aspects make the $t\bar{t}H$ sample a good candidate to study faked taus from jets with the additional condition that also real taus are naturally present compared to the top-pair production. Furthermore efficiencies for different tau selections can be studied as well in this events as they occur as signal signatures. Findings in the background processes then can be compared to the LQ signal samples (see section \ref{signaleff}). \newline
 Together these to background samples cover most of the contamination of the $t\tau^{-}+\bar{t}\tau^{+}$ for the LQ search.\par
 %Truth match
-The sub-selections for the efficiency study are as follows: The event selection (cf. section \ref{eventselection}) with two b-jets is applied additionally to the object selection (cf. section \ref{physObj}), in the following named as basic selection. Applying the common definition of efficiency, which compares the number of events passing a special selection compared to the total event number, different efficiency selections are created. They are summarized in table \ref{ttbarttHEffTable}. The error $\sigma_\epsilon$ is derived from the binomial uncertainty in efficiency $\epsilon$ following the definition $\sigma_\epsilon=\frac{\sqrt{n\epsilon\left(1-\epsilon\right)}}{n}$. The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fullfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ in case of the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ for the Higgs background events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. This fact reflects that no taus are expected in the former sample and some tau leptons are expected from direct Higgs boson decays. As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate.\par 
+The sub-selections for the efficiency study are as follows: The event selection (cf. section \ref{eventselection}) with two b-jets is applied additionally to the object selection (cf. section \ref{physObj}), in the following named as basic selection. Applying the common definition of efficiency, which compares the number of events passing a special selection compared to the total event number, different efficiency selections are created. They are summarized in table \ref{ttbarttHEffTable}. The error $\sigma_\epsilon$ is derived from the binomial uncertainty in efficiency $\epsilon$ following the definition
+\begin{align}
+\sigma_\epsilon=\frac{\sqrt{n\epsilon\left(1-\epsilon\right)}}{n}\,\text{.}.
+\label{binomialerror}
+\end{align}
+The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fullfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ in case of the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ for the Higgs background events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. This fact reflects that no taus are expected in the former sample and some tau leptons are expected from direct Higgs boson decays. As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate.\par 
 %	
 \begin{sidewaystable}[htbp]
 		\centering
@@ -1022,29 +1028,25 @@ The sub-selections for the efficiency study are as follows: The event selection 
 		\end{tabular*}
 		\caption[Efficiencies for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample. The luminosity is}
 		\label{ttbarttHEffTable}
-                \renewcommand{\arraystretch}{1}
-                \end{sidewaystable}
+          \renewcommand{\arraystretch}{1}
+\end{sidewaystable}
 %
 %from B mesons
 The dependency of the tau reconstruction efficiency are shown in figure \ref{DividedTau:bg}. The difficulty of the real tau reconstruction with transverse momenta smaller than $\sim\SI{100}{\giga\electronvolt}$ can be seen in the ratio plot of the Higgs sample with its low efficiency in that $p_{T,\text{vis}}^{\tau,\text{truth}}$ range (fig. \ref{DividedTau:bg:ttH}). Further investigating the matched truth tau`s origin shows that they originate from heavy B mesons (tau from B-mesons in \ref{ttbarttHEffTable}). This is denoted by the efficiency defined by the number of hadronic taus in the basic selection matched to a truth particle and originating from B-mesons over the total number of taus in the basic selection originating from B-mesons. Background contributions from Higgs events only originate only in rare cases from B-mesons with a efficiency of $\SI{0.514\pm 0.077}{\percent}$.\par       
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
                 \subcaption{Hadronic tau reconstruction efficiency of $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events.}
                 \label{DividedTau:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
                 \subcaption{Hadronic tau reconstruction efficiency of $\SI{29.39\pm 0.26}{\percent}$ for the Higgs events.}
                 \label{DividedTau:bg:ttH}
                 \end{subfigure}
-   %             
-%
 \caption[Hadronic tau reconstruction efficiency for the background events.]{Hadronic tau reconstruction efficiency for the background events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
 \label{DividedTau:bg}
 \end{figure}
@@ -1054,20 +1056,17 @@ Tau fake rates are estimated by the same efficiency definition as described abov
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_Jet.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Jet.pdf}
                 \subcaption{Estimation of a jet faking a tau lepton of $\SI{0.1741\pm 0.0019}{\percent}$ for the top-quark pair events.}
                 \label{DividedJet:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_Jet.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Jet.pdf}
                 \subcaption{Estimation of a jet faking a tau lepton of $\SI{1.0063\pm 0.0068}{\percent}$ for the Higgs events.}
                 \label{DividedJet:bg:ttH}
-                \end{subfigure}
-   %             
+                \end{subfigure}        
 \caption[Estimation of a jet faking a tau lepton for the background events.]{Estimation of a jet faking a tau lepton for the background events. The efficiency is defined as number of jets passing the basic selection and is matched to a tau-jet over the number of truth jets passing the basic selection.}
 \label{DividedJet:bg}
 \end{figure}
@@ -1079,20 +1078,17 @@ The fake rate for b-jets is defined in the same way as for jets above with the d
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_Bjet.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Bjet.pdf}
                 \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.2034\pm 0.0038}{\percent}$ for the top-quark pair events.}
                 \label{DividedBjet:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_Bjet.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Bjet.pdf}
                 \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.1496\pm 0.0033}{\percent}$ for the Higgs events.}
                 \label{DividedBjet:bg:ttH}
                 \end{subfigure}
-   %             
 \caption[Estimation of a b-jet faking a tau lepton for the background events.]{Estimation of a b-jet faking a tau lepton for the background events. The efficiency is defined as number of b-jets passing the basic selection and is matched to a tau-jet over the number of truth b-jets passing the basic selection.}
 \label{DividedBjet:bg}
 \end{figure}
@@ -1101,16 +1097,14 @@ Comparing the large difference between both samples for jet fakes with the small
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttbar/Divided_NoBjet.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_NoBjet.pdf}
                 \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{0.1616\pm 0.0022}{\percent}$ for the top-quark pair events.}
                 \label{DividedNoBjet:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_NoBjet.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_NoBjet.pdf}
                 \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{2.356\pm 0.016}{\percent}$ for the Higgs events.}
                 \label{DividedNoBjet:bg:ttH}
                 \end{subfigure}
@@ -1126,23 +1120,20 @@ The Higgs related events also includes real tau signals for which are further su
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_prompt.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_prompt.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) of $\SI{36.76\pm 0.51}{\percent}$ for the Higgs events.}
                 \label{Dividedprompt:bg:all}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_prompt1prong.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_prompt1prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 1-prong mode. The efficiency is $\SI{40.16\pm 0.62}{\percent}$ for the Higgs events.}
                 \label{Dividedprompt:bg:1prong}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_prompt3prong.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_prompt3prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 3-prong mode. The efficiency is $\SI{29.01\pm 0.88}{\percent}$ for the Higgs events.}
                 \label{Dividedprompt:bg:3prong}
                 \end{subfigure}
@@ -1155,23 +1146,20 @@ The efficiency derived from the number of taus passing the basic selection and a
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_fromH.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons  of $\SI{45.20\pm 0.47}{\percent}$ for the Higgs events.}
                 \label{DividedFromH:bg:all}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_fromH1prong.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH1prong.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons and decaying in the 1-prong mode. The efficiency is $\SI{49.25\pm 0.55}{\percent}$ for the Higgs events.}
                 \label{DividedFromH:bg:1prong}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_fromH3prong.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH3prong.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons and decaying in the 3-prong mode. The efficiency is $\SI{34.08\pm 0.87}{\percent}$ for the Higgs events.}
                 \label{DividedFromH:bg:3prong}
                 \end{subfigure}
@@ -1183,25 +1171,23 @@ The efficiency derived from the number of taus passing the basic selection and a
 %HT Gedöns// H | prompt
 As a reference for the LQ signal samples the sum of the transverse momenta of different physical objects $S_{T,\text{lep}}$, $H_{T,\text{had}}$, $S_{T}$, $H_{T}$ and the number of jets are plotted against the efficiency for taus originating from the weak vector bosons and the Higgs boson. The definition of the sum-variables are as follows:
 \begin{align}
-S_{T,\text{lep}}&=\cancel{\it{E}}_{T}+\sum_i\p_{T,i}^{\text{e}}+\sum_i\p_{T,i}^{\mu}+\sum_i\p_{T,i}^{\tau}\\
+S_{T,\text{lep}}&=\cancel{E}_{T}+\sum_i\p_{T,i}^{\text{e}}+\sum_i\p_{T,i}^{\mu}+\sum_i\p_{T,i}^{\tau}\\
 H_{T,\text{had}}&=\sum_i\p_{T,i}^{\text{jet}}\\
-S_{T}&=\cancel{\it{E}}_{T}+\sum_i\p_{T,i}^{\text{e}}+\sum_i\p_{T,i}^{\mu}+\sum_i\p_{T,i}^{\tau}+\sum_i\p_{T,i}^{\text{jet}}\\
+S_{T}&=\cancel{E}_{T}+\sum_i\p_{T,i}^{\text{e}}+\sum_i\p_{T,i}^{\mu}+\sum_i\p_{T,i}^{\tau}+\sum_i\p_{T,i}^{\text{jet}}\\
 H_{T}&=\sum_i\p_{T,i}^{\text{e}}+\sum_i\p_{T,i}^{\mu}+\sum_i\p_{T,i}^{\text{jet}}\,\text{,}
 \label{STgedöns}
 \end{align}
-where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, muons $X=\mu$, taus $X=\tau$ and jets $X=\text{jet}$ and $\cancel{\it{E}}_{T}$ denotes the missing energy, which includes in the standard model considerations the neutrinos. With the definitions of eq. (\ref{STgedöns}) different sensitivities are covered. $S_T$ is sensitive to all considered objects with the sub-category of $S_{T,\text{lep}}$, which only takes the leptonic objects into account, while $H_{T}$ is only sensitive to electrons and muons as well as jets. $H_{T,\text{had}}$ only includes jets.\par
+where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, muons $X=\mu$, taus $X=\tau$ and jets $X=\text{jet}$ and $\cancel{E}_{T}$ denotes the missing energy, which includes in the standard model considerations the neutrinos. With the definitions of eq. (\ref{STgedöns}) different sensitivities are covered. $S_T$ is sensitive to all considered objects with the sub-category of $S_{T,\text{lep}}$, which only takes the leptonic objects into account, while $H_{T}$ is only sensitive to electrons and muons as well as jets. $H_{T,\text{had}}$ only includes jets.\par
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_promptHT.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptHT.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $H_{T}$ for the Higgs events.}
                 \label{Divided:prompt:HT}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_promptHThad.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptHThad.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $H_{T,\text{had}}$ for the Higgs events.}
                 \label{Divided:prompt:HThad}
                 \end{subfigure}
@@ -1211,16 +1197,14 @@ where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, m
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_fromHHT.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHHT.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $H_{T}$ for the Higgs events.}
                 \label{Divided:fromH:HT}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_fromHHThad.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHHThad.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $H_{T,\text{had}}$ for the Higgs events.}
                 \label{Divided:fromH:HThad}
                 \end{subfigure}
@@ -1235,35 +1219,31 @@ The same plots for $H_{T,\text{had}}$ and $H_{T}$ are shown in figure \ref{Divid
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_promptST.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptST.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $S_{T}$ for the Higgs events.}
                 \label{Divided:prompt:ST}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_promptSTlep.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptSTlep.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $S_{T,\text{lep}}$ for the Higgs events.}
                 \label{Divided:prompt:STlep}
-                \end{subfigure}
+\end{subfigure}
 \caption[Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons for the Higgs background events.]{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on $S_{T}$ (a) and $S_{T,\text{lep}}$ (b)for the Higgs background events.}
 \label{Divided:prompt:STgedöns}
 \end{figure}
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_fromHST.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHST.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $S_{T}$ for the Higgs events.}
                 \label{Divided:fromH:ST}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_fromHSTlep.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHSTlep.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $S_{T,\text{lep}}$ for the Higgs events.}
                 \label{Divided:fromH:STlep}
                 \end{subfigure}
@@ -1277,16 +1257,14 @@ The efficiency dependence on the number of jets shows very low efficiency for ta
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_promptnjets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptnjets.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on the number of jets for the Higgs events.}
                 \label{Divided:prompt:njets}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_fromHnjets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHnjets.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons depending on the number of jets for the Higgs events.}
                 \label{Divided:fromH:njets}
                 \end{subfigure}
@@ -1300,30 +1278,26 @@ Figure \ref{dR:bg:taulepton} shows the minimum and maximum seperation between ta
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_pr_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_pr_mindR_taulepton.pdf}
                 \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and leptons.}
                 \label{dR:bg:prompt:taulepton:min}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taulepton.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taulepton.pdf}
                 \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and leptons.}
                 \label{dR:bg:prompt:taulepton:max}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taulepton.pdf}
                 \subcaption{Minimum seperation between taus originating from the Higgs events and leptons.}
                 \label{dR:bg:fromH:taulepton:min}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taulepton.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taulepton.pdf}
                 \subcaption{Maximum seperation between taus originating from the Higgs events and leptons.}
                 \label{dR:bg:fromH:taulepton:max}
                 \end{subfigure}
@@ -1335,30 +1309,26 @@ The minimum and maximum seperation bewtween taus and jets is presented in figure
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_pr_mindR_taujets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_pr_mindR_taujets.pdf}
                 \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and jets.}
                 \label{dR:bg:prompt:taujets:min}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taujets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taujets.pdf}
                 \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and jets.}
                 \label{dR:bg:prompt:taujets:max}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taujets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taujets.pdf}
                 \subcaption{Minimum seperation between taus originating from the Higgs events and jets.}
                 \label{dR:bg:fromH:taujets:min}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taujets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taujets.pdf}
                 \subcaption{Maximum seperation between taus originating from the Higgs events and jets.}
                 \label{dR:bg:fromH:taujets:max}
                 \end{subfigure}
@@ -1370,30 +1340,26 @@ The maximum separation between taus and b-jets has the difference that the separ
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.9\textwidth}
-                \qquad\qquad
-                \includegraphics[width=0.5\textwidth]{figures/plots/ttH/Divided_mindR_pr_taubjets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_mindR_pr_taubjets.pdf}
                 \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and bjets.}
                 \label{dR:bg:prompt:taubjets:min}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taubjets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taubjets.pdf}
                 \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and bjets.}
                 \label{dR:bg:prompt:taubjets:max}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_mindR_fromH_taubjets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_mindR_fromH_taubjets.pdf}
                 \subcaption{Minimum seperation between taus originating from the Higgs events and bjets.}
                 \label{dR:bg:fromH:taubjets:min}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.5\textwidth}
-                \centering
-                \includegraphics[width=0.8\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taubjets.pdf}
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taubjets.pdf}
                 \subcaption{Maximum seperation between taus originating from the Higgs events and bjets.}
                 \label{dR:bg:fromH:taubjets:max}
                 \end{subfigure}
@@ -1403,6 +1369,7 @@ The maximum separation between taus and b-jets has the difference that the separ
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Signal efficiency}\label{signaleff}
+The efficiencies for the leptoquark signal sampels with their two mass points are summarized in table \ref{LQEffTable} following the example of the background efficiencies in section \ref{bgeff}. The uncertainty is calculated derived from the binomial error of the efficiency after eq. (\ref{binomialerror}). The efficiency are the same as for the background samples with the difference that the category of a tau originating from a Higgs boson replaced by the categry of tau leptons originating from leptoquarks.\par
 %	
 	\begin{sidewaystable}[htbp]
 		\centering
@@ -1456,26 +1423,26 @@ The maximum separation between taus and b-jets has the difference that the separ
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.91\pm 0.90}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.93\pm 0.93}{\percent}$}
 		\\
-		\hline
-		jet faking as tau            & $3452$         & $43922$      & $3728$         & $53495$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{7.86\pm 0.13}{\percent}$}   & \multicolumn{2}{c}{$\SI{6.97\pm 0.11}{\percent}$}
-		\\
-		\hline
-		b-jet faking as tau          & $38$        & $1613$      & $33$         & $1842$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{2.36\pm 0.38}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.79\pm 0.31}{\percent}$}
-		\\
-		\hline
-                not b-jet faking as tau          & $3414$        & $27788$      & $3695$         & $35075$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{12.29\pm 0.20}{\percent}$}   & \multicolumn{2}{c}{$\SI{10.53\pm 0.16}{\percent}$}
-		\\
-                \hline
-                electron faking as tau          & $2$        & $7871$      & $5$         & $8906$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{0.025\pm 0.018}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.056\pm 0.025}{\percent}$}
-		\\
+		%\hline
+		%jet faking as tau            & $3452$         & $43922$      & $3728$         & $53495$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{7.86\pm 0.13}{\percent}$}   & \multicolumn{2}{c}{$\SI{6.97\pm 0.11}{\percent}$}
+		%\\
+		%\hline
+		%b-jet faking as tau          & $38$        & $1613$      & $33$         & $1842$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{2.36\pm 0.38}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.79\pm 0.31}{\percent}$}
+		%\\
+		%\hline
+                %not b-jet faking as tau          & $3414$        & $27788$      & $3695$         & $35075$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{12.29\pm 0.20}{\percent}$}   & \multicolumn{2}{c}{$\SI{10.53\pm 0.16}{\percent}$}
+		%\\
+                %\hline
+                %electron faking as tau          & $2$        & $7871$      & $5$         & $8906$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.025\pm 0.018}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.056\pm 0.025}{\percent}$}
+		%\\
 		\hline
 		\hline
 		\end{tabular*}
@@ -1484,11 +1451,935 @@ The maximum separation between taus and b-jets has the difference that the separ
                 \renewcommand{\arraystretch}{1}
                 \end{sidewaystable}
 %
+%Truth match
+The efficiency for reconstructing a hadronic tau, which is matched to a truth tau over the total number of truth taus passing the basic selection is $$\SI{48.44\pm 0.95}{\percent}$$ and $$\SI{44.73\pm 0.95}{\percent}$$ for the $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point LQ sample respectively. These higher efficiencies compared to the background samples is the existence of more real taus due to the LQ decay. This can be seen also at the momentum spectrum in figure \ref{DividedTau:signal}, where the truth tau's transverse momentum is drawn against the efficiency.\par  
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
+                \subcaption{Hadronic tau reconstruction efficiency of $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events.}
+                \label{DividedTau:signal:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
+                \subcaption{Hadronic tau reconstruction efficiency of $\SI{29.39\pm 0.26}{\percent}$ for the Higgs events.}
+                \label{DividedTau:signal:LQ76}
+                \end{subfigure}
+\caption[Hadronic tau reconstruction efficiency for the background events.]{Hadronic tau reconstruction efficiency for the background events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
+\label{DividedTau:signal}
+\end{figure}
+%
+%B mesons
+With a mean efficiency value of roughly $\sim\SI{1}{\percent}$ taus originating from B-mesons the rate is as twice as high compared to the two background samples. Nevertheless this is a small contributions compared to other tau sources and more important, because of the low statistics of only one event and the resulting high uncertainty, this sub-category can be neglected in the overall consideration.\par  
+%prompt
+The weak gauge bosons remain as tau sources with an efficiency of $\SI{32.4\pm 4.4}{\percent}$ for the LQ$_{500\textbf{GeV}}$ sample. This is comparable with the efficiency in the same sub-category for the Higgs background sample (cf. table \ref{ttbarttHEffTable}). But the higher mass point LQ sample shows a smaller efficiency of $\SI{20.8\pm 3.3}{\percent}$ in that sub-selection. This means that the behaviour regarding tau sources from $W^\pm$ and $Z^0$ is comparable in both signal and $t\bar{t}H$ background samples. The efficiency depending on the truth taus' transverse momentum is shown in figure \ref{Divided:signal:prompt:LQ75} and \ref{Divided:signal:prompt:LQ76} for the low and the high LQ mass point respectively. A further sub-selection differentiates between the tau decay into one and three charged particles, which can be seen in figure \ref{Divided:signal:prompt1prong:LQ75} and \ref{Divided:signal:prompt3prong:LQ75} for the low mass point. The $p_{T,\text{vis}}^{\tau,\text{truth}}$ range reaches $\SI{300}{\giga\electronvolt}$ and $\SI{250}{\giga\electronvolt}$ and shows an increasing efficiency with increasing transverse momentum. This effect is known from the Higgs background events. The overall efficiency for the 1-prong case is $\SI{32.9\pm 5.3}{\percent}$ and for the 3-prong case is $\SI{34.5\pm 8.8}{\percent}$. For the high mass point the 1-prong and 3-prong decay is shown in figure \ref{Divided:signal:prompt1prong:LQ76} and \ref{Divided:signal:prompt3prong:LQ76} and has efficiencies of $\SI{23.6\pm 4.1}{\percent}$ and $\SI{12.5\pm 5.8}{\percent}$ respectively.\par 
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_prompt.pdf}
+                \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) of $\SI{32.4\pm 4.4}{\percent}$ for the low mass LQ events.}
+                \label{Dividedprompt:bg:all}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_prompt1prong.pdf}
+                \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 1-prong mode. The efficiency is $\SI{32.9\pm 5.3}{\percent}$ for the low mass LQ events.}
+                \label{Dividedprompt:bg:1prong}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_prompt3prong.pdf}
+                \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 3-prong mode. The efficiency is $\SI{34.5\pm 8.8}{\percent}$ for the low mass LQ events.}
+                \label{Dividedprompt:bg:3prong}
+                \end{subfigure}
+\caption[Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) for the low mass LQ signal events.]{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) for the low mass LQ signal events. The efficiency is defined as the number of taus passing the basic selection and matched to a hadronic truth tau as well as the origin is from a $W^\pm$ or $Z^0$ boson over the total number of taus passing the basic selection and originating from a $W^\pm$ or $Z^0$ boson.}
+\label{Divided:signal:prompt:LQ75}
+\end{figure}
+%
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_prompt.pdf}
+                \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) of $\SI{20.8\pm 3.3}{\percent}$ for the high mass LQ events.}
+                \label{Dividedprompt:bg:all}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_prompt1prong.pdf}
+                \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 1-prong mode. The efficiency is $\SI{23.6\pm 4.1}{\percent}$ for the high mass LQ events.}
+                \label{Dividedprompt:bg:1prong}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_prompt3prong.pdf}
+                \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 3-prong mode. The efficiency is $\SI{12.5\pm 5.8}{\percent}$ for the high mass LQ events.}
+                \label{Dividedprompt:bg:3prong}
+                \end{subfigure}            
+\caption[Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) for the high mass LQ signal events.]{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) for the high mass LQ signal events. The efficiency is defined as the number of taus passing the basic selection and matched to a hadronic truth tau as well as the origin is from a $W^\pm$ or $Z^0$ boson over the total number of taus passing the basic selection and originating from a $W^\pm$ or $Z^0$ boson.}
+\label{Divided:signal:prompt:LQ76}
+\end{figure}
+%
+%from LQ
+Taus originating directly from LQ have a efficiency of $\SI{51.3\pm 1.2}{\percent}$ and $\SI{50.7\pm 1.5}{\percent}$ for the low and high mass point respectively. These to efficiencies are in agreement with each other. The corresponding efficiency plots can be found in figure \ref{Divided:signal:fromLQ:LQ75} and \ref{Divided:signal:fromLQ:LQ7+} as well as the efficiency categories for taus decaying into one charged or three charged particles. The efficiency for 1-prong decaying taus in case of the low mass LQ sample is $\SI{55.5\pm 1.4}{\percent}$ and $\SI{38.2\pm 2.4}{\percent}$ for the 3-prong case. The high mass point LQ samples shows efficiencies for the 1-prong and 3-prong case of $SI{55.0\pm 1.7}{\percent}$ and $\SI{36.3\pm 3.0}{\percent}$.\par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ.pdf}
+                \subcaption{Efficiency of taus originating LQs of $\SI{51.3\pm 1.2}{\percent}$ for the low mass LQ events.}
+                \label{DividedfromLQ:signal:allLQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ1prong.pdf}
+                \subcaption{Efficiency of taus originating LQs and decaying in the 1-prong mode. The efficiency is $\SI{55.5\pm 1.4}{\percent}$ for the low mass LQ events.}
+                \label{DividedfromLQ:bg:1prongLQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ3prong.pdf}
+                \subcaption{Efficiency of taus originating LQs and decaying in the 3-prong mode. The efficiency is $\SI{38.2\pm 2.4}{\percent}$ for the low mass LQ events.}
+                \label{DividedfromLQ:bg:3prong}
+                \end{subfigure}
+\caption[Efficiency of taus originating LQs for the low mass LQ signal events.]{Efficiency of taus originating LQs for the low mass LQ signal events. The efficiency is defined as the number of taus passing the basic selection and matched to a hadronic truth tau as well as the origin is from a $W^\pm$ or $Z^0$ boson over the total number of taus passing the basic selection and originating from a $W^\pm$ or $Z^0$ boson.}
+\label{Divided:signal:fromLQ:LQ75}
+\end{figure}
+%
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ.pdf}
+                \subcaption{Efficiency of taus originating LQs of $\SI{50.7\pm 1.5}{\percent}$ for the high mass LQ events.}
+                \label{DividedfromLQ:bg:all}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ1prong.pdf}
+                \subcaption{Efficiency of taus originating LQs and decaying in the 1-prong mode. The efficiency is $SI{55.0\pm 1.7}{\percent}$ for the high mass LQ events.}
+                \label{DividedfromLQ:bg:1prong}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ3prong.pdf}
+                \subcaption{Efficiency of taus originating LQs and decaying in the 3-prong mode. The efficiency is $\SI{36.3\pm 3.0}{\percent}$ for the high mass LQ events.}
+                \label{DividedfromLQ:bg:3prong}
+                \end{subfigure}            
+\caption[Efficiency of taus originating LQs for the high mass LQ signal events.]{Efficiency of taus originating LQs for the high mass LQ signal events. The efficiency is defined as the number of taus passing the basic selection and matched to a hadronic truth tau as well as the origin is from a $W^\pm$ or $Z^0$ boson over the total number of taus passing the basic selection and originating from a $W^\pm$ or $Z^0$ boson.}
+\label{Divided:signal:fromLQ:LQ76}
+\end{figure}
+%
+%HT,ST Gedöns prompt | LQ
+The correlation between the efficiency and the variables $H_T$, $H_{T,\text{had}}$, $S_T$, $S_{T,\text{lep}}$ defined in eq. (\ref{STgedöns}) and the number of jets is also available for the leptoquark related events. \newline
+%HT und HThad
+Figure \ref{Dividedprompt:HTgedöns} shows the efficiency depending on the variable $H_T$ and $H_{T,\text{had}}$ for the sub-selections, where taus originate from weak gauge.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHT.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T}$ low mass LQ sample.}
+                \label{Divided:prompt:HT:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T,\text{had}}$ low mass LQ sample.}
+                \label{Divided:prompt:HThad:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHT.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T}$ high mass LQ sample.}
+                \label{Divided:prompt:HT:LQ76}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHThad.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T,\text{had}}$ high mass LQ sample.}
+                \label{Divided:prompt:HThad:LQ76}
+                \end{subfigure}
+\caption[Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons for the LQ singal events.]{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons depending on $H_{T}$ (a), (c) and $H_{T,\text{had}}$ (b), (d) for the LQ singal events.}
+\label{Dividedprompt:HTgedöns}
+\end{figure}
+%
+The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case of the sub-category, where tau leptons originate from LQs, are shown in figure \ref{DividedFromLQ:HTgedöns}. The $H_T$ ($H_{T,\text{had}}$) spectrum covers a larger range for the $\SI{1}{\tera\electronvolt}$ leptoquarks sample due to its higher mass. The $H_T$ distribution extends up to $\SI{3}{\tera\electronvolt}$ (see fig. \ref{Divided:fromLQ:HT:LQ76}) compared to figure \ref{Divided:fromLQ:HT:LQ75}, which extends only to $\SI{2.5}{\tera\electronvolt}$. The $H_{T,\text{had}}$ distribution extends up to $\SI{2.5}{\tera\electronvolt}$ (see fig. \ref{Divided:fromLQ:HThad:LQ76}) compared to figure \ref{Divided:fromLQ:HThad:LQ75}, which extends to $\SI{1.2}{\tera\electronvolt}$. The efficiency trend over the hole spectrum is constant with the most fluctuation in case of the $H_{T}$ spectrum for the high mass point, besides the $H_{T,\text{had}}$ spectrum of the low mass point. It shows lower efficiencies at the edge of the sum of the jets' transverse momentum from $SI{200}{\giga\electronvolt}$ to $SI{300}{\giga\electronvolt}$ and from $SI{900}{\giga\electronvolt}$ to $SI{1000}{\giga\electronvolt}$.\newline
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHT.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T}$ low mass LQ sample.}
+                \label{Divided:fromLQ:HT:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T,\text{had}}$ low mass LQ sample.}
+                \label{Divided:fromLQ:HThad:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHT.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T}$ high mass LQ sample.}
+                \label{Divided:fromLQ:HT:LQ76}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHThad.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T,\text{had}}$ high mass LQ sample.}
+                \label{Divided:fromLQ:HThad:LQ76}
+                \end{subfigure}
+\caption[Efficiency of taus originating from leptoquarks for the LQ singal events.]{Efficiency of taus originating from leptoquarks depending on $H_{T}$ (a), (c) and $H_{T,\text{had}}$ (b), (d) for the LQ singal events.}
+\label{DividedfromLQ:HTgedöns}
+\end{figure}
+%
+%ST und STlep
+Taking into account not only jets, electrons and muons, but also taus and missing energy for example one can study the correlation bewtween the efficiency and $S_T$ ($S_{T,\text{lep}}$). This is done in figure \ref{Dividedprompt:STgedöns} for taus originating from weak gauge bosons. Efficiencies are found to be in range of high momenta. For the $\SI{1}{\tera\electronvolt}$ sample the spectrum is even more shifted to higher $p_T$ due to the high mass point. For the $S_T$ spectrum the efficiency starts at $\SI{500}{\giga\electronvolt}$ (see fig. \ref{Divided:prompt:ST:LQ76}) and the $S_{T,\text{lep}}$ spectrum starts at $\SI{1}{\tera\electronvolt}$ (see fig. \ref{Divided:prompt:STlep:LQ76}). The sample with the low LQ mass point is different from the other LQ sample. It has a local efficiency minimum in the $\S_T$ distribution at $\SI{1.3}{\tera\electronvolt}$ (see fig. \ref{Divided:prompt:ST:LQ75}) and a local minimum in the $S_{T,\text{lep}}$ distribution at $SI{0.5}{\tera\electronvolt}$. \newline
+%
+\begin{figure}
+  \centering    
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQST.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T}$ low mass LQ sample.}
+                \label{Divided:prompt:ST:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQSTlep.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T,\text{lep}}$ low mass LQ sample.}
+                \label{Divided:prompt:STlep:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQST.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T}$ high mass LQ sample.}
+                \label{Divided:prompt:ST:LQ76}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQSTlep.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T,\text{lep}}$ high mass LQ sample.}
+                \label{Divided:prompt:STlep:LQ76}
+                \end{subfigure}
+\caption[Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons for the LQ singal events.]{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons depending on $S_{T}$ (a), (c) and $S_{T,\text{lep}}$ (b), (d) for the LQ singal events.}
+\label{Dividedprompt:STgedöns}
+\end{figure}
+%
+The sub-selection with taus originating directly from LQs show in this consideration of $S_T$ and $S_{T,\text{lep}}$ show no such minima in case of the sample with the low mass point. Their efficiency plots can be seen in figure \ref{Divided:fromLQ:ST:LQ75} and \ref{Divided:fromLQ:STlep:LQ75}. The $S_T$ and $S_{T,\text{lep}}$ distribution for the high mass point is shown in figure \ref{Divided:fromLQ:ST:LQ76} and \ref{Divided:fromLQ:STlep:LQ76} respectively. \newline 
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQST.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T}$ low mass LQ sample.}
+                \label{Divided:fromLQ:ST:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQSTlep.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T,\text{lep}}$ low mass LQ sample.}
+                \label{Divided:fromLQ:STlep:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQST.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T}$ high mass LQ sample.}
+                \label{Divided:fromLQ:ST:LQ76}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQSTlep.pdf}
+                \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T,\text{lep}}$ high mass LQ sample.}
+                \label{Divided:fromLQ:STlep:LQ76}
+                \end{subfigure}
+\caption[Efficiency of taus originating from leptoquarks for the LQ singal events.]{Efficiency of taus originating from leptoquarks depending on $S_{T}$ (a), (c) and $S_{T,\text{lep}}$ (b), (d) for the LQ singal events.}
+\label{DividedfromLQ:STgedöns}
+\end{figure}
+%
+%njets
+The dependence of the efficiency on the number of jets can be found in figure \ref{Divided:signal:njets} for both tau origins.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_promptnjets.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on the number of jets for the LQ sample with low mass point.}
+                \label{Divided:prompt:njets:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_promptnjets.pdf}
+                \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on the number of jets for the LQ sample with high mass point.}
+                \label{Divided:prompt:njets:LQ76}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromHnjets.pdf}
+                \subcaption{Efficiency of taus originating from Higgs bosons depending on the number of jets for the LQ sample with low mass point.}
+                \label{Divided:fromH:njets:LQ75}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromHnjets.pdf}
+                \subcaption{Efficiency of taus originating from Higgs bosons depending on the number of jets for the LQ sample with high mass point.}
+                \label{Divided:fromH:njets:LQ75}
+                \end{subfigure}
+\caption[Efficiency of taus originating from $W^\pm$, $Z^0$ and Higgs bosons for the Higgs background events.]{Efficiency of taus originating from $W^\pm$, $Z^0$ and Higgs bosons depending on the number of jets .}
+\label{Divided:signal:njets}
+\end{figure}
+%
+%dR min max Gedöns prompt| LQ
+The following describes the geometric separation between taus and leptons, taus and jets as well as taus and b-jets for the LQ signal samples.\newline
+%dR taulepton
+The minimum and maximum separation between taus and leptons (electrons and muons) is shown in figure \ref{dR:signal:prompt:taulepton} for both signal samples. It is the efficiency for taus originating from $W^\pm$ and $Z^0$ bosons.   
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taulepton.pdf}
+                \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and leptons for the low mass point LQ sample.}
+                \label{dR:signal:prompt:taulepton:min}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taulepton.pdf}
+                \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and leptons for the low mass point LQ sample.}
+                \label{dR:signal:prompt:taulepton:max}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taulepton.pdf}
+                \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and leptons for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taulepton:min}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taulepton.pdf}
+                \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and leptons for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taulepton:max}
+                \end{subfigure}
+\caption[Efficiency of separation between taus originating from $W^\pm$, $Z^0$ and leptons.]{Efficiency of minimum and maximum separation between taus originating from $W^\pm$, $Z^0$ and leptons (electrons and muons).}
+\label{dR:signal:prompt:taulepton}
+\end{figure}
+%
+The minimum and maximum separation for the efficiency selection of taus originating from leptoquarks is depicted in figure \ref{dR:signal:fromH:taulepton}.\newline
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromH_mindR_taulepton.pdf}
+                \subcaption{Minimum seperation between taus originating from Higgs events and leptons for the low mass point LQ sample.}
+                \label{dR:signal:fromH:taulepton:min}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_fromH_taulepton.pdf}
+                \subcaption{Maximum seperation between taus originating from Higgs events and leptons for the low mass point LQ sample.}
+                \label{dR:signal:fromH:taulepton:max}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromH_mindR_taulepton.pdf}
+                \subcaption{Minimum seperation between taus originating from Higgs events and leptons for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taulepton:min}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_fromH_taulepton.pdf}
+                \subcaption{Maximum seperation between taus originating from Higgs events and leptons for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taulepton:max}
+                \end{subfigure}
+\caption[Efficiency of separation between taus originating from Higgs and leptons.]{Efficiency of minimum and maximum separation between taus originating from Higgs and leptons (electrons and muons).}
+\label{dR:signal:fromH:taulepton}
+\end{figure}
+%
+Correspondigly to the background samples the minimum and maximum separation between taus and jets is shown in figure \ref{dR:signal:prompt:taujet} for taus originating from $W^\pm$ and $Z^0$ and in figure \ref{dR:signal:fromH:taujet} for taus originating directly from LQs.\newline
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taujet.pdf}
+                \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and jets for the low mass point LQ sample.}
+                \label{dR:signal:prompt:taujet:min}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taujet.pdf}
+                \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and jets for the low mass point LQ sample.}
+                \label{dR:signal:prompt:taujet:max}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taujet.pdf}
+                \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taujet:min}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taujet.pdf}
+                \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taujet:max}
+                \end{subfigure}
+\caption[Efficiency of separation between taus originating from $W^\pm$, $Z^0$ and jets.]{Efficiency of minimum and maximum separation between taus originating from $W^\pm$, $Z^0$ and jets.}
+\label{dR:signal:prompt:taujet}
+\end{figure}
+%
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromH_mindR_taujet.pdf}
+                \subcaption{Minimum seperation between taus originating from Higgs events and jets for the low mass point LQ sample.}
+                \label{dR:signal:fromH:taujet:min}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_fromH_taujet.pdf}
+                \subcaption{Maximum seperation between taus originating from Higgs events and jets for the low mass point LQ sample.}
+                \label{dR:signal:fromH:taujet:max}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromH_mindR_taujet.pdf}
+                \subcaption{Minimum seperation between taus originating from Higgs events and jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taujet:min}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_fromH_taujet.pdf}
+                \subcaption{Maximum seperation between taus originating from Higgs events and jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taujet:max}
+                \end{subfigure}
+\caption[Efficiency of separation between taus originating from Higgs and jets.]{Efficiency of minimum and maximum separation between taus originating from Higgs and jets.}
+\label{dR:signal:fromH:taujet}
+\end{figure}
+%
+The special case of the minimum and maximum separation between taus and b-flavor jets is shown in figure \ref{dR:signal:fromH:taubjet} for the sub-category taus originating from $W^\pm$ and $Z^0$ bosons.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taubjet.pdf}
+                \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the low mass point LQ sample.}
+                \label{dR:signal:prompt:taubjet:min}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taubjet.pdf}
+                \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the low mass point LQ sample.}
+                \label{dR:signal:prompt:taubjet:max}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taubjet.pdf}
+                \subcaption{Minimum seperation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taubjet:min}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taubjet.pdf}
+                \subcaption{Maximum seperation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taubjet:max}
+                \end{subfigure}
+\caption[Efficiency of separation between taus originating from $W^\pm$, $Z^0$ and b-jets.]{Efficiency of minimum and maximum separation between taus originating from $W^\pm$, $Z^0$ and b-jets.}
+\label{dR:signal:prompt:taubjet}
+\end{figure}
+%
+The separation between taus and b-jets in case of the sub-selection, where taus originate from LQs are shown in figure \ref{dR:signal:fromH:taubjet}.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromH_mindR_taubjet.pdf}
+                \subcaption{Minimum seperation between taus originating from Higgs events and b-jets for the low mass point LQ sample.}
+                \label{dR:signal:fromH:taubjet:min}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_fromH_taubjet.pdf}
+                \subcaption{Maximum seperation between taus originating from Higgs events and b-jets for the low mass point LQ sample.}
+                \label{dR:signal:fromH:taubjet:max}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromH_mindR_taubjet.pdf}
+                \subcaption{Minimum seperation between taus originating from Higgs events and b-jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taubjet:min}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_fromH_taubjet.pdf}
+                \subcaption{Maximum seperation between taus originating from Higgs events and b-jets for the high mass point LQ sample.}
+                \label{dR:signal:fromH:taubjet:max}
+                \end{subfigure}
+\caption[Efficiency of separation between taus originating from Higgs and b-jets.]{Efficiency of minimum and maximum separation between taus originating from Higgs and b-jets.}
+\label{dR:signal:fromH:taubjet}
+\end{figure}
+%
 \section{Kinematics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In section \ref{signalANDbgEff} signal and background efficiencies helps to understand especially the role of the tau lepton in the signal and background samples for the relevant $t\tau^{-}+\bar{t}\tau^{+}$ channel. The next step into the direction of signal studies is to compare the event yield for signal and background samples in the different channels of the event selection (cf. section \ref{eventselection}). This is done by studying kinematic variables for the tau lepton like the transverse momentum, angular distribution, the variables defined in eq. \ref{STgedöns} (cf. section \ref{bgeff}) and the separation between taus and objects like electrons, jets and b-jets. The comparison is done with the background and signal MC samples together with data of the data-taking years 2015 until 2018. This reveals, if the signature of the choosen event selection can be extracted and detected within the known standard model processes. The data in this context gives the possibility of reference how well data is resembled by the MC simulation, although this work is not a full LQ search. No systematic variations are applied on the Monte Carlo simulations, which would be the normal procedure for a full search. Furthermore $\SI{1}{\percent}$ of the 2017 data are missing. This corresponds to a luminosity loss of \SI{0.44}{\per\femto\barn} (cf. table \ref{datalumi}).\par
+%tau pT
+The transverse momentum distribution of the tau lepton is shown in figure \ref{taupt} for different event selections.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j2b_1tau.pdf}
+                \subcaption{$p_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{taupt:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j2b_2tau.pdf}
+                \subcaption{$p_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{taupt:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j1b_1tau.pdf}
+                \subcaption{$p_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{taupt:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j1b_2tau.pdf}
+                \subcaption{$p_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{taupt:1b2tau}
+                \end{subfigure}
+\caption[Transverse momentum distribution of the tau lepton for different event selections.]{Transverse momentum distribution of the tau lepton for different event selections.}
+\label{taupt}
+\end{figure}
+%
+The selection of at least two b-jets and at least one tau shows (see figure \ref{taupt:2b1tau}) that up to transverse momenta of $\SI{80}{\giga\electronvolt}$ the LQ signal is hidden from top-quark pair and Higgs contributions. But from that threshold on the momentum distribution of the low mass signal sample exceeds the background. For the high mass point sample this happens at $\SI{200}{\giga\electronvolt}$. The MC background samples agree well with data from $\SI{50}{\giga\electronvolt}$ onwards, besides one outlier. Before that value data exceeds the used background. The discrepancy can be explained such that  more contributions should be taken into account like vector bosons and additional jets, di-boson events or single-top contributions. Tightening the selection to at least two taus (see figure \ref{taupt:2b2tau}) will reveal even more signal compared to relatively small background. The event yield for data shows that only few events in this selection is expected. The disatvantage in this selection is the few events in general, which results in low statistics. The looser selection of taking only at least one b-jet and at least one tau (see figure \ref{taupt:1b1tau}) shifts the threshold for the signal up to $\SI{100}{\giga\electronvolt}$  and $\SI{230}{\giga\electronvolt}$ for the low and high mass point LQ sample respectively, but allows at the same time higher statistics. This effect is clearly visible in the selection of at least one b-jet and at least two tau leptons shown in figure \ref{taupt:1b2tau}. The discrepancy between data and MC in the lower $p_T$ range also exists here, as it depends not directly on the choosen selection.\par
+%tauphi
+The distribution of the azimuthal angle of the tau leptons for different event selection is shown in figure \ref{tauphi}. It gives the same picture as for the transverse momentum distribution inluding the lack of MC events. For the selection of at least two b-jets and at least one tau the signal samples are hidden by the background over the hole $\phi$ range (see figure \ref{tauphi:2b1tau} and \ref{tauphi:1b1tau}). Only the at least two tau selection reveals the LQ signal. Better statistics can be achieved by using the selection with at least one b-jet and at least two taus (see figure \ref{tauphi:1b2tau}).\par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j2b_1tau.pdf}
+                \subcaption{$\phi$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{tauphi:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j2b_2tau.pdf}
+                \subcaption{$\phi$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{tauphi:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j1b_1tau.pdf}
+                \subcaption{$\phi$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{tauphi:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j1b_2tau.pdf}
+                \subcaption{$\phi$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{tauphi:1b2tau}
+                \end{subfigure}
+\caption[Azimuthal angle distribution of the tau lepton for different event selections.]{Azimuthal angle distribution of the tau lepton for different event selections.}
+\label{tauphi}
+\end{figure}
+%
+%tau eta
+The pseudorapidity distribution shows the same trend as the $p_T$ and $\phi$ distribution described above and is shown in figure \ref{taueta}.\par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j2b_1tau.pdf}
+                \subcaption{$\eta$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{taueta:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j2b_2tau.pdf}
+                \subcaption{$\eta$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{taueta:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j1b_1tau.pdf}
+                \subcaption{$\eta$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{taueta:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j1b_2tau.pdf}
+                \subcaption{$\eta$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{taueta:1b2tau}
+                \end{subfigure}
+\caption[Pseudorapidity distribution of the tau lepton for different event selections.]{Pseudorapidity distribution of the tau lepton for different event selections.}
+\label{taueta}
+\end{figure}
+%
+%MET
+Following the definition of eq. \ref{STgedöns} (cf. section \ref{bgeff}) the distribution of the missing energy for different selections is shown in figure \ref{MET}. The missing energy is not a optimal discriminant variable, because the signal is not well separated over the hole $\cancel{E}_T$ range in the selection of at least one b-jet and at least one tau (see \ref{MET:1b1tau}). The signal is in fact better separated in the selection of at least two b-jets and at least one tau as depicted in figure \ref{MET:2b1tau}. Also the at least two tau condition does not improve the separation (see figure \ref{MET:2b2tau} and \ref{MET:1b2tau}). Altough the studied $t\tau^{-}+\bar{t}\tau^{+}$ channel has sources of neutrinos responsible for missing transverse energy through the decay of tau leptons or leptonic top-quark decays, this is not enough to discriminate it from background neutrino contributions.\par   
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j2b_1tau.pdf}
+                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{MET:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j2b_2tau.pdf}
+                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{MET:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j1b_1tau.pdf}
+                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{MET:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j1b_2tau.pdf}
+                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{MET:1b2tau}
+                \end{subfigure}
+\caption[Missing energy distribution of the tau lepton for different event selections.]{Missing energy distribution of the tau lepton for different event selections.}
+\label{MET}
+\end{figure}
+%
+%HT
+The distribution of $H_T$ is shown in figure \ref{HT}. Because this distribution is the sum of the transverse momenta of electrons, muons and jets and therefore includes this is good discriminating variable for particles with high masses like the leptoquarks in the signal sample. Figure \ref{HT:2b1tau} shows that the background decreases from $\SI{600}{\giga\electron}$ on and reveals at least the $\SI{500}{\giga\electronvolt}$ mass LQ signal. The best extraction results from at least two tau selection shown in figure \ref{HT:2b2tau} and \ref{HT:1b2tau}.\par    
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j2b_1tau.pdf}
+                \subcaption{$H_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{HT:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j2b_2tau.pdf}
+                \subcaption{$H_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{HT:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j1b_1tau.pdf}
+                \subcaption{$H_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{HT:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j1b_2tau.pdf}
+                \subcaption{$H_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{HT:1b2tau}
+                \end{subfigure}
+\caption[$H_T$ distribution of the tau lepton for different event selections.]{$H_T$ distribution of the tau lepton for different event selections.}
+\label{HT}
+\end{figure}
+%
+%HThad
+The variable $H_{T,\text{had}}$ in principle shows the same trend as the $H_T$ distribution for a discriminating variable. Nevertheless the effect of extracting the signal is not as good as for $H_T$. The reason is that less objects are included in the variable. $H_{T,\text{had}}$ only contains the sum of the jets' momenta. The plots are shown in figure \ref{HThad}. \par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j2b_1tau.pdf}
+                \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{HThad:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j2b_2tau.pdf}
+                \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{HThad:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j1b_1tau.pdf}
+                \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{HThad:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j1b_2tau.pdf}
+                \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{HThad:1b2tau}
+                \end{subfigure}
+\caption[$H_{T,\text{had}}$ distribution of the tau lepton for different event selections.]{$H_{T,\text{had}}$ distribution of the tau lepton for different event selections.}
+\label{HThad}
+\end{figure}
+%
+%ST
+The most objects are coverd by $S_T$ variable. Its distribution is shown in figure \ref{ST}. It is possible to differentiate between signal and background in the selection of at least on b-jet and at least one tau (see figure \ref{ST:1b1tau}) as well as in the selection of at least two b-jets and at least one tau (see figure \ref{ST:2b1tau}). Taking into account at least two tau leptons means an improvement of the signal selection (see figure \ref{ST:1b2tau} and \ref{2b2tau}). The high mass point sample can be distinguished the best in this selection. Due to ist high LQ mass the $S_T$ spectrum reaches high values up to $\SI{2.5}{\tera\electronvolt}$. \par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j2b_1tau.pdf}
+                \subcaption{$S_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{ST:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j2b_2tau.pdf}
+                \subcaption{$S_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{ST:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j1b_1tau.pdf}
+                \subcaption{$S_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{ST:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j1b_2tau.pdf}
+                \subcaption{$S_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{ST:1b2tau}
+                \end{subfigure}
+\caption[$S_T$ distribution of the tau lepton for different event selections.]{$S_T$ distribution of the tau lepton for different event selections.}
+\label{ST}
+\end{figure}
+%
+%STlep
+Excluding the jets in the definition of $S_T$ results in the possibly discriminating variable $S_{T,\text{lep}}$ (see figure \ref{STlep}), which is also capable to show a difference in signal and background at $\SI{450}{\giga\electronvolt}$ (see figure \ref{STlep:2b1tau} and \ref{STlep:1b1tau}). The at least two tau selection gives similar results to that of $S_T$ (see figure \ref{STlep:2b2tau} and \ref{STlep:21b2tau}). \par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j2b_1tau.pdf}
+                \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \label{STlep:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j2b_2tau.pdf}
+                \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \label{STlep:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j1b_1tau.pdf}
+                \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \label{STlep:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j1b_2tau.pdf}
+                \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \label{STlep:1b2tau}
+                \end{subfigure}
+\caption[$S_{T,\text{lep}}$ distribution of the tau lepton for different event selections.]{$S_{T,\text{lep}}$ distribution of the tau lepton for different event selections.}
+\label{STlep}
+\end{figure}
+%
+%dR
+Minimum and maximum separation between taus and leptons, taus and jets as well as taus and b-jets within the event selection are partly convenient for a discrimination between signal and background.\newline
+%min dR <tau,lepton>
+The minimum separation between taus and leptons are shown in figure \ref{mindR:taulepton} for the different selections. The best discrimination can be reached for the selection of at least two tau leptons preferring the case with at least 1-bjet due to enough statistics (see figure \ref{mindR:taulepton:2b2tau} and \ref{mindR:taulepton:1b2tau}). Within the selection of only one tau the signal is exceeded by background events (see figure \ref{mindR:taulepton:2b1tau} and \ref{mindR:taulepton:1b2tau}). \par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j2b_1tau.pdf}
+                \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least one additional tau.}
+                \label{mindR:taulepton:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j2b_2tau.pdf}
+                \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least two additional tau.}
+                \label{mindR:taulepton:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j1b_1tau.pdf}
+                \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least one additional tau.}
+                \label{mindR:taulepton:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j1b_2tau.pdf}
+                \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least two additional tau.}
+                \label{mindR:taulepton:1b2tau}
+                \end{subfigure}
+\caption[Minimum separation between taus and leptons (electrons and muons) for different event selections.]{Minimum separation between taus and leptons (electrons and muons) for different event selections.}
+\label{mindR:taulepton}
+\end{figure}
+%
+%max dR taulepton
+The maximum separation between taus and leptons (electrons and muons) are shown in figure \ref{maxdR:taulepton}. The best discrimination between signal and background can be achieved with the selection of at least two taus. Altough this is not the best option compared to $S_T$ variable for example.\par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j2b_1tau.pdf}
+                \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least one additional tau.}
+                \label{maxdR:taulepton:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j2b_2tau.pdf}
+                \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least two additional tau.}
+                \label{maxdR:taulepton:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j1b_1tau.pdf}
+                \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least one additional tau.}
+                \label{maxdR:taulepton:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j1b_2tau.pdf}
+                \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least two additional tau.}
+                \label{maxdR:taulepton:1b2tau}
+                \end{subfigure}
+\caption[Maximum separation between taus and leptons (electrons and muons) for different event selections.]{Maximum separation between taus and leptons (electrons and muons) for different event selections.}
+\label{maxdR:taulepton}
+\end{figure}
+%
+%min dR <tau,jet>
+The minimum and maximum separation between taus and jets as shown in figure \ref{mindR:taujet} and \ref{maxdR:taujet} as discrimination option is also not the best option compared to $S_T$ or tau related distributions. The sinal events exceed the background only in the selection with at least two taus with the disatvantage of lower statistics.\par
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j2b_1tau.pdf}
+                \subcaption{Minimum separation between taus and jets, when selecting at least two b-jets and at least one additional tau.}
+                \label{mindR:taujet:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j2b_2tau.pdf}
+                \subcaption{Minimum separation between taus and jets, when selecting at least two b-jets and at least two additional tau.}
+                \label{mindR:taujet:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j1b_1tau.pdf}
+                \subcaption{Minimum separation between taus and jets, when selecting at least one b-jets and at least one additional tau.}
+                \label{mindR:taujet:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j1b_2tau.pdf}
+                \subcaption{Minimum separation between taus and jets, when selecting at least one b-jets and at least two additional tau.}
+                \label{mindR:taujet:1b2tau}
+                \end{subfigure}
+\caption[Minimum separation between taus and jets for different event selections.]{Minimum separation between taus and jets for different event selections.}
+\label{mindR:taujet}
+\end{figure}
+%
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j2b_1tau.pdf}
+                \subcaption{Maximum separation between taus and jets, when selecting at least two b-jets and at least one additional tau.}
+                \label{maxdR:taujet:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j2b_2tau.pdf}
+                \subcaption{Maximum separation between taus and jets, when selecting at least two b-jets and at least two additional tau.}
+                \label{maxdR:taujet:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j1b_1tau.pdf}
+                \subcaption{Maximum separation between taus and jets, when selecting at least one b-jets and at least one additional tau.}
+                \label{maxdR:taujet:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j1b_2tau.pdf}
+                \subcaption{Maximum separation between taus and jets, when selecting at least one b-jets and at least two additional tau.}
+                \label{maxdR:taujet:1b2tau}
+                \end{subfigure}
+\caption[Maximum separation between taus and jets for different event selections.]{Maximum separation between taus and jets for different event selections.}
+\label{maxdR:taujet}
+\end{figure}
+%
+%min dR <tau,bjet>
+Following the example of the minium and maximum separation between taus and jets the separation between taus and b-jets gives similar results shown in figure \ref{mindR:taubjet} and \ref{maxdR:taubjet}. Taking this separating variable as discriminant is not the best option.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j2b_1tau.pdf}
+                \subcaption{Minimum separation between taus and b-jets, when selecting at least two b-jets and at least one additional tau.}
+                \label{mindR:taubjet:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j2b_2tau.pdf}
+                \subcaption{Minimum separation between taus and b-jets, when selecting at least two b-jets and at least two additional tau.}
+                \label{mindR:taubjet:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j1b_1tau.pdf}
+                \subcaption{Minimum separation between taus and b-jets, when selecting at least one b-jets and at least one additional tau.}
+                \label{mindR:taubjet:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j1b_2tau.pdf}
+                \subcaption{Minimum separation between taus and b-jets, when selecting at least one b-jets and at least two additional tau.}
+                \label{mindR:taubjet:1b2tau}
+                \end{subfigure}
+\caption[Minimum separation between taus and b-jets for different event selections.]{Minimum separation between taus and b-jets for different event selections.}
+\label{mindR:taubjet}
+\end{figure}
+%
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j2b_1tau.pdf}
+                \subcaption{Maximum separation between taus and b-jets, when selecting at least two b-jets and at least one additional tau.}
+                \label{maxdR:taubjet:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j2b_2tau.pdf}
+                \subcaption{Maximum separation between taus and b-jets, when selecting at least two b-jets and at least two additional tau.}
+                \label{maxdR:taubjet:2b2tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j1b_1tau.pdf}
+                \subcaption{Maximum separation between taus and b-jets, when selecting at least one b-jets and at least one additional tau.}
+                \label{maxdR:taubjet:1b1tau}
+                \end{subfigure}
+                 %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j1b_2tau.pdf}
+                \subcaption{Maximum separation between taus and b-jets, when selecting at least one b-jets and at least two additional tau.}
+                \label{maxdR:taubjet:1b2tau}
+                \end{subfigure}
+\caption[Maximum separation between taus and b-jets for different event selections.]{Maximum separation between taus and b-jets for different event selections.}
+\label{maxdR:taubjet}
+\end{figure}
+%
+%resumee dass, die  1b2tau selection eine ganz gute wahl ist eig!
+%auch wenn LQ76 im 1tau nicht so gut abschneidet, so gewinnt es trotzdem in der 2tau selection wegen des langen spectrums folgend aus der 1tev masse
+% beiträge aus single top, usw (mal auf die Folie von Yoshi schauen, was man da so reinnimmt: Z,W+jets...) 1% 2017 Data fehlen --> good agreement?
 \section{Significance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%quantitative ausssage über wie die signifikanz bei der extraction des signal is
 \appendix
 \chapter{Appendix}
+\section{Comparison bewteen the top-quark background samples (di-lepton versus non-allhadronic)}\label{dilORnonallhad}
 %Einfach eine Tabelle mit event yield für ttbar dil und ttbar nonallhad in einem, um zu zeigen, dass eigentlich nonallhad benötigt wird, aber das so auch geht: einen satz entsprechend dann dazu in used samples
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \listoffigures
