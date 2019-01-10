@@ -924,7 +924,7 @@ The fake rate for b-jets is defined in the same way as for jets above with the d
 \end{figure}
 %
 %NoBjet
-Comparing the large difference between both samples for jet fakes with the small difference in b-jet fakes shows the dominance of b-jets in the top pair related events, whereas the Higgs related events are more dominated by light jets. This can be seen in the efficiency sub-selection of taking only light jets into account and excluding the b-jets explicitly. This is done in figure \ref{Divided_NoBjet:bg}, which shows the constant high efficiency for the Higgs related background in the range up to $\SI{120}{\giga\electronvolt}$ for the truth b-jets' transverse momentum (see fig. \ref{Divided_NoBjet:bg:ttH}). Sources of b-jets are the subsequent decay of top-quark pairs mainly in b-quarks or in case of Higgs related background from direct Higgs decays into $b\bar{b}$. \par%to do: b kommen halt mal schnell von ttbar zerfall, aber woher kommen b bei H? gibt es ja keine wirkliche Quelle, oder? hab ich oben ja schon gesagt, dass tt nicht so vorkommt, jetzt ist nur die frage, eigentlich hat ja auch H->bb einen anteil... aber ist wohl nicht so groß im vergleich zu den haufen ttbars in ttbar sample?
+Comparing the large difference between both samples for jet fakes with the small difference in b-jet fakes shows the dominance of b-jets in the top pair related events, whereas the Higgs related events are more dominated by light jets. This can be seen in the efficiency sub-selection of taking only light jets into account and excluding the b-jets explicitly. This is done in figure \ref{DividedNoBjet:bg}, which shows the constant high efficiency for the Higgs related background in the range up to $\SI{120}{\giga\electronvolt}$ for the truth b-jets' transverse momentum (see fig. \ref{DividedNoBjet:bg:ttH}). Sources of b-jets are the subsequent decay of top-quark pairs mainly in b-quarks or in case of Higgs related background from direct Higgs decays into $b\bar{b}$. \par%to do: b kommen halt mal schnell von ttbar zerfall, aber woher kommen b bei H? gibt es ja keine wirkliche Quelle, oder? hab ich oben ja schon gesagt, dass tt nicht so vorkommt, jetzt ist nur die frage, eigentlich hat ja auch H->bb einen anteil... aber ist wohl nicht so groß im vergleich zu den haufen ttbars in ttbar sample?
 %
 \begin{figure}
   \centering
@@ -1002,13 +1002,13 @@ The efficiency derived from the number of taus passing the basic selection and a
 %HT Gedöns// H | prompt
 As a reference for the LQ signal samples the sum of the transverse momenta of different physical objects $S_{T,\text{lep}}$, $H_{T,\text{had}}$, $S_{T}$, $H_{T}$ and the number of jets are plotted against the efficiency for taus originating from the weak vector bosons and the Higgs boson. The definition of the sum-variables are as follows:
 \begin{align}
-S_{T,\text{lep}}&=\cancel{E}_{T}+\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\tau}\\
-H_{T,\text{had}}&=\sum_i p_{T,i}^{\text{jet}}\\
-S_{T}&=\cancel{E}_{T}+\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\tau}+\sum_i p_{T,i}^{\text{jet}}\\
+S_{T,\text{lep}}&=\cancel{E}_{T}+\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\tau} \label{STlepgedöns}\\
+H_{T,\text{had}}&=\sum_i p_{T,i}^{\text{jet}} \label{HThadgedöns}\\
+S_{T}&=\cancel{E}_{T}+\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\tau}+\sum_i p_{T,i}^{\text{jet}} \label{STgedöns}\\
 H_{T}&=\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\text{jet}}\,\text{,}
-\label{STgedöns}
+\label{HTgedöns}
 \end{align}
-where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, muons $X=\mu$, taus $X=\tau$ and jets $X=\text{jet}$ and $\cancel{E}_{T}$ denotes the missing energy, which includes in the standard model considerations the neutrinos. With the definitions of eq. (\ref{STgedöns}) different sensitivities are covered. $S_T$ is sensitive to all considered objects with the sub-category of $S_{T,\text{lep}}$, which only takes the leptonic objects into account, while $H_{T}$ is only sensitive to electrons and muons as well as jets. $H_{T,\text{had}}$ only includes jets.\par
+where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, muons $X=\mu$, taus $X=\tau$ and jets $X=\text{jet}$ and $\cancel{E}_{T}$ denotes the missing energy, which includes in the standard model considerations the neutrinos. With the definitions of eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) different sensitivities are covered. $S_T$ is sensitive to all considered objects with the sub-category of $S_{T,\text{lep}}$, which only takes the leptonic objects into account, while $H_{T}$ is only sensitive to electrons and muons as well as jets. $H_{T,\text{had}}$ only includes jets.\par
 \begin{figure}
   \centering
                 \begin{subfigure}[t]{0.45\textwidth}
@@ -1408,7 +1408,7 @@ Taus originating directly from LQ have a efficiency of $\SI{51.3\pm 1.2}{\percen
 \end{figure}
 %
 %HT,ST Gedöns prompt | LQ
-The correlation between the efficiency and the variables $H_T$, $H_{T,\text{had}}$, $S_T$, $S_{T,\text{lep}}$ defined in eq. (\ref{STgedöns}) and the number of jets is also available for the leptoquark related events. \newline
+The correlation between the efficiency and the variables $H_T$, $H_{T,\text{had}}$, $S_T$, $S_{T,\text{lep}}$ defined in eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) and the number of jets is also available for the leptoquark related events. \newline
 %HT und HThad
 Figure \ref{Dividedprompt:signal:HTgedöns} shows the efficiency depending on the variable $H_T$ and $H_{T,\text{had}}$ for the sub-selections, where taus originate from weak gauge bosons.
 %
@@ -1454,7 +1454,7 @@ The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case 
                 \begin{subfigure}[t]{0.45\textwidth}
                 \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T,\text{had}}$ low mass LQ sample.}
-                \label{DividedDromLQ:signal:HThadLQ75}
+                \label{DividedFromLQ:signal:HThadLQ75}
                 \end{subfigure}
                 %
                 \begin{subfigure}[t]{0.45\textwidth}
@@ -1601,7 +1601,7 @@ The minimum and maximum separation between taus and leptons (electrons and muons
 \label{dRprompt:signal:taulepton}
 \end{figure}
 %
-The minimum and maximum separation for the efficiency selection of taus originating from leptoquarks is depicted in figure \ref{dRFromH:signal:taulepton}.\newline
+The minimum and maximum separation for the efficiency selection of taus originating from leptoquarks is depicted in figure \ref{dRFromLQ:signal:taulepton}.\newline
 %
 \begin{figure}
   \centering
@@ -1693,7 +1693,7 @@ Correspondingly to the background samples the minimum and maximum separation bet
 \label{dRFromLQ:signal:taujet}
 \end{figure}
 %
-The special case of the minimum and maximum separation between taus and b-flavor jets is shown in figure \ref{dR:signal:fromH:taubjet} for the sub-category taus originating from $W^\pm$ and $Z^0$ bosons.
+The special case of the minimum and maximum separation between taus and b-flavor jets is shown in figure \ref{dRprompt:signal:taubjet} for the sub-category taus originating from $W^\pm$ and $Z^0$ bosons.
 %
 \begin{figure}
   \centering
@@ -1724,7 +1724,7 @@ The special case of the minimum and maximum separation between taus and b-flavor
 \label{dRprompt:signal:taubjet}
 \end{figure}
 %
-The separation between taus and b-jets in case of the sub-selection, where taus originate from LQs are shown in figure \ref{dRfromLQ:signal:taubjet}.
+The separation between taus and b-jets in case of the sub-selection, where taus originate from LQs are shown in figure \ref{dRFromLQ:signal:taubjet}.
 %
 \begin{figure}
   \centering
@@ -1755,14 +1755,14 @@ The separation between taus and b-jets in case of the sub-selection, where taus 
 \label{dRFromLQ:signal:taubjet}
 \end{figure}
 %
-\section{Kinematics}
+\section{Kinematics}\label{Kinematics}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The signal and background efficiencies in section \ref{signalANDbgEff} help to understand especially the role of the tau lepton for the relevant $t\tau^{-}+\bar{t}\tau^{+}$ channel. The next step into the direction of signal studies is to compare the event yield for signal and background samples in the different channels of the event selection (cf. section \ref{eventselection}). This is done by studying kinematic variables for the tau lepton like the transverse momentum, angular distribution, the variables defined in eq. \ref{STgedöns} (cf. section \ref{bgeff}) and the separation between taus and objects like electrons, jets and b-jets. The comparison is done with the background and signal MC samples together with data of the data-taking years 2015 until 2018. This reveals, if the signature of the chosen event selection can be extracted and detected within the known standard model processes. The data in this context gives the possibility of reference how well data is resembled by the MC simulation, although this work is not a full LQ search. No systematic variations are applied on the Monte Carlo simulations, which would be the normal procedure for a full search. Furthermore $\SI{1}{\percent}$ of the 2017 data are missing. This corresponds to a luminosity loss of \SI{0.44}{\per\femto\barn} (cf. table \ref{datalumi}).\par
+The signal and background efficiencies in section \ref{signalANDbgEff} help to understand especially the role of the tau lepton for the relevant $t\tau^{-}+\bar{t}\tau^{+}$ channel. The next step into the direction of signal studies is to compare the event yield for signal and background samples in the different channels of the event selection (cf. section \ref{eventselection}). This is done by studying kinematic variables for the tau lepton like the transverse momentum, angular distribution, the variables defined in eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) (cf. section \ref{bgeff}) and the separation between taus and objects like electrons, jets and b-jets. The comparison is done with the background and signal MC samples together with data of the data-taking years 2015 until 2018. This reveals, if the signature of the chosen event selection can be extracted and detected within the known standard model processes. The data in this context gives the possibility of reference how well data is resembled by the MC simulation, although this work is not a full LQ search. No systematic variations are applied on the Monte Carlo simulations, which would be the normal procedure for a full search. For data the luminosity of \SI{140.45}{\per\femto\barn} (cf. table \ref{datalumi}) is available.\par
 %tau pT
 The transverse momentum distribution of the tau lepton is shown in figure \ref{taupt} for different event selections.
 %
@@ -1989,7 +1989,7 @@ The most objects are covered by the $S_T$ variable. Its distribution is shown in
 \end{figure}
 %
 %STlep
-Even excluding the jets in the definition of $S_T$ resulting in the possibly discriminating variable $S_{T,\text{lep}}$ (see figure \ref{STlep}), the distribution is also capable to show a difference in signal and background at $\SI{400}{\giga\electronvolt}$ (see figure \ref{STlep:2b1tau} and \ref{STlep:1b1tau}) in the at least one tau selection of the low mass point LQ sample. But still it is possible to extract the high mass point LQ signal from background in the same selection with at least one tau. The threshold is $\sim\SI{1}{\tera\electronvolt}$. The selection of at least two taus gives similar results to that of $S_T$ (see figure \ref{STlep:2b2tau} and \ref{STlep:21b2tau}) with a optimal extraction of the signal samples. From that point of view $S_{T,\text{lep}}$ should be preferred over $H_T$ or the better option is to take $S_T$. \par
+Even excluding the jets in the definition of $S_T$ resulting in the possibly discriminating variable $S_{T,\text{lep}}$ (see figure \ref{STlep}), the distribution is also capable to show a difference in signal and background at $\SI{400}{\giga\electronvolt}$ (see figure \ref{STlep:2b1tau} and \ref{STlep:1b1tau}) in the at least one tau selection of the low mass point LQ sample. But still it is possible to extract the high mass point LQ signal from background in the same selection with at least one tau. The threshold is $\sim\SI{1}{\tera\electronvolt}$. The selection of at least two taus gives similar results to that of $S_T$ (see figure \ref{STlep:2b2tau} and \ref{STlep:1b2tau}) with a optimal extraction of the signal samples. From that point of view $S_{T,\text{lep}}$ should be preferred over $H_T$ or the better option is to take $S_T$. \par
 %
 \begin{figure}
   \centering
@@ -2213,9 +2213,68 @@ Following the example of the minimum and maximum separation between taus and jet
 %Kinematics conclusion
 As a conclusion the findings of this section shows that variables like the tau transverse momentum or the $S_T$ distributions are good candidates for signal extraction and offer the possibility to cut on that values for a signal optimization. In detail this means that the selection of at least two taus should be the choice because of the larger differences in both signal samples compared to the background. The advantage of selecting at least one b-jet is that it provides better statistics compared to the two b-jet case. The background estimation with $t\bar{t}$ and $t\bar{t}H$ agrees with data in case of the two tau selection, which also shows that in this selection the Higgs contributions are more dominant than in selections with less than two taus. Nevertheless some background contributions are missing, which is shown by the selections with less than one tau especially in the low transverse momentum region or the full range of the angular distribution and the separation $\Delta R$.  
 % beiträge aus single top, usw (mal auf die Folie von Yoshi schauen, was man da so reinnimmt: Z,W+jets...) 1% 2017 Data fehlen --> good agreement?
-\section{Significance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%quantitative ausssage über wie die signifikanz bei der extraction des signal is
+\section{Discovery significance}\label{significance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The discovery significance provides a benchmark for a quantitative measurement of the leptoquark signal extraction out of the background contributions. Section \ref{Kinematics} already showed possible candidates for discriminant variables in the chosen event selection. This chapter gives insight to the discovery significance for the different event selections and shows the variation of the significance by cutting on discriminant variables like the taus' transverse momentum and $S_T$ (cf. eq. (\ref{STgedöns})).\par
+%Theory paragraph über Asimov discovery significance approximation from profile likelihood ratio
+\begin{align}
+           Z_A=\sum_{n=0}^{N}\left[2\left((s+b)\ln\left[\frac{(s+b)(b+\sigma_b^2)}{b^2+(s+b)\sigma_b^2}\right]-\frac{b^2}{\sigma_b^2}\ln\left[1+\frac{\sigma_b^2s}{b(b+\sigma_b^2)}\right]\right)\right]^\frac{1}{2}
+\label{ZA}
+\end{align}
+%erklärung formelzeichen, dann paragraph \par
+The expected discovery significance for the two leptoquark signal samples are calculated for the different event selection with at least one or two b-jets and at least one or two additional taus (cf. \ref{eventselection}) in respect to the branching fraction $\beta(LQ\rightarrow t\tau)$ of the leptoquark (cf. section \ref{effmodels}). The used leptoquark MC samples (cf. section \ref{MCsamples}) consider LQ decays with a branching fraction of $\beta=1$. The following is done in order to obtain the dependency of the significance on the branching ratio and treat $\beta$ as a free parameter follwing the basic idea of more generic LQ searches described in section \ref{effmodels}:
+The relation
+\begin{align}
+                s(\beta)\propto\sigma\beta(LQ\rightarrow t\tau)^2
+\label{sbeta}
+\end{align}
+holds true for the number of signal events $s(\beta)$ at branching fraction $\beta(LQ\rightarrow t\tau)$ and the given cross section $\sigma$. The square of the branching ratio is valid, because leptoquark pairs are considered as signal events. According to eq. (\ref{sbeta}), the case of $\beta=1$ results in $s(\beta=1)\propto\sigma$. Considering the previous two findings and taking the branching ratio as free parameter, the number of signal events becomes $s(\beta)\propto s(\beta=1)\beta^2$ for the general case.\newline
+The discovery significance for the signal samples in the selection of at least two b-jets is shown in \ref{Significance:2b}.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/2b-jet_1tau.pdf}
+                                \subcaption{Discovery significance for the signal LQ samples in the selection of at least two b-jets and at least one additional tau lepton.}
+                \label{Significance:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/2b-jet_2tau.pdf}
+                \subcaption{Discovery significance for the signal LQ samples in the selection of at least two b-jets and at least two additional tau leptons.}
+                \label{Significance:2b2tau}
+                \end{subfigure}
+\caption[Discovery significance for the signal LQ samples in the selection of at least two b-jets.]{Discovery significance for the signal LQ samples.}
+\label{Significance:2b}
+\end{figure}
+%
+The significance follows the expected parabola curve and is greatest for the branching fraction with no further decay modes ($\beta=1$). Due to the small production cross sections in the high mass point LQ sample the significance is very low compared to the low mass point sample. The discovery significance when selecting at least one tau is $9.7$ and $0.12$ for the low and the high mass point respectively (see fig. \ref{Significance:2b1tau}). As the plots showed in section \ref{Kinematics} the selection with at least two taus increases the significance, although the increase in figure \ref{Significance:2b2tau} is marginally ($12$ and $0.18$). This can be explained by the general decrease of statistics due to the tight cut requiring at least two b-jets. Figure \ref{Significance:1b} with its selection of at least one b-jet stands in comparison to this with higher statistics. The significance is as high as $11$ and $0.13$ for the $\SI{500}{\giga\electronvolt}$ LQ mass point and the $\SI{1}{\tera\electronvolt}$ LQ mass point respectively. This is valid for the additional selection of at least one tau lepton (see fig. \ref{Significance:1b1tau}). Selecting at least two additional taus creates a significance shown in figure \ref{Significance:1b2tau}.
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/1b-jet_1tau.pdf}
+                \subcaption{Discovery significance for the signal LQ samples in the selection of at least one b-jet and at least one additional tau lepton.}
+                \label{Significance:1b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/1b-jet_2tau.pdf}
+                \subcaption{Discovery significance for the signal LQ samples in the selection of at least one b-jet and at least two additional tau leptons.}
+                \label{Significance:1b2tau}
+                \end{subfigure}
+\caption[Discovery significance for the signal LQ samples in the selection of at least one b-jet.]{Discovery significance for the signal LQ samples.}
+\label{Significance:1b}
+\end{figure}
+%
+%Die werte ausgeben lassen, dann weiß mans und muss es nicht aus dem Graphen lesen!
+The looser selection with at least one b-jet agrees with the results of section \ref{Kinematics}. The discovery significance is higher compared to the two b-jet selection. For selecting at least two tau the significance is $17$ and $0.24$ for the low and high mass point respectively (see fig. \ref{Significance:1b2tau}).\newline
+In agreement with section \ref{Kinematics} the highest significance for the LQ signal can be observed with selecting at least one b-jet and additionally at least two tau leptons.\par
+The next step is to search for cuts on kinematic variables to further improve the signal significance. This work presents a first approach for signal optimization in the variables $S_T$ (cf. eq. (\ref{STgedöns})) and in the taus' transverse momentum. In order to find optimal cut values the significance depending on the cut threshold is calculated.    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \chapter{Appendix}
 \section{Comparison between the top-quark background samples (di-lepton versus non-allhadronic)}\label{dilORnonallhad}
