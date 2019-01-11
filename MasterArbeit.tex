@@ -2219,20 +2219,17 @@ As a conclusion the findings of this section shows that variables like the tau t
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The discovery significance provides a benchmark for a quantitative measurement of the leptoquark signal extraction out of the background contributions. Section \ref{Kinematics} already showed possible candidates for discriminant variables in the chosen event selection. This chapter gives insight to the discovery significance for the different event selections and shows the variation of the significance by cutting on discriminant variables like the taus' transverse momentum and $S_T$ (cf. eq. (\ref{STgedöns})).\par
-%Theory paragraph über Asimov discovery significance approximation from profile likelihood ratio
+When searching for new physics a certain number of events $n$ is observed, following the Poisson distribution with a mean of $s+b$ that is the number of signal events $s$ and backgroud events $b$. The discovery significance can be treated as statistical test using the Gausian $p$-value with the hypothesis that $s$ becomes a hypothesized number of signal events. This can be achived by a statistic based on the profile likelihood ratio \cite{AsimovSignificance}:
 \begin{align}
-           Z_A=\sum_{n=0}^{N}\left[2\left((s+b)\ln\left[\frac{(s+b)(b+\sigma_b^2)}{b^2+(s+b)\sigma_b^2}\right]-\frac{b^2}{\sigma_b^2}\ln\left[1+\frac{\sigma_b^2s}{b(b+\sigma_b^2)}\right]\right)\right]^\frac{1}{2}
-\label{ZA}
+                \lambda(s)=\frac{L\left(s,\hat{\hat{\theta}}(s)\right)}{L\left(\hat{s},\hat{\theta}\right)}\,\text{.}
+\label{profilelikelihoodratio}
 \end{align}
-%erklärung formelzeichen, dann paragraph \par
-The expected discovery significance for the two leptoquark signal samples are calculated for the different event selection with at least one or two b-jets and at least one or two additional taus (cf. \ref{eventselection}) in respect to the branching fraction $\beta(LQ\rightarrow t\tau)$ of the leptoquark (cf. section \ref{effmodels}). The used leptoquark MC samples (cf. section \ref{MCsamples}) consider LQ decays with a branching fraction of $\beta=1$. The following is done in order to obtain the dependency of the significance on the branching ratio and treat $\beta$ as a free parameter follwing the basic idea of more generic LQ searches described in section \ref{effmodels}:
-The relation
+Here $L(s,\theta)$ is the likelihood function, representing the probability for the measurement, under the assumption of the signal parameter s and any additional nuisance parameter $\theta$. The double-hat refers to the nuisance parameter $\theta$ that maximize the likelihood for a specific $s$. Thus, it is the profile likelihood. The denominator is the maximum of the likelihood. \cite{AsimovSignificance}\newline
+If the number of background events is not known, $b$ can be treated es such nuisance parameter. To further constrain the background events a control measurement with $m$ events can be performed, where the signal is absent. The control measurement follows a Poisson statistic with the mean value of $\tau b$. In this context $\tau$ represents a scale factor. The resulting likelihood function for that problem is the product \cite{AsimovSignificance}:
 \begin{align}
-                s(\beta)\propto\sigma\beta(LQ\rightarrow t\tau)^2
-\label{sbeta}
+                L(s,b)=\frac{(s+b)^n}{n!}e^{-(s+b)}\frac{\tau b}{m!}e^{-\tau b}\,\text{.}
+\label{likelihoodfunction}
 \end{align}
-holds true for the number of signal events $s(\beta)$ at branching fraction $\beta(LQ\rightarrow t\tau)$ and the given cross section $\sigma$. The square of the branching ratio is valid, because leptoquark pairs are considered as signal events. According to eq. (\ref{sbeta}), the case of $\beta=1$ results in $s(\beta=1)\propto\sigma$. Considering the previous two findings and taking the branching ratio as free parameter, the number of signal events becomes $s(\beta)\propto s(\beta=1)\beta^2$ for the general case.\newline
-The discovery significance for the signal samples in the selection of at least two b-jets is shown in \ref{Significance:2b}.
 %
 \begin{figure}
   \centering
@@ -2247,11 +2244,23 @@ The discovery significance for the signal samples in the selection of at least t
                 \subcaption{Discovery significance for the signal LQ samples in the selection of at least two b-jets and at least two additional tau leptons.}
                 \label{Significance:2b2tau}
                 \end{subfigure}
-\caption[Discovery significance for the signal LQ samples in the selection of at least two b-jets.]{Discovery significance for the signal LQ samples.}
+\caption[Discovery significance for the signal LQ samples in the selection of at least two b-jets.]{Discovery significance for the signal LQ samples in the selection of at least two b-jets.}
 \label{Significance:2b}
 \end{figure}
 %
-The significance follows the expected parabola curve and is greatest for the branching fraction with no further decay modes ($\beta=1$). Due to the small production cross sections in the high mass point LQ sample the significance is very low compared to the low mass point sample. The discovery significance when selecting at least one tau is $9.7$ and $0.12$ for the low and the high mass point respectively (see fig. \ref{Significance:2b1tau}). As the plots showed in section \ref{Kinematics} the selection with at least two taus increases the significance, although the increase in figure \ref{Significance:2b2tau} is marginally ($12$ and $0.18$). This can be explained by the general decrease of statistics due to the tight cut requiring at least two b-jets. Figure \ref{Significance:1b} with its selection of at least one b-jet stands in comparison to this with higher statistics. The significance is as high as $11$ and $0.13$ for the $\SI{500}{\giga\electronvolt}$ LQ mass point and the $\SI{1}{\tera\electronvolt}$ LQ mass point respectively. This is valid for the additional selection of at least one tau lepton (see fig. \ref{Significance:1b1tau}). Selecting at least two additional taus creates a significance shown in figure \ref{Significance:1b2tau}.
+With the help of Wilks theorem \cite{Wilks} and the replacement of the data values $n$ and $m$ by their expectation values $s+b$ and $\tau b$ in the \textit{Asimov approximation} gives the expectation significance \cite{AsimovSignificance}:
+\begin{align}
+           Z_A=\sum_{n=0}^{N}\left[2\left((s+b)\ln\left[\frac{(s+b)(b+\sigma_b^2)}{b^2+(s+b)\sigma_b^2}\right]-\frac{b^2}{\sigma_b^2}\ln\left[1+\frac{\sigma_b^2s}{b(b+\sigma_b^2)}\right]\right)\right]^\frac{1}{2}
+\label{ZA}
+\end{align}
+with the variance of $\hat{b}$ that maximizes the likelihood given by $\sigma_b^2=\frac{b}{\tau}$. Here a conservative estimation was made for the background variance and is set to $\sigma_b=\SI{50}{\percent}$. If the real variance has a smaller variance the impact of the significance increase would be higher.\par
+%This formula is also true for cases that deviate from the special case $s<<b$.
+The expected discovery significance for the two leptoquark signal samples are calculated for the different event selection with at least one or two b-jets and at least one or two additional taus (cf. \ref{eventselection}) in respect to the branching fraction $\beta(LQ\rightarrow t\tau)$ of the leptoquark (cf. section \ref{effmodels}). The used leptoquark MC samples (cf. section \ref{MCsamples}) consider LQ decays with a branching fraction of $\beta=1$. The following is done in order to obtain the dependency of the significance on the branching ratio and treat $\beta$ as a free parameter follwing the basic idea of more generic LQ searches described in section \ref{effmodels}:
+The relation
+\begin{align}
+                s(\beta)\propto\sigma\beta(LQ\rightarrow t\tau)^2
+\label{sbeta}
+\end{align}
 %
 \begin{figure}
   \centering
@@ -2266,14 +2275,133 @@ The significance follows the expected parabola curve and is greatest for the bra
                 \subcaption{Discovery significance for the signal LQ samples in the selection of at least one b-jet and at least two additional tau leptons.}
                 \label{Significance:1b2tau}
                 \end{subfigure}
-\caption[Discovery significance for the signal LQ samples in the selection of at least one b-jet.]{Discovery significance for the signal LQ samples.}
+\caption[Discovery significance for the signal LQ samples in the selection of at least one b-jet.]{Discovery significance for the signal LQ samples in the selection of at least one b-jet.}
 \label{Significance:1b}
 \end{figure}
 %
-%Die werte ausgeben lassen, dann weiß mans und muss es nicht aus dem Graphen lesen!
-The looser selection with at least one b-jet agrees with the results of section \ref{Kinematics}. The discovery significance is higher compared to the two b-jet selection. For selecting at least two tau the significance is $17$ and $0.24$ for the low and high mass point respectively (see fig. \ref{Significance:1b2tau}).\newline
+holds true for the number of signal events $s(\beta)$ at branching fraction $\beta(LQ\rightarrow t\tau)$ and the given cross section $\sigma$. The square of the branching ratio is valid, because leptoquark pairs are considered as signal events. According to eq. (\ref{sbeta}), the case of $\beta=1$ results in $s(\beta=1)\propto\sigma$. Considering the previous two findings and taking the branching ratio as free parameter, the number of signal events becomes $s(\beta)\propto s(\beta=1)\beta^2$ for the general case.\newline
+The discovery significance for the signal samples in the selection of at least two b-jets is shown in \ref{Significance:2b}. The significance follows the expected parabola curve and is greatest for the branching fraction with no further decay modes ($\beta=1$). Due to the small production cross sections in the high mass point LQ sample the significance is very low compared to the low mass point sample. The discovery significance when selecting at least one tau is $9.7$ and $0.12$ for the low and the high mass point respectively (see fig. \ref{Significance:2b1tau}). As the plots showed in section \ref{Kinematics} the selection with at least two taus increases the significance, although the increase in figure \ref{Significance:2b2tau} is marginally ($12$ and $0.18$). This can be explained by the general decrease of statistics due to the tight cut requiring at least two b-jets. Figure \ref{Significance:1b} with its selection of at least one b-jet stands in comparison to this with higher statistics. The significance is as high as $11$ and $0.13$ for the $\SI{500}{\giga\electronvolt}$ LQ mass point and the $\SI{1}{\tera\electronvolt}$ LQ mass point respectively. This is valid for the additional selection of at least one tau lepton (see fig. \ref{Significance:1b1tau}). Selecting at least two additional taus creates a significance shown in figure \ref{Significance:1b2tau}. The looser selection with at least one b-jet agrees with the results of section \ref{Kinematics}. The discovery significance is higher compared to the two b-jet selection. For selecting at least two tau the significance is $17$ and $0.24$ for the low and high mass point respectively (see fig. \ref{Significance:1b2tau}).\newline
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_2b-jet_1tau.pdf}
+                \subcaption{Discovery significance for selecting at least two b-jets and additionally at least one tau.}
+                \label{xcut:pt:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_2b-jet_2tau.pdf}
+                \subcaption{Discovery significance for selecting at least two b-jets and additionally at least two taus.}
+                \label{xcut:pt:2b2tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_1b-jet_1tau.pdf}
+                \subcaption{Discovery significance for selecting at least one b-jet and additionally at least one tau.}
+                \label{xcut:pt:1b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_1b-jet_2tau.pdf}
+                \subcaption{Discovery significance for selecting at least one b-jet and additionally at least two taus.}
+                \label{xcut:pt:1b2tau}
+                \end{subfigure}
+\caption[Discovery significance depending on the taus' transverse momentum cut value.]{Discovery significance depending on the taus' transverse momentum cut value for different event selections at a branching fraction of $\beta=1$. }
+\label{xcut:pt}
+\end{figure}
+%
 In agreement with section \ref{Kinematics} the highest significance for the LQ signal can be observed with selecting at least one b-jet and additionally at least two tau leptons.\par
-The next step is to search for cuts on kinematic variables to further improve the signal significance. This work presents a first approach for signal optimization in the variables $S_T$ (cf. eq. (\ref{STgedöns})) and in the taus' transverse momentum. In order to find optimal cut values the significance depending on the cut threshold is calculated.    
+The next step is to search for cuts on kinematic variables to further improve the signal significance. This work presents a first approach for signal optimization in the variables $S_T$ (cf. eq. (\ref{STgedöns})) and in the taus' transverse momentum. In order to find optimal cut values the significance depending on the cut threshold is calculated. Figure \ref{xcutj:pt} shows the significance varied by different cut values on the taus' $p_T$ for the different event selections. The cut thresholds are divided in steps of $\SI{5}{\giga\electronvolt}$. When selecting at least two b-jets and at least one tau a cut at $\SI{355}{\giga\electronvolt}$ (see fig. \ref{xcut:pt:2b1tau}) increases the significance up to $\SI{22}{}$ for signal sample with mass point $\SI{500}{\giga\electronvolt}$. An increase of significance is reached for the $\SI{1}{\tera\electronvolt}$ LQ sample up to $\SI{0.92}{}$ with a transverse momentum cut of $\SI{655}{\giga\electronvolt}$. For the selection of at least two b-jets and at least two taus the increase of significance up to $19$ is achieved with a cut at $\SI{240}{\giga\electronvolt}$ and up to $0.63$ with a cut at $\SI{425}{\giga\electronvolt}$ for the low and high mass point respectively (see fig. \ref{xcut:pt:2b2tau}). Increased significance of $18$ and $0.71$ is observed for the selection of at least one b-jet and at least one tau lepton, if $p_T$ is cut at $\SI{355}{\giga\electronvolt}$ and $\SI{715}{\giga\electronvolt}$ for the low and high mass point sample respectively (see fig. \ref{xcut:pt:1b1tau}). Correspondingly, the discovery significance is greatest with $12$ and $0.34$ with a $\SI{230}{\giga\electronvolt}$ and $\SI{425}{\giga\electronvolt}$ cut, when selecting at least one b-jet and at least two taus (see fig. \ref{xcut:pt:1b2tau}). \newline
+%
+\begin{figure}
+  \centering
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_2b-jet_1tau.pdf}
+                \subcaption{Discovery significance for selecting at least two b-jets and additionally at least one tau.}
+                \label{xcut:ST:2b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_2b-jet_2tau.pdf}
+                \subcaption{Discovery significance for selecting at least two b-jets and additionally at least two taus.}
+                \label{xcut:ST:2b2tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_1b-jet_1tau.pdf}
+                \subcaption{Discovery significance for selecting at least one b-jet and additionally at least one tau.}
+                \label{xcut:ST:1b1tau}
+                \end{subfigure}
+                %
+                \begin{subfigure}[t]{0.45\textwidth}
+                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_1b-jet_2tau.pdf}
+                \subcaption{Discovery significance for selecting at least one b-jet and additionally at least two taus.}
+                \label{xcut:ST:1b2tau}
+                \end{subfigure}
+\caption[Discovery significance depending on the $S_T$ cut value.]{Discovery significance depending on $S_T$ (see eq. (\ref{STgedöns})) cut value for different event selections at a branching fraction of $\beta=1$.}
+\label{xcut:ST}
+\end{figure}
+%
+Figure \ref{xcutj:ST} shows the significance varied by different $S_T$ cut values (see eq. (\ref{STgedöns})) for the different event selections. The cut thresholds are divided in steps of $\SI{10}{\giga\electronvolt}$. The sifnificance reaches values of $22$ and $1.1$ at $S_T$ cuts of $\SI{710}{\giga\electronvolt}$ and $\SI{1430}{\giga\electronvolt}$ in the selection of at least two b-jets and at least one tau lepton (see fig. \ref{xcut:ST:2b1tau}). This corresponds to the low and high LQ signal sample. For the selection with at least two b-jets and two tau leptons the increase of the discovery significance is up to $19$ and $0.68$ at $\SI{470}{\giga\electronvolt}$ and $\SI{850}{\giga\electronvolt}$ cuts (see fig. \ref{xcut:pt:2b2tau}). In case of at least one b-jet and at least one tau lepton the increase of significance is up to $18$ and $0.71$ at cuts based on $\SI{710}{\giga\electronvolt}$ and $\SI{1430}{\giga\electronvolt}$ for the low and high mass point sample respectively (see fig. \ref{xcut:pt:1b1tau}). Cuts on $S_T$ of $\SI{460}{\giga\electronvolt}$ and $\SI{840}{\giga\electronvolt}$ result in an increase of up to $12$ and $0.39$ in the discovery significance (see fig. \ref{xcut:pt:1b2tau}).\par
+The general trend is that within a chosen b-jet selection the significance reaches higher values in the one tau selection compared to the two tau selection. This can be explained by higher available statistics in that specific selection. The difference of the b-jet selection shows that selecting at least one b-jet results in higher significance values due to the looser nature of that requirement. At the same time the significance is already at high values with the two tau selection. Table \ref{xcuts} summarizes all siginificance increases for the different selections and the two kinematic variables.
+%	
+	\begin{table}[htbp]
+		\centering
+                \footnotesize
+                \renewcommand{\arraystretch}{1.2}
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
+		\hline
+		\hline
+		\textbf{selection}  & \textbf{kinematic variable}  & \textbf{increased siginficance value}      & \textbf{cut}/$\SI{}{\giga\electronvolt}$ 
+		\\
+		\hline
+		\multirow{4}{*}{$\geq 2\,$b-jets $+\geq 1\,\tau$} & $p_T$      & $18$      & $\SI{355}{}$
+		\\
+                &       $p_T$   & $0.71$        & $715$
+                \\
+                &       $S_T$   & $18$        & $710$
+                \\
+                &       $S_T$   & $0.88$        & $1430$
+                \\
+		\hline
+		\multirow{4}{*}{$\geq 2\,$b-jets $+\geq 2\,\tau$} & $p_T$      & $12$      & $\SI{230}{}$
+		\\
+                &       $p_T$   & $0.34$        & $425$
+                \\
+                &       $S_T$   & $12$        & $460$
+                \\
+                &       $S_T$   & $0.39$        & $840$
+                \\
+		\hline
+                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 1\,\tau$} & $p_T$      & $22$      & $\SI{355}{}$
+		\\
+                &       $p_T$   & $0.92$        & $655$
+                \\
+                &       $S_T$   & $22$        & $710$
+                \\
+                &       $S_T$   & $1.1$        & $1430$
+                \\
+		\hline
+                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 1\,\tau$} & $p_T$      & $19$      & $\SI{240}{}$
+		\\
+                &       $p_T$   & $0.63$        & $425$
+                \\
+                &       $S_T$   & $19$        & $470$
+                \\
+                &       $S_T$   & $0.68$        & $850$
+                \\
+                \hline
+		\hline
+		\end{tabular*}
+		\caption[Overview of the discovery significance increase in the kinematic variables $p_T$ and $S_T$ for the different event selections.]{Overview of the discovery significance increase in the kinematic variables $p_T$ and $S_T$ for the different event selections. }
+		\label{xcuts}
+                \renewcommand{\arraystretch}{1}
+                \end{table}
+%
+%The caveat of this method to optimize the significance is that the cuts on tau $p_T$ and $S_T$ has to be selected carefully due to sufficient signal events.
+%Diskussion hier fertig, am Besten wäre ein Fehler-Angabe noch beim std::out --> das ist selbst für 2tau immer noch gut im Rahmen für LQ76
+Sudden downward changes in the significance curve can be explained by a sudden drop of signal and background events at the same time. Limit coniderations of eq. (\ref{ZA}) show that $\lim_{b\rightarrow 0}Z_A=\lim_{s\rightarrow 0}Z_A=0$. Local maxima are the result of a sudden drop of background events, whereas the signal events are constant, e.g. no $t\bar{t}$ background for high $p_T$ ($S_T$).  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \chapter{Appendix}
