@@ -1,15 +1,11 @@
 %      --- TO DO --- 
 %FCNC im LQ Kaptiel braucht sehr wahrscheinlich eine Erklärung!! + schwacher isospin
 %
-%%
-%
 %
 %QCD und QED sollte vielleicht mal im SM erwähnt werden
 %
 % overlap removal bei phys obj sel + trigger erklären! https://arxiv.org/pdf/1611.09661.pdf https://cds.cern.ch/record/2133909/files/ATL-DAQ-PROC-2016-003.pdf (ntuple/settings/*)
-%%
 %
-%%    Danksagung --> noch überlegen, ob die nicht vielleicht doch auf Deutsch sein soll..., aber Deb, Mahsana usw lesen das lieber auf Englisch, ein misch masch kommt aber auch komisch -->eher doch englisch
 %-----------------------------------------------------------------------------------------------
 %                   Gliederungsideen
 %Experiment-Part: LHC, ATLAS, LQpairprod @pp collisions
@@ -21,20 +17,23 @@
 %Ausgangspunkt, Forschungsfrage...
 %
 %Quasi eine Story erzählen: SM sehr erfolgreiche Theorie (->Theorie), aber auch nicht die ganze Geschichte (->beyond), das könnte LQ lösen (->LQ) dafür braucht man aber ein Nachweisgerät (->ATLAS, LHC...) und dass man an die Physik rankommt, braucht man Auswertung (->Datenprocessierung und btagging usw), was ist  der aktuelle Stand in der Vorschung, worauf wird sich hier in der Arbeit konzentriert (->ttbar tautau)
-%
-%dilepton, semileptonic, nonallhad in samples nochmal überprüfen, ob das jetzt so stimmt...      
+%   
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
-\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{Summary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{Zusammenfassung}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction}
-%einen gescheiten Einleitungsgedanken überlegen! Ja nicht Higgs... :see_no_evil:
-%Yukawa Kopplung vielleicht? --> ich bin mir nicht mehr sicher, aber vielleicht habe ich da einen Artikel gelesen (News CERN oder so) wo es um die noch bessere Messung der Yukawa Kopplung ging...
+Today's physical cornerstones for understanding nature is based on powerful theories like quantum mechanics and the theory of general relativity. Under constant development over centuries, superior concepts helped to reduce the empirical observed phenomena to fundamental physical mechanisms in order to get deeper insight into the nature of matter, forces, space and time. The ambition is to deduce an universal description of the laws of nature. Within this evolutionary gain of knowledge the concept of symmetry was and is an appealing tool and indeed, symmetries are deeply connected with conservation laws formulated in Noether's theorem.\par
+Four fundamental physical forces are known that is the electromagnetic, weak and strong force as well as gravity, which is covered by the theory of general relativity. The standard model of elementary particle physics, which describes the fundamental components of matter and their interactions induced by the electromagnetic, weak and strong force, profited in its development from symmetry considerations. It's formulation is based on relativistic quantum field theory. Understanding particles as part of symmetry groups made it possible to formulate the electroweak unification bringing together the electromagnetic and weak force. Undisputably, the standard model is a powerful theory capable of explaining the constituents of matter and their fundamental interactions, although various open questions remain. Amongst others these are for example the puzzle of neutrino masses, the hierarchy problem or problems in formulating a theory of quantum gravity.\par
+Thinking within the picture of symmetry it is very attractive to solve some of the questions with further unifying the fundamental forces into a grand unified theory even including gravity. This would imply the existence of new gauge bosons called leptoquarks. Leptoquarks are colored particles carring both lepton and baryon number and can be seen as mediators between leptons and quarks. Possible decay modes involve a top-quark pair and a tau lepton pair and would be a hint to such exotic particles. Leptoquark masses are possibly in reach of today's particle accelerators like the {\LHC} at the research center {\CERN} and could be detected with the {\ATLAS} detector. Therefore it is crucial to understand tau reconstruction efficiencies for future search strategies in that specific $t\tau^-\bar{t}\tau^+$ channel. This work gives insight into tau reconstruction efficiencies and background contributions to the possible leptoquark signal.\par
+The structure of the thesis is as follows: Chapter \ref{theory} gives an overview of the standard model of particle physics. Furthermore it presents issues, which are beyond the scope of the standard model and some approaches to solve this puzzles. One possibility is the introduction of leptoquarks in the context of grand unified theories. Within this chapter the research question of the thesis is discussed. Chapter \ref{experiment} describes the experimental setup of on wich the analyis is based on. That is hadron collider complex {\LHC} and the {\ATLAS} detector. General information about physical object reconstruction can be found in chapter \ref{physObj}. Chapter \ref{analysis} provides information about the implemented analysis and the data sets used for it. In chapter \ref{results} the results of the efficiency and background study are presented as well as the comparison of kinematic distributions for the signal and background events. Additionally, insight into the discovery significance of the leptoquark Monte Carlo simulations is given here. Finally the appendix provides some additional information to cover the hole analysis plots. 
+%powerful theories, quantenmechanik und art, four fundamentala forces, tieferes verständnis durch übergeordnete Konzepte, Symmetrie als solch ein Konzept, vereinheitlichung klingt sehr a1111ttraktiv, standardmodel, historischer abriss elektro/magnetische WW->elektromagnetisch+ weak-->electroweak, starke,  gravity in art, Quantengravitation? GUT = Weltformel für alles, GUT führt zu LQ, kurz LQ und deren sinn/wirken, CERN+ATLAS in reichweite von third generation lq nach mBRW model im tttautau channel, rolle der tau leptonen, was wird hier in der arbeit gemacht: eff, kin, significance, keine full search, chapter beschreibung, was wo behandelt wird (auch appendix erwähnen?) och neee...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Theoretical background for the search for scalar leptoquarks}\label{theory}
 This chapter describes theoretical foundations required for the search for scalar leptoquarks including the successful Standard Model of elementary particle physics evolved from the symbiosis of experimental achievements and theoretical milestones. Besides its success some issues still remain unsolved and could be a hint to physics beyond the Standard Model, giving space to introduce the Leptoquark Model as one possible extension. 
@@ -360,7 +359,7 @@ The search for third generation LQ decaying to top quarks and $\tau$-leptons is 
   \end{subfigure}
   \quad
   \begin{subfigure}[t]{0.45\textwidth}
-   \includegraphics[width=1\textwidth]{figures/t_hadronic.pdf}
+   \includegraphics[width=\textwidth]{figures/t_hadronic.pdf}
    \subcaption[Hadronic top decay.]{Hadronic single-top decay. Black depicts the top decay, whereas blue depicts the anti-top decay.}
    \label{tophadronic}
   \end{subfigure}
@@ -379,7 +378,7 @@ The top quark decays weakly into $t\rightarrow Wq$ with $q=b,s,d$. The main deca
 \end{figure}
 %
 Tau leptons have various decay modes, which can be categorized with the number of charged particles involved in the decay. Main decay modes for taus include one charged particle (`1-prong') and three charged particles (`3-prong') in the decay. They are shown in table \ref{taudecays} for $\tau^-$. Here $h^{\pm}$ are charged pions $\pi^\pm$ and Kaons $K^\pm$, `neutrals' are photons $\gamma$ or neutral pions $\pi^0$. The decay modes of the $\tau^+$ involve the same products, but with opposite charges.\par
-Signal and background studies with various objects in the final state depend crucially on the purity of the signatures left in the detector (cf. chapter \ref{detectorsignatures}) and how they are traced back to the potential LQ. Electrons and muons provide a good chance for reliable reconstruction (see chapter \ref{detectorsignatures}). Therefore the dilepton and semileptonic decay modes of the top quark-pair are good candidates to study the signal and background contributions for the search of LQ. They provide, additionally to the hadronic $\tau$ final states, two leptons from the top-pair decay or one lepton and one jet respectively. In the face of high contributions from underlying QCD events, resulting in jet objects, dilepton and semileptonic modes are easier to reconstruct compared to the full hadronic decays with jets only in the final state. This provides the starting point for studying the hadronic $\tau$ reconstruction efficiencies and the influence of fake rates on the $t\tau^{-}+\bar{t}\tau^{+}$ channel.
+Signal and background studies with various objects in the final state depend crucially on the purity of the signatures left in the detector (cf. chapter \ref{detectorsignatures}) and how they are traced back to the potential LQ. Electrons and muons provide a good chance for reliable reconstruction (see chapter \ref{detectorsignatures}). Therefore the dilepton and semi-leptonic decay modes of the top quark-pair are good candidates to study the signal and background contributions for the search of LQ. They provide, additionally to the hadronic $\tau$ final states, two leptons from the top-pair decay or one lepton and one jet respectively. In the face of high contributions from underlying QCD events, resulting in jet objects, dilepton and semi-leptonic modes are easier to reconstruct compared to the full hadronic decays with jets only in the final state. This provides the starting point for studying the hadronic $\tau$ reconstruction efficiencies and the influence of fake rates on the $t\tau^{-}+\bar{t}\tau^{+}$ channel.
 %
 \begin{table}[htbp]
 		\centering
@@ -581,7 +580,7 @@ A steady comparison and adaption of theory and experiment is crucial to be able 
 MC simulations are based on an algorithm relying on sequences of pseudo random numbers. Effectively it is a method to numerically compute multidimensional integrals over a complex region as it is often the case for matrix elements in perturbation theory. \cite{MCbook} The MC chain for the {\ATLAS} detector consists of three main steps. This includes the generation of MC events with event generators and the subsequent simulation of fragmentation and showering processes in the first step. The second step is the simulation of the detector and the propagation of the particles through it with the associated interactions and, as third step, the digitization of energy deposits in the detector's sensitive areas. This digitization step involves the simulation of the resulting signals in the readout system for comparison with real data. The detailed implemented simulation of the detector and the particles interaction with it is done with {\GEANT}4\cite{GEANT4}, which additionally considers realistic detector conditions and misalignments as well as the detector response to be as realistic as possible. This fact enhances the digital copy to furthermore test the effectiveness of proposed search strategies for specific signatures. \cite{ATLASSim}
 %aus Verenas MA: ATLAS detector and physics performance: Technical design report, 2 1999. CERN-LHCC-99-015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Analysis}
+\chapter{Analysis}\label{analysis}
 The framework conditions for the analysis, investigating the research question formulated in section \ref{startingpoint}, have to be defined. 
 The MC samples and data samples, which are taken into account, are listed in detail in section \ref{MCsamples}. The physical object definition and the event selection for the performed analysis are presented in section \ref{physObj} and \ref{eventselection}.  
 %das wurde zu LQ verfrachtet, siehe LQ Kapitel: besserer Zusammenhang
@@ -591,7 +590,7 @@ The MC samples and data samples, which are taken into account, are listed in det
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Athena is the {\ATLAS} software framework for event generation, simulation, reconstruction and derivation production (cf. also section \ref{MCsim}) \cite{Athena}. The management and build of the software packages rely on CMake. At the end of the software chain analyses use the AthAnalysisBase, which is organized in different analysis sub-groups like the top-quark group. Their standard package for physical object reconstruction is AnalysisTop, which also includes the data analysis tool {\ROOT}.\par
 For this work a package based on AnalysisTop of release 21.2.56 (build on November 29, 2018) was used.\newline
-The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to decay either fully leptonically or semi-leptonically in the nonallhad LQ sample (cf. section \ref{startingpoint}). The parton shower and fragmentation as well as the underlying event was generated with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} parameters at next-to-leading (NLO) in matrix calculation. \newline         
+The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to decay either fully leptonically or semi-leptonically in the LQ sample (cf. section \ref{startingpoint}). The parton shower and fragmentation as well as the underlying event was generated with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} parameters at next-to-leading (NLO) in matrix calculation. \newline         
 The other category includes main background contributions of SM processes. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allows the $t\bar{t}$ pair to decay fully leptonically. Showering, fragmentation and underlying event is simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and is responsible for the highest parton radiation beyond the Born level \cite{hdamp}.\newline
 %
 \begin{table}[htbp]
@@ -622,7 +621,7 @@ The other category includes main background contributions of SM processes. That 
 \renewcommand{\arraystretch}{1}
 \end{table}
 %
-The $t\bar{t}H$ samples (dilepton and semi-leptonic) are generated with {\POWHEG}. Like for the $t\bar{t}$ samples, the event generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14 was used to simulate the showering, fragmentation and underlying event. The mass of the Higgs boson is set to $\SI{125}{\giga\electronvolt}$ and the resummation parameter was set to $\SI{325.5}{\giga\electronvolt}$. \newline
+The $t\bar{t}H$ sample is generated with {\POWHEG}. Like for the $t\bar{t}$ samples, the event generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14 was used to simulate the showering, fragmentation and underlying event. The mass of the Higgs boson is set to $\SI{125}{\giga\electronvolt}$ and the resummation parameter was set to $\SI{325.5}{\giga\electronvolt}$. \newline
 For all samples the {\EvtGen} (v1.6.0) \cite{EvtGen} program was used for the decay of the bottom and charm hardons produced by the top-quark decay.\newline
 To compare the MC prediction data of the data-taking periods 2015, 2016, 2017 and 2018 was used. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{140.45}{\per\femto\barn}$ used in the analysis.
 \section{Physical object selection}\label{physObj}
@@ -679,11 +678,11 @@ The signal and background studies for the $t\tau^{-}+\bar{t}\tau^{+}$ channel in
 %
 The selection includes one electron and one muon of opposite electrical charge and a transverse momentum of at least $p_T>\SI{27}{\giga\electronvolt}$. This di-lepton selection covers the leptonic decay of the top-pair mediated by the $W^-$ boson in case of the anti-top quark and mediated by the $W^+$ in case of the top quark. Due to conservation of electrical charge the resulting leptons of the subsequent decay of the $W^\pm$ boson is of opposite sign. Additional to that at least two jets are selected because the weak top-pair decay produces a bottom-pair (cf. figure \ref{topdecay}), which will result in a jet. Due to the different experimental reconstruction of jets in general and jets of b-flavor described in chapter \ref{detectorsignatures} a more detailed examination of the jets is done. At least two of the above selected jets have to be b-tagged or at least one of the above jets have to be b-tagged. To cover the phase space of the full $t\tau^{-}+\bar{t}\tau^{+}$ channel, an additional selection is made to select at least either one or two tau leptons for each cases of b-jet selection.    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Results}
+\chapter{Results}\label{results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Number of event candidates}\label{eventYield}
 The observed and predicted number of event candidates for the event selection described in section \ref{eventselection} is summarized in this chapter.\par
-The event yield table \ref{eventYieldTable} includes all the main background contributions from $t\bar{t}$ and $t\bar{t}H$ processes as well as the signal candidates from the two different LQ samples compared to the number of event candidates from data. The error consists of the statistical uncertainty only. The differentiation of the event number categories follow the event selection described in section \ref{eventselection}. It`s main categories include the selection of either one b-jet or two b-jets. The decay channel of the LQ involves a pair of b-quarks originating from the subsequent top-pair decay mediated by the weak interaction (cf. section \ref{startingpoint}). Therefore the two b-jet selection takes the signature of this top-pair decay into account. Selecting only one b-jet will be useful for a full search strategy for scalar LQs. Due to the leptoquarks' high masses of $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ the assumed production cross section at the {\LHC} is small compared to abundant QCD processes of the SM. In the case of the simulated $t\bar{t}$ the cross section is $\SI{729.7}{\pico\barn}$ compared to the leptoquark simulation of $\SI{271.5}{\femto\barn}$ (mass point $\SI{500}{\giga\electronvolt}$) and $\SI{3.0}{\femto\barn}$ (mass point $\SI{1}{\tera\electronvolt}$). The simulated dilepton $t\bar{t}H$ cross section is $\SI{61.7}{\femto\barn}$ and the semi-leptonic $t\bar{t}H$ is $\SI{222.8}{\femto\barn}$. Thus the looser selection of only one b-jet and the resulting higher event yield gives room for tighter cuts on kinematic variables to optimize the signal and at the same time looses almost nothing in background rejection. \newline
+The event yield table \ref{eventYieldTable} includes all the main background contributions from $t\bar{t}$ and $t\bar{t}H$ processes as well as the signal candidates from the two different LQ samples compared to the number of event candidates from data. The error consists of the statistical uncertainty only. The differentiation of the event number categories follow the event selection described in section \ref{eventselection}. It`s main categories include the selection of either one b-jet or two b-jets. The decay channel of the LQ involves a pair of b-quarks originating from the subsequent top-pair decay mediated by the weak interaction (cf. section \ref{startingpoint}). Therefore the two b-jet selection takes the signature of this top-pair decay into account. Selecting only one b-jet will be useful for a full search strategy for scalar LQs. Due to the leptoquarks' high masses of $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ the assumed production cross section at the {\LHC} is small compared to abundant QCD processes of the SM. In the case of the simulated $t\bar{t}$ the cross section is $\SI{729.7}{\pico\barn}$ compared to the leptoquark simulation of $\SI{271.5}{\femto\barn}$ (mass point $\SI{500}{\giga\electronvolt}$) and $\SI{3.0}{\femto\barn}$ (mass point $\SI{1}{\tera\electronvolt}$). The simulated dilepton $t\bar{t}H$ cross section is $\SI{61.7}{\femto\barn}$ and the semi-leptonic $t\bar{t}H$ cross section is $\SI{222.8}{\femto\barn}$. Thus the looser selection of only one b-jet and the resulting higher event yield gives room for tighter cuts on kinematic variables to optimize the signal and at the same time looses almost nothing in background rejection. \newline
 %
 \begin{sidewaystable}[htbp]
 		\centering
@@ -735,23 +734,23 @@ The differential cross section for top-quark pair generation is \SI{829\pm189}{\
 %
 \begin{figure}
  \centering
-  \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=0.95\textwidth]{figures/ttbara.pdf}
+  \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbara.pdf}
     \subcaption[Quark fusion process generating a top-quark pair in the s-channel.]{Quark fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
    %\label{ATLASDesign}
   \end{subfigure}
-  \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=0.95\textwidth]{figures/ttbarb.pdf}
+  \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbarb.pdf}
    \subcaption[Gluon fusion process generating a top-quark pair in the t-channel.]{Gluon fusion process generating a top-quark pair in the t-channel \cite{Feynmanttbar}.}
    %\label{btageff}
   \end{subfigure}
- \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=0.95\textwidth]{figures/ttbarc.pdf}
+ \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbarc.pdf}
     \subcaption[Gluon fusion process generating a top-quark pair in the u-channel.]{Gluon fusion process generating a top-quark pair in the u-channel \cite{Feynmanttbar}.}
    %\label{ATLASDesign}
   \end{subfigure}
-  \begin{subfigure}[t]{0.4\textwidth}
-   \includegraphics[width=0.95\textwidth]{figures/ttbard.pdf}
+  \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbard.pdf}
     \subcaption[Gluon fusion process generating a top-quark pair in the s-channel.]{Gluon fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
    %\label{ATLASDesign}
   \end{subfigure}
@@ -865,14 +864,14 @@ The dependency of the tau reconstruction efficiency are shown in figure \ref{Div
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
                 \subcaption{Hadronic tau reconstruction efficiency of $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events.}
                 \label{DividedTau:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
                 \subcaption{Hadronic tau reconstruction efficiency of $\SI{29.39\pm 0.26}{\percent}$ for the Higgs events.}
                 \label{DividedTau:bg:ttH}
                 \end{subfigure}
@@ -886,14 +885,14 @@ The efficiency depending on the transverse momentum of the truth jet is shown as
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Jet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_Jet.pdf}
                 \subcaption{Estimation of a jet faking a tau lepton of $\SI{0.1741\pm 0.0019}{\percent}$ for the top-quark pair events.}
                 \label{DividedJet:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Jet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_Jet.pdf}
                 \subcaption{Estimation of a jet faking a tau lepton of $\SI{1.0063\pm 0.0068}{\percent}$ for the Higgs events.}
                 \label{DividedJet:bg:ttH}
                 \end{subfigure}        
@@ -908,14 +907,14 @@ The fake rate for b-jets is defined in the same way as for jets above with the d
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_Bjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_Bjet.pdf}
                 \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.2034\pm 0.0038}{\percent}$ for the top-quark pair events.}
                 \label{DividedBjet:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_Bjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_Bjet.pdf}
                 \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.1496\pm 0.0033}{\percent}$ for the Higgs events.}
                 \label{DividedBjet:bg:ttH}
                 \end{subfigure}
@@ -928,14 +927,14 @@ Comparing the large difference between both samples for jet fakes with the small
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttbar/Divided_NoBjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_NoBjet.pdf}
                 \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{0.1616\pm 0.0022}{\percent}$ for the top-quark pair events.}
                 \label{DividedNoBjet:bg:ttbar}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_NoBjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_NoBjet.pdf}
                 \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{2.356\pm 0.016}{\percent}$ for the Higgs events.}
                 \label{DividedNoBjet:bg:ttH}
                 \end{subfigure}
@@ -951,20 +950,20 @@ The Higgs related events also includes real tau signals for which are further su
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_prompt.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_prompt.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) of $\SI{36.76\pm 0.51}{\percent}$ for the Higgs events.}
                 \label{Dividedprompt:bg:all}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_prompt1prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_prompt1prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 1-prong mode. The efficiency is $\SI{40.16\pm 0.62}{\percent}$ for the Higgs events.}
                 \label{Dividedprompt:bg:1prong}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_prompt3prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_prompt3prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 3-prong mode. The efficiency is $\SI{29.01\pm 0.88}{\percent}$ for the Higgs events.}
                 \label{Dividedprompt:bg:3prong}
                 \end{subfigure}
@@ -977,20 +976,20 @@ The efficiency derived from the number of taus passing the basic selection and a
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_H.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_H.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons  of $\SI{45.20\pm 0.47}{\percent}$ for the Higgs events.}
                 \label{DividedFromH:bg:all}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH1prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromH1prong.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons and decaying in the 1-prong mode. The efficiency is $\SI{49.25\pm 0.55}{\percent}$ for the Higgs events.}
                 \label{DividedFromH:bg:1prong}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH3prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromH3prong.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons and decaying in the 3-prong mode. The efficiency is $\SI{34.08\pm 0.87}{\percent}$ for the Higgs events.}
                 \label{DividedFromH:bg:3prong}
                 \end{subfigure}
@@ -1011,14 +1010,14 @@ H_{T}&=\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\text{jet}
 where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, muons $X=\mu$, taus $X=\tau$ and jets $X=\text{jet}$ and $\cancel{E}_{T}$ denotes the missing energy, which includes in the standard model considerations the neutrinos. With the definitions of eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) different sensitivities are covered. $S_T$ is sensitive to all considered objects with the sub-category of $S_{T,\text{lep}}$, which only takes the leptonic objects into account, while $H_{T}$ is only sensitive to electrons and muons as well as jets. $H_{T,\text{had}}$ only includes jets.\par
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptHT.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_promptHT.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $H_{T}$ for the Higgs events.}
                 \label{Divided:prompt:HT}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptHThad.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_promptHThad.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $H_{T,\text{had}}$ for the Higgs events.}
                 \label{Divided:prompt:HThad}
                 \end{subfigure}
@@ -1028,14 +1027,14 @@ where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, m
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHHT.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromHHT.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $H_{T}$ for the Higgs events.}
                 \label{Divided:fromH:HT}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHHThad.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromHHThad.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $H_{T,\text{had}}$ for the Higgs events.}
                 \label{Divided:fromH:HThad}
                 \end{subfigure}
@@ -1050,14 +1049,14 @@ The same plots for $H_{T,\text{had}}$ and $H_{T}$ are shown in figure \ref{Divid
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptST.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_promptST.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $S_{T}$ for the Higgs events.}
                 \label{Divided:prompt:ST}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptSTlep.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_promptSTlep.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons of depending on $S_{T,\text{lep}}$ for the Higgs events.}
                 \label{Divided:prompt:STlep}
 \end{subfigure}
@@ -1067,14 +1066,14 @@ The same plots for $H_{T,\text{had}}$ and $H_{T}$ are shown in figure \ref{Divid
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHST.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromHST.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $S_{T}$ for the Higgs events.}
                 \label{Divided:fromH:ST}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHSTlep.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromHSTlep.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $S_{T,\text{lep}}$ for the Higgs events.}
                 \label{Divided:fromH:STlep}
                 \end{subfigure}
@@ -1088,14 +1087,14 @@ The efficiency dependence on the number of jets shows very low efficiency for ta
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_promptnjets.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_promptnjets.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on the number of jets for the Higgs events.}
                 \label{Divided:prompt:njets}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromHnjets.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromHnjets.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons depending on the number of jets for the Higgs events.}
                 \label{Divided:fromH:njets}
                 \end{subfigure}
@@ -1109,26 +1108,26 @@ Figure \ref{dR:bg:taulepton} shows the minimum and maximum separation between ta
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_pr_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_pr_mindR_taulepton.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and leptons.}
                 \label{dR:bg:prompt:taulepton:min}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taulepton.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and leptons.}
                 \label{dR:bg:prompt:taulepton:max}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taulepton.pdf}
                 \subcaption{Minimum separation between taus originating from the Higgs events and leptons.}
                 \label{dR:bg:fromH:taulepton:min}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taulepton.pdf}
                 \subcaption{Maximum separation between taus originating from the Higgs events and leptons.}
                 \label{dR:bg:fromH:taulepton:max}
                 \end{subfigure}
@@ -1140,26 +1139,26 @@ The minimum and maximum separation between taus and jets is presented in figure 
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_pr_mindR_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_pr_mindR_taujet.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and jets.}
                 \label{dR:bg:prompt:taujets:min}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taujet.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and jets.}
                 \label{dR:bg:prompt:taujets:max}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromH_mindR_taujet.pdf}
                 \subcaption{Minimum separation between taus originating from the Higgs events and jets.}
                 \label{dR:bg:fromH:taujets:min}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taujet.pdf}
                 \subcaption{Maximum separation between taus originating from the Higgs events and jets.}
                 \label{dR:bg:fromH:taujets:max}
                 \end{subfigure}
@@ -1171,26 +1170,26 @@ The maximum separation between taus and b-jets has the difference that the separ
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_mindR_pr_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_mindR_pr_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and bjets.}
                 \label{dR:bg:prompt:taubjets:min}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_maxdR_pr_taubjet.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and bjets.}
                 \label{dR:bg:prompt:taubjets:max}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_mindR_fromH_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_mindR_fromH_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from the Higgs events and bjets.}
                 \label{dR:bg:fromH:taubjets:min}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_maxdR_fromH_taubjet.pdf}
                 \subcaption{Maximum separation between taus originating from the Higgs events and bjets.}
                 \label{dR:bg:fromH:taubjets:max}
                 \end{subfigure}
@@ -1290,14 +1289,14 @@ The efficiency for reconstructing a hadronic tau, which is matched to a truth ta
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_Tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_Tau.pdf}
                 \subcaption{Hadronic tau reconstruction efficiency of $\SI{48.44\pm 0.95}{\percent}$ for the top-quark pair events.}
                 \label{DividedTau:signal:LQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_Tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_Tau.pdf}
                 \subcaption{Hadronic tau reconstruction efficiency of $\SI{44.73\pm 0.95}{\percent}$ for the Higgs events.}
                 \label{DividedTau:signal:LQ76}
                 \end{subfigure}
@@ -1312,20 +1311,20 @@ The weak gauge bosons remain as tau sources with an efficiency of $\SI{32.4\pm 4
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_prompt.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_prompt.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) of $\SI{32.4\pm 4.4}{\percent}$ for the low mass LQ events.}
                 \label{Dividedprompt:signal:allLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_prompt1prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_prompt1prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 1-prong mode. The efficiency is $\SI{32.9\pm 5.3}{\percent}$ for the low mass LQ events.}
                 \label{Dividedprompt:signal:1prongLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_prompt3prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_prompt3prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 3-prong mode. The efficiency is $\SI{34.5\pm 8.8}{\percent}$ for the low mass LQ events.}
                 \label{Dividedprompt:signal:3prongLQ75}
                 \end{subfigure}
@@ -1336,20 +1335,20 @@ The weak gauge bosons remain as tau sources with an efficiency of $\SI{32.4\pm 4
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_prompt.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_prompt.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) of $\SI{20.8\pm 3.3}{\percent}$ for the high mass LQ events.}
                 \label{Dividedprompt:signal:allLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_prompt1prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_prompt1prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 1-prong mode. The efficiency is $\SI{23.6\pm 4.1}{\percent}$ for the high mass LQ events.}
                 \label{Dividedprompt:signal:1prongLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_prompt3prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_prompt3prong.pdf}
                 \subcaption{Efficiency of taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and decaying in the 3-prong mode. The efficiency is $\SI{12.5\pm 5.8}{\percent}$ for the high mass LQ events.}
                 \label{Dividedprompt:signal:3prongLQ76}
                 \end{subfigure}            
@@ -1362,20 +1361,20 @@ Taus originating directly from LQ have a efficiency of $\SI{51.3\pm 1.2}{\percen
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_LQ.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_LQ.pdf}
                 \subcaption{Efficiency of taus originating LQs of $\SI{51.3\pm 1.2}{\percent}$ for the low mass LQ events.}
                 \label{DividedfromLQ:signal:allLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ1prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQ1prong.pdf}
                 \subcaption{Efficiency of taus originating LQs and decaying in the 1-prong mode. The efficiency is $\SI{55.5\pm 1.4}{\percent}$ for the low mass LQ events.}
                 \label{DividedfromLQ:signal:1prongLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ3prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQ3prong.pdf}
                 \subcaption{Efficiency of taus originating LQs and decaying in the 3-prong mode. The efficiency is $\SI{38.2\pm 2.4}{\percent}$ for the low mass LQ events.}
                 \label{DividedfromLQ:signal:3prong}
                 \end{subfigure}
@@ -1386,20 +1385,20 @@ Taus originating directly from LQ have a efficiency of $\SI{51.3\pm 1.2}{\percen
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_LQ.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_LQ.pdf}
                 \subcaption{Efficiency of taus originating LQs of $\SI{50.7\pm 1.5}{\percent}$ for the high mass LQ events.}
                 \label{DividedfromLQ:signal:allLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ1prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQ1prong.pdf}
                 \subcaption{Efficiency of taus originating LQs and decaying in the 1-prong mode. The efficiency is $\SI{55.0\pm 1.7}{\percent}$ for the high mass LQ events.}
                 \label{DividedfromLQ:signal:1prongLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ3prong.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQ3prong.pdf}
                 \subcaption{Efficiency of taus originating LQs and decaying in the 3-prong mode. The efficiency is $\SI{36.3\pm 3.0}{\percent}$ for the high mass LQ events.}
                 \label{DividedfromLQ:signal:3prongLQ76}
                 \end{subfigure}            
@@ -1414,26 +1413,26 @@ Figure \ref{Dividedprompt:signal:HTgedöns} shows the efficiency depending on th
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHT.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQHT.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T}$ low mass LQ sample.}
                 \label{Dividedprompt:signal:HTLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T,\text{had}}$ low mass LQ sample.}
                 \label{Dividedprompt:signal:HThadLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHT.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQHT.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T}$ high mass LQ sample.}
                 \label{Dividedprompt:signal:HTLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHThad.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQHThad.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $H_{T,\text{had}}$ high mass LQ sample.}
                 \label{Divided:prompt:signal:HThadLQ76}
                 \end{subfigure}
@@ -1445,26 +1444,26 @@ The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case 
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHT.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQHT.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T}$ low mass LQ sample.}
                 \label{DividedFromLQ:signal:HTLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQHThad.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T,\text{had}}$ low mass LQ sample.}
                 \label{DividedFromLQ:signal:HThadLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHT.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQHT.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T}$ high mass LQ sample.}
                 \label{DividedFromLQ:signal:HTLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQHThad.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQHThad.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $H_{T,\text{had}}$ high mass LQ sample.}
                 \label{DividedFromLQ:signal:HThadLQ76}
                 \end{subfigure}
@@ -1477,26 +1476,26 @@ Taking into account not only jets, electrons and muons, but also taus and missin
 %
 \begin{figure}
   \centering    
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQST.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQST.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T}$ low mass LQ sample.}
                 \label{Dividedprompt:signal:STLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQSTlep.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQSTlep.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T,\text{lep}}$ low mass LQ sample.}
                 \label{Dividedprompt:signal:STlepLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQST.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQST.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T}$ high mass LQ sample.}
                 \label{Dividedprompt:signal:STLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQSTlep.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQSTlep.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$ and $Z^0$ bosons of depending on $S_{T,\text{lep}}$ high mass LQ sample.}
                 \label{Dividedprompt:signal:STlepLQ76}
                 \end{subfigure}
@@ -1508,26 +1507,26 @@ The sub-selection with taus originating directly from LQs show in this considera
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQST.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQST.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T}$ low mass LQ sample.}
                 \label{DividedFromLQ:signal:STLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQSTlep.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQSTlep.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T,\text{lep}}$ low mass LQ sample.}
                 \label{DividedFromLQ:signal:STlepLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQST.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQST.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T}$ high mass LQ sample.}
                 \label{DividedFromLQ:signal:STLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQSTlep.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQSTlep.pdf}
                 \subcaption{Efficiency of taus originating from leptoquarks of depending on $S_{T,\text{lep}}$ high mass LQ sample.}
                 \label{DividedFromLQ:signal:STlepLQ76}
                 \end{subfigure}
@@ -1540,26 +1539,26 @@ The dependence of the efficiency on the number of jets can be found in figure \r
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_promptnjets.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_promptnjets.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on the number of jets for the LQ sample with low mass point.}
                 \label{Dividedprompt:signal:njetsLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_promptnjets.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_promptnjets.pdf}
                 \subcaption{Efficiency of taus originating from $W^\pm$, and $Z^0$ bosons depending on the number of jets for the LQ sample with high mass point.}
                 \label{Dividedprompt:signal:njetsLQ76}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQnjets.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQnjets.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons depending on the number of jets for the LQ sample with low mass point.}
                 \label{DividedFromLQ:signal:njetsLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQnjets.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQnjets.pdf}
                 \subcaption{Efficiency of taus originating from Higgs bosons depending on the number of jets for the LQ sample with high mass point.}
                 \label{DividedFromLQ:signal:njetsLQ76}
                 \end{subfigure}
@@ -1574,26 +1573,26 @@ The minimum and maximum separation between taus and leptons (electrons and muons
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taulepton.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and leptons for the low mass point LQ sample.}
                 \label{dRprompt:signal:taulepton:minLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taulepton.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and leptons for the low mass point LQ sample.}
                 \label{dRprompt:signal:taulepton:maxLQ75}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taulepton.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and leptons for the high mass point LQ sample.}
                 \label{dRprompt:signal:taulepton:minLQ76}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taulepton.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and leptons for the high mass point LQ sample.}
                 \label{dRprompt:signal:taulepton:maxLQ76}
                 \end{subfigure}
@@ -1605,26 +1604,26 @@ The minimum and maximum separation for the efficiency selection of taus originat
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQ_mindR_taulepton.pdf}
                 \subcaption{Minimum separation between taus originating from Higgs events and leptons for the low mass point LQ sample.}
                 \label{dRFromLQ:signal:taulepton:minLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_fromLQ_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_maxdR_fromLQ_taulepton.pdf}
                 \subcaption{Maximum separation between taus originating from Higgs events and leptons for the low mass point LQ sample.}
                 \label{dRFromLQ:signal:taulepton:maxLQ75}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ_mindR_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQ_mindR_taulepton.pdf}
                 \subcaption{Minimum separation between taus originating from Higgs events and leptons for the high mass point LQ sample.}
                 \label{dRFromLQ:signal:taulepton:minLQ76}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_fromLQ_taulepton.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_maxdR_fromLQ_taulepton.pdf}
                 \subcaption{Maximum separation between taus originating from Higgs events and leptons for the high mass point LQ sample.}
                 \label{dRFromLQ:signal:taulepton:maxLQ76}
                 \end{subfigure}
@@ -1636,26 +1635,26 @@ Correspondingly to the background samples the minimum and maximum separation bet
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_pr_mindR_taujet.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and jets for the low mass point LQ sample.}
                 \label{dRprompt:signal:taujet:minLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taujet.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and jets for the low mass point LQ sample.}
                 \label{dRprompt:signal:taujet:maxLQ75}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_pr_mindR_taujet.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and jets for the high mass point LQ sample.}
                 \label{dRprompt:signal:taujet:minLQ76}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taujet.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and jets for the high mass point LQ sample.}
                 \label{dRprompt:signal:taujet:maxLQ76}
                 \end{subfigure}
@@ -1666,26 +1665,26 @@ Correspondingly to the background samples the minimum and maximum separation bet
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_fromLQ_mindR_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_fromLQ_mindR_taujet.pdf}
                 \subcaption{Minimum separation between taus originating from Higgs events and jets for the low mass point LQ sample.}
                 \label{dRFromLQ:signal:taujet:minLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_fromLQ_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_maxdR_fromLQ_taujet.pdf}
                 \subcaption{Maximum separation between taus originating from Higgs events and jets for the low mass point LQ sample.}
                 \label{dRFromLQ:signal:taujet:maxLQ75}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_fromLQ_mindR_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_fromLQ_mindR_taujet.pdf}
                 \subcaption{Minimum separation between taus originating from Higgs events and jets for the high mass point LQ sample.}
                 \label{dRFromLQ:signal:taujet:minLQ76}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_fromLQ_taujet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_maxdR_fromLQ_taujet.pdf}
                 \subcaption{Maximum separation between taus originating from Higgs events and jets for the high mass point LQ sample.}
                 \label{dRFromLQ:signal:taujet:maxLQ76}
                 \end{subfigure}
@@ -1697,26 +1696,26 @@ The special case of the minimum and maximum separation between taus and b-flavor
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_mindR_pr_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_mindR_pr_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the low mass point LQ sample.}
                 \label{dRprompt:signal:taubjet:minLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_maxdR_pr_taubjet.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the low mass point LQ sample.}
                 \label{dRprompt:signal:taubjet:maxLQ75}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_mindR_pr_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_mindR_pr_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the high mass point LQ sample.}
                 \label{dRprompt:signal:taubjet:minLQ76}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_maxdR_pr_taubjet.pdf}
                 \subcaption{Maximum separation between taus originating from $W^\pm$, $Z^0$ events and b-jets for the high mass point LQ sample.}
                 \label{dRprompt:signal:taubjet:maxLQ76}
                 \end{subfigure}
@@ -1728,26 +1727,26 @@ The separation between taus and b-jets in case of the sub-selection, where taus 
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_mindR_fromLQ_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_mindR_fromLQ_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from Higgs events and b-jets for the low mass point LQ sample.}
                 \label{dRFromLQ:signal:taubjet:minLQ75}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ75/Divided_maxdR_fromLQ_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_maxdR_fromLQ_taubjet.pdf}
                 \subcaption{Maximum separation between taus originating from Higgs events and b-jets for the low mass point LQ sample.}
                 \label{dRFromLQ:signal:taubjet:maxLQ75}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_mindR_fromLQ_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_mindR_fromLQ_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from Higgs events and b-jets for the high mass point LQ sample.}
                 \label{dRFromLQ:signaltaubjet:minLQ76}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/LQ76/Divided_maxdR_fromLQ_taubjet.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_maxdR_fromLQ_taubjet.pdf}
                 \subcaption{Maximum separation between taus originating from Higgs events and b-jets for the high mass point LQ sample.}
                 \label{dRFromLQ:signal:taubjet:maxLQ76}
                 \end{subfigure}
@@ -1768,26 +1767,26 @@ The transverse momentum distribution of the tau lepton is shown in figure \ref{t
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_pT_2j2b_1tau.pdf}
                 \subcaption{$p_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{taupt:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_pT_2j2b_2tau.pdf}
                 \subcaption{$p_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{taupt:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_pT_2j1b_1tau.pdf}
                 \subcaption{$p_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{taupt:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_pT_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_pT_2j1b_2tau.pdf}
                 \subcaption{$p_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{taupt:1b2tau}
                 \end{subfigure}
@@ -1801,26 +1800,26 @@ The distribution of the azimuthal angle of the tau leptons for different event s
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_phi_2j2b_1tau.pdf}
                 \subcaption{$\phi$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{tauphi:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_phi_2j2b_2tau.pdf}
                 \subcaption{$\phi$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{tauphi:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_phi_2j1b_1tau.pdf}
                 \subcaption{$\phi$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{tauphi:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_phi_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_phi_2j1b_2tau.pdf}
                 \subcaption{$\phi$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{tauphi:1b2tau}
                 \end{subfigure}
@@ -1833,26 +1832,26 @@ The pseudorapidity distribution shows the same trend as the $p_T$ and $\phi$ dis
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_eta_2j2b_1tau.pdf}
                 \subcaption{$\eta$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{taueta:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_eta_2j2b_2tau.pdf}
                 \subcaption{$\eta$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{taueta:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_eta_2j1b_1tau.pdf}
                 \subcaption{$\eta$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{taueta:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/tau_eta_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/tau_eta_2j1b_2tau.pdf}
                 \subcaption{$\eta$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{taueta:1b2tau}
                 \end{subfigure}
@@ -1865,26 +1864,26 @@ Following the definition of eq. \ref{STgedöns} (cf. section \ref{bgeff}) the di
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j2b_1tau.pdf}
                 \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{MET:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j2b_2tau.pdf}
                 \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{MET:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j1b_1tau.pdf}
                 \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{MET:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/MET_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j1b_2tau.pdf}
                 \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{MET:1b2tau}
                 \end{subfigure}
@@ -1897,26 +1896,26 @@ The distribution of $H_T$ is shown in figure \ref{HT}. Because this distribution
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HT_2j2b_1tau.pdf}
                 \subcaption{$H_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{HT:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HT_2j2b_2tau.pdf}
                 \subcaption{$H_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{HT:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HT_2j1b_1tau.pdf}
                 \subcaption{$H_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{HT:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HT_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HT_2j1b_2tau.pdf}
                 \subcaption{$H_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{HT:1b2tau}
                 \end{subfigure}
@@ -1929,26 +1928,26 @@ The variable $H_{T,\text{had}}$ in principle shows the same trend as the $H_T$ d
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HThad_2j2b_1tau.pdf}
                 \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{HThad:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HThad_2j2b_2tau.pdf}
                 \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{HThad:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HThad_2j1b_1tau.pdf}
                 \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{HThad:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/HThad_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/HThad_2j1b_2tau.pdf}
                 \subcaption{$H_{T,\text{had}}$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{HThad:1b2tau}
                 \end{subfigure}
@@ -1961,26 +1960,26 @@ The most objects are covered by the $S_T$ variable. Its distribution is shown in
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/ST_2j2b_1tau.pdf}
                 \subcaption{$S_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{ST:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/ST_2j2b_2tau.pdf}
                 \subcaption{$S_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{ST:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/ST_2j1b_1tau.pdf}
                 \subcaption{$S_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{ST:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/ST_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/ST_2j1b_2tau.pdf}
                 \subcaption{$S_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{ST:1b2tau}
                 \end{subfigure}
@@ -1993,26 +1992,26 @@ Even excluding the jets in the definition of $S_T$ resulting in the possibly dis
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/STlep_2j2b_1tau.pdf}
                 \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
                 \label{STlep:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/STlep_2j2b_2tau.pdf}
                 \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
                 \label{STlep:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/STlep_2j1b_1tau.pdf}
                 \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
                 \label{STlep:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/STlep_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/STlep_2j1b_2tau.pdf}
                 \subcaption{$S_{T,\text{lep}}$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{STlep:1b2tau}
                 \end{subfigure}
@@ -2027,26 +2026,26 @@ The minimum separation between taus and leptons (electrons and muons) are shown 
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j2b_1tau.pdf}
                 \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least one additional tau.}
                 \label{mindR:taulepton:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j2b_2tau.pdf}
                 \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least two additional tau.}
                 \label{mindR:taulepton:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j1b_1tau.pdf}
                 \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least one additional tau.}
                 \label{mindR:taulepton:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taulepton_2j1b_2tau.pdf}
                 \subcaption{Minimum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least two additional tau.}
                 \label{mindR:taulepton:1b2tau}
                 \end{subfigure}
@@ -2059,26 +2058,26 @@ The maximum separation between taus and leptons (electrons and muons) are shown 
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j2b_1tau.pdf}
                 \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least one additional tau.}
                 \label{maxdR:taulepton:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j2b_2tau.pdf}
                 \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least two b-jets and at least two additional tau.}
                 \label{maxdR:taulepton:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j1b_1tau.pdf}
                 \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least one additional tau.}
                 \label{maxdR:taulepton:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taulepton_2j1b_2tau.pdf}
                 \subcaption{Maximum separation between taus and leptons (electrons and muons), when selecting at least one b-jets and at least two additional tau.}
                 \label{maxdR:taulepton:1b2tau}
                 \end{subfigure}
@@ -2091,26 +2090,26 @@ The minimum and maximum separation between taus and jets as shown in figure \ref
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j2b_1tau.pdf}
                 \subcaption{Minimum separation between taus and jets, when selecting at least two b-jets and at least one additional tau.}
                 \label{mindR:taujet:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j2b_2tau.pdf}
                 \subcaption{Minimum separation between taus and jets, when selecting at least two b-jets and at least two additional tau.}
                 \label{mindR:taujet:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j1b_1tau.pdf}
                 \subcaption{Minimum separation between taus and jets, when selecting at least one b-jets and at least one additional tau.}
                 \label{mindR:taujet:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taujet_2j1b_2tau.pdf}
                 \subcaption{Minimum separation between taus and jets, when selecting at least one b-jets and at least two additional tau.}
                 \label{mindR:taujet:1b2tau}
                 \end{subfigure}
@@ -2121,26 +2120,26 @@ The minimum and maximum separation between taus and jets as shown in figure \ref
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j2b_1tau.pdf}
                 \subcaption{Maximum separation between taus and jets, when selecting at least two b-jets and at least one additional tau.}
                 \label{maxdR:taujet:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j2b_2tau.pdf}
                 \subcaption{Maximum separation between taus and jets, when selecting at least two b-jets and at least two additional tau.}
                 \label{maxdR:taujet:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j1b_1tau.pdf}
                 \subcaption{Maximum separation between taus and jets, when selecting at least one b-jets and at least one additional tau.}
                 \label{maxdR:taujet:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taujet_2j1b_2tau.pdf}
                 \subcaption{Maximum separation between taus and jets, when selecting at least one b-jets and at least two additional tau.}
                 \label{maxdR:taujet:1b2tau}
                 \end{subfigure}
@@ -2153,26 +2152,26 @@ Following the example of the minimum and maximum separation between taus and jet
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j2b_1tau.pdf}
                 \subcaption{Minimum separation between taus and b-jets, when selecting at least two b-jets and at least one additional tau.}
                 \label{mindR:taubjet:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j2b_2tau.pdf}
                 \subcaption{Minimum separation between taus and b-jets, when selecting at least two b-jets and at least two additional tau.}
                 \label{mindR:taubjet:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j1b_1tau.pdf}
                 \subcaption{Minimum separation between taus and b-jets, when selecting at least one b-jets and at least one additional tau.}
                 \label{mindR:taubjet:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/mindR_taubjet_2j1b_2tau.pdf}
                 \subcaption{Minimum separation between taus and b-jets, when selecting at least one b-jets and at least two additional tau.}
                 \label{mindR:taubjet:1b2tau}
                 \end{subfigure}
@@ -2183,26 +2182,26 @@ Following the example of the minimum and maximum separation between taus and jet
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j2b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j2b_1tau.pdf}
                 \subcaption{Maximum separation between taus and b-jets, when selecting at least two b-jets and at least one additional tau.}
                 \label{maxdR:taubjet:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j2b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j2b_2tau.pdf}
                 \subcaption{Maximum separation between taus and b-jets, when selecting at least two b-jets and at least two additional tau.}
                 \label{maxdR:taubjet:2b2tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j1b_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j1b_1tau.pdf}
                 \subcaption{Maximum separation between taus and b-jets, when selecting at least one b-jets and at least one additional tau.}
                 \label{maxdR:taubjet:1b1tau}
                 \end{subfigure}
                  %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j1b_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/kinLQ75/maxdR_taubjet_2j1b_2tau.pdf}
                 \subcaption{Maximum separation between taus and b-jets, when selecting at least one b-jets and at least two additional tau.}
                 \label{maxdR:taubjet:1b2tau}
                 \end{subfigure}
@@ -2233,14 +2232,14 @@ If the number of background events is not known, $b$ can be treated es such nuis
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/2b-jet_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/2b-jet_1tau.pdf}
                                 \subcaption{Discovery significance for the signal LQ samples in the selection of at least two b-jets and at least one additional tau lepton.}
                 \label{Significance:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/2b-jet_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/2b-jet_2tau.pdf}
                 \subcaption{Discovery significance for the signal LQ samples in the selection of at least two b-jets and at least two additional tau leptons.}
                 \label{Significance:2b2tau}
                 \end{subfigure}
@@ -2264,14 +2263,14 @@ The relation
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/1b-jet_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/1b-jet_1tau.pdf}
                 \subcaption{Discovery significance for the signal LQ samples in the selection of at least one b-jet and at least one additional tau lepton.}
                 \label{Significance:1b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/1b-jet_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/1b-jet_2tau.pdf}
                 \subcaption{Discovery significance for the signal LQ samples in the selection of at least one b-jet and at least two additional tau leptons.}
                 \label{Significance:1b2tau}
                 \end{subfigure}
@@ -2284,26 +2283,26 @@ The discovery significance for the signal samples in the selection of at least t
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_2b-jet_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_pt_2b-jet_1tau.pdf}
                 \subcaption{Discovery significance for selecting at least two b-jets and additionally at least one tau.}
                 \label{xcut:pt:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_2b-jet_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_pt_2b-jet_2tau.pdf}
                 \subcaption{Discovery significance for selecting at least two b-jets and additionally at least two taus.}
                 \label{xcut:pt:2b2tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_1b-jet_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_pt_1b-jet_1tau.pdf}
                 \subcaption{Discovery significance for selecting at least one b-jet and additionally at least one tau.}
                 \label{xcut:pt:1b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_pt_1b-jet_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_pt_1b-jet_2tau.pdf}
                 \subcaption{Discovery significance for selecting at least one b-jet and additionally at least two taus.}
                 \label{xcut:pt:1b2tau}
                 \end{subfigure}
@@ -2312,30 +2311,30 @@ The discovery significance for the signal samples in the selection of at least t
 \end{figure}
 %
 In agreement with section \ref{Kinematics} the highest significance for the LQ signal can be observed with selecting at least one b-jet and additionally at least two tau leptons.\par
-The next step is to search for cuts on kinematic variables to further improve the signal significance. This work presents a first approach for signal optimization in the variables $S_T$ (cf. eq. (\ref{STgedöns})) and in the taus' transverse momentum. In order to find optimal cut values the significance depending on the cut threshold is calculated. Figure \ref{xcutj:pt} shows the significance varied by different cut values on the taus' $p_T$ for the different event selections. The cut thresholds are divided in steps of $\SI{5}{\giga\electronvolt}$. When selecting at least two b-jets and at least one tau a cut at $\SI{355}{\giga\electronvolt}$ (see fig. \ref{xcut:pt:2b1tau}) increases the significance up to $\SI{22}{}$ for signal sample with mass point $\SI{500}{\giga\electronvolt}$. An increase of significance is reached for the $\SI{1}{\tera\electronvolt}$ LQ sample up to $\SI{0.92}{}$ with a transverse momentum cut of $\SI{655}{\giga\electronvolt}$. For the selection of at least two b-jets and at least two taus the increase of significance up to $19$ is achieved with a cut at $\SI{240}{\giga\electronvolt}$ and up to $0.63$ with a cut at $\SI{425}{\giga\electronvolt}$ for the low and high mass point respectively (see fig. \ref{xcut:pt:2b2tau}). Increased significance of $18$ and $0.71$ is observed for the selection of at least one b-jet and at least one tau lepton, if $p_T$ is cut at $\SI{355}{\giga\electronvolt}$ and $\SI{715}{\giga\electronvolt}$ for the low and high mass point sample respectively (see fig. \ref{xcut:pt:1b1tau}). Correspondingly, the discovery significance is greatest with $12$ and $0.34$ with a $\SI{230}{\giga\electronvolt}$ and $\SI{425}{\giga\electronvolt}$ cut, when selecting at least one b-jet and at least two taus (see fig. \ref{xcut:pt:1b2tau}). \newline
+The next step is to search for cuts on kinematic variables to further improve the signal significance. This work presents a first approach for signal optimization in the variables $S_T$ (cf. eq. (\ref{STgedöns})) and in the taus' transverse momentum. In order to find optimal cut values the significance depending on the cut threshold is calculated. Figure \ref{xcut:pt} shows the significance varied by different cut values on the taus' $p_T$ for the different event selections. The cut thresholds are divided in steps of $\SI{5}{\giga\electronvolt}$. When selecting at least two b-jets and at least one tau a cut at $\SI{355}{\giga\electronvolt}$ (see fig. \ref{xcut:pt:2b1tau}) increases the significance up to $\SI{22}{}$ for signal sample with mass point $\SI{500}{\giga\electronvolt}$. An increase of significance is reached for the $\SI{1}{\tera\electronvolt}$ LQ sample up to $\SI{0.92}{}$ with a transverse momentum cut of $\SI{655}{\giga\electronvolt}$. For the selection of at least two b-jets and at least two taus the increase of significance up to $19$ is achieved with a cut at $\SI{240}{\giga\electronvolt}$ and up to $0.63$ with a cut at $\SI{425}{\giga\electronvolt}$ for the low and high mass point respectively (see fig. \ref{xcut:pt:2b2tau}). Increased significance of $18$ and $0.71$ is observed for the selection of at least one b-jet and at least one tau lepton, if $p_T$ is cut at $\SI{355}{\giga\electronvolt}$ and $\SI{715}{\giga\electronvolt}$ for the low and high mass point sample respectively (see fig. \ref{xcut:pt:1b1tau}). Correspondingly, the discovery significance is greatest with $12$ and $0.34$ with a $\SI{230}{\giga\electronvolt}$ and $\SI{425}{\giga\electronvolt}$ cut, when selecting at least one b-jet and at least two taus (see fig. \ref{xcut:pt:1b2tau}). \newline
 %
 \begin{figure}
   \centering
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_2b-jet_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_2b-jet_1tau.pdf}
                 \subcaption{Discovery significance for selecting at least two b-jets and additionally at least one tau.}
                 \label{xcut:ST:2b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_2b-jet_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_2b-jet_2tau.pdf}
                 \subcaption{Discovery significance for selecting at least two b-jets and additionally at least two taus.}
                 \label{xcut:ST:2b2tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_1b-jet_1tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_1b-jet_1tau.pdf}
                 \subcaption{Discovery significance for selecting at least one b-jet and additionally at least one tau.}
                 \label{xcut:ST:1b1tau}
                 \end{subfigure}
                 %
-                \begin{subfigure}[t]{0.45\textwidth}
-                \includegraphics[width=0.95\textwidth]{figures/plots/Significance/xcut_1b-jet_2tau.pdf}
+                \begin{subfigure}[t]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{figures/plots/Significance/xcut_1b-jet_2tau.pdf}
                 \subcaption{Discovery significance for selecting at least one b-jet and additionally at least two taus.}
                 \label{xcut:ST:1b2tau}
                 \end{subfigure}
@@ -2343,7 +2342,7 @@ The next step is to search for cuts on kinematic variables to further improve th
 \label{xcut:ST}
 \end{figure}
 %
-Figure \ref{xcutj:ST} shows the significance varied by different $S_T$ cut values (see eq. (\ref{STgedöns})) for the different event selections. The cut thresholds are divided in steps of $\SI{10}{\giga\electronvolt}$. The sifnificance reaches values of $22$ and $1.1$ at $S_T$ cuts of $\SI{710}{\giga\electronvolt}$ and $\SI{1430}{\giga\electronvolt}$ in the selection of at least two b-jets and at least one tau lepton (see fig. \ref{xcut:ST:2b1tau}). This corresponds to the low and high LQ signal sample. For the selection with at least two b-jets and two tau leptons the increase of the discovery significance is up to $19$ and $0.68$ at $\SI{470}{\giga\electronvolt}$ and $\SI{850}{\giga\electronvolt}$ cuts (see fig. \ref{xcut:pt:2b2tau}). In case of at least one b-jet and at least one tau lepton the increase of significance is up to $18$ and $0.71$ at cuts based on $\SI{710}{\giga\electronvolt}$ and $\SI{1430}{\giga\electronvolt}$ for the low and high mass point sample respectively (see fig. \ref{xcut:pt:1b1tau}). Cuts on $S_T$ of $\SI{460}{\giga\electronvolt}$ and $\SI{840}{\giga\electronvolt}$ result in an increase of up to $12$ and $0.39$ in the discovery significance (see fig. \ref{xcut:pt:1b2tau}).\par
+Figure \ref{xcut:ST} shows the significance varied by different $S_T$ cut values (see eq. (\ref{STgedöns})) for the different event selections. The cut thresholds are divided in steps of $\SI{10}{\giga\electronvolt}$. The sifnificance reaches values of $22$ and $1.1$ at $S_T$ cuts of $\SI{710}{\giga\electronvolt}$ and $\SI{1430}{\giga\electronvolt}$ in the selection of at least two b-jets and at least one tau lepton (see fig. \ref{xcut:ST:2b1tau}). This corresponds to the low and high LQ signal sample. For the selection with at least two b-jets and two tau leptons the increase of the discovery significance is up to $19$ and $0.68$ at $\SI{470}{\giga\electronvolt}$ and $\SI{850}{\giga\electronvolt}$ cuts (see fig. \ref{xcut:pt:2b2tau}). In case of at least one b-jet and at least one tau lepton the increase of significance is up to $18$ and $0.71$ at cuts based on $\SI{710}{\giga\electronvolt}$ and $\SI{1430}{\giga\electronvolt}$ for the low and high mass point sample respectively (see fig. \ref{xcut:pt:1b1tau}). Cuts on $S_T$ of $\SI{460}{\giga\electronvolt}$ and $\SI{840}{\giga\electronvolt}$ result in an increase of up to $12$ and $0.39$ in the discovery significance (see fig. \ref{xcut:pt:1b2tau}).\par
 The general trend is that within a chosen b-jet selection the significance reaches higher values in the one tau selection compared to the two tau selection. This can be explained by higher available statistics in that specific selection. The difference of the b-jet selection shows that selecting at least one b-jet results in higher significance values due to the looser nature of that requirement. At the same time the significance is already at high values with the two tau selection. Table \ref{xcuts} summarizes all siginificance increases for the different selections and the two kinematic variables.
 %	
 	\begin{table}[htbp]
@@ -2405,8 +2404,8 @@ Sudden downward changes in the significance curve can be explained by a sudden d
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \chapter{Appendix}
-\section{Comparison between the top-quark background samples (di-lepton versus non-allhadronic)}\label{dilORnonallhad}
-%Einfach eine Tabelle mit event yield für ttbar dil und ttbar nonallhad in einem, um zu zeigen, dass eigentlich nonallhad benötigt wird, aber das so auch geht: einen satz entsprechend dann dazu in used samples
+\section{Comparison between the top-quark background samples}\label{dilORnonallhad}
+%Einfach eine Tabelle mit event yield für ttbar dil und ttbar nonallhad in einem, um zu zeigen, dass eigentlich nonallhad benötigt wird, aber das so auch geht: einen satz entsprechend dann dazu in used samples; eigentlich soll ich kein semi-leptonic und nonallhadronic für sample Beschreibung verwenden
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \listoffigures
 \addcontentsline{toc}{chapter}{List of figures}%fügt das Bildverzeichnis zum Inhaltsverzeichnis
