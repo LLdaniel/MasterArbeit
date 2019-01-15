@@ -491,7 +491,7 @@ The nominal interaction point acts as origin of the coordinate system, where the
 \label{pseudorapidity}
 \end{align}
 This variable only depends on the polar angle is therefore the adequate quantity in the context of collision experiments, where usually the angle $\theta$ from the beamline is measured. \cite{ChinaPseudorapidityBook}\par
-The collision products, originating from the interaction point at the center of the {\ATLAS} detector, will propagate through the different layers of the detector's sub-systems. The inner detector is responsible to track electrically charged particles. The magnetic fields for identifying the particles' electric charge and for momentum measurement is provided by the {\ATLAS} magnet system. The next layer includes the calorimeter. The electromagnetic calorimeter measures mainly the energy deposit of electrons, positrons and photons and allows the distinction between them with the help of the track information given by the inner detector. Hardronic particles will deposit their energy in the hadronic calorimeter. The outermost layer consists of the muon system responsible for a second independent measurement of the muon and anti-muon tracks. \cite{ATLASJINST}\par    
+The collision products, originating from the interaction point at the center of the {\ATLAS} detector, will propagate through the different layers of the detector's sub-systems. The inner detector is responsible to track electrically charged particles. The magnetic fields for identifying the particles' electric charge and for momentum measurement is provided by the {\ATLAS} magnet system. The next layer includes the calorimeter. The electromagnetic calorimeter measures mainly the energy deposit of electrons, positrons and photons and allows the distinction between them with the help of the track information given by the inner detector. Hadronic particles will deposit their energy in the hadronic calorimeter. The outermost layer consists of the muon system responsible for a second independent measurement of the muon and anti-muon tracks. \cite{ATLASJINST}\par    
 \textbf{The magnet system} includes a superconducting solenoid with a field strength of $\SI{2}{\tesla}$ surrounding the inner detector as well as three large superconducting toroid magnets composed in an eight-fold azimuthal symmetry around the calorimeter. The barrel toroid magnet delivers a field strength of $\SI{0.5}{\tesla}$ and in the end-cap a field of $\SI{1}{\tesla}$ is present. \cite{ATLASJINST}\newline%Bending particle path -->identification... ######
 \textbf{The inner detector} is responsible for momentum measurements, vertex measurements and pattern recognition for the identification of electrically charged particles. This is achieved with a combination of semiconductor pixel and microstrip trackers (SCT). The Insertable B-Layer (IBL) is the innermost layer of the pixel detectors at a radius of $\SI{3.3}{\centi\meter}$ away from the beam line. Additional straw tube tracking detectors are sensitive to transition radiation (TRT) located in the outer part that are responsible for high vertex and momentum resolution. The $R-\phi$ segmented pixel detectors are of a size of $50\times \SI{400}{\square\micro\meter}$ and the SCTs with their $8$ strip layers cover together a range of $|\eta|<2.5$. Typically $36$ hits per track are provided by the $\SI{4}{\milli\meter}$ straw tubes of the TRTs, which cover the range $|\eta|\leq 2.0$. \cite{IBL}\cite{ATLASJINST}\newline %Unterscheidung teilchen anhand der Übergangsstrahlung ####################
 Liquid argon electromagnetic sampling \textbf{calorimeters} with high granularity allow for an excellent energy measurement of electrons and photons. They have a total thickness of more than $22$ radiation lengths $X_0$ in the barrel region ($|\eta|<1.475$) and more than $24X_0$ in the end-cap region ($1.375<|\eta|<3.2$). For hadronic energy measurements a scintillator-tile calorimeter covering $|\eta|<1.7$ is in operation. It is a sampling calorimeter and uses steel as absorber material and scintillating tiles as active material in conjunction with wavelength shifting fibres. Further LAr technology is used for hadronic particles in the outer pseudorapidity range up to $|\eta|=3.2$. Here copper plates provide the absorber material. The forward calorimeters extend the coverage of hadronic and electromagnetic energy measurements to $|\eta|=4.9$ and are $10X_0$ deep. \cite{ATLASJINST}\newline%Energiemessung: provide god res for high energy jets###################
@@ -581,17 +581,14 @@ MC simulations are based on an algorithm relying on sequences of pseudo random n
 %aus Verenas MA: ATLAS detector and physics performance: Technical design report, 2 1999. CERN-LHCC-99-015
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Analysis}\label{analysis}
-The framework conditions for the analysis, investigating the research question formulated in section \ref{startingpoint}, have to be defined. 
-The MC samples and data samples, which are taken into account, are listed in detail in section \ref{MCsamples}. The physical object definition and the event selection for the performed analysis are presented in section \ref{physObj} and \ref{eventselection}.  
+Before investigating the research question formulated in section \ref{startingpoint}, the framework principles have to be defined. The MC samples and data samples, which are taken into account, are listed in detail in section \ref{MCsamples}. The physical object definition and the event selection for the performed analysis are presented in section \ref{physObj} and \ref{eventselection}.  
 %das wurde zu LQ verfrachtet, siehe LQ Kapitel: besserer Zusammenhang
 %\section{Current status in the search for scalar leptoquarks}
 %\section{Starting point and research question for the analysis}
-\section{Used data and Monte Carlo samples}\label{MCsamples}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Athena is the {\ATLAS} software framework for event generation, simulation, reconstruction and derivation production (cf. also section \ref{MCsim}) \cite{Athena}. The management and build of the software packages rely on CMake. At the end of the software chain analyses use the AthAnalysisBase, which is organized in different analysis sub-groups like the top-quark group. Their standard package for physical object reconstruction is AnalysisTop, which also includes the data analysis tool {\ROOT}.\par
-For this work a package based on AnalysisTop of release 21.2.56 (build on November 29, 2018) was used.\newline
-The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to decay either fully leptonically or semi-leptonically in the LQ sample (cf. section \ref{startingpoint}). The parton shower and fragmentation as well as the underlying event was generated with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} parameters at next-to-leading (NLO) in matrix calculation. \newline         
-The other category includes main background contributions of SM processes. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allows the $t\bar{t}$ pair to decay fully leptonically. Showering, fragmentation and underlying event is simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and is responsible for the highest parton radiation beyond the Born level \cite{hdamp}.\newline
+\section{Datasets and Monte Carlo samples}\label{MCsamples}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to decay either fully leptonically or semi-leptonically in the LQ sample (cf. section \ref{startingpoint}). The parton showering and fragmentation as well as the underlying event generation were done with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} tunes at next-to-leading order (NLO) in matrix calculation. \newline         
+The other category of simulations includes main background contributions of standard model processes. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allow the $t\bar{t}$ pair to decay fully leptonically. Showering, fragmentation and the underlying event generation are simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and regulates the highest transverse momentum of the first additional parton radiation beyond the Born level \cite{hdamp}\cite{hdamp2}.\newline
 %
 \begin{table}[htbp]
 		\centering
@@ -622,14 +619,16 @@ The other category includes main background contributions of SM processes. That 
 \end{table}
 %
 The $t\bar{t}H$ sample is generated with {\POWHEG}. Like for the $t\bar{t}$ samples, the event generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14 was used to simulate the showering, fragmentation and underlying event. The mass of the Higgs boson is set to $\SI{125}{\giga\electronvolt}$ and the resummation parameter was set to $\SI{325.5}{\giga\electronvolt}$. \newline
-For all samples the {\EvtGen} (v1.6.0) \cite{EvtGen} program was used for the decay of the bottom and charm hardons produced by the top-quark decay.\newline
-To compare the MC prediction data of the data-taking periods 2015, 2016, 2017 and 2018 was used. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{140.45}{\per\femto\barn}$ used in the analysis.
+For all samples the {\EvtGen} (v1.6.0) \cite{EvtGen} program was used for the decay of the bottom and charm hadrons produced by the top-quark decay.\newline
+Data sets of the data-taking periods 2015, 2016, 2017 and 2018, which were produced at a center of mass energy of $\sqrt{s}=\SI{13}{\tera\electronvolt}$, are studied and compared to the MC predictions. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{140.45}{\per\femto\barn}$ used in the analysis. 
 \section{Physical object selection}\label{physObj}
-The physical object selection for electrons, muons, hadronic taus, jets and b-jets in the analysis is described in this chapter. For the basic reconstruction of physical objects see chapter \ref{detectorsignatures}.
+The physical object selection for electrons, muons, hadronic taus, jets and b-jets in the analysis is described in this section. For the general reconstruction concepts of physical objects see chapter \ref{detectorsignatures}.\par
+The {\ATLAS} software framework for event generation, simulation, reconstruction and derivation production (cf. also section \ref{MCsim}) is Athena \cite{Athena}. %The management and build of the software packages rely on CMake.
+The standard package for physical object reconstruction used in this analysis is AnalysisTop. It is derived from the general software chain of AthAnalysisBase specifically adapted for the needs of the top-quark analysis group. The \texttt{C++} framwork {\ROOT} is used as data analysis tool. For this work a package based on AnalysisTop of release 21.2.56 (build on November 29, 2018) was used.\par
 \subsubsection*{Electrons}
-Electrons have to fulfill the tight quality requirement and have at least a transverse momentum of $p_T>\SI{25}{\giga\electronvolt}$ and lie in the pseudorapidity range of $|\eta|<2.5$. In order to get a clean signal from a leptonic decaying top quark, the electrons have to meet the gradient isolation requirement. All single electron triggers are used for this selection.\newline
-For the electron identification all single electron trigger were used. The high level electron trigger has a transverse energy threshold of at least $\SI{24}{\giga\electronvolt}$ and requires at least a medium quality electron based on the likelihood categories described in section \ref{eReconstruction} (\texttt{e24\textunderscore lhmedium}). This HLT is seeded from the electromagnetic calorimeter of the level 1 trigger system with a threshold of at least $E_T<\SI{20}{\giga\electronvolt}$ (\texttt{L1EM20VH}). Additionally a energy dependent veto against energy deposited in the hadronic calorimeter behind  the electromagnetic cluster is implemented. Thus it acts as hadronic veto (denoted with `\texttt{H}'). Furthermore the transverse energy threshold depends slightly on the pseudorapidity to compensate for energy losses in the material directly in front of the electromagnetic calorimeter (denoted with `\texttt{V}'). The next tighter trigger selection includes a transverse energy threshold of $E_T>\SI{60}{\giga\electronvolt}$ and a medium quality electron (\texttt{e60\textunderscore lhmedium}). Adapted for high energy electrons the trigger \texttt{e120\textunderscore lhloose} provides electrons with transverse energy of at least $\SI{120}{\giga\electronvolt}$ by requiring at the same time the loose electron working point. \cite{trigger:e:mu} The above electron trigger menu is valid for data taken in 2015. For the data-taking periods in 2016-2018 the changes are the following:\newline
-HLT thresholds are set to $\SI{26}{\giga\electronvolt}$ with the tight quality requirement (\texttt{e26\textunderscore lhtight}) and a variable cone size isolation (\texttt{ivarloose}), which uses the criteria that the sum of the track momentum must not exceed $\SI{10}{\percent}$ of the electron's transverse energy within a cone of $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}<0.2$ \cite{trigger:ivarloose:erkl}\cite{trigger:ivarloose:form}. Additional to that no transverse impact parameter cut is applied (\texttt{nod0}) \cite{trigger:ivarloose:erkl}. The complementary trigger for the high transverse energy regime is changed to $\SI{140}{\giga\electronvolt}$ \cite{trigger:e:mu}.
+Electrons have to fulfill the tight quality requirement and need to have at least a transverse momentum of $p_T>\SI{25}{\giga\electronvolt}$ and lie within the pseudorapidity range of $|\eta|<2.5$. In order to get a clean signal from a leptonic decaying top quark, the electrons have to meet the gradient isolation requirement. For the electron identification all single electron trigger were used.\newline
+The high level electron trigger has a transverse energy threshold of at least $\SI{24}{\giga\electronvolt}$ and requires at least a medium quality electron based on the likelihood categories described in section \ref{eReconstruction} (\texttt{e24\textunderscore lhmedium}). This high level trigger (HLT) is seeded from the electromagnetic calorimeter of the level 1 trigger system with a threshold of at least $E_T<\SI{20}{\giga\electronvolt}$ (\texttt{L1EM20VH}). Additionally a energy dependent veto against energy deposits in the hadronic calorimeter behind  the electromagnetic cluster is implemented. Thus it acts as hadronic veto (denoted with `\texttt{H}'). Furthermore the transverse energy threshold depends slightly on the pseudorapidity to compensate for energy losses in the material directly in front of the electromagnetic calorimeter (denoted with `\texttt{V}'). The next step of a tighter trigger selection includes a transverse energy threshold of $E_T>\SI{60}{\giga\electronvolt}$ and requires a medium quality electron (\texttt{e60\textunderscore lhmedium}). Adapted for high energy electrons the trigger \texttt{e120\textunderscore lhloose} provides electrons with transverse energies of at least $\SI{120}{\giga\electronvolt}$ by requiring at the same time the loose electron working point. \cite{trigger:e:mu} The above electron trigger menu is valid for data taken in 2015. For the data-taking periods in 2016-2018 the following changes are applied:\newline
+HLT thresholds are set to $\SI{26}{\giga\electronvolt}$ with the tight quality requirement (\texttt{e26\textunderscore lhtight}) and a variable cone size isolation (\texttt{ivarloose}), which uses the criteria that the sum of the track momentum must not exceed $\SI{10}{\percent}$ of the electron's transverse energy within a cone of $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}<0.2$ \cite{trigger:ivarloose:erkl}\cite{trigger:ivarloose:form}. Additional to that no transverse impact parameter cut is applied (\texttt{nod0}) \cite{trigger:ivarloose:erkl}. The complementary trigger for the high transverse energy regime is increased to $\SI{140}{\giga\electronvolt}$ \cite{trigger:e:mu}.
 %electron identification starts from searches of the highest energy deposit in the second layer of em, immer unter dem Aspekt möglichst schneller processierung       
 %lowest single e trigger e24_lhmedium threshold of ET>24GeV + medium LH identification of the electron
 %seeded from the electromagnetic calorimeter at level 1 with threshold ET>20GeV L1EM20VH
@@ -645,9 +644,9 @@ HLT thresholds are set to $\SI{26}{\giga\electronvolt}$ with the tight quality r
 %
 %
 \subsubsection*{Muons}
-Muons have to meet the medium quality requirement and have a transverse momentum of $p_T>\SI{25}{\giga\electronvolt}$. The selected muons are reconstructed as a combined muon within a pseudorapidity region of $|\eta|<2.5$. Analogous to the electron selection for a clean lepton signal, the muon has to further fulfill the gradient isolation requirement and all single muon triggers are used for the selection.\newline
-Trigger decisions for muons are based on the MS and the quality of the match that combines the track measurement of the MS and the ID. The requirement on the transverse momentum of the combined muon is at least $\SI{20}{\giga\electronvolt}$ with a additional loose isolation (\texttt{mu20\textunderscore iloose}). The loose isolation means that the scalar sum of the track $p_T$ values does not exceed $<\SI{12}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.2$. This HLT is based on the decisions of the trigger level 1 seed, which selects muons with a transverse momentum of at least $\SI{15}{\giga\electronvolt}$ (\texttt{L1MU15}). The HLT trigger \texttt{mu50} has a threshold of $p_T<\SI{50}{\giga\electronvolt}$ and complements the trigger's high momentum regime without isolation conditions. The above muon trigger menu is based on the data taking periods in 2015 \cite{trigger:e:mu}. Changes in the periods of the year 2016-2018 are as follows: \newline
-The HLT transverse momentum requirement is changed to at least $<\SI{26}{\giga\electronvolt}$ and the isolation requirement is changed in such a way that the scalar sum of the track momentum must not exceed $\SI{7}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.3$ (\texttt{e26\textunderscore ivarmedium}) \cite{trigger:mu}.            
+Muons have to meet the medium quality requirement and need to have a transverse momentum of $p_T>\SI{25}{\giga\electronvolt}$. The selected muons are reconstructed as a combined muon within a pseudorapidity region of $|\eta|<2.5$. Analogous to the electron selection for a clean lepton signal, the muon has to further fulfill the gradient isolation requirement and all single muon triggers are used for the selection.\newline
+Trigger decisions for muons are based on the MS and the quality of the match that combines the track measurement of the MS and the ID. The requirement on the transverse momentum of the combined muon is at least $\SI{20}{\giga\electronvolt}$ with an additional loose isolation (\texttt{mu20\textunderscore iloose}). The loose isolation means that the scalar sum of the track $p_T$ values does not exceed $\SI{12}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.2$. This HLT is based on the decisions of the trigger level 1 seed, which selects muons with a transverse momentum of at least $\SI{15}{\giga\electronvolt}$ (\texttt{L1MU15}). The HLT trigger \texttt{mu50} has a threshold of $p_T<\SI{50}{\giga\electronvolt}$ and complements the trigger's high momentum regime without isolation conditions. The above muon trigger menu is based on the data taking periods in 2015 \cite{trigger:e:mu}. Changes to the data selection of the periods of the year 2016-2018 are as follows: \newline
+The HLT transverse momentum requirement is changed to at least $>\SI{26}{\giga\electronvolt}$ and the isolation requirement is changed in such a way that the scalar sum of the track momentum must not exceed $\SI{7}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.3$ (\texttt{e26\textunderscore ivarmedium}) \cite{trigger:mu}.            
 %MS only und quality of th e matching of muon track measured independently in the ID and MS (physical property = pT)
 %pT>20GeV of CB muon candidate + loose isolation: sum of track pT values  in cone around dR<0,2 is set to <12% of the muon pT
 %seeded by L1MU15 -> pT>15GeV
@@ -658,9 +657,9 @@ The HLT transverse momentum requirement is changed to at least $<\SI{26}{\giga\e
 %
 %
 \subsubsection*{Taus}
-Taus selected for this analysis have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$ and must lie in the pseudorapidity range of $|\eta|<2.5$. Additional to that the taus have to decay hadronically. Following their basic reconstruction procedure, taus have to met the conditions of the loose working point. To avoid misinterpretations of electrons as taus, the corresponding working point is set to loose.
+Taus selected for this analysis need to have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$ and must lie within the pseudorapidity range of $|\eta|<2.5$. Additional to that the taus have to decay hadronically. Following their basic reconstruction procedure, taus have to meet the conditions of the loose working point. To avoid misinterpretations of electrons as taus, the corresponding working point is set to loose.
 \subsubsection*{Jets}
-Jets are reconstructed with the anti-$k_T$ algorithm and have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$. 
+Jets are reconstructed with the anti-$k_T$ algorithm and need to have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$. 
 \subsubsection*{b-jets}\label{physObj:bjet}
 For the b-jet selection the b-tagger MV2c10 is used with a working point of $\SI{77}{\percent}$ b-tagging efficiency.
 %overlap removal? --> default between <e,mu>, <e,jet>, <mu,jet>
@@ -671,12 +670,12 @@ The signal and background studies for the $t\tau^{-}+\bar{t}\tau^{+}$ channel in
 \begin{figure}[htbp]                                 
  \begin{center}                                       
   \includegraphics[width=0.45\linewidth]{figures/selection.pdf} 
-   \caption[Overview of the event selection.]{Overview of the event selection involved for the signal and background studies $t\tau^{-}+\bar{t}\tau^{+}$ channel.}
+   \caption[Overview of the event selection.]{Overview of the event selection involved for the signal and background studies in the $t\tau^{-}+\bar{t}\tau^{+}$ channel.}
   \label{selection}                                    
  \end{center}
 \end{figure}
 %
-The selection includes one electron and one muon of opposite electrical charge and a transverse momentum of at least $p_T>\SI{27}{\giga\electronvolt}$. This di-lepton selection covers the leptonic decay of the top-pair mediated by the $W^-$ boson in case of the anti-top quark and mediated by the $W^+$ in case of the top quark. Due to conservation of electrical charge the resulting leptons of the subsequent decay of the $W^\pm$ boson is of opposite sign. Additional to that at least two jets are selected because the weak top-pair decay produces a bottom-pair (cf. figure \ref{topdecay}), which will result in a jet. Due to the different experimental reconstruction of jets in general and jets of b-flavor described in chapter \ref{detectorsignatures} a more detailed examination of the jets is done. At least two of the above selected jets have to be b-tagged or at least one of the above jets have to be b-tagged. To cover the phase space of the full $t\tau^{-}+\bar{t}\tau^{+}$ channel, an additional selection is made to select at least either one or two tau leptons for each cases of b-jet selection.    
+The selection includes one electron and one muon of opposite electrical charge and a transverse momentum of at least $p_T>\SI{27}{\giga\electronvolt}$. This di-lepton selection covers the leptonic decay of the top-pair mediated by the $W^-$ boson in case of the anti-top quark and mediated by the $W^+$ in case of the top quark. Due to conservation of the electric charge the resulting leptons of the subsequent decay of the $W^\pm$ boson is of opposite sign. In addition to that at least two jets are selected because the weak top-pair decay produces a bottom-pair (cf. figure \ref{topdecay}), which will result in a jet. Due to the different experimental reconstruction techniques of jets in general and jets of b-flavor described in chapter \ref{detectorsignatures} a more detailed examination of the jets is done. At least two of the above selected jets have to be b-tagged or at least one of the above jets have to be b-tagged. To cover the phase space of the full $t\tau^{-}+\bar{t}\tau^{+}$ channel, an additional selection is made to select at least either one or two tau leptons for each cases of b-jet selection.    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results}\label{results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -831,7 +830,88 @@ The total efficiency of reconstructing a hadronic tau matched to its truth parti
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.635\pm 0.061}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.514\pm 0.077}{\percent}$}
 		\\
+		%\hline
+		%jet faking as tau            & $8232$         & $4728730$      & $21925$         & $2178770$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.1741\pm 0.0019}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.0063\pm 0.0068}{\percent}$}
+		%\\
+		%\hline
+		%b-jet faking as tau          & $5361$        & $3317260$      & $1993$         & $1332650$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.1616\pm 0.0022}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.1496\pm 0.0033}{\percent}$}
+		%\\
+		%\hline
+                %not b-jet faking as tau          & $2871$        & $1411470$      & $19932$         & $846121$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.2034\pm 0.0038}{\percent}$}   & \multicolumn{2}{c}{$\SI{2.356\pm 0.016}{\percent}$}
+		%\\
+                %\hline
+                %electron faking as tau          & $17$        & $1639390$      & $17$         & $488234$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.00104\pm 0.00025}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.00348\pm 0.00084}{\percent}$}
+		%\\
 		\hline
+		\hline
+		\end{tabular*}
+		\caption[Efficiencies for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\label{ttbarttHEffTable}
+          \renewcommand{\arraystretch}{1}
+\end{sidewaystable}
+%
+%	
+\begin{sidewaystable}[htbp]
+		\centering
+                \footnotesize
+                \renewcommand{\arraystretch}{1.2}
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
+		\hline
+		\hline
+		 \textbf{sample}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$}}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
+		\\
+		\hline
+		selection  & passed events      & total events & passed events      & total events
+		\\ 
+		\hline
+		%truth matching for tau      & $107$            & $16863$      & $8971$        & $30527$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.635\pm 0.061}{\percent}$}    & \multicolumn{2}{c}{$\SI{29.39\pm 0.26}{\percent}$}
+		%\\
+		%\hline
+		%tau originated from W$^{\pm}$, Z$^0$& $0$        & $0$         & $3251$          & $8843$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{36.76\pm 0.51}{\percent}$}
+		%\\
+		%\hline
+                %tau originated from W$^{\pm}$, Z$^0$ (1-prong)& $0$        & $0$         & $2488$          & $6195$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{40.16\pm 0.62}{\percent}$}
+		%\\
+		%\hline
+                %tau originated from W$^{\pm}$, Z$^0$ (3-prong)& $0$        & $0$         & $763$          & $2630$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{29.01\pm 0.88}{\percent}$}
+		%\\
+		%\hline
+                %tau originated from H$^0$& $0$        & $0$         & $5140$          & $11372$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{45.20\pm 0.47}{\percent}$}
+		%\\
+		%\hline
+                %tau originated from H$^0$ (1-prong)& $0$        & $0$         & $4132$          & $8390$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{49.25\pm 0.55}{\percent}$}
+		%\\
+		%\hline
+                %tau originated from H$^0$ (3-prong)& $0$        & $0$         & $1008$          & $2958$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{34.08\pm 0.87}{\percent}$}
+		%\\
+		%\hline
+		%tau from B-mesons           & $107$            & $16860$      & $44$            & $8553$ 
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{0.635\pm 0.061}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.514\pm 0.077}{\percent}$}
+		%\\
+		%\hline
 		jet faking as tau            & $8232$         & $4728730$      & $21925$         & $2178770$ 
 		\\
 		efficiency                  & \multicolumn{2}{c}{$\SI{0.1741\pm 0.0019}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.0063\pm 0.0068}{\percent}$}
@@ -854,8 +934,8 @@ The total efficiency of reconstructing a hadronic tau matched to its truth parti
 		\hline
 		\hline
 		\end{tabular*}
-		\caption[Efficiencies for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample. The luminosity is}
-		\label{ttbarttHEffTable}
+		\caption[Fake rates for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Fake rates for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\label{ttbarttHfakeTable}
           \renewcommand{\arraystretch}{1}
 \end{sidewaystable}
 %
@@ -1039,8 +1119,8 @@ The efficiency dependence on the number of jets shows very low efficiency of $\S
 \begin{figure}
   \centering
                 \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_fromHnjets.pdf}
-\label{Divided:fromH:njets}
 \caption[Efficiency of taus originating from Higgs bosons depending on the number of jets for the Higgs events.]{Efficiency of taus originating from Higgs bosons depending on the number of jets for the Higgs events.}
+\label{Divided:fromH:njets}
 \end{figure}
 %
 %dR min/max Gedöns fromH
@@ -1083,7 +1163,7 @@ The minimum and maximum separation between taus and jets is presented in figure 
 \label{dR:fromH:taujets}
 \end{figure}
 %
-The maximum separation between taus and b-jets shows a slightly shifted peak at $\Delta R=2.8$ compared to the jet separation (see \ref{dR:bg:fromH:taubjets:max}), but the efficiency dependence is very similar to the jets separation. This is valid for taus coming from $H^0$.  The minimum separation between taus and b-jets show large changes compared to all jet flavors (see \ref{dR:fromH:taubjets:max}). The minimum separation is extended over a full separation range up to $\Delta R=4.5$ and has significantly less efficiency near to zero for small separations.
+The maximum separation between taus and b-jets shows a slightly shifted peak at $\Delta R=2.8$ compared to the jet separation (see \ref{dR:fromH:taubjets:max}), but the efficiency dependence is very similar to the jets separation. This is valid for taus coming from $H^0$.  The minimum separation between taus and b-jets show large changes compared to all jet flavors (see \ref{dR:fromH:taubjets:max}). The minimum separation is extended over a full separation range up to $\Delta R=4.5$ and has significantly less efficiency near to zero for small separations.
 %
 \begin{figure}
   \centering
@@ -1107,7 +1187,7 @@ The maximum separation between taus and b-jets shows a slightly shifted peak at 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Signal efficiency}\label{signaleff}
-The efficiencies for the leptoquark signal samples with their two mass points are summarized in table \ref{LQEffTable} following the example of the background efficiencies in section \ref{bgeff}. The uncertainty is derived from the binomial error of the efficiency after eq. (\ref{binomialerror}). The efficiency are the same as for the background samples with the difference that the category of a tau originating from a Higgs boson replaced by the category of tau leptons originating from leptoquarks.\par
+The efficiencies for the leptoquark signal samples with their two mass points are summarized in table \ref{LQEffTable} following the example of the background efficiencies in section \ref{bgeff}. The uncertainty is derived from the binomial error of the efficiency after eq. (\ref{binomialerror}). The efficiency are the same as for the background samples with the difference that the category of a tau originating from a Higgs boson is replaced by the category of tau leptons originating from leptoquarks.\par
 %	
 	\begin{sidewaystable}[htbp]
 		\centering
@@ -1190,7 +1270,7 @@ The efficiencies for the leptoquark signal samples with their two mass points ar
                 \end{sidewaystable}
 %
 %Truth match
-The efficiency for reconstructing a hadronic tau, which is matched to a truth tau over the total number of truth taus passing the basic selection is $\SI{48.44\pm 0.95}{\percent}$ and $\SI{44.73\pm 0.95}{\percent}$ for the $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point LQ sample respectively. These higher efficiencies compared to the background samples is the existence of more real taus due to the LQ decay. This can be seen also at the momentum spectrum in figure \ref{DividedTau:signal}, where the truth tau's transverse momentum is drawn against the efficiency.\par  
+The efficiency for reconstructing a hadronic tau, which is matched to a truth tau over the total number of truth taus passing the basic selection is $\SI{48.44\pm 0.95}{\percent}$ and $\SI{44.73\pm 0.95}{\percent}$ for the $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point LQ sample respectively. These higher efficiencies compared to the background samples are caused by the existence of more real taus due to the LQ decay. This can be seen also at the momentum spectrum in figure \ref{DividedTau:signal}, where the truth tau's transverse momentum is drawn against the efficiency.\par  
 %
 \begin{figure}
   \centering
@@ -1216,7 +1296,7 @@ With a mean efficiency value of roughly $\sim\SI{1}{\percent}$ taus originating 
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx
 %from LQ
-Taus originating directly from LQs have a efficiency of $\SI{51.3\pm 1.2}{\percent}$ and $\SI{50.7\pm 1.5}{\percent}$ for the low and high mass point respectively. These to efficiencies are in agreement with each other. The corresponding efficiency plots can be found in figure \ref{DividedFromLQ:signal:LQ75} and \ref{DividedFromLQ:signal:LQ76} as well as the efficiency categories for taus decaying into one charged or three charged particles. The efficiency for 1-prong decaying taus in case of the low mass LQ sample is $\SI{55.5\pm 1.4}{\percent}$ and $\SI{38.2\pm 2.4}{\percent}$ for the 3-prong case. The high mass point LQ samples shows efficiencies for the 1-prong and 3-prong case of $\SI{55.0\pm 1.7}{\percent}$ and $\SI{36.3\pm 3.0}{\percent}$.\par
+Taus originating directly from LQs have a efficiency of $\SI{51.3\pm 1.2}{\percent}$ and $\SI{50.7\pm 1.5}{\percent}$ for the low and high mass point respectively. These to efficiencies are in agreement with each other. The corresponding efficiency plots can be found in figure \ref{DividedFromLQ:signal:LQ75} and \ref{DividedFromLQ:signal:LQ76} as well as the efficiency categories for taus decaying into one charged or three charged particles. The efficiency for 1-prong decaying taus in case of the low mass LQ sample is $\SI{55.5\pm 1.4}{\percent}$ and $\SI{38.2\pm 2.4}{\percent}$ for the 3-prong case. The high mass point LQ samples shows efficiencies for the 1-prong and 3-prong case of $\SI{55.0\pm 1.7}{\percent}$ and $\SI{36.3\pm 3.0}{\percent}$. Taus directly from the low mass point leptoquarks show a slight efficiency dependence of the transverse momentum (see \ref{DividedFromLQ:signal:LQ75}). Towards high momenta the efficiency decreases slightly. Differences in 1-prong and 3-prong cases are not present.\par
 %
 \begin{figure}
   \centering
@@ -1265,6 +1345,7 @@ Taus originating directly from LQs have a efficiency of $\SI{51.3\pm 1.2}{\perce
 \label{DividedFromLQ:signal:LQ76}
 \end{figure}
 %
+For the high mass point leptoquarks the efficiency dependence on the taus' transverse momentum is constantly over the whole momentum range (see fig. \ref{DividedFromLQ:signal:LQ76}). Like for the low mass point, the 1-prong and 3-prong cases reveal no considerable dependence on the taus' $p_T$. 
 %HT,ST Gedöns prompt | LQ
 The correlation between the efficiency and the variables $H_T$, $H_{T,\text{had}}$, $S_T$, $S_{T,\text{lep}}$ defined in eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) and the number of jets is also available for the leptoquark related events. \newline
 %HT und HThad
@@ -1272,7 +1353,7 @@ The correlation between the efficiency and the variables $H_T$, $H_{T,\text{had}
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 %
-The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case of the sub-category, where tau leptons originate from LQs, are shown in figure \ref{DividedFromLQ:signal:HTgedöns}. The $H_T$ ($H_{T,\text{had}}$) spectrum covers a larger range for the $\SI{1}{\tera\electronvolt}$ leptoquarks sample due to its higher mass. The $H_T$ distribution extends up to $\SI{3}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HTLQ76}) compared to figure \ref{DividedFromLQ:signal:HTLQ75}, which extends only to $\SI{2.5}{\tera\electronvolt}$. The $H_{T,\text{had}}$ distribution extends up to $\SI{2.5}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HThadLQ76}) compared to figure \ref{DividedFromLQ:signal:HThadLQ75}, which extends to $\SI{1.2}{\tera\electronvolt}$. The efficiency trend over the hole spectrum is constant with the most fluctuation in case of the $H_{T}$ spectrum for the high mass point, besides the $H_{T,\text{had}}$ spectrum of the low mass point. It shows lower efficiencies at the edge of the sum of the jets' transverse momentum from $\SI{200}{\giga\electronvolt}$ to $\SI{300}{\giga\electronvolt}$ and from $\SI{900}{\giga\electronvolt}$ to $\SI{1000}{\giga\electronvolt}$.\newline
+The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case of the sub-category, where tau leptons originate from LQs, are shown in figure \ref{DividedFromLQ:signal:HTgedöns}. The $H_T$ ($H_{T,\text{had}}$) spectrum covers a larger range for the $\SI{1}{\tera\electronvolt}$ leptoquarks sample due to its higher mass. The $H_T$ distribution extends up to $\SI{3}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HTLQ76}) compared to figure \ref{DividedFromLQ:signal:HTLQ75}, which extends only to $\SI{2.5}{\tera\electronvolt}$. The $H_{T,\text{had}}$ distribution extends up to $\SI{2.5}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HThadLQ76}) compared to figure \ref{DividedFromLQ:signal:HThadLQ75}, which extends to $\SI{1.2}{\tera\electronvolt}$. The efficiency trend over the hole spectrum is constant with some fluctuations.\newline
 %
 \begin{figure}
   \centering
@@ -1304,11 +1385,9 @@ The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case 
 \end{figure}
 %
 %ST und STlep
-Taking into account not only jets, electrons and muons, but also taus and missing energy for example one can study the correlation between the efficiency and $S_T$ ($S_{T,\text{lep}}$). %This is done in figure \ref{Dividedprompt:signal:STgedöns} for taus originating from weak gauge bosons. Efficiencies are found to be in range of high momenta. For the $\SI{1}{\tera\electronvolt}$ sample the spectrum is even more shifted to higher $p_T$ due to the high mass point. For the $S_T$ spectrum the efficiency starts at $\SI{500}{\giga\electronvolt}$ (see fig. \ref{Dividedprompt:signal:STLQ76}) and the $S_{T,\text{lep}}$ spectrum starts at $\SI{1}{\tera\electronvolt}$ (see fig. \ref{Dividedprompt:signal:STlepLQ76}). The sample with the low LQ mass point is different from the other LQ sample. It has a local efficiency minimum in the $\S_T$ distribution at $\SI{1.3}{\tera\electronvolt}$ (see fig. \ref{Dividedprompt:signal:STLQ75}) and a local minimum in the $S_{T,\text{lep}}$ distribution at $\SI{0.5}{\tera\electronvolt}$. \newline
+Taking into account not only jets, electrons and muons, but also taus and missing energy for example one can study the correlation between the efficiency and $S_T$ ($S_{T,\text{lep}}$). This is done in figure \ref{DividedFromLQ:signal:STgedöns} for taus originating from Higgs bosons. The efficiency depends only slightly on the variable $S_T$ (see fig. \ref{DividedFromLQ:signal:STLQ75}) or $S_{T,\text{lep}}$ (see fig. \ref{DividedFromLQ:signal:STlepLQ75}) over the whole spectrum, whereas in case of the more massive LQ sample the efficiency increases towards the high momenta end of the spectrum. This involves the range of $\SI{2600}{\giga\electronvolt}$ onwards for $S_T$ and $\SI{2000}{\giga\electronvolt}$ onwards for $S_{T,\text{lep}}$. This difference can exist because of the different mass points of the leptoquarks. The spectrum of the $\SI{1}{\tera\electronvolt}$ naturally extends to a higher momenta values.\newline
 %
-% XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
-%
-The sub-selection with taus originating directly from LQs show in this consideration of $S_T$ and $S_{T,\text{lep}}$ show no such minima in case of the sample with the low mass point. Their efficiency plots can be seen in figure \ref{DividedFromLQ:signal:STLQ75} and \ref{DividedFromLQ:signal:STlepLQ75}. The $S_T$ and $S_{T,\text{lep}}$ distribution for the high mass point is shown in figure \ref{DividedFromLQ:signal:STLQ76} and \ref{DividedFromLQ:signal:STlepLQ76} respectively. \newline 
+% XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx 
 %
 \begin{figure}
   \centering
@@ -1340,7 +1419,7 @@ The sub-selection with taus originating directly from LQs show in this considera
 \end{figure}
 %
 %njets
-The dependence of the efficiency on the number of jets can be found in figure \ref{Divided:fromLQ:njets}.% for both tau origins.
+The number of jets against the efficiency can be found in figure \ref{Divided:fromLQ:njets} and show a interesting feature in both LQ samples. No tau entries for three jets survived the condition that taus are directly from LQ and matched to a truth tau. The low efficiency for two jets in case of the Higgs background sample (see fig. \ref{Divided:fromH:njets}) may indicate that the already tight conditions for two jets evoke in case of taus originating from LQ that no event survives. 
 %
 \begin{figure}
   \centering
@@ -1359,14 +1438,13 @@ The dependence of the efficiency on the number of jets can be found in figure \r
 \label{Divided:fromLQ:njets}
 \end{figure}
 %
-%dR min max Gedöns prompt| LQ
+%dR min max Gedöns LQ
 The following describes the geometric separation between taus and leptons, taus and jets as well as taus and b-jets for the LQ signal samples.\newline
 %dR taulepton
-%The minimum and maximum separation between taus and leptons (electrons and muons) is shown in figure \ref{dRprompt:signal:taulepton} for both signal samples. It is the efficiency for taus originating from $W^\pm$ and $Z^0$ bosons.   
+The minimum separation between taus and light leptons (electrons and muons) is shown in figure \ref{dRFromLQ:signal:taulepton} for both signal samples. It is the efficiency for taus originating from $H^0$ bosons. The minimum separation is not only concentrated on a small $\Delta R$ range, but extends over the whole separation spectrum. A maximum number of taus with minimal separation can be found at $\Delta R=1.6$ in case of the low mass point sample. Below $\Delta R<0.4$ no taus can be found, which is explained by the overlap removal (cf. section \ref{overlapremoval}). The maximum separation for the $\SI{500}{\giga\electronvolt}$ sample (see fig. \ref{dRFromLQ:signal:taulepton:maxLQ75}) indicates most tau events at $\Delta R=3.0$. Below $\Delta R<0.8$ no entry can be found. An interesting feature is that for the maximum separation two efficiency peaks are present at a separation of $1.0$ and $1.6$. For the $\SI{1}{\tera\electronvolt}$ signal sample the minimum separation (see fig. \ref{dRFromLQ:signal:taulepton:minLQ76}) does not undercut the value of $0.4$ which can be explained again by the overlap removal. Comparing figure \ref{dRFromLQ:signal:taulepton:minLQ75} and \ref{dRFromLQ:signal:taulepton:minLQ76} shows that in case of the high mass point LQ sample no maximum number of taus can be found around $\Delta R=1.6$. In this case it is more a plateau. Again, two efficiency peaks show up at a separation of $1.0$ and $2.0$. The maximum separation (see fig. \ref{dRFromLQ:signal:taulepton:maxLQ76}) indicates slightly higher efficiency at the end of the separation distribution.\newline     
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 %
-The minimum and maximum separation between taus and leptons (electrons and muons) for the efficiency selection of taus originating from leptoquarks is depicted in figure \ref{dRFromLQ:signal:taulepton}.\newline
 %
 \begin{figure}
   \centering
@@ -1397,7 +1475,7 @@ The minimum and maximum separation between taus and leptons (electrons and muons
 \label{dRFromLQ:signal:taulepton}
 \end{figure}
 %
-Correspondingly to the background samples the minimum and maximum separation between taus and jets is shown in figure \ref{dRFromLQ:signal:taujet} for taus originating directly from LQs.\newline
+Correspondingly to the background samples the minimum and maximum separation between taus and jets is shown in figure \ref{dRFromLQ:signal:taujet} for taus originating directly from LQs. Similar to the separation in the Higgs background sample (cf. figure \ref{dR:fromH:taujets}) the minimum separation has only high efficiency values at $\Delta R<0.5$ and no entries otherwise in the spectrum. This can be explained by the jet fake rates, which are expected in that separation region. The maximum separation for both signal samples resembles in prinicple that from the $t\bar{t}H$ sample with the most taus at a separation of $3.0$. No number of taus are found below $\Delta R=1.2$ and $\Delta R=1.4$ for the low and high mass point signal sample respectively. \newline
 %\ref{dRprompt:signal:taujet} $W^\pm$ and $Z^0$ and in figure \ref{dRFromLQ:signal:taujet} for taus originating directly from LQs.\newline
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
@@ -1436,7 +1514,7 @@ Correspondingly to the background samples the minimum and maximum separation bet
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxx
 %
-The special case of the minimum and maximum separation between taus and b-flavor jets is shown in figure \ref{dRFromLQ:signal:taubjet} for the sub-category taus originating from LQs.
+The special case of the minimum and maximum separation between taus and b-flavor jets is shown in figure \ref{dRFromLQ:signal:taubjet} for the sub-category taus originating from LQs. The separation between taus and b-jets in the $\SI{500}{\giga\electronvolt}$ sample show a broad spectrum over the whole separation range. The minimum separation (see fig. \ref{dRFromLQ:signal:taubjet:minLQ75}) and maximum separation (see fig. \ref{dRFromLQ:signal:taubjet:maxLQ75}) show two efficiency peaks within the range of $1.0<\Delta R<2.0$ and $1.0<\Delta R<2.2$ respectively. Small contributions are found for the minimum separation at $<0.4$ (see fig. \ref{dRFromLQ:signal:taubjet:minLQ76}). The $\SI{1}{\tera\electronvolt}$ sample also shows low efficiency in the range of $<0.4$ for the minumum separation. Again peaks of efficiency show up here in the range of $1.0$ and $1.4$ for the minimum and maximum separation (see fig. \ref{dRFromLQ:signal:taubjet:maxLQ76}) respectively.
 %The separation between taus and b-jets in case of the sub-selection, where taus originate from LQs are shown in figure \ref{dRFromLQ:signal:taubjet}.
 %
 \begin{figure}
@@ -1456,7 +1534,7 @@ The special case of the minimum and maximum separation between taus and b-flavor
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_mindR_fromLQ_taubjet.pdf}
                 \subcaption{Minimum separation between taus originating from LQs events and b-jets for the high mass point LQ sample.}
-                \label{dRFromLQ:signaltaubjet:minLQ76}
+                \label{dRFromLQ:signal:taubjet:minLQ76}
                 \end{subfigure}
                  %
                 \begin{subfigure}[t]{0.49\textwidth}
