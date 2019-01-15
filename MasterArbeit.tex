@@ -21,10 +21,6 @@
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Summary}      
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Zusammenfassung}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -347,8 +343,9 @@ The {\CMS} collaboration published a study for the search of third generation sc
 The corresponding integrated luminosity is $\SI{35.9}{\per\femto\barn}$. The results agree with the standard model expectation and no evidence for LQ pair production was found. The study excludes LQ with masses below $\SI{900}{\giga\electronvolt}$ at a branching fraction of $\beta=1.0$ and at a CL of $\SI{95}{\percent}$. Figure \ref{exclusionLQ} shows upper limits at CL $\SI{95}{\percent}$ of the product of the cross section and $\beta^2$ depending on the leptoquark mass for the $t\tau^-\bar{t}\tau^+$ channel. These results are the most stringent limits to date for the production of third generation LQs decaying to top quark and $\tau$-lepton. \cite{currentStatus:13TeVCMS}\par
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Starting point and research question for the analysis}\label{startingpoint}
-This work is enclosed in the general research context briefly described in section \ref{currentStatus} and makes a contribution to the search of pair-produced scalar LQs of type $S_{0,L}$ and $S_{1,L}$ (cf. table \ref{LQstable}) decaying to $LQ+LQ\rightarrow t\tau^{-}+\bar{t}\tau^{+}$ at the {\ATLAS} experiment. In particular this involves the $\tau$ reconstruction efficiencies and background studies for the search of LQ-signal signatures based on MC samples. The simulations are compared with data from the data taking periods $2015$, $2016$, $2017$ and partly $2018$ adding up to an integrated luminosity of $\SI{128.34}{\per\femto\barn}$.\par   
+This work is enclosed in the general research context briefly described in section \ref{currentStatus} and makes a contribution to the search of pair-produced scalar LQs of type $S_{0,L}$ and $S_{1,L}$ (cf. table \ref{LQstable}) decaying to $LQ+LQ\rightarrow t\tau^{-}+\bar{t}\tau^{+}$ at the {\ATLAS} experiment. The common duifficulty in searches for exotic particles is that in the measured data sets signal and background contributions appear as one entity. To reliably distinguish between signal and background events it would be ideally to break down data into its single constituents. Of course this is not possible, but using Monte Carlo predictions opens up a chance for a better understanding of signal and background contributions in real data (see also section \ref{MCsim}). Although this work presents not a full search strategy for third generation leptoquarks it provides in particular insight to $\tau$ reconstruction efficiencies and background studies for the search of LQ-signal signatures based on Monte Carlo samples (see section \ref{signalANDbgEff}). Efficiencies reflect the ability to successfully reconstruct a tau lepton in the detector within the context of the $t\tau^{-}+\bar{t}\tau^{+}$ channel. Further contributions of the thesis are fake rate estimations for objects that incorrectly mimic the signature of a tau lepton as well as presenting kinematic variables (see section \ref{Kinematics}) within the event selection (see section \ref{eventselection}) that is sensitive to the decay of third generation leptoqurk pairs. Taking into account findings from the kinematic distributions and the efficiency and fake rate contributions discovery significances based on signal samples are calculated and gives insight to first optimization steps (see section \ref{significance}). The used data sets are from the data taking periods $2015$, $2016$, $2017$ and partly $2018$ adding up to an integrated luminosity of $\SI{140.45}{\per\femto\barn}$.\par   
 The search for third generation LQ decaying to top quarks and $\tau$-leptons is complex because of the multiple objects resulting from the subsequent decays of the heaviest quark and heaviest lepton. 
+%
 %
 \begin{figure}
  \centering
@@ -662,7 +659,16 @@ Taus selected for this analysis need to have a transverse momentum of at least $
 Jets are reconstructed with the anti-$k_T$ algorithm and need to have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$. 
 \subsubsection*{b-jets}\label{physObj:bjet}
 For the b-jet selection the b-tagger MV2c10 is used with a working point of $\SI{77}{\percent}$ b-tagging efficiency.
-%overlap removal? --> default between <e,mu>, <e,jet>, <mu,jet>
+\subsubsection*{Overlap removal}\label{overlapremoval}
+To avoid misinterpretations an overlap removal between different objects acts like a veto and is applied for the event reconstruction. The overlap is determined by thresholds in the separtion variable $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}$. The following overlap removals are applied for objects like electrons $e$, muons $\mu$, tau leptons $\tau$ and jets $j$:
+\begin{itemize}
+\item electron removal if $\Delta R(e,j)<0.4$
+\item muon removal if $\Delta R(\mu,j)<0.4$
+\item jet removal if $\Delta R(j,e)<0.2$
+\item tau removal if $\Delta R(\tau,l)< 0.4$ with $l=e,\mu$
+\end{itemize}
+%https://indico.cern.ch/event/784955/contributions/3265310/attachments/1776237/2890543/SR_definitions.pdf
+%overlap removal: default between <e,jet>, <mu,jet>, <jet,e> 0.2 nicht tau, 0.4 tau
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Event selection}\label{eventselection}
 The signal and background studies for the $t\tau^{-}+\bar{t}\tau^{+}$ channel involves the event selection shown in figure \ref{selection}.\newline
@@ -776,87 +782,42 @@ The sub-selections for the efficiency study are as follows: The event selection 
 \sigma_\epsilon=\frac{\sqrt{n\epsilon\left(1-\epsilon\right)}}{n}\,\text{.}.
 \label{binomialerror}
 \end{align}
-The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fulfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ efficiency for the Higgs background events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. The low efficiency in the $t\bar{t}$ sample reflects the fact that no taus are expected there and some tau leptons are expected from direct Higgs boson decays. The efficiency for Higgs events strongly depends on the $p_T$ of the truth tau up to transverse momenta of $\SI{150}{\giga\electronvolt}$ (see fig. \ref{DividedTau:bg:ttH}). As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate.\par 
+The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fulfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ efficiency for the $t\bar{t}H$ events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. The low efficiency in the $t\bar{t}$ sample reflects the fact that no taus are expected there and some tau leptons are expected from direct Higgs boson decays. The efficiency for Higgs events strongly depends on the $p_T$ of the truth tau up to transverse momenta of $\SI{150}{\giga\electronvolt}$ (see fig. \ref{DividedTau:bg:ttH}). As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate.\par 
 %	
-\begin{sidewaystable}[htbp]
+\begin{table}[htbp]
 		\centering
                 \footnotesize
                 \renewcommand{\arraystretch}{1.2}
-		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccc}
 		\hline
 		\hline
-		 \textbf{sample}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$}}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
+		\textbf{sample}    & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
 		\\
 		\hline
-		selection  & passed events      & total events & passed events      & total events
+		selection   & passed events      & total events
 		\\ 
 		\hline
-		truth matching for tau      & $107$            & $16863$      & $8971$        & $30527$
+                tau originated from H$^0$        & $5140$          & $11372$
 		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{0.635\pm 0.061}{\percent}$}    & \multicolumn{2}{c}{$\SI{29.39\pm 0.26}{\percent}$}
-		\\
-		\hline
-		tau originated from W$^{\pm}$, Z$^0$& $0$        & $0$         & $3251$          & $8843$
-		\\
-		efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{36.76\pm 0.51}{\percent}$}
+		efficiency                     & \multicolumn{2}{c}{$\SI{45.20\pm 0.47}{\percent}$}
 		\\
 		\hline
-                tau originated from W$^{\pm}$, Z$^0$ (1-prong)& $0$        & $0$         & $2488$          & $6195$
+                tau originated from H$^0$ (1-prong)         & $4132$          & $8390$
 		\\
-		efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{40.16\pm 0.62}{\percent}$}
-		\\
-		\hline
-                tau originated from W$^{\pm}$, Z$^0$ (3-prong)& $0$        & $0$         & $763$          & $2630$
-		\\
-		efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{29.01\pm 0.88}{\percent}$}
+		efficiency                     & \multicolumn{2}{c}{$\SI{49.25\pm 0.55}{\percent}$}
 		\\
 		\hline
-                tau originated from H$^0$& $0$        & $0$         & $5140$          & $11372$
+                tau originated from H$^0$ (3-prong)         & $1008$          & $2958$
 		\\
-		efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{45.20\pm 0.47}{\percent}$}
+		efficiency                    & \multicolumn{2}{c}{$\SI{34.08\pm 0.87}{\percent}$}
 		\\
-		\hline
-                tau originated from H$^0$ (1-prong)& $0$        & $0$         & $4132$          & $8390$
-		\\
-		efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{49.25\pm 0.55}{\percent}$}
-		\\
-		\hline
-                tau originated from H$^0$ (3-prong)& $0$        & $0$         & $1008$          & $2958$
-		\\
-		efficiency                  & \multicolumn{2}{c}{-}   & \multicolumn{2}{c}{$\SI{34.08\pm 0.87}{\percent}$}
-		\\
-		\hline
-		tau from B-mesons           & $107$            & $16860$      & $44$            & $8553$ 
-		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{0.635\pm 0.061}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.514\pm 0.077}{\percent}$}
-		\\
-		%\hline
-		%jet faking as tau            & $8232$         & $4728730$      & $21925$         & $2178770$ 
-		%\\
-		%efficiency                  & \multicolumn{2}{c}{$\SI{0.1741\pm 0.0019}{\percent}$}   & \multicolumn{2}{c}{$\SI{1.0063\pm 0.0068}{\percent}$}
-		%\\
-		%\hline
-		%b-jet faking as tau          & $5361$        & $3317260$      & $1993$         & $1332650$ 
-		%\\
-		%efficiency                  & \multicolumn{2}{c}{$\SI{0.1616\pm 0.0022}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.1496\pm 0.0033}{\percent}$}
-		%\\
-		%\hline
-                %not b-jet faking as tau          & $2871$        & $1411470$      & $19932$         & $846121$ 
-		%\\
-		%efficiency                  & \multicolumn{2}{c}{$\SI{0.2034\pm 0.0038}{\percent}$}   & \multicolumn{2}{c}{$\SI{2.356\pm 0.016}{\percent}$}
-		%\\
-                %\hline
-                %electron faking as tau          & $17$        & $1639390$      & $17$         & $488234$ 
-		%\\
-		%efficiency                  & \multicolumn{2}{c}{$\SI{0.00104\pm 0.00025}{\percent}$}   & \multicolumn{2}{c}{$\SI{0.00348\pm 0.00084}{\percent}$}
-		%\\
 		\hline
 		\hline
 		\end{tabular*}
-		\caption[Efficiencies for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\caption[Efficiencies for the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$H Monte Carlo sample.}
 		\label{ttbarttHEffTable}
           \renewcommand{\arraystretch}{1}
-\end{sidewaystable}
+\end{table}
 %
 %	
 \begin{sidewaystable}[htbp]
@@ -1055,7 +1016,7 @@ The overall efficiency dependence increases towards $\SI{200}{\giga\electronvolt
                 \label{DividedFromH:bg:3prong}
                 \end{subfigure}
    %             
-\caption[Efficiency of taus originating from Higgs bosons for the Higgs background events.]{Efficiency of taus originating from Higgs for the Higgs background events. The efficiency is defined as the number of taus passing the basic selection and matched to a hadronic truth tau as well as the origin is from a $H^0$ boson over the total number of taus passing the basic selection and originating from a $H^0$ boson.}
+\caption[Efficiency of taus originating from Higgs bosons for events from $t\bar{t}H$ sample.]{Efficiency of taus originating from Higgs for events from $t\bar{t}H$ sample. The efficiency is defined as the number of taus passing the basic selection and matched to a hadronic truth tau as well as the origin is from a $H^0$ boson over the total number of taus passing the basic selection and originating from a $H^0$ boson.}
 \label{DividedFromH:bg:ttH}
 \end{figure}
 %
@@ -1085,7 +1046,7 @@ where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, m
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $H_{T,\text{had}}$ for the Higgs events.}
                 \label{Divided:fromH:HThad}
                 \end{subfigure}
-\caption[Efficiency of taus originating from Higgs bosons for the Higgs background events.]{Efficiency of taus originating from Higgs bosons depending on $H_{T}$ (a) and $H_{T,\text{had}}$ (b)for the Higgs background events.}
+\caption[Efficiency of taus originating from Higgs bosons for events from $t\bar{t}H$ sample.]{Efficiency of taus originating from Higgs bosons depending on $H_{T}$ (a) and $H_{T,\text{had}}$ (b)for events from $t\bar{t}H$ sample.}
 \label{Divided:fromH:HTgedöns}
 \end{figure}
 %
@@ -1108,7 +1069,7 @@ In figure \ref{Divided:fromH:HTgedöns} the sum of the transverse momenta are sh
                 \subcaption{Efficiency of taus originating from Higgs bosons of depending on $S_{T,\text{lep}}$ for the Higgs events.}
                 \label{Divided:fromH:STlep}
                 \end{subfigure}
-\caption[Efficiency of taus originating from Higgs bosons for the Higgs background events.]{Efficiency of taus originating from Higgs bosons depending on $S_{T}$ (a) and $S_{T,\text{lep}}$ (b) for the Higgs background events.}
+\caption[Efficiency of taus originating from Higgs bosons for events from $t\bar{t}H$ sample.]{Efficiency of taus originating from Higgs bosons depending on $S_{T}$ (a) and $S_{T,\text{lep}}$ (b) for events from $t\bar{t}H$ sample.}
 \label{Divided:fromH:STgedöns}
 \end{figure}
 %
@@ -1292,7 +1253,7 @@ The efficiency for reconstructing a hadronic tau, which is matched to a truth ta
 %B mesons
 With a mean efficiency value of roughly $\sim\SI{1}{\percent}$ taus originating from B-mesons the rate is as twice as high compared to the two background samples. Nevertheless this is a small contribution compared to other tau sources and more important, because of the low statistics of only one event and the resulting high uncertainty, this sub-category can be neglected in the overall consideration.\par  
 %prompt
-%The weak gauge bosons remain as tau sources with an efficiency of $\SI{32.4\pm 4.4}{\percent}$ for the LQ$_{500\textbf{GeV}}$ sample. This is comparable with the efficiency in the same sub-category for the Higgs background sample (cf. table \ref{ttbarttHEffTable}). But the higher mass point LQ sample shows a smaller efficiency of $\SI{20.8\pm 3.3}{\percent}$ in that sub-selection. This means that the behavior regarding tau sources from $W^\pm$ and $Z^0$ is comparable in both signal and $t\bar{t}H$ background samples. The efficiency depending on the truth taus' transverse momentum is shown in figure \ref{Dividedprompt:signal:LQ75} and \ref{Dividedprompt:signal:LQ76} for the low and the high LQ mass point respectively. A further sub-selection differentiates between the tau decay into one and three charged particles, which can be seen in figure \ref{Dividedprompt:signal:1prongLQ75} and \ref{Dividedprompt:signal:3prongLQ75} for the low mass point. The $p_{T,\text{vis}}^{\tau,\text{truth}}$ range reaches $\SI{300}{\giga\electronvolt}$ and $\SI{250}{\giga\electronvolt}$ and shows an increasing efficiency with increasing transverse momentum. This effect is known from the Higgs background events. The overall efficiency for the 1-prong case is $\SI{32.9\pm 5.3}{\percent}$ and for the 3-prong case is $\SI{34.5\pm 8.8}{\percent}$. For the high mass point the 1-prong and 3-prong decay is shown in figure \ref{Dividedprompt:signal:1prongLQ76} and \ref{Dividedprompt:signal:3prongLQ76} and has efficiencies of $\SI{23.6\pm 4.1}{\percent}$ and $\SI{12.5\pm 5.8}{\percent}$ respectively.\par 
+%The weak gauge bosons remain as tau sources with an efficiency of $\SI{32.4\pm 4.4}{\percent}$ for the LQ$_{500\textbf{GeV}}$ sample. This is comparable with the efficiency in the same sub-category for the Higgs background sample (cf. table \ref{ttbarttHEffTable}). But the higher mass point LQ sample shows a smaller efficiency of $\SI{20.8\pm 3.3}{\percent}$ in that sub-selection. This means that the behavior regarding tau sources from $W^\pm$ and $Z^0$ is comparable in both signal and $t\bar{t}H$ background samples. The efficiency depending on the truth taus' transverse momentum is shown in figure \ref{Dividedprompt:signal:LQ75} and \ref{Dividedprompt:signal:LQ76} for the low and the high LQ mass point respectively. A further sub-selection differentiates between the tau decay into one and three charged particles, which can be seen in figure \ref{Dividedprompt:signal:1prongLQ75} and \ref{Dividedprompt:signal:3prongLQ75} for the low mass point. The $p_{T,\text{vis}}^{\tau,\text{truth}}$ range reaches $\SI{300}{\giga\electronvolt}$ and $\SI{250}{\giga\electronvolt}$ and shows an increasing efficiency with increasing transverse momentum. This effect is known from events from $t\bar{t}H$ sample. The overall efficiency for the 1-prong case is $\SI{32.9\pm 5.3}{\percent}$ and for the 3-prong case is $\SI{34.5\pm 8.8}{\percent}$. For the high mass point the 1-prong and 3-prong decay is shown in figure \ref{Dividedprompt:signal:1prongLQ76} and \ref{Dividedprompt:signal:3prongLQ76} and has efficiencies of $\SI{23.6\pm 4.1}{\percent}$ and $\SI{12.5\pm 5.8}{\percent}$ respectively.\par 
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx
 %from LQ
@@ -1419,7 +1380,7 @@ Taking into account not only jets, electrons and muons, but also taus and missin
 \end{figure}
 %
 %njets
-The number of jets against the efficiency can be found in figure \ref{Divided:fromLQ:njets} and show a interesting feature in both LQ samples. No tau entries for three jets survived the condition that taus are directly from LQ and matched to a truth tau. The low efficiency for two jets in case of the Higgs background sample (see fig. \ref{Divided:fromH:njets}) may indicate that the already tight conditions for two jets evoke in case of taus originating from LQ that no event survives. 
+The number of jets against the efficiency can be found in figure \ref{Divided:fromLQ:njets} and show a interesting feature in both LQ samples. No tau entries for three jets survived the condition that taus are directly from LQ and matched to a truth tau. The low efficiency for two jets in case of the $t\bar{t}H$ sample (see fig. \ref{Divided:fromH:njets}) may indicate that the already tight conditions for two jets evoke in case of taus originating from LQ that no event survives. 
 %
 \begin{figure}
   \centering
@@ -1475,7 +1436,7 @@ The minimum separation between taus and light leptons (electrons and muons) is s
 \label{dRFromLQ:signal:taulepton}
 \end{figure}
 %
-Correspondingly to the background samples the minimum and maximum separation between taus and jets is shown in figure \ref{dRFromLQ:signal:taujet} for taus originating directly from LQs. Similar to the separation in the Higgs background sample (cf. figure \ref{dR:fromH:taujets}) the minimum separation has only high efficiency values at $\Delta R<0.5$ and no entries otherwise in the spectrum. This can be explained by the jet fake rates, which are expected in that separation region. The maximum separation for both signal samples resembles in prinicple that from the $t\bar{t}H$ sample with the most taus at a separation of $3.0$. No number of taus are found below $\Delta R=1.2$ and $\Delta R=1.4$ for the low and high mass point signal sample respectively. \newline
+Correspondingly to the background samples the minimum and maximum separation between taus and jets is shown in figure \ref{dRFromLQ:signal:taujet} for taus originating directly from LQs. Similar to the separation in the $t\bar{t}H$ sample (cf. figure \ref{dR:fromH:taujets}) the minimum separation has only high efficiency values at $\Delta R<0.5$ and no entries otherwise in the spectrum. This can be explained by the jet fake rates, which are expected in that separation region. The maximum separation for both signal samples resembles in prinicple that from the $t\bar{t}H$ sample with the most taus at a separation of $3.0$. No number of taus are found below $\Delta R=1.2$ and $\Delta R=1.4$ for the low and high mass point signal sample respectively. \newline
 %\ref{dRprompt:signal:taujet} $W^\pm$ and $Z^0$ and in figure \ref{dRFromLQ:signal:taujet} for taus originating directly from LQs.\newline
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
@@ -2174,7 +2135,7 @@ The general trend is that within a chosen b-jet selection the significance reach
                 &       $S_T$   & $1.1$        & $1430$
                 \\
 		\hline
-                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 1\,\tau$} & $p_T$      & $19$      & $\SI{240}{}$
+                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 2\,\tau$} & $p_T$      & $19$      & $\SI{240}{}$
 		\\
                 &       $p_T$   & $0.63$        & $425$
                 \\
@@ -2192,14 +2153,15 @@ The general trend is that within a chosen b-jet selection the significance reach
 %
 %The caveat of this method to optimize the significance is that the cuts on tau $p_T$ and $S_T$ has to be selected carefully due to sufficient signal events.
 %Diskussion hier fertig, am Besten wäre ein Fehler-Angabe noch beim std::out --> das ist selbst für 2tau immer noch gut im Rahmen für LQ76
-Sudden downward changes in the significance curve can be explained by a sudden drop of signal and background events at the same time. Limit coniderations of eq. (\ref{ZA}) show that $\lim_{b\rightarrow 0}Z_A=\lim_{s\rightarrow 0}Z_A=0$. Local maxima are the result of a sudden drop of background events, whereas the signal events are constant, e.g. no $t\bar{t}$ background for high $p_T$ ($S_T$).  
+Sudden downward changes in the significance curve can be explained by a sudden drop of signal and background events at the same time. Limit coniderations of eq. (\ref{ZA}) show that $\lim_{b\rightarrow 0}Z_A=\lim_{s\rightarrow 0}Z_A=0$. Local maxima are the result of a sudden drop of background events, whereas the signal events are constant, e.g. no $t\bar{t}$ background for high $p_T$ ($S_T$).\par
+The transverse momentum and the variable $S_T$ are good discriminant variables providing high discovery significance for at least the low mass point LQ sample witin the chosen event selection. This covers at least one b-jet and at least two tau leptons. Due to the low cross section for the $\SI{1}{\tera\electronvolt}$ LQ sample the significance with at maximum $1$ is not as high as expected. Taking the tau $p_T$ and $S_T$ at the same time as parameter $\theta$ in eq. (\ref{profilelikelihoodratio}) would further increase the discovery significance.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusion and Outlook}
+\chapter*{Summary}      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Zusammenfassung}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \chapter{Appendix}
-\section{Comparison between the top-quark background samples}\label{dilORnonallhad}
-%Einfach eine Tabelle mit event yield für ttbar dil und ttbar nonallhad in einem, um zu zeigen, dass eigentlich nonallhad benötigt wird, aber das so auch geht: einen satz entsprechend dann dazu in used samples; eigentlich soll ich kein semi-leptonic und nonallhadronic für sample Beschreibung verwenden
 \section{Efficiency plots of tau leptons originating from weak gauge bosons}\label{promptplots}
 Efficiencies following the example of section \ref{bgeff} and \ref{signaleff} are available for tau lepotons originating from $W^\pm$ and $Z^0$ bosons. Due to the overlap removal of taus and light leptons these efficiencies are smaller compared to other tau selections. A collection of those plots can be found in this chapter.
 \input{promptplots.tex}
@@ -2208,11 +2170,16 @@ Efficiencies following the example of section \ref{bgeff} and \ref{signaleff} ar
 \addcontentsline{toc}{chapter}{List of figures}%fügt das Bildverzeichnis zum Inhaltsverzeichnis
 \listoftables
 \addcontentsline{toc}{chapter}{List of tables}%fügt das Tabellenverzeichnis zum Inhaltsverzeichnis
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Literaturverzeichnis-----------------------------------------------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{Literatur}
+\addcontentsline{toc}{chapter}{Bibliography}%fügt das Literaturverzeichnis zum Inhaltsverzeichnis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\chapter*{Acknowledgement}
-%An dieser Stelle möchte ich meinen herzlichen Dank an die Personen aussprechen, die für das Gelingen dieser Arbeit unentbehrlich waren:
+%This thesis would have been impossible without the aid and support of the following people and therefore I would like to thank you all:
  %\begin{itemize}
-% \item Professor Thomas Trefzger für die sehr freundliche Aufnahme an den Lehrstuhl Physik und ihre Didaktik + NTW
+% \item Professor Thomas Trefzger for the opportunity to write my master thesis at the chair Lehrstuhl für Physik und ihre Didaktik and the team work for+ NTW
 % \item Professor Raimund Ströhmer für die konstruktiven Anregungen und hilfreichen Diskussionen, welche die Arbeit sehr vorangebracht haben 
 %  \item Dr. Mahsana Haleem für die Betreuung meiner Master Arbeit, für die geduldigen Erklärungen zu jeder Zeit und die lehrreichen Diskussionen zum Thema meiner Arbeit und darüber hinaus
 %  \item Verena Herget für die Einarbeitung in die Datenanalyse, für tausend Antworten zu Fragen aller Art, ob phyiskalischer, programmiertechnischer oder alltäglicher Natur, für bereitwilliges und kompetentes Erklären sogar per Fernanalyse, für das Korrekturlesen der Arbeit, für die äußerst nette Atmosphäre im Büro zu jeder Zeit und den Aktionen freizeittechnischer Natur. Ohne Dich wäre ich niemals soweit gekommen. Danke! 
@@ -2227,12 +2194,55 @@ Efficiencies following the example of section \ref{bgeff} and \ref{signaleff} ar
 %  \item allen anderen Mitgliedern des Lehrstuhl, die stets eine Wohlfühlatmosphäre geschaffen haben und bei kleineren Problemen hilfsbereit zur Seite standen. Danke auch für die lustigen Runden beim Mittagessen =)
 %  \item meiner engeren Familie allen voran meinen Eltern und Geschwistern, die stets hinter mir stehen und mich im gesamten Studium und in der Zeit dieser Arbeit unterstützt haben
 %\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Literaturverzeichnis-----------------------------------------------------------------------------------------
-\bibliographystyle{unsrt}
-\bibliography{Literatur}
-\addcontentsline{toc}{chapter}{Bibliography}%fügt das Literaturverzeichnis zum Inhaltsverzeichnis
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%I would first like to thank my thesis advisor [title] [Name Surname] of the [School / Faculty name] at [University name]. The door to Prof. [Last name] office was always open whenever I ran into a trouble spot or had a question about my research or writing. He/She consistently allowed this paper to be my own work, but steered me in the right the direction whenever he thought I needed it.
+
+%I would also like to thank the experts who were involved in the validation survey for this research project: [List professional Titles, Name and Surnames of the experts who participated/contributed]. Without their passionate participation and input, the validation survey could not have been successfully conducted.
+
+ 
+
+%I would also like to acknowledge [title] [Name Surname] of the [School / Faculty name] at [University name] as the second reader of this thesis, and I am gratefully indebted to his/her for his/her very valuable comments on this thesis.
+
+ 
+
+%Finally, I must express my very profound gratitude to my parents and to my [partner, spouse, girl/boyfriend] for providing me with unfailing support and continuous encouragement throughout my years of study and through the process of researching and writing this thesis. This accomplishment would not have been possible without them. Thank you.
+
+%Author
+
+%[Name Surname]
+
+
+%    I would like to thank…
+ %   I am profoundly grateful to…
+ %   My research would have been impossible without the aid and support of…
+  %%  Heartfelt thanks go to…
+  %  My sincere thanks to…
+  %  XXX gave me invaluable help with…
+     
+%k    would    not    have    been    possible    without    the    financial    support    of    the    Vanderbilt    Physician    
+%Scientist    Development    Award,    the    American    Roentgen    Ray    Society    Scholarship    or    the    Vanderbilt    University    
+%Medical    Center    Department    of    Radiology    and    Radiological    Science
+%s.    I    am    especially    indebted    to    Dr.    Martin    
+%Sandler,    Chairman    of    the    Department    of    Radiology,    and    Dr.    John    Worrell,    Chief    of    the    Section    of    Thoracic    
+%Radiology,    who    have    been    supportive    of    my    career    goals    and    who    worked    actively    to    provide    me    with    the    
+%protect
+%ed    academic    time    to    pursue    those    goals.
+%I    am    grateful    to    all    of    those    with    whom    I    have    had    the    pleasure    to    work    during    this    and    other    related    
+%projects.    Each    of    the    members    of    my    Dissertation    Committee    has    provided    me    extensive    personal    and    
+%professional    gu
+%idance    and    taught    me    a    great    deal    about    both    scientific    research    and    life    in    general.    I    would    %
+%especially    like    to    thank    Dr.    Ron    Price,    the    chairman    of    my    committee.    As    my    teacher    and    mentor,    he    has    
+%taught    me    more    than    I    could    ever    give    him    credit    for    here.    
+%He    has    shown    me,    by    his    example,    what    a    good    %
+%scientist    (and    person)    should    be.
+%Nobody    has    been    more    important    to    me    in    the    pursuit    of    this    project    than    the    members    of    my    family.    I    
+%would    like    to    thank    my    parents,    whose    love    and    guidance    are    with    me    in    what
+%ever    I    pursue.    They    are    the    
+%ultimate    role    models.    Most    importantly,    I    wish    to    thank    my    loving    and    supportive    wife,    Jennifer,    and    my    three    
+%wonderful    children,    Lauren,    Jacob    and    Elizabe
+%th,    who    provide    unending    inspir
+%ation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{Declaration of Authorship}
 I hereby declare that I am the sole author of this master thesis and that I have not used any sources other than those listed in the bibliography and identified as references.\newline
 I further declare that I have not submitted this thesis at any other institution in order to obtain a degree.
