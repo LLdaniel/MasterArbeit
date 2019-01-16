@@ -1,4 +1,4 @@
-%      --- TO DO --- 
+        %      --- TO DO --- 
 %FCNC im LQ Kaptiel braucht sehr wahrscheinlich eine Erklärung!! + schwacher isospin
 %
 %
@@ -21,6 +21,10 @@
 \input{header.tex}
 \begin{document}
 \input{titlepage.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Summary}      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Zusammenfassung}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,7 +507,23 @@ All components of the detector system of {\ATLAS} (see chapter \ref{ATLAS}) deli
 Electrons and positrons are stable and abundant final states of collision products. Therefore, relying on signatures of such particles in the detector is essential. Electrons and positrons\footnote{In this section, the term `positron' is absorbed in the term `electron'.} give rise to tracks in the inner detector and deposit their total energy in the electromagnetic calorimeter. The tracks and calorimeter signals are used for the electron reconstruction. \cite{ePerformance}\par
 For the reconstruction of electrons in the central region ($|\eta|<\SI{2.47}{}$) several steps are necessary. At first, with respect to the granularity of the calorimeter, it is searched for electron cluster seeds in the so called step of \textit{seed-cluster reconstruction}. For more information on clusters see section \ref{jets}. The efficiency of this search is $\SI{95}{\percent}$ to $\SI{99}{\percent}$ for transverse energies up to $\SI{7}{\giga\electronvolt}$ and $>\SI{15}{\giga\electronvolt}$ respectively. The \textit{track reconstruction} is responsible for the pattern recognition in the inner detector taking into account the energy loss due to mainly bremsstrahlung in the detector material of up to $\SI{30}{\percent}$. The track seed, consisting of at least three hits in different layers of the silicon detectors, is extended to a full track of at least seven hits and is extrapolated to the regions of interest at the electromagnetic calorimeter. This is done by the {\ATLAS} Global $\chi^2$ Track Fitter \cite{trackfitter}. Afterwards a loose matching of the tracks to the clusters in the electromagnetic calorimeter is done in the \textit{electron specific track fit}. The final step, \textit{electron candidate reconstruction}, is the selection of the final track candidate out of the different tracks with the best matching to the initial cluster seed. \cite{ePerformance}\newline
 Both, the information of the track and the energy cluster, are used for the four-momentum calculation of the electrons. Algorithms for reconstructed electron identification are applied to distinguish signal-like or background-like electron candidates. For that the TRT likelihood method plays an important role, which uses the high-threshold hits of each TRT. Several discriminating variables are evaluated\footnote{For further details see \cite{ePerformance}} for this likelihood method (LH). Based on the outcome, three quality categories for the electron identification are defined: \textit{Loose} relies on information of the hadronic calorimeter and the first two layers of the electromagnetic calorimeter. \textit{Medium} adds information from the TRTs, the transverse impact parameter and the third layer of the electromagnetic calorimeter, whereas the \textit{Tight} operating point additionally considers track-cluster matching variables like the ratio of the cluster energy over the track momentum. \cite{ePerformance}\newline
-For a well reconstructed electron additional requirements on the isolation of the cluster and the track need to be met. In this thesis the definition of the operating point \textit{Gradient} is relevant. The efficiency depends linearly on the transverse energy $E_T$. For Gradient the isolation efficiency used in the operating point optimization is $\SI{0.1143}{\percent\per\giga\electronvolt}\cdot E_T+\SI{92.14}{\percent}$ for the calorimeter cluster and the track. \cite{ePerformance}
+For a well reconstructed electron additional requirements on the isolation of the cluster and the track need to be met. In this thesis the definition of the operating point \textit{Gradient} is relevant. The efficiency depends linearly on the transverse energy $E_T$. For Gradient the isolation efficiency used in the operating point optimization is $\SI{0.1143}{\percent\per\giga\electronvolt}\cdot E_T+\SI{92.14}{\percent}$ for the calorimeter cluster and the track. \cite{ePerformance}\newline
+The high level electron trigger has a transverse energy threshold of at least $\SI{24}{\giga\electronvolt}$ and requires at least a medium quality electron based on the likelihood categories described in section \ref{eReconstruction} (\texttt{e24\textunderscore lhmedium}). This high level trigger (HLT) is seeded from the electromagnetic calorimeter of the level 1 trigger system with a threshold of at least $E_T<\SI{20}{\giga\electronvolt}$ (\texttt{L1EM20VH}). Additionally a energy dependent veto against energy deposits in the hadronic calorimeter behind  the electromagnetic cluster is implemented. Thus it acts as hadronic veto (denoted with `\texttt{H}'). Furthermore the transverse energy threshold depends slightly on the pseudorapidity to compensate for energy losses in the material directly in front of the electromagnetic calorimeter (denoted with `\texttt{V}'). The next step of a tighter trigger selection includes a transverse energy threshold of $E_T>\SI{60}{\giga\electronvolt}$ and requires a medium quality electron (\texttt{e60\textunderscore lhmedium}). Adapted for high energy electrons the trigger \texttt{e120\textunderscore lhloose} provides electrons with transverse energies of at least $\SI{120}{\giga\electronvolt}$ by requiring at the same time the loose electron working point. \cite{trigger:e:mu} The above electron trigger menu is valid for data taken in 2015. For the data-taking periods in 2016-2018 the following changes are applied:\newline
+HLT thresholds are set to $\SI{26}{\giga\electronvolt}$ with the tight quality requirement (\texttt{e26\textunderscore lhtight}) and a variable cone size isolation (\texttt{ivarloose}), which uses the criteria that the sum of the track momentum must not exceed $\SI{10}{\percent}$ of the electron's transverse energy within a cone of $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}<0.2$ \cite{trigger:ivarloose:erkl}\cite{trigger:ivarloose:form}. Additional to that no transverse impact parameter cut is applied (\texttt{nod0}) \cite{trigger:ivarloose:erkl}. The complementary trigger for the high transverse energy regime is increased to $\SI{140}{\giga\electronvolt}$ \cite{trigger:e:mu}.
+%electron identification starts from searches of the highest energy deposit in the second layer of em, immer unter dem Aspekt möglichst schneller processierung       
+%lowest single e trigger e24_lhmedium threshold of ET>24GeV + medium LH identification of the electron
+%seeded from the electromagnetic calorimeter at level 1 with threshold ET>20GeV L1EM20VH
+%energy dependent veto against energy deposited in the hadronic calorimeter behind the electronmagnetic cluster = hadronic veto H
+%ET threshold slighly eta dependent to compensate for energy loss in the passive material in front of the calorimeter V
+%complementary trigger for the high transverse energy regime which requires a loose electron identification with ET>120GeV
+%---------------cite trigger:e:mu
+%nod0 -> no transverse impact parameter cut is applied
+%iloose indic       ates a variable cone size isolation requ
+%----------cite trigger:ivarloose:erkl
+%iloose            track momentum sum can not be more than  10% of the electron transverse energy within dR<0,2
+%------------------cite trigger:ivarloose:form
+%
+%
 %
 %
 \section{Muon reconstruction at ATLAS}\label{muReconstruction}
@@ -512,18 +532,18 @@ The first reconstruction step is again pattern recognition for seeds in the sili
 The muon reconstruction in the muon spectrometer is initiated by the search for hit patterns in the muon chambers to form segments. Muon track candidates are created by fitting the segments from different layers, which is done by a combinatorial search. Selection criteria include hit multiplicity and fit quality to find the optimal track. The hits associated to each track candidate, after applying an overlap removal algorithm, are fitted using a global $\chi^2$ fit. \cite{muPerformance}\newline
 Different types of reconstructed muons are distinguished, depending on which information of the possible muon candidate is available in the inner detector, the calorimeter and the muon spectrometer. After a first signature combination of the involved sub-detector signatures, the energy loss of the muon traveling through the calorimeters and the detector material is included in a refit. A \textit{combined muon} is reconstructed from the independent inner detector and muon spectrometer measurement in a global refit, if both sub-detector components have registered a muon signature. \textit{Segment-tagged muons} are extrapolated from the inner detector muon track to at least one local segment of the muon spectrometer. If the track of the inner detector can be matched to energy deposits in the calorimeter, the reconstructed muon is called \textit{calorimeter-tagged} muon. Muons reconstructed only on the basis of the muon spectrometer are extrapolated back to the interaction point and therefore are called \textit{extrapolated muons}.\cite{muPerformance}\newline
 Quality requirements on the track suppress background contributions and guarantee a robust momentum measurement by including discriminating variables like the $\chi^2$ of the combined track. This categorization finalizes the muon identification process. For the category \textit{Loose muons} all above listed muon types are used. The category \textit{medium muons} minimizes the systematic uncertainties and is based only on combined muons and extrapolated muons. \textit{Tight muons} only uses the combined muon type and is optimized for maximum purity at the cost of some efficiency. The \textit{high-$p_T$ muons} are designed for  a maximization of the momentum resolution for tracks above $\SI{100}{\giga\electronvolt}$. \cite{muPerformance}\newline
-The relevant isolation requirement used in this thesis for muons is the so called \textit{Gradient} isolation, which includes track-based and calorimeter-based discriminating variables. In this case it is the sum of transverse momenta of the tracks in a cone around the muon with $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}<0.3$, excluding the muon track itself. The calorimeter condition is based on the sum of transverse energies of the topological clusters around the muon in a cone of $\Delta R<0.2$. \cite{muPerformance}\cite{varcone}     
+The relevant isolation requirement used in this thesis for muons is the so called \textit{Gradient} isolation, which includes track-based and calorimeter-based discriminating variables. In this case it is the sum of transverse momenta of the tracks in a cone around the muon with $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}<0.3$, excluding the muon track itself. The calorimeter condition is based on the sum of transverse energies of the topological clusters around the muon in a cone of $\Delta R<0.2$. \cite{muPerformance}\cite{varcone}\newline
+Trigger decisions for muons are based on the MS and the quality of the match that combines the track measurement of the MS and the ID. The requirement on the transverse momentum of the combined muon is at least $\SI{20}{\giga\electronvolt}$ with an additional loose isolation (\texttt{mu20\textunderscore iloose}). The loose isolation means that the scalar sum of the track $p_T$ values does not exceed $\SI{12}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.2$. This HLT is based on the decisions of the trigger level 1 seed, which selects muons with a transverse momentum of at least $\SI{15}{\giga\electronvolt}$ (\texttt{L1MU15}). The HLT trigger \texttt{mu50} has a threshold of $p_T<\SI{50}{\giga\electronvolt}$ and complements the trigger's high momentum regime without isolation conditions. The above muon trigger menu is based on the data taking periods in 2015 \cite{trigger:e:mu}. Changes to the data selection of the periods of the year 2016-2018 are as follows: \newline
+The HLT transverse momentum requirement is changed to at least $>\SI{26}{\giga\electronvolt}$ and the isolation requirement is changed in such a way that the scalar sum of the track momentum must not exceed $\SI{7}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.3$ (\texttt{e26\textunderscore ivarmedium}) \cite{trigger:mu}.            
 %MS only und quality of th e matching of muon track measured independently in the ID and MS (physical property = pT)
 %pT>20GeV of CB muon candidate + loose isolation: sum of track pT values  in cone around dR<0,2 is set to <12% of the muon pT
 %seeded by L1MU15 -> pT>15GeV
 %complemented by mu50 withoout isolatoin for high pT muons with pT>50GeV
 %---------------perf of the atlas trigger system in 2015
-%ptrack compared to pt complett <7% in cone dR<0,3
-%------------------https://cds.cern.ch/record/2284295/files/ATL-DAQ-SLIDE-2017-774.pdf
+%ivarmedium ptrack compared to pt complett <7% in cone dR<0,3
+%----------------- cite erkl
 %
 %
-%
-
 \section{Jet reconstruction at ATLAS}\label{jets}
 Note that jets are not physical objects in the sense of elementary particles, but denote collimated streams of colored final states. Due to confinement (cf. chapter \ref{SM}) colored fragments will always result in jet signatures. \cite{PhysTeV}\newline  
 For the reconstruction of hadronic parts of final states like isolated hadrons, jets (see also section \ref{btagging}) and hadronically decaying taus (see also section \ref{taus}), the {\ATLAS} experiment employs clusters of topologically connected calorimeter cell signals (topo-clusters). The topo-cluster algorithm analyzes the spatial distribution of the cell signals to reconstruct the energy and direction of the incoming particle. \cite{topo}\par
@@ -583,9 +603,53 @@ Before investigating the research question formulated in section \ref{startingpo
 %\section{Current status in the search for scalar leptoquarks}
 %\section{Starting point and research question for the analysis}
 \section{Datasets and Monte Carlo samples}\label{MCsamples}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$. The top pair is allowed to decay either fully leptonically or semi-leptonically in the LQ sample (cf. section \ref{startingpoint}). The parton showering and fragmentation as well as the underlying event generation were done with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} tunes at next-to-leading order (NLO) in matrix calculation. \newline         
-The other category of simulations includes main background contributions of standard model processes. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allow the $t\bar{t}$ pair to decay fully leptonically. Showering, fragmentation and the underlying event generation are simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and regulates the highest transverse momentum of the first additional parton radiation beyond the Born level \cite{hdamp}\cite{hdamp2}.\newline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The motivation is to estimate tau efficiencies for the search for third generation leptoquarks in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. To draw convincing conclusions from the efficiency study, a good estimation of the standard model background events has to be chosen. The choice of background samples involves the following considerations:\newline
+%ttbar teil
+Dominant background processes, contaminating the potential LQ signal, originate from QCD events producing top-quark pairs and top-pair production in association with Higgs, where Higgs decays into tau leptons.\newline
+The differential cross section for top-quark pair generation at $\sqrt{s}=\SI{13}{\tera\electronvolt}$ is \SI{829\pm189}{\pico\barn} \cite{ttbarpairproduction} including the statistical and the systematic uncertainty as well as the uncertainty from the luminosity measurement. Due to the nature of a proton-proton collider mainly gluon fusion ($\SI{90}{\percent}$ \cite{PhysRevD}) is responsible for the top-quark pair production at the {\LHC}. Also quark fusion can lead to $t\bar{t}$ states. The corresponding Feynman diagrams involved in the pair production are shown in figure \ref{ttbarproduction}. Because of its high production cross section and the lack of naturally existing taus, the $t\bar{t}$ sample is the ideal candidate to study jets and especially b-jets that fake as a hadronic tau.  
+%
+\begin{figure}
+ \centering
+  \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbara.pdf}
+    \subcaption[Quark fusion process generating a top-quark pair in the s-channel.]{Quark fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
+   %\label{ATLASDesign}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbarb.pdf}
+   \subcaption[Gluon fusion process generating a top-quark pair in the t-channel.]{Gluon fusion process generating a top-quark pair in the t-channel \cite{Feynmanttbar}.}
+   %\label{btageff}
+  \end{subfigure}
+ \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbarc.pdf}
+    \subcaption[Gluon fusion process generating a top-quark pair in the u-channel.]{Gluon fusion process generating a top-quark pair in the u-channel \cite{Feynmanttbar}.}
+   %\label{ATLASDesign}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.49\textwidth}
+   \includegraphics[width=\textwidth]{figures/ttbard.pdf}
+    \subcaption[Gluon fusion process generating a top-quark pair in the s-channel.]{Gluon fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
+   %\label{ATLASDesign}
+  \end{subfigure}
+ \caption[Feynman diagrams showing the dominant top-pair production at the {\LHC}.]{Feynman diagrams showing the dominant top-pair production at the {\LHC} including quark fusion (a) and gluon fusion (b)-(d) \cite{Feynmanttbar}.}
+ \label{ttbarproduction}
+\end{figure}
+%
+%dann noch H teil.
+The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} \right)\,\text{pb}$ \cite{HiggsCrossSection}. The dominant Higgs production mechanisms of leading order at hadron colliders are gluon fusion, vector boson fusion, Higgs-strahlung or the associated production with a pair of top (bottom) quarks \cite{PhysRevD}. The relevant background SM process for the search of LQs is the associated Higgs production with a top pair, which can mimic the $t\tau^{-}+\bar{t}\tau^{+}$ state. The $t\bar{t}H$ cross section is $\SI{0.51\pm0.06}{\pico\barn}$. The corresponding Feynman diagram for $t\bar{t}H$ production is depicted in figure \ref{ttHproduction}. The used $t\bar{t}H$ sample (cf. section \ref{MCsamples}) acts as an inclusive sample, which allows all possible Higgs decays. The Higgs coupling strength is proportional to the particle's mass and therefore the direct decay of the Higgs boson into a tau-pair is possible, as it involves the heaviest lepton (cf. \ref{SMtable}). Together with the decay $H\rightarrow b\bar{b}$ the mode $H\rightarrow \tau^-\tau^+$ is the dominant process below the threshold of $\SI{160.8}{\giga\electronvolt}$ and $\SI{182.4}{\giga\electronvolt}$ that is the on-shell $\text{H}^0\rightarrow\text{W}^-\text{W}^+$ and $\text{H}^0\rightarrow\text{Z}^0\text{Z}^0$ production \cite{PhysRevD}. On-shell means that both vector bosons are produced with their likeliest mass rather than producing one vector boson of the pair as a virtual particle. From the point of view of the Higgs boson's coupling to large masses in principle $H\rightarrow t\bar{t}$ is also a possible decay mode. But the di-top mass exceeds the Higgs mass by a factor of roughly three times, which suppresses that decay due to the fact that the top-pair can exist only virtually.    
+%
+\begin{figure}[htbp]                                 
+ \begin{center}                                       
+  \includegraphics[width=0.3\linewidth]{figures/ttHproduction.pdf} 
+   \caption[Higgs production associated with a top-quark pair.]{Feynman diagram in leading order for the top-quark pair associated Higgs production \cite{PhysRevD}.}
+  \label{ttHproduction}                                    
+ \end{center}
+\end{figure}
+%
+The above mentioned aspects make the $t\bar{t}H$ sample a good candidate to study faked taus from jets with the additional condition that also real taus are naturally present compared to the top-pair production. Furthermore efficiencies for different tau selections can be studied as well in this events as they occur as signal signatures. Findings in the background processes then can be compared to the LQ signal samples (see section \ref{signaleff}). \newline
+Together these to background samples cover most of the contamination of the $t\tau^{-}+\bar{t}\tau^{+}$ for the LQ search.\par
+The MC samples in the analysis are used to investigate the signal and background composition and to estimate fake rates related to tau reconstruction of LQs in the $t\tau^{-}+\bar{t}\tau^{+}$ channel. The analysis uses two types of MC samples. One category includes the LQ signal following the decays after the mBRW model (cf. section \ref{effmodels}). These signal samples were produced with the event generator {\aMCNLO} (v2.6.0) \cite{aMCNlo} with two different mass points of the LQ of $m_{LQ}=\SI{500}{\giga\electronvolt}$ and $m_{LQ}=\SI{1}{\tera\electronvolt}$ and with a production cross section of $\SI{271}{\femto\barn}$ $\SI{3}{\femto\barn}$ respectively. The top pair is allowed to decay either fully leptonically or semi-leptonically in the LQ sample (cf. section \ref{startingpoint}). The parton showering and fragmentation as well as the underlying event generation were done with {\Pythia} \cite{Pythia8} with the particle distribution function (PDF) sets {\NNPDFd} \cite{NNPDF} and the A14 \cite{A14} tunes at next-to-leading order (NLO) in matrix calculation. \newline         
+The other category of simulations includes main background contributions of standard model processes as motivated above. That is background from $t\bar{t}$ pairs and inclusive $t\bar{t}H$ decay processes. The $t\bar{t}$ samples are generated with {\POWHEG} \cite{Powheg} and allow the $t\bar{t}$ pair to decay fully leptonically. Showering, fragmentation and the underlying event generation are simulated with the generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14. The $h_\text{damp}$ parameter was set to $\SI{258.75}{\giga\electronvolt}$, which is a resummation damping factor and regulates the highest transverse momentum of the first additional parton radiation beyond the Born level \cite{hdamp}\cite{hdamp2}.\newline
 %
 \begin{table}[htbp]
 		\centering
@@ -617,48 +681,85 @@ The other category of simulations includes main background contributions of stan
 %
 The $t\bar{t}H$ sample is generated with {\POWHEG}. Like for the $t\bar{t}$ samples, the event generator {\Pythia} at NLO with the PDF set of {\NNPDFz} and the parameter set of A14 was used to simulate the showering, fragmentation and underlying event. The mass of the Higgs boson is set to $\SI{125}{\giga\electronvolt}$ and the resummation parameter was set to $\SI{325.5}{\giga\electronvolt}$. \newline
 For all samples the {\EvtGen} (v1.6.0) \cite{EvtGen} program was used for the decay of the bottom and charm hadrons produced by the top-quark decay.\newline
-Data sets of the data-taking periods 2015, 2016, 2017 and 2018, which were produced at a center of mass energy of $\sqrt{s}=\SI{13}{\tera\electronvolt}$, are studied and compared to the MC predictions. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{140}{\per\femto\barn}$ used in the analysis. 
+Data sets of the data-taking periods 2015, 2016, 2017 and 2018, which were produced at a center of mass energy of $\sqrt{s}=\SI{13}{\tera\electronvolt}$, are studied and compared to the MC predictions. Table \ref{datalumi} shows the integrated luminosity of the different years and the total integrated luminosity of $\SI{140}{\per\femto\barn}$ used in the analysis. Because of the fact that for this study no systematic uncertainties (hallo) are considered, the luminosity values are rounded to the next whole number. Their uncertainty contributions of usually few percent are small compared to uncertainties from systematics.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%$
 \section{Physical object selection}\label{physObj}
 The physical object selection for electrons, muons, hadronic taus, jets and b-jets in the analysis is described in this section. For the general reconstruction concepts of physical objects see chapter \ref{detectorsignatures}.\par
 The {\ATLAS} software framework for event generation, simulation, reconstruction and derivation production (cf. also section \ref{MCsim}) is Athena \cite{Athena}. %The management and build of the software packages rely on CMake.
 The standard package for physical object reconstruction used in this analysis is AnalysisTop. It is derived from the general software chain of AthAnalysisBase specifically adapted for the needs of the top-quark analysis group. The \texttt{C++} framwork {\ROOT} is used as data analysis tool. For this work a package based on AnalysisTop of release 21.2.56 (build on November 29, 2018) was used.\par
 \subsubsection*{Electrons}
-Electrons have to fulfill the tight quality requirement and need to have at least a transverse momentum of $p_T>\SI{27}{\giga\electronvolt}$ and lie within the pseudorapidity range of $|\eta|<2.5$. In order to get a clean signal from a leptonic decaying top quark, the electrons have to meet the $p_T$ dependent isolation requirements. For the electron identification all single electron trigger were used.\newline
-The high level electron trigger has a transverse energy threshold of at least $\SI{24}{\giga\electronvolt}$ and requires at least a medium quality electron based on the likelihood categories described in section \ref{eReconstruction} (\texttt{e24\textunderscore lhmedium}). This high level trigger (HLT) is seeded from the electromagnetic calorimeter of the level 1 trigger system with a threshold of at least $E_T<\SI{20}{\giga\electronvolt}$ (\texttt{L1EM20VH}). Additionally a energy dependent veto against energy deposits in the hadronic calorimeter behind  the electromagnetic cluster is implemented. Thus it acts as hadronic veto (denoted with `\texttt{H}'). Furthermore the transverse energy threshold depends slightly on the pseudorapidity to compensate for energy losses in the material directly in front of the electromagnetic calorimeter (denoted with `\texttt{V}'). The next step of a tighter trigger selection includes a transverse energy threshold of $E_T>\SI{60}{\giga\electronvolt}$ and requires a medium quality electron (\texttt{e60\textunderscore lhmedium}). Adapted for high energy electrons the trigger \texttt{e120\textunderscore lhloose} provides electrons with transverse energies of at least $\SI{120}{\giga\electronvolt}$ by requiring at the same time the loose electron working point. \cite{trigger:e:mu} The above electron trigger menu is valid for data taken in 2015. For the data-taking periods in 2016-2018 the following changes are applied:\newline
-HLT thresholds are set to $\SI{26}{\giga\electronvolt}$ with the tight quality requirement (\texttt{e26\textunderscore lhtight}) and a variable cone size isolation (\texttt{ivarloose}), which uses the criteria that the sum of the track momentum must not exceed $\SI{10}{\percent}$ of the electron's transverse energy within a cone of $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}<0.2$ \cite{trigger:ivarloose:erkl}\cite{trigger:ivarloose:form}. Additional to that no transverse impact parameter cut is applied (\texttt{nod0}) \cite{trigger:ivarloose:erkl}. The complementary trigger for the high transverse energy regime is increased to $\SI{140}{\giga\electronvolt}$ \cite{trigger:e:mu}.
-%electron identification starts from searches of the highest energy deposit in the second layer of em, immer unter dem Aspekt möglichst schneller processierung       
-%lowest single e trigger e24_lhmedium threshold of ET>24GeV + medium LH identification of the electron
-%seeded from the electromagnetic calorimeter at level 1 with threshold ET>20GeV L1EM20VH
-%energy dependent veto against energy deposited in the hadronic calorimeter behind the electronmagnetic cluster = hadronic veto H
-%ET threshold slighly eta dependent to compensate for energy loss in the passive material in front of the calorimeter V
-%complementary trigger for the high transverse energy regime which requires a loose electron identification with ET>120GeV
-%---------------cite trigger:e:mu
-%nod0 -> no transverse impact parameter cut is applied
-%iloose indic       ates a variable cone size isolation requ
-%----------cite trigger:ivarloose:erkl
-%iloose            track momentum sum can not be more than  10% of the electron transverse energy within dR<0,2
-%------------------cite trigger:ivarloose:form
-%
-%
+Electrons have to fulfill the tight quality requirement and need to have at least a transverse momentum of $p_T>\SI{27}{\giga\electronvolt}$ and lie within the pseudorapidity range of $|\eta|<2.5$. In order to get a clean signal from a leptonic decaying top quark, the electrons have to meet the $p_T$ dependent isolation requirements. For the electron trigger requirements see the paragraph `Lepton trigger' below.
 \subsubsection*{Muons}
-Muons have to meet the medium quality requirement and need to have a transverse momentum of $p_T>\SI{27}{\giga\electronvolt}$. The selected muons are reconstructed as a combined muon within a pseudorapidity region of $|\eta|<2.5$. Analogous to the electron selection for a clean lepton signal, the muon has to further fulfill the $p_T$ dependent isolation requirements and all single muon triggers are used for the selection.\newline
-Trigger decisions for muons are based on the MS and the quality of the match that combines the track measurement of the MS and the ID. The requirement on the transverse momentum of the combined muon is at least $\SI{20}{\giga\electronvolt}$ with an additional loose isolation (\texttt{mu20\textunderscore iloose}). The loose isolation means that the scalar sum of the track $p_T$ values does not exceed $\SI{12}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.2$. This HLT is based on the decisions of the trigger level 1 seed, which selects muons with a transverse momentum of at least $\SI{15}{\giga\electronvolt}$ (\texttt{L1MU15}). The HLT trigger \texttt{mu50} has a threshold of $p_T<\SI{50}{\giga\electronvolt}$ and complements the trigger's high momentum regime without isolation conditions. The above muon trigger menu is based on the data taking periods in 2015 \cite{trigger:e:mu}. Changes to the data selection of the periods of the year 2016-2018 are as follows: \newline
-The HLT transverse momentum requirement is changed to at least $>\SI{26}{\giga\electronvolt}$ and the isolation requirement is changed in such a way that the scalar sum of the track momentum must not exceed $\SI{7}{\percent}$ of the muon's transverse momentum within a cone of $\Delta R<0.3$ (\texttt{e26\textunderscore ivarmedium}) \cite{trigger:mu}.            
-%MS only und quality of th e matching of muon track measured independently in the ID and MS (physical property = pT)
-%pT>20GeV of CB muon candidate + loose isolation: sum of track pT values  in cone around dR<0,2 is set to <12% of the muon pT
-%seeded by L1MU15 -> pT>15GeV
-%complemented by mu50 withoout isolatoin for high pT muons with pT>50GeV
-%---------------perf of the atlas trigger system in 2015
-%ivarmedium ptrack compared to pt complett <7% in cone dR<0,3
-%----------------- cite erkl
-%
-%
+Muons have to meet the medium quality requirement and need to have a transverse momentum of $p_T>\SI{27}{\giga\electronvolt}$. The selected muons are reconstructed as a combined muon within a pseudorapidity region of $|\eta|<2.5$. Analogous to the electron selection for a clean lepton signal, the muon has to further fulfill the $p_T$ dependent isolation requirements. For the muon trigger requirements see the paragraph `Lepton trigger' below. 
 \subsubsection*{Taus}
 Taus selected for this analysis need to have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$ and must lie within the pseudorapidity range of $|\eta|<2.5$. Additional to that the taus have to decay hadronically. Following their basic reconstruction procedure, taus have to meet the conditions of the loose working point (see section \ref{taus}). To avoid misinterpretations of electrons as taus, the corresponding working point is set to loose.
 \subsubsection*{Jets}
 Jets are reconstructed with the anti-$k_T$ algorithm and need to have a transverse momentum of at least $p_T>\SI{25}{\giga\electronvolt}$. 
 \subsubsection*{b-jets}\label{physObj:bjet}
 For the b-jet selection the b-tagger MV2c10 is used with a working point of $\SI{77}{\percent}$ b-tagging efficiency.
+\subsubsection*{Lepton trigger}\label{leptontrigger}
+The trigger requirements relevant for the analysis on electrons and muons are described here and are categorized each after the corresponding data-taking period.\par
+Electrons are required to to pass the `OR' condition of the single electron triggers. This means that for an electron at least one of the triggers presented in table \ref{etriggersTable} had indicated an electron signature for the specific data-taking period in the detector.\par
+%
+\begin{table}[htbp]
+		\centering
+                \footnotesize
+                \renewcommand{\arraystretch}{1.2}       
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccc}
+		\hline
+		\hline
+		\textbf{data-taking year}&  \textbf{`OR' required trigger} & \textbf{important parameter}
+		\\
+                \hline
+                \multirow{3}{*}{$2018$, $2017$, $2016$}                & \texttt{e26\textunderscore lhtight\textunderscore nod0\textunderscore ivarloose}   & $p_T>\SI{26}{\giga\electronvolt}$, tight working point 
+                \\
+                & or \texttt{e60\textunderscore lhmedium\textunderscore nod0}   & $p_T>\SI{60}{\giga\electronvolt}$, medium working point 
+                \\
+                & or \texttt{e140\textunderscore lhloose\textunderscore nod0}       & $p_T>\SI{140}{\giga\electronvolt}$, loose working point 
+                \\
+                \hline
+                \multirow{3}{*}{$2015$}                & \texttt{e24\textunderscore lhmedium\textunderscore L1EM20VH}   &      $p_T>\SI{24}{\giga\electronvolt}$, medium working point 
+                \\
+                & or \texttt{e60\textunderscore lhmedium}       & $p_T>\SI{60}{\giga\electronvolt}$, medium working point
+                \\
+                & or \texttt{e120\textunderscore lhloose}       & $p_T>\SI{120}{\giga\electronvolt}$, loose working point
+                \\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[List of single electron triggers.]{List of single electron triggers.}
+\label{etriggersTable}
+\renewcommand{\arraystretch}{1}
+\end{table}
+%
+The same strategy as it is used for electrons is valid for muons. Muons are required to to pass the `OR' condition of the single muon triggers. This means that for an muon at least one of the triggers presented in table \ref{mutriggersTable} had indicated a muon signature for the specific data-taking period in the detector.\par
+%
+\begin{table}[htbp]
+		\centering
+                \footnotesize
+                \renewcommand{\arraystretch}{1.2}       
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccc}
+		\hline
+		\hline
+		\textbf{data-taking year}&  \textbf{`OR' required trigger} & \textbf{important parameter}
+		\\
+                \hline
+                \multirow{2}{*}{$2018$, $2017$, $2016$}                & \texttt{mu26\textunderscore ivarmedium} & $p_T>\SI{26}{\giga\electronvolt}$, medium working point
+                \\
+                & or \texttt{mu50}      & $p_T>\SI{50}{\giga\electronvolt}$
+                \\
+                \hline
+                $2015$                & \texttt{mu20\textunderscore iloose\textunderscore L1MU15} & $p_T>\SI{26}{\giga\electronvolt}$, loose working point
+                \\
+		\hline
+		\hline
+		\end{tabular*}
+		\caption[List of single muon triggers.]{List of single muon triggers.}
+\label{mutriggersTable}
+\renewcommand{\arraystretch}{1}
+\end{table}
+%
+For more detailed information about the trigger requirements and their exlanation see section \ref{eReconstruction} and \ref{muReconstruction}.
 \subsubsection*{Overlap removal}\label{overlapremoval}
 To avoid misinterpretations an overlap removal between different objects acts like a veto and is applied for the event reconstruction. The overlap is determined by thresholds in the separtion variable $\Delta R=\sqrt{\Delta\eta^2+\Delta\phi^2}$. The following overlap removals are applied for objects like electrons $e$, muons $\mu$, tau leptons $\tau$ and jets $j$:
 \begin{itemize}
@@ -681,13 +782,13 @@ The signal and background studies for the $t\tau^{-}+\bar{t}\tau^{+}$ channel in
  \end{center}
 \end{figure}
 %
-The selection includes one electron and one muon of opposite electrical charge and a transverse momentum of at least $p_T>\SI{27}{\giga\electronvolt}$. This di-lepton selection covers the leptonic decay of the top-pair mediated by the $W^-$ boson in case of the anti-top quark and mediated by the $W^+$ in case of the top quark. Due to conservation of the electric charge the resulting leptons of the subsequent decay of the $W^\pm$ boson is of opposite sign. In addition to that at least two jets are selected because the weak top-pair decay produces a bottom-pair (cf. figure \ref{topdecay}), which will result in a jet. At least two of the above selected jets have to be b-tagged or at least one of the above jets have to be b-tagged. To cover the full $t\tau^{-}+\bar{t}\tau^{+}$ channel, an additional selection is made to select at least either one or two tau leptons for each cases of b-jet selection. The samples include these categories of one b-tagged jet, two b-tagged jets, one tau or two taus and the corresponding distributions as seperate categories.   
+The selection includes one electron and one muon of opposite electrical charge and a transverse momentum of at least $p_T>\SI{27}{\giga\electronvolt}$. This di-lepton selection covers the leptonic decay of the top-pair mediated by the $W^-$ boson in case of the anti-top quark and mediated by the $W^+$ in case of the top quark. Due to conservation of the electric charge the resulting leptons of the subsequent decay of the $W^\pm$ boson is of opposite sign. In addition to that at least two jets are selected because the weak top-pair decay produces a bottom-pair (cf. figure \ref{topdecay}), which will result in a jet. At least two of the above selected jets have to be b-tagged or at least one of the above jets have to be b-tagged. To cover the full $t\tau^{-}+\bar{t}\tau^{+}$ channel, an additional selection is made to select at least either one or two tau leptons for each cases of b-jet selection. The samples include these categories of one b-tagged jet, two b-tagged jets, one tau or two taus and the corresponding distributions as separate categories.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Results}\label{results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Number of event candidates}\label{eventYield}
 The observed and predicted number of event candidates for the event selection described in section \ref{eventselection} is summarized in this chapter.\par
-The event yield table \ref{eventYieldTable} includes all the main background contributions from $t\bar{t}$ and $t\bar{t}H$ processes as well as the LQ signal samples generated with two different mass points compared to the number of event candidates from data. The error consists of the statistical uncertainty only. The differentiation of the event number categories follow the event selection described in section \ref{eventselection}. It`s main categories include the selection of either at least one b-jet or two b-jets. The decay channel of the LQ involves a pair of b-quarks originating from the subsequent top-pair decay mediated by the weak interaction (cf. section \ref{startingpoint}). After the two b-jet selection the sample is dominated by contributions from standard model $t\bar{t}$ productions. Selecting only one b-jet will be useful for a full search strategy for scalar LQs. Due to the leptoquarks' high masses of $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ the assumed production cross section at the {\LHC} is small compared to abundant QCD processes of the SM. In the case of the simulated $t\bar{t}$ the cross section is $\SI{729.7}{\pico\barn}$ compared to the leptoquark simulation of $\SI{271.5}{\femto\barn}$ (mass point $\SI{500}{\giga\electronvolt}$) and $\SI{3.0}{\femto\barn}$ (mass point $\SI{1}{\tera\electronvolt}$). The simulated dilepton $t\bar{t}H$ cross section is $\SI{61.7}{\femto\barn}$ and the semi-leptonic $t\bar{t}H$ cross section is $\SI{222.8}{\femto\barn}$. Thus the looser selection of at least one b-jet and the resulting higher event yield gives room for tighter cuts on kinematic variables to optimize the signal and at the same time looses almost nothing in background rejection. \newline
+The event yield table \ref{eventYieldTable} includes all the main background contributions from $t\bar{t}$ and $t\bar{t}H$ processes as well as the LQ signal samples generated with two different mass points compared to the number of event candidates from data. The error consists of the statistical uncertainty only. The differentiation of the event number categories follow the event selection described in section \ref{eventselection}. It`s main categories include the selection of either at least one b-jet or two b-jets. The decay channel of the LQ involves a pair of b-quarks originating from the subsequent top-pair decay mediated by the weak interaction (cf. section \ref{startingpoint}). After the two b-jet selection the sample is dominated by contributions from standard model $t\bar{t}$ productions. Selecting only one b-jet will be useful for a full search strategy for scalar LQs. Due to the leptoquarks' high masses of $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ and experimental exclusion limits as well as theoretically considerations, the assumed production cross section at the {\LHC} is small compared to abundant QCD processes of the SM\footnote{For a cross section comparison see \ref{MCsamples}, where the different samples are discussed.}. Thus the looser selection of at least one b-jet and the resulting higher event yield gives room for tighter cuts on kinematic variables to optimize the signal and at the same time looses almost nothing in background rejection. \newline
 %
 \begin{sidewaystable}[htbp]
 		\centering
@@ -733,49 +834,6 @@ Main background contributions are processes from Higgs and top-quark pairs, whic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%ttbar teil
-Dominant background processes, contaminating the potential LQ signal, originate from QCD events producing top-quark pairs and top-pair production in association with Higgs, where Higgs decays into tau leptons.\newline
-The differential cross section for top-quark pair generation is \SI{829\pm189}{\pico\barn} \cite{ttbarpairproduction} including the statistical and the systematic uncertainty as well as the uncertainty from the luminosity measurement. Due to the nature of a proton-proton collider mainly gluon fusion ($\SI{90}{\percent}$ \cite{PhysRevD}) is responsible for the top-quark pair production at the {\LHC}. Also quark fusion can lead to $t\bar{t}$ states. The corresponding Feynman diagrams involved in the pair production are shown in figure \ref{ttbarproduction}. Because of its high production cross section and the lack of naturally existing taus, the $t\bar{t}$ sample is the ideal candidate to study jets and especially b-jets that fake as a hadronic tau.  
-%
-\begin{figure}
- \centering
-  \begin{subfigure}[t]{0.49\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbara.pdf}
-    \subcaption[Quark fusion process generating a top-quark pair in the s-channel.]{Quark fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
-   %\label{ATLASDesign}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.49\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbarb.pdf}
-   \subcaption[Gluon fusion process generating a top-quark pair in the t-channel.]{Gluon fusion process generating a top-quark pair in the t-channel \cite{Feynmanttbar}.}
-   %\label{btageff}
-  \end{subfigure}
- \begin{subfigure}[t]{0.49\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbarc.pdf}
-    \subcaption[Gluon fusion process generating a top-quark pair in the u-channel.]{Gluon fusion process generating a top-quark pair in the u-channel \cite{Feynmanttbar}.}
-   %\label{ATLASDesign}
-  \end{subfigure}
-  \begin{subfigure}[t]{0.49\textwidth}
-   \includegraphics[width=\textwidth]{figures/ttbard.pdf}
-    \subcaption[Gluon fusion process generating a top-quark pair in the s-channel.]{Gluon fusion process generating a top-quark pair in the s-channel \cite{Feynmanttbar}.}
-   %\label{ATLASDesign}
-  \end{subfigure}
- \caption[Feynman diagrams showing the dominant top-pair production at the {\LHC}.]{Feynman diagrams showing the dominant top-pair production at the {\LHC} including quark fusion (a) and gluon fusion (b)-(d) \cite{Feynmanttbar}.}
- \label{ttbarproduction}
-\end{figure}
-%
-%dann noch H teil.
-The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} \right)\,\text{pb}$ \cite{HiggsCrossSection}. The dominant Higgs production mechanisms of leading order at hadron colliders are gluon fusion, vector boson fusion, Higgs-strahlung or the associated production with a pair of top (bottom) quarks \cite{PhysRevD}. The relevant background SM process for the search of LQs is the associated Higgs production with a top pair, which can mimic the $t\tau^{-}+\bar{t}\tau^{+}$ state. The corresponding Feynman diagram for $t\bar{t}H$ production is depicted in figure \ref{ttHproduction}. The used $t\bar{t}H$ sample (cf. section \ref{MCsamples}) acts as an inclusive sample, which allows all possible Higgs decays. The Higgs coupling strength is proportional to the particle's mass and therefore the direct decay of the Higgs boson into a tau-pair is possible, as it involves the heaviest lepton (cf. \ref{SMtable}). Together with the decay $H\rightarrow b\bar{b}$ the mode $H\rightarrow \tau^-\tau^+$ is the dominant process below the threshold of $\SI{160.8}{\giga\electronvolt}$ and $\SI{182.4}{\giga\electronvolt}$ that is the on-shell $\text{H}^0\rightarrow\text{W}^-\text{W}^+$ and $\text{H}^0\rightarrow\text{Z}^0\text{Z}^0$ production \cite{PhysRevD}. On-shell means that both vector bosons are produced with their likeliest mass rather than producing one vector boson of the pair as a virtual particle. From the point of view of the Higgs boson's coupling to large masses in principle $H\rightarrow t\bar{t}$ is also a possible decay mode. But the di-top mass exceeds the Higgs mass by a factor of roughly three times, which suppresses that decay due to the fact that the top-pair can exist only virtually.    
-%
-\begin{figure}[htbp]                                 
- \begin{center}                                       
-  \includegraphics[width=0.3\linewidth]{figures/ttHproduction.pdf} 
-   \caption[Higgs production associated with a top-quark pair.]{Feynman diagram in leading order for the top-quark pair associated Higgs production \cite{PhysRevD}.}
-  \label{ttHproduction}                                    
- \end{center}
-\end{figure}
-%
-The above mentioned aspects make the $t\bar{t}H$ sample a good candidate to study faked taus from jets with the additional condition that also real taus are naturally present compared to the top-pair production. Furthermore efficiencies for different tau selections can be studied as well in this events as they occur as signal signatures. Findings in the background processes then can be compared to the LQ signal samples (see section \ref{signaleff}). \newline
-Together these to background samples cover most of the contamination of the $t\tau^{-}+\bar{t}\tau^{+}$ for the LQ search.\par
 The sub-selections for the efficiency study are as follows: The event selection (cf. section \ref{eventselection}) with two b-jets is applied additionally to the object selection (cf. section \ref{physObj}), in the following named together as basic selection. Applying the common definition of efficiency, which compares the number of events passing a special selection compared to the total event number, different efficiency selections are created. They are summarized in table \ref{ttbarttHEffTable}. The error $\sigma_\epsilon$ is derived from the binomial uncertainty in efficiency $\epsilon$ following the definition
 \begin{align}
 \sigma_\epsilon=\frac{\sqrt{n\epsilon\left(1-\epsilon\right)}}{n}\,\text{.}.
@@ -815,7 +873,7 @@ The sub-selections for the efficiency study are as follows: The event selection 
 		\hline
 		\hline
 		\end{tabular*}
-		\caption[Efficiencies for the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\caption[Efficiencies for the t$\bar{\text{t}}$H sample.]{Efficiencies for different tau lepton categories for the t$\bar{\text{t}}$H Monte Carlo sample. The efficiency is defined as $\epsilon=\frac{\text{\#truth hadronic }\tau\text{ matched to a reconstructed }\tau+Z}{\text{\#truth }\tau\text{ passing the basic selection}+Z}$.}
 		\label{ttbarttHEffTable}
           \renewcommand{\arraystretch}{1}
 \end{table}
@@ -898,7 +956,7 @@ The sub-selections for the efficiency study are as follows: The event selection 
 		\hline
 		\hline
 		\end{tabular*}
-		\caption[Fake rates for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Fake rates for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample.}
+		\caption[Fake rates for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H sample.]{Fake rates for different tau lepton categories for the t$\bar{\text{t}}$ and the t$\bar{\text{t}}$H Monte Carlo sample. The fake rate is defined as $f=\frac{\text{\#truth fake candidate matched to a reconstructed }\tau}{\text{\#truth fake candidate passing the basic selection}}$}
 		\label{ttbarttHfakeTable}
           \renewcommand{\arraystretch}{1}
 \end{sidewaystable}
@@ -1238,7 +1296,7 @@ The efficiencies for the leptoquark signal samples with their two mass points ar
 		\hline
 		\hline
 		\end{tabular*}
-		\caption[Efficiencies for the two LQ samples with $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point.]{Efficiencies for different tau lepton categories for the two different LQ Monte Carlo samples with $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point. The luminosity is}
+		\caption[Efficiencies for the two LQ samples with $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point.]{Efficiencies for different tau lepton categories for the two different LQ Monte Carlo samples with $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point. The efficiency is defined as $\epsilon=\frac{\text{\#truth hadronic }\tau\text{ matched to a reconstructed }\tau+Z}{\text{\#truth }\tau\text{ passing the basic selection}+Z}$.}
 		\label{LQEffTable}
                 \renewcommand{\arraystretch}{1}
                 \end{sidewaystable}
@@ -2171,9 +2229,7 @@ The general trend is that within a chosen b-jet selection the significance reach
 Sudden downward changes in the significance curve can be explained by a sudden drop of signal and background events at the same time. Limit coniderations of eq. (\ref{ZA}) show that $\lim_{b\rightarrow 0}Z_A=\lim_{s\rightarrow 0}Z_A=0$. Local maxima are the result of a sudden drop of background events, whereas the signal events are constant, e.g. no $t\bar{t}$ background for high $p_T$ ($S_T$).\par
 The transverse momentum and the variable $S_T$ are good discriminant variables providing high discovery significance for at least the low mass point LQ sample witin the chosen event selection. This covers at least one b-jet and at least two tau leptons. Due to the low cross section for the $\SI{1}{\tera\electronvolt}$ LQ sample the significance with at maximum $1$ is not as high as expected. Taking the tau $p_T$ and $S_T$ at the same time as parameter $\theta$ in eq. (\ref{profilelikelihoodratio}) would further increase the discovery significance.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Summary}      
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Zusammenfassung}
+\chapter{Conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\appendix
 %\chapter{Appendix}
@@ -2201,7 +2257,7 @@ This thesis would have been impossible without the aid and support of the follow
  \item Dr. Deb Sankar Bhattacharya for all the helpful hints and the well-spent time for our photography projects - we are the ``Tr\"{o}deltrupp'' xD.
  \item Denise B\"{o}hm for the fruitful collaboration within the outreach project and beyond: I enjoyed the time with you!
  \item Dr. Stephan L\"{u}ck for the best lunch times in the kitchen - sorry for eating your salad - and all the inspiring chats about photography, film series, computers, games or whatever other topics we have found so far xD.
- \item Thorben Swirski for the proofreading, the happy debugging and other diverse explanations. 
+ \item Thorben Swirski for the proofreading, the happy debugging and other helpful explanations. 
  \item Robin Boshuis and Lucas Klein for the pleasant atmosphere in the office as part-time colleagues ;)
  \item Susan Sch\"{a}fer and Florian Treisch for your effort to organize the team building activites besides the work and the great time: I really enjoyed it!
  \item all other members of the chair and the secretaries for the pleasant atmosphere you created and that you were always helpful. Thanks. =) 
