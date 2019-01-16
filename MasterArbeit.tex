@@ -697,23 +697,23 @@ The event yield table \ref{eventYieldTable} includes all the main background con
 		\hline
 		\textbf{channel} &      \multicolumn{6}{c}{\textbf{event selection}}
 		\\
-                & $\geq2\,$b-jet &     $\geq 2\,$b-jet $+$ $\geq 1\tau$ &   $\geq 2\,$b-jet $+$ $\geq 2\tau$ &     $\geq 1\,$b-jet &     $\geq 1\,$b-jet $+$ $\geq 1\tau$ &     $\geq 1\,$b-jet $+$ $\geq 2\tau$ 
+                & $\geq 1\,$b-jet &     $\geq 1\,$b-jet $+$ $\geq 1\tau$ &   $\geq 1\,$b-jet $+$ $\geq 2\tau$ &     $\geq 2\,$b-jet &     $\geq 2\,$b-jet $+$ $\geq 1\tau$ &     $\geq 2\,$b-jet $+$ $\geq 2\tau$ 
 		\\
 		\hline
-                $t\bar{t}$ &    $\SI{270799\pm 210}{}$ &        $\SI{765\pm 11}{}$ &    $\SI{2.99\pm 0.69}{}$ & $\SI{555369\pm 303}{}$ &        $\SI{2793\pm 21}{}$ &   $\SI{7.5\pm 1.1}{}$
+                $t\bar{t}$ &    $\SI{555369\pm 303}{}$ &        $\SI{2793\pm 21}{}$ &    $\SI{7.5\pm 1.1}{}$ & $\SI{270799\pm 210}{}$ &        $\SI{765\pm 11}{}$ &   $\SI{2.99\pm 0.69}{}$
                 \\
-                $t\bar{t}H$ &    $\SI{338.1\pm 1.6}{}$ &        $\SI{14.24\pm 0.37}{}$ &    $\SI{0.735\pm 0.043}{}$ & $\SI{517.4\pm 2.7}{}$ &        $\SI{28.02\pm 0.55}{}$ &   $\SI{1.554\pm 0.070}{}$
-                \\
-                \hline
-                \textbf{total} &    $\SI{271137\pm 210}{}$ &        $\SI{779\pm 11}{}$ &    $\SI{3.72\pm 0.69}{}$ & $\SI{555886\pm 303}{}$ &        $\SI{2821\pm 21}{}$ &   $\SI{9.0\pm 1.1}{}$
+                $t\bar{t}H$ &    $\SI{517.4\pm 2.7}{}$ &        $\SI{28.02\pm 0.55}{}$ &    $\SI{1.554\pm 0.070}{}$ & $\SI{338.1\pm 1.6}{}$ &        $\SI{14.24\pm 0.37}{}$ &   $\SI{0.735\pm 0.043}{}$
                 \\
                 \hline
-                $LQ_\text{$500\,$GeV}$ &    $\SI{650\pm 28}{}$ &        $\SI{287\pm 19}{}$ &    $\SI{45.9\pm 6.7}{}$ & $\SI{1304\pm 40}{}$ &        $\SI{598\pm 27}{}$ &   $\SI{96\pm 10}{}$
-                \\
-                $LQ_\text{$1\,$TeV}$ &    $\SI{7.44\pm 0.29}{}$ &        $\SI{3.38\pm 0.19}{}$ &    $\SI{0.371\pm 0.063}{}$ & $\SI{14.69\pm 0.41}{}$ &        $\SI{6.65\pm 0.27}{}$ &   $\SI{0.745\pm 0.093}{}$
+                \textbf{total} &    $\SI{555886\pm 303}{}$ &        $\SI{2821\pm 21}{}$ &    $\SI{9.0\pm 1.1}{}$ & $\SI{271137\pm 210}{}$ &        $\SI{779\pm 11}{}$ &   $\SI{3.72\pm 0.69}{}$
                 \\
                 \hline
-                data &    $\SI{265437\pm 515}{}$ &        $\SI{1022\pm 32}{}$ &    $\SI{3.0\pm 1.7}{}$ & $\SI{554745\pm 745}{}$ &        $\SI{3342\pm 58}{}$ &   $\SI{12.0\pm 3.5}{}$
+                $LQ_\text{$500\,$GeV}$ &    $\SI{1304\pm 40}{}$ &        $\SI{598\pm 27}{}$ &    $\SI{96\pm 10}{}$ & $\SI{650\pm 28}{}$ &        $\SI{287\pm 19}{}$ &   $\SI{45.9\pm 6.7}{}$
+                \\
+                $LQ_\text{$1\,$TeV}$ &    $\SI{14.69\pm 0.41}{}$ &        $\SI{6.65\pm 0.27}{}$ &    $\SI{0.745\pm 0.093}{}$ & $\SI{7.44\pm 0.29}{}$ &        $\SI{3.38\pm 0.19}{}$ &   $\SI{0.371\pm 0.063}{}$
+                \\
+                \hline
+                data &    $\SI{554745\pm 745}{}$ &        $\SI{3342\pm 58}{}$ &    $\SI{12.0\pm 3.5}{}$ & $\SI{265437\pm 515}{}$ &        $\SI{1022\pm 32}{}$ &   $\SI{3.0\pm 1.7}{}$
                 \\
 		\hline
 		\hline
@@ -728,13 +728,13 @@ The additional selection of at least either one or two tau leptons impose an add
 \section{Signal and background efficiencies}\label{signalANDbgEff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Main background contributions are processes from Higgs and top-quark pairs, which contaminate the potential LQ signal. A sub-selection of the event selection (cf. \ref{eventselection}) allows for a more detailed picture of the final states' origin in the $t\tau^{-}+\bar{t}\tau^{+}$ channel for signal and background samples. The MC samples include the so called `truth' information that is the information of the generated particles and the subsequent decay without the digitization and reconstruction step of their signatures in the detector. Taking into account this capability of the MC simulations (cf. \ref{MCsim}) a comparison between the fully reconstructed events and the mere information of the simulated particles is possible. Thus reconstruction efficiencies are the adequate description for that comparison and give insight to the signal and background composition. The efficiency study for signal and background samples are done in two sections \ref{bgeff} and \ref{signaleff} separately. 
-\subsection{Background produced efficiencies and fake rates}\label{bgeff}
+\subsection{Tau reconstruction efficiencies and fake rates}\label{bgeff}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %ttbar teil
-Dominant background processes, contaminating the potential LQ signal, originate from QCD events producing top-quark pairs and from Higgs decay modes, involving top-quarks and tau leptons.\newline
+Dominant background processes, contaminating the potential LQ signal, originate from QCD events producing top-quark pairs and top-pair production in association with Higgs, where Higgs decays into tau leptons.\newline
 The differential cross section for top-quark pair generation is \SI{829\pm189}{\pico\barn} \cite{ttbarpairproduction} including the statistical and the systematic uncertainty as well as the uncertainty from the luminosity measurement. Due to the nature of a proton-proton collider mainly gluon fusion ($\SI{90}{\percent}$ \cite{PhysRevD}) is responsible for the top-quark pair production at the {\LHC}. Also quark fusion can lead to $t\bar{t}$ states. The corresponding Feynman diagrams involved in the pair production are shown in figure \ref{ttbarproduction}. Because of its high production cross section and the lack of naturally existing taus, the $t\bar{t}$ sample is the ideal candidate to study jets and especially b-jets that fake as a hadronic tau.  
 %
 \begin{figure}
@@ -776,13 +776,12 @@ The total cross section measured for Higgs production is $\left( 12^{+25}_{-16} 
 %
 The above mentioned aspects make the $t\bar{t}H$ sample a good candidate to study faked taus from jets with the additional condition that also real taus are naturally present compared to the top-pair production. Furthermore efficiencies for different tau selections can be studied as well in this events as they occur as signal signatures. Findings in the background processes then can be compared to the LQ signal samples (see section \ref{signaleff}). \newline
 Together these to background samples cover most of the contamination of the $t\tau^{-}+\bar{t}\tau^{+}$ for the LQ search.\par
-%Truth match
 The sub-selections for the efficiency study are as follows: The event selection (cf. section \ref{eventselection}) with two b-jets is applied additionally to the object selection (cf. section \ref{physObj}), in the following named together as basic selection. Applying the common definition of efficiency, which compares the number of events passing a special selection compared to the total event number, different efficiency selections are created. They are summarized in table \ref{ttbarttHEffTable}. The error $\sigma_\epsilon$ is derived from the binomial uncertainty in efficiency $\epsilon$ following the definition
 \begin{align}
 \sigma_\epsilon=\frac{\sqrt{n\epsilon\left(1-\epsilon\right)}}{n}\,\text{.}.
 \label{binomialerror}
 \end{align}
-The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fulfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ efficiency for the $t\bar{t}H$ events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. The low efficiency in the $t\bar{t}$ sample reflects the fact that no taus are expected there and some tau leptons are expected from direct Higgs boson decays. The efficiency for Higgs events strongly depends on the $p_T$ of the truth tau up to transverse momenta of $\SI{150}{\giga\electronvolt}$ (see fig. \ref{DividedTau:bg:ttH}). As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate.\par 
+%The total efficiency of reconstructing a hadronic tau matched to its truth particle and passing the basic selection over taking all truth taus fulfilling the basic selections (truth matching for tau) is as low as $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events compared to $\SI{29.39\pm 0.26}{\percent}$ efficiency for the $t\bar{t}H$ events. The matching is realized with a geometric matching of the reconstructed and truth particle within a cone of $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}<0.05$. The low efficiency in the $t\bar{t}$ sample reflects the fact that no taus are expected there and some tau leptons are expected from direct Higgs boson decays. The efficiency for Higgs events strongly depends on the $p_T$ of the truth tau up to transverse momenta of $\SI{150}{\giga\electronvolt}$ (see fig. \ref{DividedTau:bg:ttH}). As a conclusion the tau reconstruction efficiency of the $t\bar{t}$ represents a fake tau rate.\par 
 %	
 \begin{table}[htbp]
 		\centering
@@ -790,19 +789,21 @@ The total efficiency of reconstructing a hadronic tau matched to its truth parti
                 \renewcommand{\arraystretch}{1.2}
 		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccc}
 		\hline
-		\hline
+                \hline
 		\textbf{sample}    & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
 		\\
 		\hline
-		selection   & passed events      & total events
+		\multirow{2}{*}{selection}   & reconstructed taus       & total number
+               \\
+              & matched to truth taus & of taus
 		\\ 
 		\hline
-                tau originated from H$^0$        & $5140$          & $11372$
+               tau originated from H$^0$        & $5140$          & $11372$
 		\\
 		efficiency                     & \multicolumn{2}{c}{$\SI{45.20\pm 0.47}{\percent}$}
 		\\
 		\hline
-                tau originated from H$^0$ (1-prong)         & $4132$          & $8390$
+               tau originated from H$^0$ (1-prong)         & $4132$          & $8390$
 		\\
 		efficiency                     & \multicolumn{2}{c}{$\SI{49.25\pm 0.55}{\percent}$}
 		\\
@@ -830,8 +831,10 @@ The total efficiency of reconstructing a hadronic tau matched to its truth parti
 		 \textbf{sample}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$}}  & \multicolumn{2}{c}{\textbf{t$\bar{\textbf{t}}$H}} 
 		\\
 		\hline
-		selection  & passed events      & total events & passed events      & total events
-		\\ 
+		\multirow{2}{*}{selection}  & reconstructed taus      & total number of  & reconstructed taus       & total number of
+		\\
+                & matched to fake object        & potential fake objects       & matched to fake object        &  potential fake objects
+                \\
 		\hline
 		%truth matching for tau      & $107$            & $16863$      & $8971$        & $30527$
 		%\\
@@ -901,24 +904,25 @@ The total efficiency of reconstructing a hadronic tau matched to its truth parti
 \end{sidewaystable}
 %
 %from B mesons
-The dependency of the tau reconstruction efficiency are shown in figure \ref{DividedTau:bg}. The difficulty of the real tau reconstruction with transverse momenta smaller than $\sim\SI{100}{\giga\electronvolt}$ can be seen in the ratio plot of the Higgs sample with its low efficiency in that $p_{T,\text{vis}}^{\tau,\text{truth}}$ range (fig. \ref{DividedTau:bg:ttH}). Further investigating the matched truth tau`s origin shows that they originate from heavy B mesons (tau from B-mesons in \ref{ttbarttHEffTable}). This is denoted by the efficiency defined by the number of hadronic taus in the basic selection matched to a truth particle and originating from B-mesons over the total number of taus in the basic selection originating from B-mesons. Background contributions from Higgs events only originate only in rare cases from B-mesons with a efficiency of $\SI{0.514\pm 0.077}{\percent}$.\par       
+%The dependency of the tau reconstruction efficiency are shown in figure \ref{DividedTau:bg}. The difficulty of the real tau reconstruction with transverse momenta smaller than $\sim\SI{100}{\giga\electronvolt}$ can be seen in the ratio plot of the Higgs sample with its low efficiency in that $p_{T,\text{vis}}^{\tau,\text{truth}}$ range (fig. \ref{DividedTau:bg:ttH}).
+Further investigating the matched truth tau`s origin shows that they originate from heavy B mesons (tau from B-mesons in \ref{ttbarttHEffTable}). This is denoted by the efficiency defined by the number of hadronic taus in the basic selection matched to a truth particle and originating from B-mesons over the total number of taus in the basic selection originating from B-mesons. Background contributions from Higgs events only originate only in rare cases from B-mesons with a efficiency of $\SI{0.514\pm 0.077}{\percent}$.\par       
 %   
-\begin{figure}
-  \centering
-                \begin{subfigure}[t]{0.49\textwidth}
-                \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
-                \subcaption{Hadronic tau reconstruction efficiency of $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events.}
-                \label{DividedTau:bg:ttbar}
-                \end{subfigure}
-                %
-                \begin{subfigure}[t]{0.49\textwidth}
-                \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
-                \subcaption{Hadronic tau reconstruction efficiency of $\SI{29.39\pm 0.26}{\percent}$ for the Higgs events.}
-                \label{DividedTau:bg:ttH}
-                \end{subfigure}
-\caption[Hadronic tau reconstruction efficiency for the background events.]{Hadronic tau reconstruction efficiency for the background events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
-\label{DividedTau:bg}
-\end{figure}
+%\begin{figure}
+%  \centering
+%                \begin{subfigure}[t]{0.49\textwidth}
+%                \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_Tau.pdf}
+%                \subcaption{Hadronic tau reconstruction efficiency of $\SI{0.635\pm 0.061}{\percent}$ for the top-quark pair events.}
+ %               \label{DividedTau:bg:ttbar}
+ %               \end{subfigure}
+ %               %
+ %               \begin{subfigure}[t]{0.49\textwidth}
+ %               \includegraphics[width=\textwidth]{figures/plots/ttH/Divided_Tau.pdf}
+ %               \subcaption{Hadronic tau reconstruction efficiency of $\SI{29.39\pm 0.26}{\percent}$ for the Higgs events.}
+ %               \label{DividedTau:bg:ttH}
+ %               \end{subfigure}
+%\caption[Hadronic tau reconstruction efficiency for the background events.]{Hadronic tau reconstruction efficiency for the background events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
+%\label{DividedTau:bg}
+%\end{figure}
 %
 %Tau fake rates
 Tau fake rates are estimated by the same efficiency definition as described above, were the matching is accomplished by a geometric matching between the reconstructed tau and the truth jet within a cone of $\Delta R<0.01$. For the fake rate estimation four different selections are available, estimating the taus faked by jets in general, by b-jets, by light-jets excluding b-jets and electrons. The fake rate for jets that is the number of jets passing matched with a tau-jet over the number of jets satisfying the basic selection is $\SI{0.1741\pm 0.0019}{\percent}$ and $\SI{1.0063\pm 0.0068}{\percent}$ for the top-pair related background and the Higgs related background respectively.\newline
@@ -942,7 +946,7 @@ The efficiency depending on the transverse momentum of the truth jet is shown as
 \end{figure}
 %
 %Jet
-The qualitative trend is for both backgrounds the same, showing a peak fake rate at $p_{T,\text{jet}}^{\text{truth}}$ of $\SI{50}{\giga\electronvolt}$. There exists a plateau in the range of the truth jet transverse momentum between $\SI{100}{\giga\electronvolt}$ and $\SI{200}{\giga\electronvolt}$ before the efficiency goes down. The main difference is that the fake rate for the $t\bar{t}H$ sample is greater than that of the $t\bar{t}$ sample. Differences in the production processes of jets can be responsible for that behavior, because jets in the top-pair simulation are mostly induced by gluons (cf. fig. \ref{ttbarproduction}) while jets in the Higgs simulation are mostly induced by associated quark generation including the special case of top quarks (cf. fig. \ref{ttHproduction}).\par
+The qualitative trend is for both backgrounds the same, showing a peak fake rate at $p_{T,\text{jet}}^{\text{truth}}$ of $\SI{50}{\giga\electronvolt}$. There exists a plateau in the range of the truth jet transverse momentum between $\SI{100}{\giga\electronvolt}$ and $\SI{200}{\giga\electronvolt}$ before the efficiency goes down. The main difference is that the fake rate for the $t\bar{t}H$ sample is greater than that of the $t\bar{t}$ sample. Differences in fake rates in $t\bar{t}$ and $t\bar{t}H$ samples could be due to the difference in composition of gluon-originated (cf. fig. \ref{ttbarproduction}) and quark-originated (cf. fig. \ref{ttHproduction}) jets in the two samples.\par
 %b-jet
 The fake rate for b-jets is defined in the same way as for jets above with the difference of selecting only jets of b-flavor. The efficiency values of the two background samples are not in agreement within the uncertainties, Although they are in the same range of $\SI{0.1616\pm 0.0022}{\percent}$ and $\SI{0.1496\pm 0.0033}{\percent}$ corresponding to $t\bar{t}$ and $t\bar{t}H$. The efficiency depending on the truth transverse momentum of the b-jet is shown in figure \ref{DividedBjet:bg}.
 %
@@ -950,7 +954,7 @@ The fake rate for b-jets is defined in the same way as for jets above with the d
   \centering
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_Bjet.pdf}
-                \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.2034\pm 0.0038}{\percent}$ for the top-quark pair events.}
+                \subcaption{Estimation of a b-jet faking a tau lepton of $\SI{0.1616\pm 0.0022}{\percent}$ for the top-quark pair events.}
                 \label{DividedBjet:bg:ttbar}
                 \end{subfigure}
                 %
@@ -964,13 +968,17 @@ The fake rate for b-jets is defined in the same way as for jets above with the d
 \end{figure}
 %
 %NoBjet
-Comparing the large difference between both samples for jet fakes with the small difference in b-jet fakes shows the dominance of b-jets in the top pair related events, whereas the Higgs related events are more dominated by light jets. This can be seen in the efficiency sub-selection of taking only light jets into account and excluding the b-jets explicitly. This is done in figure \ref{DividedNoBjet:bg}, which shows the constant high efficiency for the Higgs related background in the range up to $\SI{120}{\giga\electronvolt}$ for the truth b-jets' transverse momentum (see fig. \ref{DividedNoBjet:bg:ttH}). Sources of b-jets are the subsequent decay of top-quark pairs mainly in b-quarks or in case of Higgs related background from direct Higgs decays into $b\bar{b}$. \par%to do: b kommen halt mal schnell von ttbar zerfall, aber woher kommen b bei H? gibt es ja keine wirkliche Quelle, oder? hab ich oben ja schon gesagt, dass tt nicht so vorkommt, jetzt ist nur die frage, eigentlich hat ja auch H->bb einen anteil... aber ist wohl nicht so groß im vergleich zu den haufen ttbars in ttbar sample?
+Comparing the large difference between both samples for jet fakes with the small difference in b-jet fakes shows the jet $p_T$ dependence of the fake rates. The $t\bar{t}H$ sample has a slightly harder transverse momentum spectrum of b-jets. 
+
+The difference in non-bjet efficiency is due to the difference in the composition of the jets: one is gluon and the other quark
+
+The efficiency of taking only light jets into account and excluding the b-jets explicitly is $\SI{0.2034\pm 0.0038}{\percent}$ and $\SI{2.356\pm 0.016}{\percent}$ for $t\bar{t}$ and $t\bar{t}H$ sample respectively. Its efficiency is shown in figure \ref{DividedNoBjet:bg}, which shows the constant high efficiency for the Higgs related background in the range up to $\SI{120}{\giga\electronvolt}$ for the truth b-jets' transverse momentum (see fig. \ref{DividedNoBjet:bg:ttH}). Sources of b-jets are the subsequent decay of top-quark pairs mainly in b-quarks or in case of Higgs related background from direct Higgs decays into $b\bar{b}$. Their difference can be explained by the difference in the composition of the jets as mentioned above: The top-pair sample is dominated by gluon-initiated jets and the Higgs sample is dominated by quark-initiated jets.\par
 %
 \begin{figure}
   \centering
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/ttbar/Divided_NoBjet.pdf}
-                \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{0.1616\pm 0.0022}{\percent}$ for the top-quark pair events.}
+                \subcaption{Estimation of a light jet (excluding b-jets) faking a tau lepton of $\SI{0.2034\pm 0.0038}{\percent}$ for the top-quark pair events.}
                 \label{DividedNoBjet:bg:ttbar}
                 \end{subfigure}
                 %
@@ -984,17 +992,18 @@ Comparing the large difference between both samples for jet fakes with the small
 \label{DividedNoBjet:bg}
 \end{figure}
 %
-%e fake
-The fake tau contributions from electrons is very tiny in this efficiency consideration. The fake rate estimation is done by taking the number of electrons matched with a truth tau lepton within a cone of $\Delta R<0.15$ over the number of truth electrons in the basic selection. For the top-pair related events the fake rate is $\SI{0.00104\pm 0.00025}{\percent}$ and for the Higgs related events $\SI{0.00348\pm 0.00084}{\percent}$. One reason for such a low rate lies in the standard procedure of tau reconstruction described in section \ref{taus}, where most of the electrons are already vetoed. Therefore the electron fake rate can be neglected in this context.\par
+%e fake %stimmt das jetzt so?
+The fake tau contributions from electrons is very tiny in this efficiency consideration. The fake rate estimation is done by taking the true number of electrons, which are reconstructed as a hadronic tau lepton. For the top-pair related events the fake rate is $\SI{0.00104\pm 0.00025}{\percent}$ and for the Higgs related events $\SI{0.00348\pm 0.00084}{\percent}$.
+%One reason for such a low rate lies in the standard procedure of tau reconstruction described in section \ref{taus}, where most of the electrons are already vetoed. \par das passt scheinbar nicht??
 % H für Higgs Betrachtung
-The Higgs related events also include real tau signals for which further sub-selections for efficiency studies are available. Two main categories can be distinguished and include both the sub-categories of 1-prong and 3-prong decays (cf. \ref{startingpoint} and \ref{taus}): Taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and taus originating directly from Higgs bosons. This variety comes with the diversity of the Higgs decay modes like di-boson and di-tau events. Applied overlap removals between tau leptons and light leptons (see section \ref{overlapremoval}) reduce the efficiency numbers significantly. Therefore only taus from $H^0$ are considered. Nevertheless the plots for tau leptons originating from $W^\pm$ and $Z^0$ can be found in section \ref{promptplots}. 
+The Higgs related events also include real tau signals for which further sub-selections for efficiency studies are available. Two main categories can be distinguished and include both the sub-categories of 1-prong and 3-prong decays (cf. \ref{startingpoint} and \ref{taus}): Taus originating from bosons of the weak interaction ($W^\pm$, $Z^0$) and taus originating directly from Higgs bosons. This variety comes with the diversity of the Higgs decay modes like di-boson and di-tau events. Applied overlap removals between tau leptons and light leptons (see section \ref{overlapremoval}) reduce the efficiency numbers significantly. Therefore only taus from $H^0$ are considered. %Nevertheless the plots for tau leptons originating from $W^\pm$ and $Z^0$ can be found in section \ref{promptplots}. 
 %
 %Selecting the number of taus passing the basic selection and are matched to a truth tau within $\Delta R=0.05$ originating from weak bosons over the total number of truth taus passing the basic selection and originate from weak bosons gives an efficiency value of $\SI{36.76\pm 0.51}{\percent}$. Higgs decaying into vector bosons gives rise to this proportion of the tau leptons. The dependency of the efficiency with the transverse momentum of the truth tau is shown in figure \ref{Dividedprompt:bg:all}. Splitting this origin into 1-prong and 3-prong case of the subsequent tau decay gives efficiency values of $\SI{40.16\pm 0.62}{\percent}$ and $\SI{29.01\pm 0.88}{\percent}$ respectively (see figure \ref{Dividedprompt:bg:1prong} and \ref{Dividedprompt:bg:3prong}). The efficiencies for the tau reconstruction after one charged particle or three charged particles are reasonable when compared to the reconstruction efficiencies of the selected physical objects. Taking into account $\sim\SI{99}{\percent}$ of the muon and electron reconstruction efficiency \cite{muPerformance}\cite{ePerformance2}, the two b-jets with a reconstruction efficiency of $\SI{77}{\percent}$ each (cf. section \ref{btagging} and \ref{physObj:bjet}) and the reconstruction efficiency of a loose tau with $\SI{60}{\percent}$ (1-prong) and $\SI{50}{\percent}$ (3-prong) (cf. section \ref{taus}). Following the product of the reconstruction efficiencies $\epsilon_{1/3-\text{prong}}=\epsilon_e\epsilon_\mu\epsilon_{2\text{b-jets}}\epsilon_\tau$ results in $\SI{35}{\percent}$ (1-prong) and $\SI{29}{\percent}$ (3-prong).\newline
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXx
 %
-The efficiency derived from the number of taus matched to a truth tau within $\Delta R=0.05$ originating from a Higgs boson over the total number of truth taus passing the basic selection and its origin from Higgs is $\SI{45.20\pm 0.47}{\percent}$. The efficiency plot is shown in figure \ref{DividedFromH:bg:all}. Splitting the taus' origin from $H^0$ into 1-prong and 3-prong case gives the efficiency of $\SI{49.25\pm 0.55}{\percent}$ and $\SI{34.08\pm 0.87}{\percent}$ respectively (see figure \ref{DividedFromH:bg:1prong} and \ref{DividedFromH:bg:3prong}). %Compared to the efficiency resulting from the product of the different object reconstruction efficiencies the tau efficiency coming from Higgs decays are 15 percentage points and 5 percentage point higher for the 1-prong and 3-prong case respectively.\par
-The overall efficiency dependence increases towards $\SI{200}{\giga\electronvolt}$ and fluctuates beyond that threshold for higher transverse momenta. This behavior is mostly dominated by the 1-prong cases with its highest contribution to the prompt Higgs decay, because the 1-prong case in figure \ref{DividedFromH:bg:1prong} shows the same trend. In contrast to that, the smaller contributions of $\SI{34.08\pm 0.87}{\percent}$ efficiency in the 3-prong case show less dependence in efficiency (see fig. \ref{DividedFromH:bg:3prong}). 
+The efficiency derived from the number of taus matched to a truth tau within $\Delta R=0.2$ originating from a Higgs boson over the total number of truth taus passing the basic selection and its origin from Higgs is $\SI{45.20\pm 0.47}{\percent}$. The efficiency plot is shown in figure \ref{DividedFromH:bg:all}. Splitting the taus' origin from $H^0$ into 1-prong and 3-prong case gives the efficiency of $\SI{49.25\pm 0.55}{\percent}$ and $\SI{34.08\pm 0.87}{\percent}$ respectively (see figure \ref{DividedFromH:bg:1prong} and \ref{DividedFromH:bg:3prong}). %Compared to the efficiency resulting from the product of the different object reconstruction efficiencies the tau efficiency coming from Higgs decays are 15 percentage points and 5 percentage point higher for the 1-prong and 3-prong case respectively.\par
+The overall efficiency dependence increases towards $\SI{200}{\giga\electronvolt}$ and fluctuates beyond that threshold for higher transverse momenta. This behavior is mostly dominated by the 1-prong cases with its highest contribution to the prompt Higgs decay, because the 1-prong case in figure \ref{DividedFromH:bg:1prong} shows the same trend. In contrast to that, the smaller contributions of $\SI{34.08\pm 0.87}{\percent}$ efficiency in the 3-prong case show less dependence in efficiency (see fig. \ref{DividedFromH:bg:3prong}).\par 
 %
 \begin{figure}
   \centering
@@ -1020,8 +1029,9 @@ The overall efficiency dependence increases towards $\SI{200}{\giga\electronvolt
 \label{DividedFromH:bg:ttH}
 \end{figure}
 %
+These efficiencies are also evaluated for the LQ signal samples in section \ref{signaleff} and are investigated as a function of various kinematic variables.%Überleitungssatz
 %HT Gedöns// H 
-As a reference for the LQ signal samples the sum of the transverse momenta of different physical objects $S_{T,\text{lep}}$, $H_{T,\text{had}}$, $S_{T}$, $H_{T}$ and the number of jets are plotted against the efficiency for taus originating from Higgs bosons. The definition of the sum-variables are as follows:
+Thus, as a reference for the LQ signal samples the sum of the transverse momenta of different physical objects $S_{T,\text{lep}}$, $H_{T,\text{had}}$, $S_{T}$, $H_{T}$ and the number of jets are plotted against the efficiency for taus originating from Higgs bosons. The definition of the sum-variables are as follows:
 \begin{align}
 S_{T,\text{lep}}&=\cancel{E}_{T}+\sum_i p_{T,i}^{\text{e}}+\sum_i p_{T,i}^{\mu}+\sum_i p_{T,i}^{\tau} \label{STlepgedöns}\\
 H_{T,\text{had}}&=\sum_i p_{T,i}^{\text{jet}} \label{HThadgedöns}\\
@@ -1051,7 +1061,7 @@ where $p_{T,i}^\text{X}$ is the transverse momentum of single electrons $X=e$, m
 \end{figure}
 %
 %HT und HThad
-In figure \ref{Divided:fromH:HTgedöns} the sum of the transverse momenta are shown against the efficiency in case of taus generated by $H^0$. Adding up the electrons' and muons' transverse momentum (see \ref{Divided:fromH:HT}) to the sum of the jets' transverse momentum (see \ref{Divided:fromH:HThad}) influences the number of elements and expands the spectrum, but influences not the shape of the efficiency depicted in the ratio plot. Only slight changes in efficiency is visible apart from the constant efficiency curve in the ratio plot for the variable $H_T$. The difference of the variables regarding electrons and muons adds one remarkable minimum to the efficiency depending on $H_T$ at $\SI{1.45}{\tera\electronvolt}$ to the efficiency dependence.\newline
+In figure \ref{Divided:fromH:HTgedöns} the sum of the transverse momenta are shown against the efficiency in case of taus generated by $H^0$. Adding up the electrons' and muons' transverse momentum (see \ref{Divided:fromH:HT}) to the sum of the jets' transverse momentum (see \ref{Divided:fromH:HThad}) influences the number of elements and expands the spectrum, but influences not the shape of the efficiency depicted in the ratio plot. Only slight changes in efficiency is visible apart from the constant efficiency curve in the ratio plot for the variable $H_T$. The difference of the variables regarding electrons and muons adds one remarkable minimum to the efficiency depending on $H_T$ at $\SI{1.45}{\tera\electronvolt}$ to the efficiency dependence.\newline %was ist jetzt mit dem dämlichen Min, habs nochmal in hunderter rebinned... immber noch da....
 %ST and STlep
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -1073,7 +1083,7 @@ In figure \ref{Divided:fromH:HTgedöns} the sum of the transverse momenta are sh
 \label{Divided:fromH:STgedöns}
 \end{figure}
 %
-The sum of all considered objects in $S_T$ or the subset $S_{T,\text{lep}}$ are depicted in figure \ref{Divided:fromH:ST} and \ref{Divided:fromH:STlep} respectively. Efficiency variations over the whole momentum range in $S_T$ are caused mainly by leptonic objects. This conclusion can be drawn from stronger variations in $S_{T,\text{lep}}$ (see fig. \ref{Divided:fromH:STlep}).\newline  
+The sum of all considered objects in $S_T$ or the subset $S_{T,\text{lep}}$ are depicted in figure \ref{Divided:fromH:ST} and \ref{Divided:fromH:STlep} respectively. Efficiency variations over the whole momentum range in $S_T$ are caused mainly by hadronic tau multiplicity and transverse momenta, because $H_T$ and $H_{T,\text{had}}$ does not contain hadronic taus. This conclusion can be drawn from stronger variations in $S_{T,\text{lep}}$ (see fig. \ref{Divided:fromH:STlep}).\newline  
 %njets
 The efficiency dependence on the number of jets shows very low efficiency of $\SI{5}{\percent}$ for taus originating from Higgs bosons with 2 jets, while with 3 jets the efficiency increases significantly and its further trend is continuously. The efficiency graph is shown in figure \ref{Divided:fromH:njets}.\newline
 %
@@ -1147,8 +1157,8 @@ The maximum separation between taus and b-jets shows a slightly shifted peak at 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Signal efficiency}\label{signaleff}
-The efficiencies for the leptoquark signal samples with their two mass points are summarized in table \ref{LQEffTable} following the example of the background efficiencies in section \ref{bgeff}. The uncertainty is derived from the binomial error of the efficiency after eq. (\ref{binomialerror}). The efficiency are the same as for the background samples with the difference that the category of a tau originating from a Higgs boson is replaced by the category of tau leptons originating from leptoquarks.\par
+\subsection{Taus reconstruction efficiency in signal samples}\label{signaleff}
+The efficiencies for the leptoquark signal samples with their two mass points are summarized in table \ref{LQEffTable} following the example of the background efficiencies in section \ref{bgeff}. The uncertainty is derived from the binomial error of the efficiency after eq. (\ref{binomialerror}). The efficiency definition  is the same as for the background samples with the difference that the category of a tau originating from a Higgs boson is replaced by the category of tau leptons originating from leptoquarks.\par
 %	
 	\begin{sidewaystable}[htbp]
 		\centering
@@ -1160,14 +1170,16 @@ The efficiencies for the leptoquark signal samples with their two mass points ar
 		 \textbf{sample}  & \multicolumn{2}{c}{\textbf{LQ$_{500\textbf{GeV}}$}}  & \multicolumn{2}{c}{\textbf{LQ$_{1\textbf{TeV}}$}} 
 		\\
 		\hline
-		selection  & passed events      & total events & passed events      & total events
-		\\ 
-		\hline
-		truth matching for tau      & $1339$            & $2764$      & $1235$        & $2761$
+		\multirow{2}{*}{selection}  & reconstructed taus       & total number  & reconstructed taus       & total number 
 		\\
-		efficiency                  & \multicolumn{2}{c}{$\SI{48.44\pm 0.95}{\percent}$}    & \multicolumn{2}{c}{$\SI{44.73\pm 0.95}{\percent}$}
-		\\
+                & matched to truth taus & of taus       & matched to truth taus & of taus
+                \\
 		\hline
+		%truth matching for tau      & $1339$            & $2764$      & $1235$        & $2761$
+		%\\
+		%efficiency                  & \multicolumn{2}{c}{$\SI{48.44\pm 0.95}{\percent}$}    & \multicolumn{2}{c}{$\SI{44.73\pm 0.95}{\percent}$}
+		%\\
+		%\hline
 		%tau originated from W$^{\pm}$, Z$^0$& $36$        & $111$         & $31$          & $149$
 		%\\
 		%efficiency                  & \multicolumn{2}{c}{$\SI{32.4\pm 4.4}{\percent}$}   & \multicolumn{2}{c}{$\SI{20.8\pm 3.3}{\percent}$}
@@ -1231,26 +1243,26 @@ The efficiencies for the leptoquark signal samples with their two mass points ar
                 \end{sidewaystable}
 %
 %Truth match
-The efficiency for reconstructing a hadronic tau, which is matched to a truth tau over the total number of truth taus passing the basic selection is $\SI{48.44\pm 0.95}{\percent}$ and $\SI{44.73\pm 0.95}{\percent}$ for the $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point LQ sample respectively. These higher efficiencies compared to the background samples are caused by the existence of more real taus due to the LQ decay. This can be seen also at the momentum spectrum in figure \ref{DividedTau:signal}, where the truth tau's transverse momentum is drawn against the efficiency.\par  
+%The efficiency for reconstructing a hadronic tau, which is matched to a truth tau over the total number of truth taus passing the basic selection is $\SI{48.44\pm 0.95}{\percent}$ and $\SI{44.73\pm 0.95}{\percent}$ for the $\SI{500}{\giga\electronvolt}$ and $\SI{1}{\tera\electronvolt}$ mass point LQ sample respectively. These higher efficiencies compared to the background samples are caused by the existence of more real taus due to the LQ decay. This can be seen also at the momentum spectrum in figure \ref{DividedTau:signal}, where the truth tau's transverse momentum is drawn against the efficiency.\par  
 %
-\begin{figure}
-  \centering
-                \begin{subfigure}[t]{0.49\textwidth}
-                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_Tau.pdf}
-                \subcaption{Hadronic tau reconstruction efficiency of $\SI{48.44\pm 0.95}{\percent}$ for the low mass LQ signal events.}
-                \label{DividedTau:signal:LQ75}
-                \end{subfigure}
-                %
-                \begin{subfigure}[t]{0.49\textwidth}
-                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_Tau.pdf}
-                \subcaption{Hadronic tau reconstruction efficiency of $\SI{44.73\pm 0.95}{\percent}$ for the high mass LQ signal events.}
-                \label{DividedTau:signal:LQ76}
-                \end{subfigure}
-\caption[Hadronic tau reconstruction efficiency for the signal events.]{Hadronic tau reconstruction efficiency for the signal events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
-\label{DividedTau:signal}
-\end{figure}
+%\begin{figure}
+%  \centering
+%                \begin{subfigure}[t]{0.49\textwidth}
+%                \includegraphics[width=\textwidth]{figures/plots/LQ75/Divided_Tau.pdf}
+%                \subcaption{Hadronic tau reconstruction efficiency of $\SI{48.44\pm 0.95}{\percent}$ for the low mass LQ signal events.}
+%                \label{DividedTau:signal:LQ75}
+%                \end{subfigure}
+%                %
+%                \begin{subfigure}[t]{0.49\textwidth}
+%                \includegraphics[width=\textwidth]{figures/plots/LQ76/Divided_Tau.pdf}
+%                \subcaption{Hadronic tau reconstruction efficiency of $\SI{44.73\pm 0.95}{\percent}$ for the high mass LQ signal events.}
+%                \label{DividedTau:signal:LQ76}
+%                \end{subfigure}
+%\caption[Hadronic tau reconstruction efficiency for the signal events.]{Hadronic tau reconstruction efficiency for the signal events. The efficiency is defined as number of reconstructed hadronic taus passing the basic selection and is matched to a truth tau over the number of truth taus passing the basic selection (truth matching tau).}
+%\label{DividedTau:signal}
+%\end{figure}
 %
-%B mesons
+%B mesons %if eff has dependence on pT of the objects this difference is expected because of different kinematics
 With a mean efficiency value of roughly $\sim\SI{1}{\percent}$ taus originating from B-mesons the rate is as twice as high compared to the two background samples. Nevertheless this is a small contribution compared to other tau sources and more important, because of the low statistics of only one event and the resulting high uncertainty, this sub-category can be neglected in the overall consideration.\par  
 %prompt
 %The weak gauge bosons remain as tau sources with an efficiency of $\SI{32.4\pm 4.4}{\percent}$ for the LQ$_{500\textbf{GeV}}$ sample. This is comparable with the efficiency in the same sub-category for the Higgs background sample (cf. table \ref{ttbarttHEffTable}). But the higher mass point LQ sample shows a smaller efficiency of $\SI{20.8\pm 3.3}{\percent}$ in that sub-selection. This means that the behavior regarding tau sources from $W^\pm$ and $Z^0$ is comparable in both signal and $t\bar{t}H$ background samples. The efficiency depending on the truth taus' transverse momentum is shown in figure \ref{Dividedprompt:signal:LQ75} and \ref{Dividedprompt:signal:LQ76} for the low and the high LQ mass point respectively. A further sub-selection differentiates between the tau decay into one and three charged particles, which can be seen in figure \ref{Dividedprompt:signal:1prongLQ75} and \ref{Dividedprompt:signal:3prongLQ75} for the low mass point. The $p_{T,\text{vis}}^{\tau,\text{truth}}$ range reaches $\SI{300}{\giga\electronvolt}$ and $\SI{250}{\giga\electronvolt}$ and shows an increasing efficiency with increasing transverse momentum. This effect is known from events from $t\bar{t}H$ sample. The overall efficiency for the 1-prong case is $\SI{32.9\pm 5.3}{\percent}$ and for the 3-prong case is $\SI{34.5\pm 8.8}{\percent}$. For the high mass point the 1-prong and 3-prong decay is shown in figure \ref{Dividedprompt:signal:1prongLQ76} and \ref{Dividedprompt:signal:3prongLQ76} and has efficiencies of $\SI{23.6\pm 4.1}{\percent}$ and $\SI{12.5\pm 5.8}{\percent}$ respectively.\par 
@@ -1308,13 +1320,13 @@ Taus originating directly from LQs have a efficiency of $\SI{51.3\pm 1.2}{\perce
 %
 For the high mass point leptoquarks the efficiency dependence on the taus' transverse momentum is constantly over the whole momentum range (see fig. \ref{DividedFromLQ:signal:LQ76}). Like for the low mass point, the 1-prong and 3-prong cases reveal no considerable dependence on the taus' $p_T$. 
 %HT,ST Gedöns prompt | LQ
-The correlation between the efficiency and the variables $H_T$, $H_{T,\text{had}}$, $S_T$, $S_{T,\text{lep}}$ defined in eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) and the number of jets is also available for the leptoquark related events. \newline
+The dependence of the efficiency on kinematic variables like $H_T$, $H_{T,\text{had}}$, $S_T$, $S_{T,\text{lep}}$ defined in eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) and the number of jets is also available for the leptoquark related events. \newline
 %HT und HThad
 %Figure \ref{Dividedprompt:signal:HTgedöns} shows the efficiency depending on the variable $H_T$ and $H_{T,\text{had}}$ for the sub-selections, where taus originate from weak gauge bosons.
 %
 % XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
 %
-The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case of the sub-category, where tau leptons originate from LQs, are shown in figure \ref{DividedFromLQ:signal:HTgedöns}. The $H_T$ ($H_{T,\text{had}}$) spectrum covers a larger range for the $\SI{1}{\tera\electronvolt}$ leptoquarks sample due to its higher mass. The $H_T$ distribution extends up to $\SI{3}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HTLQ76}) compared to figure \ref{DividedFromLQ:signal:HTLQ75}, which extends only to $\SI{2.5}{\tera\electronvolt}$. The $H_{T,\text{had}}$ distribution extends up to $\SI{2.5}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HThadLQ76}) compared to figure \ref{DividedFromLQ:signal:HThadLQ75}, which extends to $\SI{1.2}{\tera\electronvolt}$. The efficiency trend over the hole spectrum is constant with some fluctuations.\newline
+The correlation between $H_{T}$ ($H_{T,\text{had}}$) and the efficiency in case of the sub-category, where tau leptons originate from LQs, are shown in figure \ref{DividedFromLQ:signal:HTgedöns}. The $H_T$ ($H_{T,\text{had}}$) spectrum covers a larger range for the $\SI{1}{\tera\electronvolt}$ leptoquarks sample due to its higher mass. The $H_T$ distribution extends up to $\SI{3}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HTLQ76}) compared to figure \ref{DividedFromLQ:signal:HTLQ75}, which extends only to $\SI{2.5}{\tera\electronvolt}$. The $H_{T,\text{had}}$ distribution extends up to $\SI{2.5}{\tera\electronvolt}$ (see fig. \ref{DividedFromLQ:signal:HThadLQ76}) compared to figure \ref{DividedFromLQ:signal:HThadLQ75}, which extends to $\SI{1.2}{\tera\electronvolt}$. The efficiency trend over the whole spectrum is constant with some fluctuations.\newline
 %
 \begin{figure}
   \centering
@@ -1516,7 +1528,7 @@ The special case of the minimum and maximum separation between taus and b-flavor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The signal and background efficiencies in section \ref{signalANDbgEff} help to understand especially the role of the tau lepton for the relevant $t\tau^{-}+\bar{t}\tau^{+}$ channel. The next step into the direction of signal studies is to compare the event yield for signal and background samples in the different channels of the event selection (cf. section \ref{eventselection}). This is done by studying kinematic variables for the tau lepton like the transverse momentum, angular distribution, the variables defined in eq. (\ref{STlepgedöns})-(\ref{HTgedöns}) (cf. section \ref{bgeff}) and the separation between taus and objects like electrons, jets and b-jets. The comparison is done with the background and signal MC samples together with data of the data-taking years 2015 until 2018. This reveals, if the signature of the chosen event selection can be extracted and detected within the known standard model processes. The data in this context gives the possibility of reference how well data is resembled by the MC simulation, although this work is not a full LQ search. No systematic variations are applied on the Monte Carlo simulations, which would be the normal procedure for a full search. For data the luminosity of \SI{140.45}{\per\femto\barn} (cf. table \ref{datalumi}) is available.\par
 %tau pT
-The transverse momentum distribution of the tau lepton is shown in figure \ref{taupt} for different event selections.
+The transverse momentum distribution of all tau leptons is shown in figure \ref{taupt} for different event selections.
 %
 \begin{figure}
   \centering
@@ -1543,13 +1555,13 @@ The transverse momentum distribution of the tau lepton is shown in figure \ref{t
                 \subcaption{$p_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{taupt:1b2tau}
                 \end{subfigure}
-\caption[Transverse momentum distribution of the tau lepton for different event selections.]{Transverse momentum distribution of the tau lepton for different event selections.}
+\caption[Transverse momentum distribution of all tau leptons for different event selections.]{Transverse momentum distribution of all tau leptons for different event selections.}
 \label{taupt}
 \end{figure}
 %
 The selection of at least two b-jets and at least one tau shows (see figure \ref{taupt:2b1tau}) that up to transverse momenta of $\SI{80}{\giga\electronvolt}$ the LQ signal is hidden from top-quark pair and Higgs contributions. But from that threshold on the momentum distribution of the low mass signal sample exceeds the background. For the high mass point sample this happens at $\SI{360}{\giga\electronvolt}$. The MC background samples agree well with data from $\SI{50}{\giga\electronvolt}$ onward, besides one outlier. Before that value data exceeds the background taken into account. The discrepancy can be explained such that more contributions should be taken into account like vector bosons and additional jets, di-boson events or single-top contributions. Tightening the selection to at least two taus (see figure \ref{taupt:2b2tau}) will reveal even more signal compared to relatively small background. The event yield for data shows that only few events in this selection is expected. The disadvantage in this selection is the few events in general, which results in low statistics. The looser selection of taking only at least one b-jet and at least one tau (see figure \ref{taupt:1b1tau}) shifts the threshold for the signal up to $\SI{100}{\giga\electronvolt}$ and $\SI{350}{\giga\electronvolt}$ for the low and high mass point LQ sample respectively, but allows at the same time higher statistics. This effect is clearly visible in the selection of at least one b-jet and at least two tau leptons shown in figure \ref{taupt:1b2tau}. The discrepancy between data and MC in the lower $p_T$ range also exists here, as it depends not directly on the chosen selection. The transverse momentum of taus in data does not exceed \SI{350}{\giga\electronvolt} and $\SI{150}{\giga\electronvolt}$ for the selection with at least one tau and at least two taus respectively. This would be interesting threshold for $p_T$ cuts to optimize the signal (see also section \ref{significance}).\par
 %tauphi
-The distribution of the azimuthal angle of the tau leptons for different event selection is shown in figure \ref{tauphi}. It gives the same picture as for the transverse momentum distribution including the lack of MC events. For the selection of at least two b-jets and at least one tau the signal samples are hidden by the background over the hole $\phi$ range (see figure \ref{tauphi:2b1tau} and \ref{tauphi:1b1tau}). Only the at least two tau selection reveals the LQ signal. Better statistics can be achieved by using the selection with at least one b-jet and at least two taus (see figure \ref{tauphi:1b2tau}).\par
+The distribution of the azimuthal angle of the tau leptons for different event selection is shown in figure \ref{tauphi}. It gives the same picture as for the transverse momentum distribution including the lack of MC events. For the selection of at least two b-jets and at least one tau the signal samples are hidden by the background over the whole $\phi$ range (see figure \ref{tauphi:2b1tau} and \ref{tauphi:1b1tau}). Only the at least two tau selection reveals the LQ signal. Better statistics can be achieved by using the selection with at least one b-jet and at least two taus (see figure \ref{tauphi:1b2tau}).\par
 %
 \begin{figure}
   \centering
@@ -1576,7 +1588,7 @@ The distribution of the azimuthal angle of the tau leptons for different event s
                 \subcaption{$\phi$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{tauphi:1b2tau}
                 \end{subfigure}
-\caption[Azimuthal angle distribution of the tau lepton for different event selections.]{Azimuthal angle distribution of the tau lepton for different event selections.}
+\caption[Azimuthal angle distribution of all tau leptons for different event selections.]{Azimuthal angle distribution of all tau leptons for different event selections.}
 \label{tauphi}
 \end{figure}
 %
@@ -1608,39 +1620,39 @@ The pseudorapidity distribution shows the same trend as the $p_T$ and $\phi$ dis
                 \subcaption{$\eta$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
                 \label{taueta:1b2tau}
                 \end{subfigure}
-\caption[Pseudorapidity distribution of the tau lepton for different event selections.]{Pseudorapidity distribution of the tau lepton for different event selections.}
+\caption[Pseudorapidity distribution of all taus lepton for different event selections.]{Pseudorapidity distribution of all tau leptons for different event selections.}
 \label{taueta}
 \end{figure}
 %
 %MET
-Following the definition of eq. \ref{STgedöns} (cf. section \ref{bgeff}) the distribution of the missing energy for different selections is shown in figure \ref{MET}. The missing energy is not a optimal discriminant variable, because the signal is not well separated over the hole $\cancel{E}_T$ range in the selection of at least one b-jet and at least one tau (see \ref{MET:1b1tau}). The signal is in fact better separated in the selection of at least two b-jets and at least one tau as depicted in figure \ref{MET:2b1tau}. The at least two tau condition improves the separation (see figure \ref{MET:2b2tau} and \ref{MET:1b2tau}) between signal and background. Although the studied $t\tau^{-}+\bar{t}\tau^{+}$ channel has sources of neutrinos responsible for missing transverse energy through the decay of tau leptons or leptonic $W^\pm$ decays, this is not enough to discriminate it from background neutrino contributions. Again, at least two taus selected induces a more $t\bar{t}H$ dominated background. \par   
+Following the definition of eq. \ref{STgedöns} (cf. section \ref{bgeff}) the distribution of the missing energy for different selections is shown in figure \ref{MET}. The missing energy is not a optimal discriminant variable, because the signal is not well separated over the whole $\cancel{E}_T$ range in the selection of at least one b-jet and at least one tau (see \ref{MET:1b1tau}). The signal is in fact better separated in the selection of at least two b-jets and at least one tau as depicted in figure \ref{MET:2b1tau}. The at least two tau condition improves the separation (see figure \ref{MET:2b2tau} and \ref{MET:1b2tau}) between signal and background. Although the studied $t\tau^{-}+\bar{t}\tau^{+}$ channel has sources of neutrinos responsible for missing transverse energy through the decay of tau leptons or leptonic $W^\pm$ decays, this is not enough to discriminate it from background neutrino contributions. Again, at least two taus selected induces a more $t\bar{t}H$ dominated background. \par   
 %
 \begin{figure}
   \centering
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j2b_1tau.pdf}
-                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least two b-jets and at least one additional tau.}
+                \subcaption{$\cancel{E}_T$ distribution, when selecting at least two b-jets and at least one additional tau.}
                 \label{MET:2b1tau}
                 \end{subfigure}
                 %
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j2b_2tau.pdf}
-                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least two b-jets and at least two additional tau.}
+                \subcaption{$\cancel{E}_T$ distribution, when selecting at least two b-jets and at least two additional tau.}
                 \label{MET:2b2tau}
                 \end{subfigure}
                  %
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j1b_1tau.pdf}
-                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least one b-jets and at least one additional tau.}
+                \subcaption{$\cancel{E}_T$ distribution, when selecting at least one b-jets and at least one additional tau.}
                 \label{MET:1b1tau}
                 \end{subfigure}
                  %
                 \begin{subfigure}[t]{0.49\textwidth}
                 \includegraphics[width=\textwidth]{figures/plots/kinLQ75/MET_2j1b_2tau.pdf}
-                \subcaption{$\cancel{E}_T$ distribution of the tau leptons, when selecting at least one b-jets and at least two additional tau.}
+                \subcaption{$\cancel{E}_T$ distribution, when selecting at least one b-jets and at least two additional tau.}
                 \label{MET:1b2tau}
                 \end{subfigure}
-\caption[Missing energy distribution of the tau lepton for different event selections.]{Missing energy distribution of the tau lepton for different event selections.}
+\caption[Missing energy distribution for different event selections.]{Missing energy distribution for different event selections.}
 \label{MET}
 \end{figure}
 %
@@ -2102,51 +2114,53 @@ The general trend is that within a chosen b-jet selection the significance reach
 		\centering
                 \footnotesize
                 \renewcommand{\arraystretch}{1.2}
-		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc}
+		\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccccc}
 		\hline
 		\hline
-		\textbf{selection}  & \textbf{kinematic variable}  & \textbf{increased siginficance value}      & \textbf{cut}/$\SI{}{\giga\electronvolt}$ 
+		\multirow{2}{*}{\textbf{selection}}  & \textbf{LQ}  & \textbf{kinematic variable}  & \textbf{increased}      & \textbf{cut}/$\SI{}{\giga\electronvolt}$ 
 		\\
-		\hline
-		\multirow{4}{*}{$\geq 2\,$b-jets $+\geq 1\,\tau$} & $p_T$      & $18$      & $\SI{355}{}$
-		\\
-                &       $p_T$   & $0.71$        & $715$
-                \\
-                &       $S_T$   & $18$        & $710$
-                \\
-                &       $S_T$   & $0.88$        & $1430$
+                &\textbf{sample}&\textbf{variable}&\textbf{siginficance value}
                 \\
 		\hline
-		\multirow{4}{*}{$\geq 2\,$b-jets $+\geq 2\,\tau$} & $p_T$      & $12$      & $\SI{230}{}$
+		\multirow{4}{*}{$\geq 2\,$b-jets $+\geq 1\,\tau$} &\SI{500}{\giga\electronvolt} mass point  & $p_T$      & $18$      & $\SI{355}{}$
 		\\
-                &       $p_T$   & $0.34$        & $425$
+                &\SI{1}{\tera\electronvolt} mass point  &       $p_T$   & $0.71$        & $715$
                 \\
-                &       $S_T$   & $12$        & $460$
+                &\SI{500}{\giga\electronvolt} mass point  &       $S_T$   & $18$        & $710$
                 \\
-                &       $S_T$   & $0.39$        & $840$
+                &\SI{1}{\tera\electronvolt} mass point  &       $S_T$   & $0.88$        & $1430$
                 \\
 		\hline
-                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 1\,\tau$} & $p_T$      & $22$      & $\SI{355}{}$
+		\multirow{4}{*}{$\geq 2\,$b-jets $+\geq 2\,\tau$} &\SI{500}{\giga\electronvolt} mass point  & $p_T$      & $12$      & $\SI{230}{}$
 		\\
-                &       $p_T$   & $0.92$        & $655$
+                &\SI{1}{\tera\electronvolt} mass point  &       $p_T$   & $0.34$        & $425$
                 \\
-                &       $S_T$   & $22$        & $710$
+                &\SI{500}{\giga\electronvolt} mass point  &       $S_T$   & $12$        & $460$
                 \\
-                &       $S_T$   & $1.1$        & $1430$
+                &\SI{1}{\tera\electronvolt} mass point  &       $S_T$   & $0.39$        & $840$
                 \\
 		\hline
-                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 2\,\tau$} & $p_T$      & $19$      & $\SI{240}{}$
+                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 1\,\tau$}&\SI{500}{\giga\electronvolt} mass point   & $p_T$      & $22$      & $\SI{355}{}$
 		\\
-                &       $p_T$   & $0.63$        & $425$
+                &\SI{1}{\tera\electronvolt} mass point  &       $p_T$   & $0.92$        & $655$
                 \\
-                &       $S_T$   & $19$        & $470$
+                &\SI{500}{\giga\electronvolt} mass point  &       $S_T$   & $22$        & $710$
                 \\
-                &       $S_T$   & $0.68$        & $850$
+                &\SI{1}{\tera\electronvolt} mass point  &       $S_T$   & $1.1$        & $1430$
+                \\
+		\hline
+                \multirow{4}{*}{$\geq 1\,$b-jets $+\geq 2\,\tau$}&\SI{500}{\giga\electronvolt} mass point   & $p_T$      & $19$      & $\SI{240}{}$
+		\\
+                &\SI{1}{\tera\electronvolt} mass point  &       $p_T$   & $0.63$        & $425$
+                \\
+                &\SI{500}{\giga\electronvolt} mass point  &       $S_T$   & $19$        & $470$
+                \\
+                &\SI{1}{\tera\electronvolt} mass point  &       $S_T$   & $0.68$        & $850$
                 \\
                 \hline
 		\hline
 		\end{tabular*}
-		\caption[Overview of the discovery significance increase in the kinematic variables $p_T$ and $S_T$ for the different event selections.]{Overview of the discovery significance increase in the kinematic variables $p_T$ and $S_T$ for the different event selections. }
+		\caption[Overview of the discovery significance increase in the kinematic variables $p_T$ and $S_T$ for the different event selections.]{Overview of the discovery significance increase in the kinematic variables transverse momentum of all reconstructed taus $p_T$ and $S_T$ for the different event selections. }
 		\label{xcuts}
                 \renewcommand{\arraystretch}{1}
                 \end{table}
